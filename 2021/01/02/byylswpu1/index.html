@@ -22,28 +22,32 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#d22","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="65zlui的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="二、实验内容1、词法分析器设计（1）单词的数据结构；（2）记号类别编码；（3）词法正规式；（4）识别单词的状态转换图。2、词法分析器实现（1）实现辅助例程；（2）实现独立的记号获取函数GetToken；（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。 12345678910111213141516171819202122232425262728293031323334">
+<meta property="og:type" content="article">
+<meta property="og:title" content="byylswpu1">
+<meta property="og:url" content="http://yoursite.com/2021/01/02/byylswpu1/index.html">
 <meta property="og:site_name" content="65zlui的博客">
+<meta property="og:description" content="二、实验内容1、词法分析器设计（1）单词的数据结构；（2）记号类别编码；（3）词法正规式；（4）识别单词的状态转换图。2、词法分析器实现（1）实现辅助例程；（2）实现独立的记号获取函数GetToken；（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。 12345678910111213141516171819202122232425262728293031323334">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-02T13:45:24.000Z">
+<meta property="article:modified_time" content="2021-01-02T14:29:44.258Z">
 <meta property="article:author" content="65zlui">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2021/01/02/byylswpu1/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>65zlui的博客</title>
+  <title>byylswpu1 | 65zlui的博客</title>
   
 
 
@@ -214,9 +218,10 @@
       <div class="main-inner">
         
 
-        <div class="content index posts-expand">
+        <div class="content post posts-expand">
           
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -234,10 +239,9 @@
 
     
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/02/byylswpu1/" class="post-title-link" itemprop="url">byylswpu1</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          byylswpu1
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -259,579 +263,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>二、实验内容<br>1、词法分析器设计<br>（1）单词的数据结构；<br>（2）记号类别编码；<br>（3）词法正规式；<br>（4）识别单词的状态转换图。<br>2、词法分析器实现<br>（1）实现辅助例程；<br>（2）实现独立的记号获取函数GetToken；<br>（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。</p>
+        <p>二、实验内容<br>1、词法分析器设计<br>（1）单词的数据结构；<br>（2）记号类别编码；<br>（3）词法正规式；<br>（4）识别单词的状态转换图。<br>2、词法分析器实现<br>（1）实现辅助例程；<br>（2）实现独立的记号获取函数GetToken；<br>（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。</p>
 <figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">scanner</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//记号类别号</span></span><br><span class="line">    <span class="keyword">enum</span> Token_Type</span><br><span class="line">    &#123;</span><br><span class="line">        ORIGIN, SCALE, ROT, IS, TO, <span class="comment">//语言保留字(一字一类别)</span></span><br><span class="line">        STEP, DRAW, FOR, FROM,      <span class="comment">//语言保留字</span></span><br><span class="line">        T,                          <span class="comment">//语言中唯一的变量</span></span><br><span class="line">        ID,                         <span class="comment">//标识符(若把关键字、变量都看成一种单词，可以使用本类别)</span></span><br><span class="line"></span><br><span class="line">        SEMICO, L_BRACKET, R_BRACKET, COMMA, <span class="comment">//分隔符(分号、左括号、右括号、逗号)</span></span><br><span class="line">        PLUS, MINUS, MUL, DIV, POWER,        <span class="comment">//运算符(加、减、乘、除、乘方)</span></span><br><span class="line"></span><br><span class="line">        FUNC,                                <span class="comment">//(语言提供的标准数学)函数</span></span><br><span class="line"></span><br><span class="line">        CONST_ID,                           <span class="comment">//数值常量</span></span><br><span class="line">        ERRTOKEN,                           <span class="comment">//错误单词</span></span><br><span class="line">        NONTOKEN							<span class="comment">//专用记号(单词序列结束)</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//记号数据类型</span></span><br><span class="line">    <span class="function"><span class="keyword">delegate</span> <span class="keyword">double</span> <span class="title">MathFunc</span>(<span class="params"><span class="keyword">double</span> d</span>)</span>;<span class="comment">//单参数的函数委托类型 delegate：代表</span></span><br><span class="line">    <span class="keyword">struct</span> Token</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> Token_Type type; 			<span class="comment">//类别号</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> lexeme;				<span class="comment">//标识符的字符串</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">double</span> <span class="keyword">value</span>;				<span class="comment">//数值常数的值</span></span><br><span class="line">        <span class="keyword">public</span> MathFunc func; 	            <span class="comment">//函数委托</span></span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Token</span>(<span class="params">Token_Type type = Token_Type.NONTOKEN, <span class="keyword">string</span> lexeme = <span class="string">""</span>, <span class="keyword">double</span> <span class="keyword">value</span> = <span class="number">0</span>, MathFunc func = <span class="literal">null</span></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">this</span>.type = type;</span><br><span class="line">            <span class="keyword">this</span>.lexeme = lexeme;</span><br><span class="line">            <span class="keyword">this</span>.<span class="keyword">value</span> = <span class="keyword">value</span>;</span><br><span class="line">            <span class="keyword">this</span>.func = func;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 预定义单词表</span></span><br><span class="line">        <span class="keyword">static</span> Token[] TokenTab = &#123;</span><br><span class="line">            <span class="comment">//符号常数</span></span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.CONST_ID,  <span class="string">"PI"</span>,       <span class="number">3.1415926</span>,  <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.CONST_ID,  <span class="string">"E"</span>,        <span class="number">2.71828</span>,    <span class="literal">null</span>),</span><br><span class="line">            <span class="comment">//变量(惟一的)</span></span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.T,         <span class="string">"T"</span>,        <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="comment">//数学函数</span></span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.FUNC,      <span class="string">"SIN"</span>,      <span class="number">0.0</span>,        Math.Sin),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.FUNC,      <span class="string">"COS"</span>,      <span class="number">0.0</span>,        Math.Cos),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.FUNC,      <span class="string">"TAN"</span>,      <span class="number">0.0</span>,        Math.Tan),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.FUNC,      <span class="string">"LN"</span>,       <span class="number">0.0</span>,        Math.Log),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.FUNC,      <span class="string">"EXP"</span>,      <span class="number">0.0</span>,        Math.Exp),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.FUNC,      <span class="string">"SQRT"</span>,     <span class="number">0.0</span>,        Math.Sqrt),</span><br><span class="line">            <span class="comment">//语句关键字</span></span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.ORIGIN,    <span class="string">"ORIGIN"</span>,   <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.SCALE,     <span class="string">"SCALE"</span>,    <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.ROT,       <span class="string">"ROT"</span>,      <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.IS,        <span class="string">"IS"</span>,       <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.FOR,       <span class="string">"FOR"</span>,      <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.FROM,      <span class="string">"FROM"</span>,     <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.TO,        <span class="string">"TO"</span>,       <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.STEP,      <span class="string">"STEP"</span>,     <span class="number">0.0</span>,        <span class="literal">null</span>),</span><br><span class="line">            <span class="keyword">new</span> Token(Token_Type.DRAW,      <span class="string">"DRAW"</span>,     <span class="number">0.0</span>,        <span class="literal">null</span>)</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">static</span> Token ErrorToken = <span class="keyword">new</span> Token(Token_Type.ERRTOKEN, <span class="string">"error token"</span>, <span class="number">-1</span>, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//c# 无 ungetc 函数（将一个字符退回输入流），所以用如下代码模拟</span></span><br><span class="line">        <span class="keyword">static</span> <span class="keyword">char</span> lastCh;</span><br><span class="line">        <span class="keyword">static</span> <span class="keyword">bool</span> ungetFlag = <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">//读取一个字符</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">char</span> <span class="title">getChar</span>(<span class="params">StreamReader sr</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!ungetFlag)</span><br><span class="line">            &#123;</span><br><span class="line">                lastCh = (<span class="keyword">char</span>)sr.Read();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                ungetFlag = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> lastCh;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//退回一个字符</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">ungetChar</span>(<span class="params">StreamReader sr</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            ungetFlag = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//c 语言的 ungetc 函数，在 c# 中的模拟</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断标识符是否语言的预定义单词</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> Token <span class="title">IsKeyWords</span>(<span class="params"><span class="keyword">string</span> id</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">int</span> i;</span><br><span class="line">            Token token = <span class="keyword">new</span> Token();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; TokenTab.Length; i++) <span class="keyword">if</span> (<span class="keyword">string</span>.Equals(TokenTab[i].lexeme, id)) <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (i &lt; TokenTab.Length)</span><br><span class="line">                token = TokenTab[i];</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                token = ErrorToken;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> token;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//显示单词</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeToken</span>(<span class="params">Token token</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">if</span> (token.type == Token_Type.FUNC)</span><br><span class="line">                Console.WriteLine(<span class="string">"&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;"</span>, (<span class="keyword">int</span>)token.type, token.lexeme, token.<span class="keyword">value</span>, (<span class="keyword">string</span>)token.func.Method.Name);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                Console.WriteLine(<span class="string">"&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;"</span>, (<span class="keyword">int</span>)token.type, token.lexeme, token.<span class="keyword">value</span>, <span class="string">""</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getToken</span>(<span class="params">StreamReader sr</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="comment">//从源代码逐个读取字符</span></span><br><span class="line">            Token token;</span><br><span class="line">            <span class="keyword">char</span> c, preCh;</span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                c = getChar(sr);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'-'</span> || c == <span class="string">'/'</span>)</span><br><span class="line">                &#123;<span class="comment">//如果是注释</span></span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);<span class="comment">//读取新字符</span></span><br><span class="line">                    <span class="keyword">if</span> (c == preCh)</span><br><span class="line">                    &#123; <span class="comment">//判断注释符引导字符</span></span><br><span class="line">                        <span class="comment">//去掉注释符引导字符</span></span><br><span class="line">                        <span class="keyword">while</span> (c != <span class="string">'\n'</span> &amp;&amp; !sr.EndOfStream)</span><br><span class="line">                        &#123;</span><br><span class="line">                            c = getChar(sr);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        c = preCh;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'+'</span>)</span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.PLUS, <span class="string">"+"</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">','</span>)</span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.COMMA, <span class="string">","</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">';'</span>)</span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.SEMICO, <span class="string">";"</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">'('</span>)</span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.L_BRACKET, <span class="string">"("</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">')'</span>)</span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.R_BRACKET, <span class="string">")"</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">'-'</span>)</span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.MINUS, <span class="string">"-"</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">'/'</span>)</span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.DIV, <span class="string">"/"</span>);</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">'*'</span>)</span><br><span class="line">                &#123;<span class="comment">//乘号会有*和乘方**</span></span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);<span class="comment">//读取新字符</span></span><br><span class="line">                    <span class="keyword">if</span> (c == preCh)</span><br><span class="line">                    &#123;</span><br><span class="line">                        token = <span class="keyword">new</span> Token(Token_Type.POWER, <span class="string">"**"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;<span class="comment">//否则退回一个字符</span></span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        token = <span class="keyword">new</span> Token(Token_Type.MUL, <span class="string">"*"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">char</span>.IsLetter(c))</span><br><span class="line">                &#123; <span class="comment">//读到的是字母</span></span><br><span class="line">                    <span class="keyword">string</span> buf = <span class="string">""</span>;<span class="comment">//临时缓冲buf</span></span><br><span class="line">                    buf += <span class="keyword">char</span>.ToUpper(c);</span><br><span class="line">                    <span class="comment">//遍历后续字符</span></span><br><span class="line">                    <span class="keyword">for</span> (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        <span class="keyword">if</span> (<span class="keyword">char</span>.IsLetterOrDigit(c))</span><br><span class="line">                        &#123; <span class="comment">//如果仍是字母/数字</span></span><br><span class="line">                            buf += <span class="keyword">char</span>.ToUpper(c);</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span> &#123; <span class="keyword">break</span>; &#125;<span class="comment">//读完</span></span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = IsKeyWords(buf);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">char</span>.IsDigit(c))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">string</span> buf = <span class="string">""</span>;</span><br><span class="line">                    buf += c;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">for</span> (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        <span class="keyword">if</span> (<span class="keyword">char</span>.IsDigit(c) || c == <span class="string">'.'</span>)</span><br><span class="line">                        &#123; <span class="comment">//如果仍是数字或小数点</span></span><br><span class="line">                            buf += c;</span><br><span class="line">                        &#125;</span><br><span class="line">                        <span class="keyword">else</span> &#123; <span class="keyword">break</span>; &#125;<span class="comment">//读完</span></span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.CONST_ID, <span class="string">""</span>, Convert.ToDouble(buf));</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    token = ErrorToken;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (sr.EndOfStream)</span><br><span class="line">                &#123; <span class="comment">//判断文件读取结束</span></span><br><span class="line">                    token = <span class="keyword">new</span> Token(Token_Type.NONTOKEN);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                writeToken(token);<span class="comment">//输出单词</span></span><br><span class="line">            &#125;</span><br><span class="line">            writeToken(token);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">"&#123;0,-11&#125;&#123;1, -12&#125;&#123;2, -12&#125;&#123;3, -20&#125;"</span>, <span class="string">"记号类别"</span>, <span class="string">"字符串"</span>, <span class="string">"常数值"</span>, <span class="string">"函数指针"</span>);</span><br><span class="line">            Console.WriteLine(<span class="string">"-------------------------------------------------------"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//打开源代码文件</span></span><br><span class="line">            StreamReader sr;</span><br><span class="line">            <span class="keyword">if</span> (args.Length == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(<span class="string">"p89-8-10.draw"</span>);<span class="comment">//文件在项目的子目录 bin\debug 下</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(args[<span class="number">0</span>].ToString());<span class="comment">//允许通过命令行参数，给出源代码文件名</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            getToken(sr);</span><br><span class="line">            sr.Close();</span><br><span class="line">            Console.ReadLine();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/31/eoj3021/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/31/eoj3021/" class="post-title-link" itemprop="url">eoj3021</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-12-31 20:53:22 / Modified: 20:57:24" itemprop="dateCreated datePublished" datetime="2020-12-31T20:53:22+08:00">2020-12-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="3021-字符排序"><a href="#3021-字符排序" class="headerlink" title="3021. 字符排序"></a>3021. 字符排序</h1><ul>
-<li>单点时限: 2.0 sec</li>
-<li>内存限制: 256 MB<br>  给定一个句子，要求将其字符重新排序输出，其中的英文字母按照字母表顺序输出，其他字符的顺序和位置不变，输出后的单词长度与原句子相同。<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2>第 1 行：一个整数<br>t(1&lt;=t&gt;=10)为问题数<br>为问题数。<br>第2t+1行，每组测试数据一行，包括一个字符串（长度最大为200 ），由英文字母（均为大写字母）及其他字符组成，由空格分开的连续字符串视作一个单词。<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2>对于每个问题，输出一行问题的编号（0 开始编号，格式：case #0: 等），然后在一行中输出重新排序后的字符串。<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3>3<br>THE BREAD IS SOLD AT $10 PER POUND<br>500 DONGCHUAN ROAD EAST CHINA NORMAL UNIVERSITY SHANGHAI CHINA 200241<br>#9724 $500 1234<h3 id="output"><a href="#output" class="headerlink" title="output"></a>output</h3>case #0:<br>AAB DDDEE EH ILNO OP $10 PRR SSTTU<br>case #1:<br>500 AAAAAAAAC CCDD EEGG HHHHH IIIIIL MNNNNNNNOO ORRRSSST TUUVY 200241<br>case #2:<br>#9724 $500 1234</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">int</span> []a=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        Scanner scanner=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String str;</span><br><span class="line">        <span class="keyword">char</span> ctemp;</span><br><span class="line">        <span class="keyword">int</span> n,u,j,temp;</span><br><span class="line">        n = Integer.parseInt(scanner.nextLine());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n ;i++ )&#123;</span><br><span class="line">            str=scanner.nextLine();</span><br><span class="line">            <span class="keyword">char</span> [] arr= str.toCharArray();</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;str.length();j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(Character.isLetter(arr[j]))</span><br><span class="line">                    a[(arr[j])-<span class="string">'A'</span>]++;<span class="comment">//储存每个字母的数量</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            temp=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; str.length(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (Character.isLetter(arr[j])) &#123;</span><br><span class="line">                    <span class="keyword">while</span> (a[temp] == <span class="number">0</span>) temp++;</span><br><span class="line">                    ctemp=<span class="string">'A'</span>;</span><br><span class="line"></span><br><span class="line">                    arr[j] = (<span class="keyword">char</span>)(ctemp+temp) ;</span><br><span class="line">                    a[temp]--;<span class="comment">//每分配到arr中一个减少一个a中数量</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">"case #"</span>+i+<span class="string">":"</span>);</span><br><span class="line">            System.out.println(arr);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/31/eoj3021/" rel="prev" title="eoj3021">
+      <i class="fa fa-chevron-left"></i> eoj3021
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/31/paixu/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/31/paixu/" class="post-title-link" itemprop="url">paixu</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-12-31 20:53:02" itemprop="dateCreated datePublished" datetime="2020-12-31T20:53:02+08:00">2020-12-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/19/os2019a/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/19/os2019a/" class="post-title-link" itemprop="url">os2019a</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-12-19 18:10:40" itemprop="dateCreated datePublished" datetime="2020-12-19T18:10:40+08:00">2020-12-19</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/19/essay02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/19/essay02/" class="post-title-link" itemprop="url">essay02</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-12-19 16:40:49" itemprop="dateCreated datePublished" datetime="2020-12-19T16:40:49+08:00">2020-12-19</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/14/essay00/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/14/essay00/" class="post-title-link" itemprop="url">essay00</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-12-14 12:53:47 / Modified: 13:06:09" itemprop="dateCreated datePublished" datetime="2020-12-14T12:53:47+08:00">2020-12-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>生命，固然短暂的，就像清晨的露珠，还未见艳阳亟待挥发。<br>真友，固然稀缺的，人群繁盛，可惜不宜寄情与人，无论寄情于人，于物，难免到最后不感到背叛，也许如单相思一般，不如投资于自己，父母亦有其私心，人不免的，难有人能理解一另一个人人的难过处。<br>喧喧闹闹，炮竹声响，喜庆的气氛中有藏着多少的虚伪。<br>我不是职业演员，可我却带着一张张面具，我很累，很困，很疲惫，<br>不如就此睡去？<br>不能的罢，<br>离去了此世你连发声的机会都不再拥有。<br>邻里，保持你的“secret”，<br>故乡，我不曾拥有，仿佛无家可归的孤儿，四海漂泊，颠沛流离。<br>学不懂多少东洋文字？还是压根就没想使劲？</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/10/words2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/10/words2/" class="post-title-link" itemprop="url">words2</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-12-10 20:17:31 / Modified: 21:39:18" itemprop="dateCreated datePublished" datetime="2020-12-10T20:17:31+08:00">2020-12-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>gloomier gloomy黑暗的阴暗的<br>mismanagement 收敛，汇聚，<br>coincide with 与…一致<br>shift n.&amp;v.转移；改变<br>tremor n.战栗，轻微地震<br>ore n.矿<br>outflow n.外流；流出量<br>recession n.经济衰退<br>emerging a.刚出现的,新兴的<br>decelerating a.减速制动<br>contraction n.收缩<br>corruption n.腐败; 贪污; 贿赂; 受贿<br>constraint 约束,限制,限定，严管<br>interpret 解释，口译，说明<br>conversely 相反地<br>horizontal 水平的/同一阶层的<br>confirming 证实<br>marginal 边缘的<br>eurozone 欧元区<br>federal reserve 美联储<br>bond——buying 债券购买<br>shifting 转移；转变；变化；移位<br>adj.变动的；移动的；想尽办法的<br>collapse v.崩溃；折叠；坍塌；暴跌<br>absurd 荒谬的可笑的<br>abuse vt.滥用；虐待<br>abusive a.辱骂的》滥用的》虐待的<br>affix vt.署名；贴上；n.词缀<br>affluent a.丰富的；富裕的；支流<br>afloat a.在海上的<br>averger n.复仇者<br>assassin n.刺客<br>berserker n.狂战士<br>scandal n.丑闻丑行<br>emerging market 新兴市场<br>sniffle n.抽鼻子（声)<br>estimate v.信任<br>prominent adj.重要的；著名的；杰出的；显眼的<br>emerge v 浮现显现；暴露；露出真相<br>estimate n.&amp;v.估计估价<br>hardy a.坚强的；勇敢的<br>grin n.&amp;vi&amp;vt. 露齿笑<br>groove n.凹槽<br>        vi.形成沟槽<br>gut n.勇气；内脏<br>harmony n.调和，协调，和谐<br>hawk n.鹰<br>hook n.钩；挂钩 vt.钩住<br>hop n.蹦跳<br>hospitable a.热情友好的<br>howl n.嗥叫；怒号<br>    vt.&amp;vi 咆哮；n.怒吼<br>humid a.潮湿的；湿润的<br>iceberg 冰山<br>idiot 傻瓜笨蛋<br>ignorant 不知道的，无知的<br>illusion 幻觉<br>immense 巨大的极好的<br>immigrant n.移民的，移民<br>grid n.网格，格子<br>grin vt.vi.露齿笑<br>grind vt.磨碎,磨快<br>grip vt.握紧,抓牢,紧握<br>harness vt. 治理，马具<br>harsh 严厉的，刺耳的<br>hasten vt.催促， vi.赶紧<br>hasty a.急速的，急促的<br>hawk vt.兜售眼界叫卖<br>hedge 篱笆，障碍物<br>hectic 兴奋的 狂热的<br>heroin n.海洛因，咖啡<br>hesitate vi.犹豫，踌躇，含糊<br>hierarchy n.层级,等级制度<br>highlight vt.突出 n.精彩的部分;加亮区<br>hike vt.&amp;n. 远足;徒步旅行<br>hive n.蜂房;热闹的场所<br>hockey n.曲棍球，<br>hollow a。空的，空洞的<br>imply vt。暗示 意指<br>impact 给予特定品质<br>keen 热心的<br>jury n.陪审团，评奖团<br>kidney 肾<br>lad 少年<br>landmark 陆标，地标<br>landscape n.风景，地形<br>layman 外行，门外汉，俗人<br>layoff 临时解雇<br>layout 布局安排设计<br>leak vi.漏，泄露，漏洞<br>lease 出租<br>legacy 遗产<br>legitimate 合法的<br>lenient 宽大的仁慈的<br>lever 杠杆<br>levy 征兵<br>liable 易于…的；可能的<br>license n.许可;执照vt.。.<br>ctrl+.中英文标点切换<br>loyalty n.忠诚,忠心<br>loot 战利品<br>loop 环<br>loom 织布机<br>    在织布机上织<br>    loophole 漏洞枪眼<br>    lotion 洗液,洗涤剂<br>    lottery 彩票,碰运气的事<br>    luxury 奢侈<br>    lyric 抒情诗,歌词<br>    magnificent a.壮丽的 华丽的<br>    lash vt.&amp;vi. 鞭打,冲击,摆动 n.鞭打辫子<br>    layman n.外行;门外汉;俗人<br>    lawsuit n.诉讼,诉讼案件<br>    lash vt 鞭打冲击摆动 n.鞭打鞭子<br>    loyal a.忠诚的,忠心的<br>    lotion n.洗液,洗涤剂<br>    lottery n.彩票,碰运气的事,抽奖<br>    lounge n.休息室,躺椅vi 闲逛<br>    lure 诱惑,诱饵,<br>    magnificent a.壮丽的华丽的<br>    magnify vt.放大夸大赞美<br>lash 鞭打<br>malice n.恶意,怨恨<br>maintain 维持,赡养,维修<br>manipulate  vt.操纵,操作<br>luminous a.发光的;明亮的;清楚的<br>loot 战利品<br>medieval 中世纪的;中古的<br>mentor n.指导者,良师益友</p>
-<p>malice n.恶意,怨恨,预谋<br>malignant a.恶性的,有害的,恶意的<br>mandate  vt.授权,托管 n.授权,命令<br>manifest vt.证明,表明,显示, vi.显示出现<br>manipulate vt.操纵,操作<br>mansion 大厦<br>mar 损毁,毁伤<br>marble 大理石,大理石制品<br>plug n.塞子,插头</p>
-<p>vt.塞<br>plumber 水管工<br>poke vt 戳刺<br>porch n.门廊<br>portable 轻便的手提的<br>potent a.有效的,强有力的<br>plea n.恳求,辩护,vt.为…辩护<br>plead vi 恳求,辩护 vt.为…辩护<br>pledge<br>polytechnic 理工科学校, a.各种工艺的,综合技术的<br>peddle 叫卖,兜售<br>peel 剥落<br>peg 钉,桩,借口,限制<br>scenario n.方案,情节,剧本<br>scorn 轻蔑,嘲笑</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/07/net00/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/07/net00/" class="post-title-link" itemprop="url">net00</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-12-07 17:07:29" itemprop="dateCreated datePublished" datetime="2020-12-07T17:07:29+08:00">2020-12-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/07/cet6-words-00/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/07/cet6-words-00/" class="post-title-link" itemprop="url">cet6_words_00</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-12-07 13:23:57 / Modified: 13:48:14" itemprop="dateCreated datePublished" datetime="2020-12-07T13:23:57+08:00">2020-12-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>day2&amp;&amp;day3<br>eradicate vt.连根拔除<br>undo vt.解开；取消<br>erase vt.擦掉<br>removal n.除去;移动<br>crackdown n.严厉打击<br>suppress vt.压制;查禁;组织…的生长（或发展)<br>oppress vt.压迫；使（心情等）沉重<br>repression n.镇压<br>repressive a.压制的;残酷的<br>tolerant a.宽容的；耐…的<br>withstand n.抵抗<br>resist v.抵抗；抵制<br>resistant a.抵抗的<br>boycott 抵制<br>protest v.坚决主张 n.抗议<br>rebel v.反叛 n.反叛分子<br>revolt n./vi。反叛，反抗，使生反感<br>riot vi.聚众闹事 n.暴乱；极度丰富<br>insurgent n.起义者 a.叛乱的<br>deport vt.把…驱逐出境<br>eject vt.喷射；驱逐 v.弹出<br>expel vt.驱逐；排出；把。。。开除<br>exile n.流放; 流亡; 放逐；流放外国者；被流放者&amp;&amp;v.<br>clasp n.扣环；紧握 vt.扣紧；握紧<br>hinge n.铰链<br>hook n.钩 vt.钩住<br>enlightened vt.启发<br>conduct v.<br>tutorial 导师的家庭教育的<br>mislead vt.<br>mission<br>calling<br>vocational<br>clamp<br>carve vt.雕刻，切<br>soak<br>absorb v。吸收<br>digestive a.助消化的<br>sip n.小口喝<br>lick vt<br>aid n.辅助物<br>conflict<br>contradict反驳相矛盾<br>mastermind 策划<br>graphic 图标的生动的<br>hamper 妨碍大篮子<br>inhibit</p>
-<p>interfere 干涉<br>intervene 干涉干扰<br>precisous<br>junk废旧物品<br>peg小钉<br>stack柱<br>wedge<br>accumulate 积累 数量增加<br>assemble 人 集合 物 装配<br>converge 会和<br>rally 集合回复健康<br>disperse 分散使分散<br>centralization<br>monoploy<br>contact 与取得联系<br>link v.连接环节<br>isolate vt.使隔离<br>insulate 使隔离；使绝缘<br>segregate 使隔离<br>partition 分割物，分割，分开<br>disense 节省没有也行<br>allotment 分配分配物<br>reject 拒绝退回<br>plus 多加加号优势<br>deduct 扣除<br>substract<br>multiply 乘<br>division n。分开分配分歧部门<br>decrease 减少<br>diminish 减少降低<br>surge 激增<br>edit 编辑，剪辑主编<br>amend v 修改<br>modify 修改修饰<br>revise 复习修订<br>judge 法官<br>referee  裁判仲裁者<br>adjust vt 。适应调整<br>affection 喜爱<br>beloved 心爱的 心爱的人<br>disgust 使厌恶<br>resent 怨恨<br>exterior 外部的<br>external 外部的<br>internal 内部的国内的内心的<br>interior 内部的内地<br>alternative 可供选择的<br>option选择权<br>optional<br>candidate 候选人考生<br>density 密集密度<br>susceptible<br>narrative 叙述的<br>foil 挫败<br>nil 无 无价值的东西<br>desperate 绝望的</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/18/ppm-reader-csharp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="65zlui">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="65zlui的博客">
-    </span>
-
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/18/ppm-reader-csharp/" class="post-title-link" itemprop="url">ppm_reader_csharp</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-11-18 21:49:22 / Modified: 21:52:39" itemprop="dateCreated datePublished" datetime="2020-11-18T21:49:22+08:00">2020-11-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>公司需要为客户开发一款用于查看PPM图像文件的软件。软件部经理决定将该项工作交付由你完成。请通过下述PPM图像文件的相关背景资料，客户粗略的软件需求说明及概要编码提示，结合桌面应用程序开发所学知识，顺利完成上述软件的开发工作。</p>
-<ol>
-<li>PPM文件介绍：PPM文件是一种非常简约的图像文件，有其自己的文件格式，PPM文件主要由文件头以及文件体两大部分组成。文件头部分确定了该PPM图像文件的格式，大小， 颜色等基本信息； 文件体部分具体存储该PPM图像文件中每个像素点的具体颜色数据。下面我们以素材文件夹中的test1.ppm文件为例。<br>文件头部分由三行构成：<br>第一行是魔数P3，表示该文件是一个像素图文本文件。（像素图说明每个像素点由RGB三个颜色分量表示，每个分量一个字节。由于是文本文件，你可以用记事本等打开浏览该文件内容。）<br>第二行是该图像的大小，先是列像素数，后是行像素数，中间用一个空格隔开。（表明该图像的分辨率为400*300）<br>第三行表示每个颜色分量的最大取值。（数值255表明每个RGB分量取值范围为0~255）</li>
-</ol>
-<p>从第四行开始到文件结尾的数据，都是该图像每个像素点的具体RGB颜色信息。数据值之间由空格隔开。例如：本实例图像的第一个像素点RGB颜色为（69，55，62）， 第二个像素点的RGB颜色为（55，55，55）。<br>2.    软件需求及编码提示：</p>
-<ul>
-<li><p>该软件只需要一个窗体，该窗体名称为FrmPPMViewer， 该窗体标题为“PPM 文件查看器”， 窗体大小为400*340。</p>
-</li>
-<li><p>该窗体包含一个MenuStrip菜单栏控件，菜单栏包含一级主菜单“文件”，一级主菜单“文件”菜单栏下包含“打开”，以及“退出”两个二级菜单。</p>
-</li>
-<li><p>当用户点击“打开”菜单后，通过OpenFileDialog对象，载入某个PPM文件。通过OpenFileDialog对象的ShowDialog（）方法显示文件打开对话框，通过OpenFileDialog对象的FileName属性可以获得用户希望载入的PPM文件名。</p>
-</li>
-<li><p>获得了PPM文件名称后，即可通过StreamReader对象进行文件的解析操作。String对象的Split( )方法，对于像素点颜色数值的分割将会大有帮助， 该方法以某个指定的分隔符（本例就是以空格为分隔符），将String对象分割成若干个小的子字符串，并返回，返回数据类型为string[]。</p>
-</li>
-<li><p>通过解析出来得到的PPM图像大小，新建一个大小相同的Bitmap对象。</p>
-</li>
-<li><p>由于所有像素点数值信息存储在string[]数组中，需要利用int.Parse(string s)方法，实现string到int数据之间的转换。利用Bitmap对象的SetPixel( )方法写入。通过for循环，写入所有像素点颜色信息后，即可得到一个可完整显示的图像。</p>
-</li>
-<li><p>写入完毕后，将该Bitmap对象，设置为FrmPPMViewer的BackgroundImage属性，即可在该窗体中显示最终图像。</p>
-</li>
-<li><p>当用户点击菜单栏的“退出”菜单后，关闭窗体，结束程序。<br>PPM的文件格式<br>第一行说明是什么格式<br>第二行宽高<br>第三行最大的r or p or g的值</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.ComponentModel;</span><br><span class="line"><span class="keyword">using</span> System.Data;</span><br><span class="line"><span class="keyword">using</span> System.Drawing;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"><span class="keyword">using</span> System.Windows.Forms;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">FrmPPMViewer</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Form1</span> : <span class="title">Form</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Form1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Form1_Load</span>(<span class="params"><span class="keyword">object</span> sender, EventArgs e</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">void</span> 打开ToolStripMenuItem_Click(<span class="keyword">object</span> sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            OpenFileDialog openFileDialog = <span class="keyword">new</span> OpenFileDialog();</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                openFileDialog.InitialDirectory = <span class="string">@"D:\"</span>;</span><br><span class="line">                openFileDialog.Filter = <span class="string">"(ppm文件)*.ppm|*.ppm"</span>;</span><br><span class="line">                openFileDialog.ShowDialog();</span><br><span class="line"></span><br><span class="line">                StreamReader sr = <span class="keyword">new</span> StreamReader(openFileDialog.FileName);</span><br><span class="line">                sr.ReadLine();</span><br><span class="line">                String x = sr.ReadLine();</span><br><span class="line">                String[] g = x.Split(<span class="string">' '</span>);</span><br><span class="line">                sr.ReadLine();</span><br><span class="line">                <span class="keyword">int</span>[] intArray = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; intArray.Length; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    intArray[i] = <span class="keyword">int</span>.Parse(g[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">string</span> strTotal = sr.ReadToEnd();</span><br><span class="line">                <span class="keyword">string</span>[] pixels = strTotal.Split(<span class="string">' '</span>);<span class="comment">//以空格为分割点的意思</span></span><br><span class="line">                <span class="keyword">int</span> v = <span class="number">0</span>;</span><br><span class="line">                </span><br><span class="line"></span><br><span class="line">                </span><br><span class="line">                Bitmap bitmap = <span class="keyword">new</span> Bitmap(intArray[<span class="number">0</span>], intArray[<span class="number">1</span>]);<span class="comment">//创建ppm相对应大小得bitmao</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; intArray[<span class="number">1</span>]; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; intArray[<span class="number">0</span>]; j++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        bitmap.SetPixel(j, i, Color.FromArgb(<span class="keyword">int</span>.Parse(pixels[v]), <span class="keyword">int</span>.Parse(pixels[v + <span class="number">1</span>]), <span class="keyword">int</span>.Parse(pixels[v + <span class="number">2</span>])));</span><br><span class="line">                        <span class="comment">//将RGB赋给bitmap（j，i）；</span></span><br><span class="line">                        v += <span class="number">3</span>;<span class="comment">//因为相邻得三个分别为RG得值</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">this</span>.BackgroundImage = bitmap;<span class="comment">//设置本窗体的背景图片为所取得bitmap</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span> &#123; &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">void</span> 退出ToolStripMenuItem_Click(<span class="keyword">object</span> sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Application.Exit();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
 
 
 
