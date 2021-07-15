@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/muse/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/muse/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/muse/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/muse/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5AUIVYTbHIAuz-eQtxSfZbWW5eg9_EVZMSQycIuXrG0">
+
+<link rel="stylesheet" href="/muse/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"theme-next.js.org","root":"/muse/","images":"/muse/images","scheme":"Muse","version":"8.6.1","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/muse/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
+<meta name="description" content="公司需要为客户开发一款用于查看PPM图像文件的软件。软件部经理决定将该项工作交付由你完成。请通过下述PPM图像文件的相关背景资料，客户粗略的软件需求说明及概要编码提示，结合桌面应用程序开发所学知识，顺利完成上述软件的开发工作。     PPM文件介绍：PPM文件是一种非常简约的图像文件，有其自己的文件格式，PPM文件主要由文件头以及文件体两大部分组成。文件头部分确定了该PPM图像文件的格式，大小，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ppm_reader_csharp">
+<meta property="og:url" content="https://theme-next.js.org/muse/ppm-reader-csharp/index.html">
+<meta property="og:site_name" content="NexT">
+<meta property="og:description" content="公司需要为客户开发一款用于查看PPM图像文件的软件。软件部经理决定将该项工作交付由你完成。请通过下述PPM图像文件的相关背景资料，客户粗略的软件需求说明及概要编码提示，结合桌面应用程序开发所学知识，顺利完成上述软件的开发工作。     PPM文件介绍：PPM文件是一种非常简约的图像文件，有其自己的文件格式，PPM文件主要由文件头以及文件体两大部分组成。文件头部分确定了该PPM图像文件的格式，大小，">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-18T21:49:22.000Z">
+<meta property="article:modified_time" content="2020-11-18T13:52:39.498Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Hexo, NexT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://theme-next.js.org/muse/ppm-reader-csharp/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://theme-next.js.org/muse/ppm-reader-csharp/","path":"ppm-reader-csharp/","title":"ppm_reader_csharp"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>ppm_reader_csharp | NexT</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108155018-3"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-108155018-3","only_pageview":false}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/muse/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/muse/atom.xml" title="NexT" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/muse/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">NexT</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Theme for Hexo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/muse/" rel="section"><i class="fa fa-bell fa-fw"></i>Home</a></li>
+        
+            
+  <li class="menu-item menu-item-docs"><a href="/muse/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
+
+
+      
+        <li class="menu-item menu-item-plugins"><a href="/muse/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
+        <li class="menu-item menu-item-archives"><a href="/muse/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">44</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Theme NexT"
+      src="/muse/images/logo.svg">
+  <p class="site-author-name" itemprop="name">Theme NexT</p>
+  <div class="site-description" itemprop="description">Stay Simple. Stay NexT.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/muse/archives/">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;next-theme"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/muse/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+<div class="cc-license animated" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0" title="Fork NexT on GitHub" aria-label="Fork NexT on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/muse/ppm-reader-csharp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/muse/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ppm_reader_csharp<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvdGhlbWUtbmV4dC1kb2NzL2VkaXQvbWFzdGVyL3NvdXJjZS9fcG9zdHMvcHBtLXJlYWRlci1jc2hhcnAubWQ=" title="Edit this post"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-11-18 21:49:22" itemprop="dateCreated datePublished" datetime="2020-11-18T21:49:22Z">2020-11-18</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/muse/ppm-reader-csharp/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="ppm-reader-csharp/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>公司需要为客户开发一款用于查看PPM图像文件的软件。软件部经理决定将该项工作交付由你完成。请通过下述PPM图像文件的相关背景资料，客户粗略的软件需求说明及概要编码提示，结合桌面应用程序开发所学知识，顺利完成上述软件的开发工作。</p>
+<ol>
+<li>   PPM文件介绍：PPM文件是一种非常简约的图像文件，有其自己的文件格式，PPM文件主要由文件头以及文件体两大部分组成。文件头部分确定了该PPM图像文件的格式，大小， 颜色等基本信息； 文件体部分具体存储该PPM图像文件中每个像素点的具体颜色数据。下面我们以素材文件夹中的test1.ppm文件为例。<br>文件头部分由三行构成：<br>第一行是魔数P3，表示该文件是一个像素图文本文件。（像素图说明每个像素点由RGB三个颜色分量表示，每个分量一个字节。由于是文本文件，你可以用记事本等打开浏览该文件内容。）<br>第二行是该图像的大小，先是列像素数，后是行像素数，中间用一个空格隔开。（表明该图像的分辨率为400*300）<br>第三行表示每个颜色分量的最大取值。（数值255表明每个RGB分量取值范围为0~255）</li>
+</ol>
+<p>从第四行开始到文件结尾的数据，都是该图像每个像素点的具体RGB颜色信息。数据值之间由空格隔开。例如：本实例图像的第一个像素点RGB颜色为（69，55，62）， 第二个像素点的RGB颜色为（55，55，55）。<br>2.    软件需求及编码提示：</p>
+<ul>
+<li>   该软件只需要一个窗体，该窗体名称为FrmPPMViewer， 该窗体标题为“PPM 文件查看器”， 窗体大小为400*340。</li>
+<li>   该窗体包含一个MenuStrip菜单栏控件，菜单栏包含一级主菜单“文件”，一级主菜单“文件”菜单栏下包含“打开”，以及“退出”两个二级菜单。</li>
+<li>   当用户点击“打开”菜单后，通过OpenFileDialog对象，载入某个PPM文件。通过OpenFileDialog对象的ShowDialog（）方法显示文件打开对话框，通过OpenFileDialog对象的FileName属性可以获得用户希望载入的PPM文件名。</li>
+<li> 获得了PPM文件名称后，即可通过StreamReader对象进行文件的解析操作。String对象的Split( )方法，对于像素点颜色数值的分割将会大有帮助， 该方法以某个指定的分隔符（本例就是以空格为分隔符），将String对象分割成若干个小的子字符串，并返回，返回数据类型为string[]。</li>
+<li>   通过解析出来得到的PPM图像大小，新建一个大小相同的Bitmap对象。</li>
+<li>   由于所有像素点数值信息存储在string[]数组中，需要利用int.Parse(string s)方法，实现string到int数据之间的转换。利用Bitmap对象的SetPixel( )方法写入。通过for循环，写入所有像素点颜色信息后，即可得到一个可完整显示的图像。</li>
+<li>   写入完毕后，将该Bitmap对象，设置为FrmPPMViewer的BackgroundImage属性，即可在该窗体中显示最终图像。</li>
+<li>   当用户点击菜单栏的“退出”菜单后，关闭窗体，结束程序。<br>PPM的文件格式<br>第一行说明是什么格式<br>第二行宽高<br>第三行最大的r or p or g的值<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.ComponentModel;</span><br><span class="line">using System.Data;</span><br><span class="line">using System.Drawing;</span><br><span class="line">using System.IO;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows.Forms;</span><br><span class="line"></span><br><span class="line">namespace FrmPPMViewer</span><br><span class="line">&#123;</span><br><span class="line">    public partial class Form1 : Form</span><br><span class="line">    &#123;</span><br><span class="line">        public Form1()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_Load(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            OpenFileDialog openFileDialog = new OpenFileDialog();</span><br><span class="line">            try</span><br><span class="line">            &#123;</span><br><span class="line">                openFileDialog.InitialDirectory = @&quot;D:\&quot;;</span><br><span class="line">                openFileDialog.Filter = &quot;(ppm文件)*.ppm|*.ppm&quot;;</span><br><span class="line">                openFileDialog.ShowDialog();</span><br><span class="line"></span><br><span class="line">                StreamReader sr = new StreamReader(openFileDialog.FileName);</span><br><span class="line">                sr.ReadLine();</span><br><span class="line">                String x = sr.ReadLine();</span><br><span class="line">                String[] g = x.Split(&#x27; &#x27;);</span><br><span class="line">                sr.ReadLine();</span><br><span class="line">                int[] intArray = new int[2];</span><br><span class="line">                for (int i = 0; i &lt; intArray.Length; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    intArray[i] = int.Parse(g[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                string strTotal = sr.ReadToEnd();</span><br><span class="line">                string[] pixels = strTotal.Split(&#x27; &#x27;);//以空格为分割点的意思</span><br><span class="line">                int v = 0;</span><br><span class="line">                </span><br><span class="line"></span><br><span class="line">                </span><br><span class="line">                Bitmap bitmap = new Bitmap(intArray[0], intArray[1]);//创建ppm相对应大小得bitmao</span><br><span class="line">                for (int i = 0; i &lt; intArray[1]; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    for (int j = 0; j &lt; intArray[0]; j++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        bitmap.SetPixel(j, i, Color.FromArgb(int.Parse(pixels[v]), int.Parse(pixels[v + 1]), int.Parse(pixels[v + 2])));</span><br><span class="line">                        //将RGB赋给bitmap（j，i）；</span><br><span class="line">                        v += 3;//因为相邻得三个分别为RG得值</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                this.BackgroundImage = bitmap;//设置本窗体的背景图片为所取得bitmap</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            catch &#123; &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Application.Exit();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/muse/vivaldi-introduce/" rel="prev" title="vivaldi_introduce">
+                  <i class="fa fa-chevron-left"></i> vivaldi_introduce
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/muse/cet6-words-00/" rel="next" title="cet6_words_00">
+                  cet6_words_00 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2014 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NexT</span>
+</div>
+  <div class="powered-by">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <a href="https://theme-next.js.org/muse/">NexT.Muse</a>
+  </div><div class="footer-custom">
+Website source code <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG8tbmV4dC9oZXhvLW5leHQuZ2l0aHViLmlv">here</span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/schemes/muse.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/pjax.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"hexo-next/community"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/chat/gitter.min.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.0/dist/mermaid.min.js","integrity":"sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/tags/mermaid.min.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/math/mathjax.min.js"></script>
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"next-theme","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/disqus.min.js"></script>
+
+</body>
+</html>

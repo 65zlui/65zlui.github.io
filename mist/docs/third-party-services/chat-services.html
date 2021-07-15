@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/mist/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/mist/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/mist/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/mist/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5AUIVYTbHIAuz-eQtxSfZbWW5eg9_EVZMSQycIuXrG0">
+
+<link rel="stylesheet" href="/mist/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"theme-next.js.org","root":"/mist/","images":"/mist/images","scheme":"Mist","version":"8.6.1","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/mist/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
+<meta name="description" content="NexT User Docs – Third-party Service Integration – Chat Services">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chat Services">
+<meta property="og:url" content="https://theme-next.js.org/mist/docs/third-party-services/chat-services.html">
+<meta property="og:site_name" content="NexT">
+<meta property="og:description" content="NexT User Docs – Third-party Service Integration – Chat Services">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-15T13:02:41.215Z">
+<meta property="article:modified_time" content="2021-07-15T13:02:41.215Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Hexo, NexT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://theme-next.js.org/mist/docs/third-party-services/chat-services">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"https://theme-next.js.org/mist/docs/third-party-services/chat-services.html","path":"docs/third-party-services/chat-services.html","title":"Chat Services"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Chat Services | NexT
+</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108155018-3"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-108155018-3","only_pageview":false}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/mist/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/mist/atom.xml" title="NexT" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/mist/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">NexT</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Theme for Hexo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/mist/" rel="section"><i class="fa fa-bell fa-fw"></i>Home</a></li>
+        
+            
+  <li class="menu-item menu-item-docs"><a href="/mist/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
+
+
+      
+        <li class="menu-item menu-item-plugins"><a href="/mist/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
+        <li class="menu-item menu-item-archives"><a href="/mist/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">44</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chatra"><span class="nav-number">1.</span> <span class="nav-text">Chatra</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tidio"><span class="nav-number">2.</span> <span class="nav-text">Tidio</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Theme NexT"
+      src="/mist/images/logo.svg">
+  <p class="site-author-name" itemprop="name">Theme NexT</p>
+  <div class="site-description" itemprop="description">Stay Simple. Stay NexT.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/mist/archives/">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;next-theme"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mist/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+<div class="cc-license animated" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0" title="Fork NexT on GitHub" aria-label="Fork NexT on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+  
+
+      
+
+        
+        <ul class="sub-menu menu">
+          
+            
+          
+          
+            
+                
+  <li class="menu-item menu-item-getting-started"><a href="/mist/docs/getting-started/" rel="section"><i class="fa fa-flag fa-fw"></i>Getting Started</a></li>
+
+
+          
+            
+                
+  <li class="menu-item menu-item-theme-settings"><a href="/mist/docs/theme-settings/" rel="section"><i class="fa fa-star fa-fw"></i>Theme Settings</a></li>
+
+
+          
+            
+                
+  <li class="menu-item menu-item-third-party-services"><a href="/mist/docs/third-party-services/" rel="section"><i class="fa fa-puzzle-piece fa-fw"></i>Third Party Services</a></li>
+
+
+          
+            
+                
+  <li class="menu-item menu-item-tag-plugins"><a href="/mist/docs/tag-plugins/" rel="section"><i class="fa fa-rocket fa-fw"></i>Tag Plugins</a></li>
+
+
+          
+            
+                
+  <li class="menu-item menu-item-advanced-settings"><a href="/mist/docs/advanced-settings/" rel="section"><i class="fa fa-cog fa-fw"></i>Advanced Settings</a></li>
+
+
+          
+              
+  <li class="menu-item menu-item-troubleshooting"><a href="/mist/docs/troubleshooting.html" rel="section"><i class="fa fa-life-ring fa-fw"></i>Troubleshooting</a></li>
+
+
+          
+        </ul>
+        
+
+        
+
+                
+                
+
+                
+                
+
+                
+
+                    
+                    <ul class="sub-menu menu">
+                      
+                        
+  <li class="menu-item menu-item-math-equations"><a href="/mist/docs/third-party-services/math-equations.html" rel="section"><i class="fa fa-square-root-alt fa-fw"></i>Math Equations</a></li>
+
+
+                        
+  <li class="menu-item menu-item-comment-systems"><a href="/mist/docs/third-party-services/comments.html" rel="section"><i class="fa fa-comment-alt fa-fw"></i>Comment Systems</a></li>
+
+
+                        
+  <li class="menu-item menu-item-post-widgets"><a href="/mist/docs/third-party-services/post-widgets.html" rel="section"><i class="fa fa-gift fa-fw"></i>Post Widgets</a></li>
+
+
+                        
+  <li class="menu-item menu-item-statistics-and-analytics"><a href="/mist/docs/third-party-services/statistics-and-analytics.html" rel="section"><i class="fa fa-chart-pie fa-fw"></i>Statistics and Analytics</a></li>
+
+
+                        
+  <li class="menu-item menu-item-search-services"><a href="/mist/docs/third-party-services/search-services.html" rel="section"><i class="fab fa-algolia fa-fw"></i>Search Services</a></li>
+
+
+                        
+  <li class="menu-item menu-item-chat-services"><a href="/mist/docs/third-party-services/chat-services.html" rel="section"><i class="fa fa-comments fa-fw"></i>Chat Services</a></li>
+
+
+                        
+  <li class="menu-item menu-item-external-libraries"><a href="/mist/docs/third-party-services/external-libraries.html" rel="section"><i class="fa fa-lightbulb fa-fw"></i>External Libraries</a></li>
+
+
+                    </ul>
+                    
+                
+
+                
+                
+
+                
+                
+        
+      
+  
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Chat Services<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvdGhlbWUtbmV4dC1kb2NzL2VkaXQvbWFzdGVyL3NvdXJjZS9kb2NzL3RoaXJkLXBhcnR5LXNlcnZpY2VzL2NoYXQtc2VydmljZXMubWQ=" title="Edit this post"><i class="fa fa-pen-nib"></i></span>
+</h1>
+
+<div class="post-meta-container">
+    <div class="post-description">NexT User Docs – Third-party Service Integration – Chat Services</div>
+  <ul class="breadcrumb">
+            <li><a href="/mist/docs/">DOCS</a></li>
+            <li><a href="/mist/docs/third-party-services/">THIRD-PARTY-SERVICES</a></li>
+            <li>CHAT-SERVICES</li>
+          
+  </ul>
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h3 id="Chatra"><a href="#Chatra" class="headerlink" title="Chatra"></a>Chatra</h3><p><span class="exturl" data-url="aHR0cHM6Ly9jaGF0cmEuY29tLw==">Chatra<i class="fa fa-external-link-alt"></i></span> is a live chat messenger app for your website.</p>
+<div class="tabs" id="chatra"><ul class="nav-tabs"><li class="tab active"><a href="#chatra-1">Enable Chatra →</a></li><li class="tab"><a href="#chatra-2">Activate sidebar button</a></li></ul><div class="tab-content"><div class="tab-pane active" id="chatra-1"><p>Visit <span class="exturl" data-url="aHR0cHM6Ly9hcHAuY2hhdHJhLmlvL3NldHRpbmdzL2dlbmVyYWw=">Dashboard<i class="fa fa-external-link-alt"></i></span> to get your ChatraID.</p>
+<figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Chatra Support</span></span><br><span class="line"><span class="comment"># See: https://chatra.com</span></span><br><span class="line"><span class="comment"># Dashboard: https://app.chatra.io/settings/general</span></span><br><span class="line"><span class="attr">chatra:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">async:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">id:</span> <span class="string">&lt;ChatraID&gt;</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="chatra-2"><p>After Chatra enabled, you can set <code>chat.enable</code> to <code>true</code> and set <code>chat.service</code> to <code>chatra</code> in <mark class="label primary">theme config file</mark>.</p>
+<figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># A button to open designated chat widget in sidebar.</span></span><br><span class="line"><span class="comment"># Firstly, you need enable the chat service you want to activate its sidebar button.</span></span><br><span class="line"><span class="attr">chat:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">chatra</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">fa</span> <span class="string">fa-comment</span></span><br><span class="line">  <span class="attr">text:</span> <span class="string">Chat</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+<h3 id="Tidio"><a href="#Tidio" class="headerlink" title="Tidio"></a>Tidio</h3><p><span class="exturl" data-url="aHR0cHM6Ly93d3cudGlkaW8uY29tLw==">Tidio<i class="fa fa-external-link-alt"></i></span> is a live chat messenger app for your website.</p>
+<div class="tabs" id="tidio"><ul class="nav-tabs"><li class="tab active"><a href="#tidio-1">Enable Tidio →</a></li><li class="tab"><a href="#tidio-2">Activate sidebar button</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tidio-1"><p>Visit <span class="exturl" data-url="aHR0cHM6Ly93d3cudGlkaW8uY29tL3BhbmVsL2Rhc2hib2FyZA==">Dashboard<i class="fa fa-external-link-alt"></i></span> to get your Public Key.</p>
+<figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Tidio Support</span></span><br><span class="line"><span class="comment"># See: https://www.tidio.com</span></span><br><span class="line"><span class="comment"># Dashboard: https://www.tidio.com/panel/dashboard</span></span><br><span class="line"><span class="attr">tidio:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">key:</span> <span class="string">&lt;Publick</span> <span class="string">Key&gt;</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tidio-2"><p>After Tidio enabled, you can set <code>chat.enable</code> to <code>true</code> and set <code>chat.service</code> to <code>tidio</code> in <mark class="label primary">theme config file</mark>.</p>
+<figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># A button to open designated chat widget in sidebar.</span></span><br><span class="line"><span class="comment"># Firstly, you need enable the chat service you want to activate its sidebar button.</span></span><br><span class="line"><span class="attr">chat:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">service:</span> <span class="string">tidio</span></span><br><span class="line">  <span class="attr">icon:</span> <span class="string">fa</span> <span class="string">fa-comment</span></span><br><span class="line">  <span class="attr">text:</span> <span class="string">Chat</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+      </div>
+      
+      
+      
+    </div>
+  <ul class="breadcrumb">
+            <li><a href="/mist/docs/">DOCS</a></li>
+            <li><a href="/mist/docs/third-party-services/">THIRD-PARTY-SERVICES</a></li>
+            <li>CHAT-SERVICES</li>
+          
+  </ul>
+
+    
+    
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2014 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NexT</span>
+</div>
+  <div class="powered-by">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <a href="https://theme-next.js.org/mist/">NexT.Mist</a>
+  </div><div class="footer-custom">
+Website source code <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG8tbmV4dC9oZXhvLW5leHQuZ2l0aHViLmlv">here</span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/schemes/muse.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/pjax.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"hexo-next/community"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/chat/gitter.min.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.0/dist/mermaid.min.js","integrity":"sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/tags/mermaid.min.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/math/mathjax.min.js"></script>
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"next-theme","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/disqus.min.js"></script>
+
+</body>
+</html>

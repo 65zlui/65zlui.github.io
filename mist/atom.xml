@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>NexT</title>
+  
+  
+  <link href="https://theme-next.js.org/mist/atom.xml" rel="self"/>
+  
+  <link href="https://theme-next.js.org/mist/"/>
+  <updated>2021-05-01T13:47:10.534Z</updated>
+  <id>https://theme-next.js.org/mist/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/%E7%BB%A7%E6%89%BF/"/>
+    <id>https://theme-next.js.org/mist/%E7%BB%A7%E6%89%BF/</id>
+    <published>2021-07-15T13:07:51.389Z</published>
+    <updated>2021-05-01T13:47:10.534Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="6-1-1继承"><a href="#6-1-1继承" class="headerlink" title="6.1.1继承"></a>6.1.1继承</h1><p>先看一个例子</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">father</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f1</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;hi&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Father</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] a)</span></span>&#123;</span><br><span class="line">        Son s=<span class="keyword">new</span> Son();</span><br><span class="line">        S.f1();</span><br><span class="line">        <span class="comment">//Son中没有f1方法的定义，根据父类继承的</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><p>面向过程编程语言没有继承，导致出现很多类型重复定义</p></li><li><p>物以类聚，世间万物皆对象，对象也可以划分为若干类别</p></li><li><p>类别内的对象属性和方法都有一定的共同点</p></li><li><p>将共同点提取出来，形成父类（或者叫基类，超类）</p><p>Parent class/Base class/Super class</p></li><li><p>而其他类则自动为子类派生类</p><p>Child class/Derived class</p></li></ul><p>从很多个对象中提取出共性，形成父类，其他类继承父类成为子类，也具有这些共性</p><ul><li><p>Man extends human 表示Man继承于humna</p></li><li><p>Human是父类，Man是子类</p></li><li><p>子类继承父类中所有的属性和方法（但不能直接访问private成员</p></li><li><p>根据信息隐藏原则：子类会继承父类中所有的方法。可以直接使用。</p></li><li><p>子类也会继承父类的父类的所有属性和方法（但不嫩更直接访问private成员)</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="comment">//private int num=20;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Derived foo =<span class="keyword">new</span> Derived();</span><br><span class="line">        System.out.println(foo.getNUm());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p>​    输出结果为</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure><p>//子类可以通过调用父类的方法来访问父类的私有的成员属性</p><h2 id="方法优先级"><a href="#方法优先级" class="headerlink" title="方法优先级"></a>方法优先级</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">20</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Derived foo =<span class="keyword">new</span> Derived();</span><br><span class="line">        System.out.println(foo.getNUm());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>结果为</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">20</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这说明了在同样方法名和参数情况下，本类的方法优先级会比父类的方法高</p><h2 id="继承（6）"><a href="#继承（6）" class="headerlink" title="继承（6）"></a>继承（6）</h2><ul><li>单类继承原则：每个类都只能继承一个类</li><li>如果不写extends，java类默认继承java.lang.Object类</li><li>class Human extends java.lang.Object</li><li>java所有类从java.lang.Object开始，构建出一个类型继承树</li><li>Object类里面默认有clone，equals，finalize，getClass，hashCode，toString等方法</li><li>若一个方法在当前类中没有定义，那这个方法就来自它的父类</li></ul><h2 id="继承和构造函数"><a href="#继承和构造函数" class="headerlink" title="继承和构造函数"></a>继承和构造函数</h2><ul><li><p>每个java类都必须有构造函数</p></li><li><p>如果没有显式定义构造函数，java编译器自动产生一个空的无形参构造函数</p></li><li><p>每个子类的构造函数的第一句话，都默认调用父类的无参数构造函数super（）,除非子类的构造函数第一句话是super，而且super语句必须放在第一条，不会出现连续两条super语句</p></li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li><p>子类继承父类所有的东西（但不能直接访问private成员）</p><ul><li><p>java所有类都继承自java.lang.Object类</p></li><li><p>java所有的类都是单根继承的</p></li><li><p>子类构造函数默认第一句话都会区调用父类的构造函数</p></li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;6-1-1继承&quot;&gt;&lt;a href=&quot;#6-1-1继承&quot; class=&quot;headerlink&quot; title=&quot;6.1.1继承&quot;&gt;&lt;/a&gt;6.1.1继承&lt;/h1&gt;&lt;p&gt;先看一个例子&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/%E7%B1%BB%E8%BD%AC%E5%9E%8B/"/>
+    <id>https://theme-next.js.org/mist/%E7%B1%BB%E8%BD%AC%E5%9E%8B/</id>
+    <published>2021-07-15T13:07:51.385Z</published>
+    <updated>2021-05-01T15:18:51.911Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="类转型"><a href="#类转型" class="headerlink" title="类转型"></a>类转型</h1><h2 id="类转型1"><a href="#类转型1" class="headerlink" title="类转型1"></a>类转型1</h2><ul><li><p>变量支持相互转化，比如int a=(int)3.5;</p></li><li><p>变量可以相互转型，但是只限制于有继承关系的类。</p><ul><li>子类可以转换为父类，而父类不可以转换为子类</li><li>子类可以继承父类所有的财产，子类可以变成父类，从大变小，即向上转型</li><li>而父类直接变成子类（从小变大，即向下转型）则不允许</li></ul></li><li><p>父类转为子类有一种情况例外</p><pre><code>* 就是这个父类本身就是从子类转化的</code></pre></li></ul><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Man</span> <span class="keyword">extends</span> <span class="title">Human</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;I can eat more&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ploygh</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span>&#123;</span><br><span class="line">Man obj1=<span class="keyword">new</span> Man();</span><br><span class="line">        obj1.eat();</span><br><span class="line">        Human obj2=(Human) obj2;</span><br><span class="line">        obj2.eat();</span><br><span class="line">        Man obj3=(Man) obj2;</span><br><span class="line">        obj3.eat();</span><br><span class="line">        <span class="comment">//obj1==obj2;//true</span></span><br><span class="line">        <span class="comment">//obj2==obj3;//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>多态的作用</p><ul><li>以统一的接口来操纵某一类中不同的对象的动态行为</li><li>对象之间的解耦</li></ul><h2 id="契约设计"><a href="#契约设计" class="headerlink" title="契约设计"></a>契约设计</h2><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210501231741365.png" alt="image-20210501231741365" loading="lazy"></p><p>契约：规定规范了对象应该包含的行为方法</p><p>接口定义了方法的名称参数和返回值</p><p>基于接口，利用转型和多态，不影响真正方法的调用，成功地将调用类和被调用类解耦</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210501230936328.png" alt="image-20210501230936328" loading="lazy"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>java支持子类转父类，但不支持父类转子类，除非父类对象最早就是子类转型父类而来</p><p>多态：子类转型为父类后，调用普通方法，依旧是子类本身的方法</p><p>契约设计：类不会直接调用另外一个类，而是采用接口形式，外部可以空投这个接口下的任意子类对象</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;类转型&quot;&gt;&lt;a href=&quot;#类转型&quot; class=&quot;headerlink&quot; title=&quot;类转型&quot;&gt;&lt;/a&gt;类转型&lt;/h1&gt;&lt;h2 id=&quot;类转型1&quot;&gt;&lt;a href=&quot;#类转型1&quot; class=&quot;headerlink&quot; title=&quot;类转型1&quot;&gt;&lt;/a&gt;类转型</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/%E6%B1%82%E8%81%8C%E8%AF%97%EF%BC%9F/"/>
+    <id>https://theme-next.js.org/mist/%E6%B1%82%E8%81%8C%E8%AF%97%EF%BC%9F/</id>
+    <published>2021-07-15T13:07:51.379Z</published>
+    <updated>2021-03-20T12:51:03.147Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="求职诗？"><a href="#求职诗？" class="headerlink" title="求职诗？"></a>求职诗？</h1><ul><li>鸣笛声伴随两道光芒</li><li>新的一天又将开始</li><li>又是掉下一撮头发</li><li>发际线又是后移</li><li>网络的新鲜感终将殆尽</li><li>又是刷手机到凌晨</li><li>可leetcode题刷了多少呢</li><li>还不是个菜鸡</li><li>梦，镜花水月一般；</li><li>若，浮光掠影之间</li><li>好像初出于人世间似的，</li><li>对一切的好奇</li><li>也许付出惨痛教训</li><li>对他人不切实际的期望</li><li>终将换来失望</li><li>我将为我的无知懵懂付出代价</li><li>有天之骄子吗</li><li>有失败人士吗</li><li>莫不是来自于无尽的比较嫉妒之螺旋</li><li>剑，那锋芒</li><li>断然不可为血肉消磨</li><li>不顾一切向前冲去</li><li>厮杀与广阔的战场，</li><li>即使战死</li><li>亦是神馈赠的命运，</li><li>我将欣然接受</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;求职诗？&quot;&gt;&lt;a href=&quot;#求职诗？&quot; class=&quot;headerlink&quot; title=&quot;求职诗？&quot;&gt;&lt;/a&gt;求职诗？&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;鸣笛声伴随两道光芒&lt;/li&gt;
+&lt;li&gt;新的一天又将开始&lt;/li&gt;
+&lt;li&gt;又是掉下一撮头发&lt;/li&gt;
+&lt;li&gt;发</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%C2%B7%E7%AE%97%E6%B3%95/"/>
+    <id>https://theme-next.js.org/mist/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%C2%B7%E7%AE%97%E6%B3%95/</id>
+    <published>2021-07-15T13:07:51.376Z</published>
+    <updated>2021-03-20T12:47:34.599Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="机器学习·算法"><a href="#机器学习·算法" class="headerlink" title="机器学习·算法"></a>机器学习·算法</h1><ul><li>参数不一样也是不同的模型</li></ul><ol><li><p>确定模型，设计模型：选定问题适合xx 模型 （model 如决策树，）</p></li><li><p>好坏标准（损失函数，loss function 学习就是学参数）</p></li><li><p>优化方法（预测能不能考上研，用已经考过研的同学的数据来训练，输入：？，输出（考上，不能考上））</p><ul><li><p>测试样本</p></li><li><p>历史数据，训练样本</p></li><li><p>训练的时候，二分类问题（神经网络,在训练网络上的好坏)</p></li><li><p>一万个同学的结果label</p></li><li><p>模型的label和真实label越接近越好</p></li><li><p>预测类别 准确率</p></li><li><p>误差</p></li><li><p>梯度下降</p></li><li><p>导数</p></li><li><p>函数极值点</p></li><li><p>优化方法</p></li><li><p>确定模型参数很多种选法</p></li><li><p>不可能把所有参数选一</p></li></ul></li></ol><ul><li><p>回归问题  目标函数输出是数值，（预测明天pm2.5的值）</p></li><li><p>分类问题 (预测明天pm2.5达不达标)</p></li><li><p>时间序列问题：在一个序列上解决的</p></li><li><p>怎么确定训练数据</p><ul><li><p>拿到去年一年的数据</p></li><li><p>三天一组</p></li><li><p>构造训练数据</p></li><li><p>一个月的pm2.5值</p></li></ul></li><li><p>slide-window 滑动窗口法</p><ul><li>2号三号一个 四号一个</li></ul></li><li><p>二分类==》多分类</p></li><li><p>大于2就叫多分类</p></li><li><p>实验 二分类</p></li><li><p>垃圾邮件过滤</p><ul><li><p>正样本和负样本的数量是差别很大的</p></li><li><p>非均衡样本使得你模型的效果不太好</p><p>垃圾邮件过滤</p><p>写规则</p><p>赌博，黄色</p><p>一堆专利</p><p>不写规则，让程序理解语义</p></li></ul></li><li><p> 输出的</p></li></ul><ul><li>alphago 分类问题</li><li>alphago确定棋子下到棋盘的几个位置</li><li>最基本的是学习能力</li><li>强化学习，自己和自己下</li></ul><ul><li><p>无监督：学习 如考试题没给答案</p></li><li></li><li><p>有监督：有标签的，有训练样本</p></li><li><p>半监督：样本有一部分有标签，有一部分没有标签</p></li><li><p>for example recognizing cats and dogs</p></li><li><p>迁移学习 </p></li><li><p>完全</p></li><li><p>没有训练样本，无监督学习</p></li></ul><p>强化学习</p><ul><li>当话务员，不知道该说什么，客户说一个问题你回答，客户再说一个问题你还回答，知道这个是不对的，非常差的反馈知道自己是错的</li><li>客户反馈不行知道错的，客户反馈可以知道还行</li></ul><p>Alphago </p><p>监督学习 ：棋谱 样本</p><p>强化学习： 自己和自己下棋</p><p>AlphaZero</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;机器学习·算法&quot;&gt;&lt;a href=&quot;#机器学习·算法&quot; class=&quot;headerlink&quot; title=&quot;机器学习·算法&quot;&gt;&lt;/a&gt;机器学习·算法&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;参数不一样也是不同的模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;确定模型，设计模</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/"/>
+    <id>https://theme-next.js.org/mist/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/</id>
+    <published>2021-07-15T13:07:51.370Z</published>
+    <updated>2021-05-01T14:37:41.786Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h1><h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>类:</p><ul><li><p>一个完整健康的类:所有的方法都有实现（方法体）</p></li><li><p>类可以没有方法，但有方法就得实现，这才是一个完整的类</p></li><li><p>如果一个类暂时有方法未实现，需要被定义为抽象类</p></li></ul><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> area;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">calArea</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>抽象类关键字abstract声明<ul><li>抽象类的组成，成员变量个数不限</li><li>具体方法，方法有实现，个数不限</li><li>抽象方法，加abstract关键字，个数不限</li></ul></li></ul><p>当图形未知时，无法给出calArea的具体实现，因此此方法定义为abstract</p><h2 id="抽象类2"><a href="#抽象类2" class="headerlink" title="抽象类2"></a>抽象类2</h2><ul><li><p>抽象类也是类，一个类继承于抽象类，就不能继承于其他的抽象类</p></li><li><p>子类可以继承于抽象类，但是一定要实现父类们所有abstract的方法。</p></li><li><p>如果不能完全实现，那么子类也必须被定义为抽象类</p></li><li><p>只有实现父类的所有抽象方法，才变成完整类，否则会报错</p></li></ul><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ul><li><p>如果类的所有方法都没有实现，那么这个类就算是接口</p></li><li><p>类可以实现多个接口，</p><p>例子：类c继承于类a，同时也实现接口b，c中的f1方法只会在a或c中实现</p></li><li><p>接口是特殊的类</p></li></ul><h2 id="接口2"><a href="#接口2" class="headerlink" title="接口2"></a>接口2</h2><ul><li><p>接口可以继承多个接口，没有实现的方法将会叠加</p></li><li><p>类实现接口，就必须实现所有未实现的方法。如果没有全部实现，那么只能成为一个抽象类（见ex4）</p><p>.ex1</p></li></ul><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">implements</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Cat:I can eat&quot;</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Cat:I can move&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Animal接口中含有eat和move两个方法</p><p>.ex2</p> <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>定义接口爬树</p><p>.ex3</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ClimbTree</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">climb</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>陆地动物</p><p>.ex4</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">LandAnimal</span> <span class="keyword">implements</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> abstact <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;I can walk bt feet&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>extends 必须写在implements前面</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Rabbit</span> <span class="keyword">extends</span> <span class="title">LandAnimal</span> <span class="keyword">implements</span> <span class="title">ClimbTree</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">climb</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;Rabbit:I can climb&quot;</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.our.println(<span class="string">&quot;Rabbit:I can eat&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>一个类可以继承一个抽象类，同时实现一个接口</p><p>而一个接口可以继承多个接口</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CatFamily</span> <span class="keyword">extends</span> <span class="title">Animal</span>,<span class="title">ClimbTree</span></span>&#123;</span><br><span class="line">    <span class="comment">//eat()</span></span><br><span class="line">    <span class="comment">//move()</span></span><br><span class="line">    <span class="comment">//climb()</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tiger</span> <span class="keyword">implements</span> <span class="title">CatFamily</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;Tiger:I can eat&quot;</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;Tiger:I can move&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">climb</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;Tiger:I can climb&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="抽象类和接口-1"><a href="#抽象类和接口-1" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h3><h4 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h4><p>两者都不能被实例化，不嫩new操作</p><h4 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h4><p>抽象类abstract 接口interface</p><p>抽象类可以有部分方法实现，接口所有方法不能有实现，</p><p>一个类只能继承一个抽象类，实现多个接口</p><p>接口可以继承多个接口</p><p>抽象类有构造函数，接口没有构造函数</p><p>抽象类可以有main，也能运行，接口没有main函数</p><p>抽象类方法可以有private/protected，接口方法都是public</p><table><thead><tr><th align="center">特点\类型</th><th align="center">类</th><th align="center">抽象类</th><th align="center">接口</th></tr></thead><tbody><tr><td align="center">构造函数</td><td align="center">有</td><td align="center">无</td><td align="center">有</td></tr><tr><td align="center">加入main方法并运行</td><td align="center">可行</td><td align="center">可</td><td align="center">不能</td></tr><tr><td align="center">可以有private/protected</td><td align="center">是</td><td align="center">是</td><td align="center">不</td></tr><tr><td align="center">继承</td><td align="center">可以继承一个类</td><td align="center">可以继承一个类，只要不是密封类</td><td align="center">可以继承接口</td></tr><tr><td align="center">实现接口</td><td align="center">可以实现多个接口</td><td align="center">可以实现多个接口</td><td align="center">不能</td></tr><tr><td align="center">实现方法</td><td align="center">必须实现所有的方法</td><td align="center">可以有部分方法实现</td><td align="center">所有方法不能有实现</td></tr><tr><td align="center">实例化</td><td align="center">可以</td><td align="center">不可以</td><td align="center">不可以</td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr><tr><td align="center"></td><td align="center"></td><td align="center"></td><td align="center"></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;抽象类和接口&quot;&gt;&lt;a href=&quot;#抽象类和接口&quot; class=&quot;headerlink&quot; title=&quot;抽象类和接口&quot;&gt;&lt;/a&gt;抽象类和接口&lt;/h1&gt;&lt;h2 id=&quot;抽象类&quot;&gt;&lt;a href=&quot;#抽象类&quot; class=&quot;headerlink&quot; title=&quot;抽象类</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/%E6%83%B3%E7%88%B1%E4%BD%A0%E4%BD%86%E6%97%A0%E8%83%BD%E4%B8%BA%E5%8A%9B/"/>
+    <id>https://theme-next.js.org/mist/%E6%83%B3%E7%88%B1%E4%BD%A0%E4%BD%86%E6%97%A0%E8%83%BD%E4%B8%BA%E5%8A%9B/</id>
+    <published>2021-07-15T13:07:51.362Z</published>
+    <updated>2021-01-15T12:47:20.719Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="待定"><a href="#待定" class="headerlink" title="待定"></a>待定</h1><p>在我很小的时候，最不解的事情之一，便是名人论证，为什么名人口中放屁一样的观点，一样很多人恭维。</p><h2 id="想爱你但无能为力"><a href="#想爱你但无能为力" class="headerlink" title="想爱你但无能为力"></a>想爱你但无能为力</h2><ol><li><p>我在生活中挣扎</p></li><li><p>我被社会的压力胁迫</p></li><li><p>被他人的眼光左右</p></li><li><p>奔向成功还是失败</p></li><li><p>就算走向死亡</p></li><li><p>也比随意得活着好</p></li><li><p>我渴望成功</p></li><li><p>我渴望他人的认可</p></li><li><p>在社会性焦虑的传染下</p></li><li><p>我多么想恋爱</p></li><li><p>宝贝啊</p></li><li><p>我想搂着你腰肢</p></li><li><p>想抚摸你那水嫩的脸庞</p></li><li><p>想爱你</p></li><li><p>无比甜蜜的你</p></li><li><p>在我心房中占据一席之地</p></li><li><p>亲爱的</p></li><li><p>请不要哭泣</p></li><li><p>你都忘了你有多可爱</p></li><li><p>亲爱的</p></li><li><p>请不要伤心</p></li><li><p>让我拂去你的泪水</p></li><li><p>我不是poser</p></li><li><p>我只是对一切爱的太深切</p></li><li><p>可惜我生命中有更重要的东西</p></li><li><p>想爱你</p></li><li><p>那么天真的你</p></li><li><p>我不忍得爱过了你又</p></li><li><p>去残忍抛弃</p></li><li><p>所以将爱藏在心底</p></li><li><p>将爱埋藏心底</p></li><li><p>总有一天我会成功</p></li><li><p>人活为一口气</p></li><li><p>我是多么多么想爱你，</p></li><li><p>可我却无能为力</p></li><li><p>我的爱太过有限</p></li><li><p>我不想滥用我的爱</p></li><li><p>趁着夜色的深沉</p></li><li><p>你我都将睡去</p></li><li><p>也许明天我将忘记你</p></li><li><p>希望你能找个好人</p></li><li><p>想爱你</p></li><li><p>但我无能为力</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;待定&quot;&gt;&lt;a href=&quot;#待定&quot; class=&quot;headerlink&quot; title=&quot;待定&quot;&gt;&lt;/a&gt;待定&lt;/h1&gt;&lt;p&gt;在我很小的时候，最不解的事情之一，便是名人论证，为什么名人口中放屁一样的观点，一样很多人恭维。&lt;/p&gt;
+&lt;h2 id=&quot;想爱你但无能为力&quot;&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/%E6%83%85%E8%AF%970/"/>
+    <id>https://theme-next.js.org/mist/%E6%83%85%E8%AF%970/</id>
+    <published>2021-07-15T13:07:51.359Z</published>
+    <updated>2021-03-20T12:36:44.944Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><ul><li>见到你仿佛见到花</li><li>我心中泛起阵阵红晕</li><li>我强做镇定</li><li>仿佛一本正经的亚子</li><li>倘若事隔流年</li><li>感情必将慢慢变淡</li><li>我如何继续选择沉默</li><li>因他人评头论足而放弃生活</li><li>是以前的我之软弱无能</li><li>忍耐是一种懦弱</li><li>我该如何选择坚强</li><li>我要选择坚强</li><li>我心之所爱</li><li>必不为他人所辱没</li><li>我心之所求</li><li>必不为他人所践踏</li><li>背后的言语</li><li>随便怎样了</li><li>如果我以后欺骗了你</li><li>你也可以将我抛弃</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;见到你仿佛见到花&lt;/li&gt;
+&lt;li&gt;我心中泛起阵阵红晕&lt;/li&gt;
+&lt;li&gt;我强做镇定&lt;/li&gt;
+&lt;li&gt;仿佛一本正经的亚子&lt;/li&gt;
+&lt;li&gt;倘</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/"/>
+    <id>https://theme-next.js.org/mist/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/</id>
+    <published>2021-07-15T13:07:51.356Z</published>
+    <updated>2021-05-01T13:13:42.926Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="信息隐藏原则和this"><a href="#信息隐藏原则和this" class="headerlink" title="信息隐藏原则和this"></a>信息隐藏原则和this</h1><h2 id="信息隐藏原则"><a href="#信息隐藏原则" class="headerlink" title="信息隐藏原则"></a>信息隐藏原则</h2><h3 id="面向对象有一个法则：信息隐藏"><a href="#面向对象有一个法则：信息隐藏" class="headerlink" title="面向对象有一个法则：信息隐藏"></a>面向对象有一个法则：信息隐藏</h3><ul><li>类的成员属性，是私有的private</li><li>类的方法是公有public的，通过方法修改成员属性的值</li></ul><p>eg. 信息隐藏：通过类的方法来间接访问类的属性，而不是直接访问类的属性</p><ul><li><p>类成员是私有的</p></li><li><p>get和set方法是公有的统称为getter setter</p></li><li><p>外界对类成员的操作只能通过get和set方法来操作</p></li></ul><h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ul><li>this 负责指向本类中的成员变量</li><li>在构造函数里，形参的优先级更高</li></ul><p>~ example1:</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>~ example2:</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><p>this 负责指向本类中的成员方法</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.add(<span class="number">5</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//调用本类的add方法，this可以忽略</span></span><br></pre></td></tr></table></figure></li><li><p>this可以代替本类的构造函数</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(<span class="number">5</span>);</span><br></pre></td></tr></table></figure><p>不影响歧义的情况下，this可以省略，参见example1</p></li></ul><p>总结一下，</p><ul><li><p>this可以指向本类中的成员变量</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x</span><br></pre></td></tr></table></figure></li><li><p>可以指向本类中的成员方法，</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x()</span><br></pre></td></tr></table></figure></li><li><p>可以当作构造函数使用</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(x);</span><br></pre></td></tr></table></figure></li></ul><h2 id="Above-all"><a href="#Above-all" class="headerlink" title="Above all"></a>Above all</h2><ul><li>信息隐藏原则<ul><li>保护属性信息</li><li>公开行为信息</li></ul></li><li>this负责指向本类中的成员</li><li>this可以代替本类中的构造函数</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;信息隐藏原则和this&quot;&gt;&lt;a href=&quot;#信息隐藏原则和this&quot; class=&quot;headerlink&quot; title=&quot;信息隐藏原则和this&quot;&gt;&lt;/a&gt;信息隐藏原则和this&lt;/h1&gt;&lt;h2 id=&quot;信息隐藏原则&quot;&gt;&lt;a href=&quot;#信息隐藏原则&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/mist/OS-1-4/"/>
+    <id>https://theme-next.js.org/mist/OS-1-4/</id>
+    <published>2021-07-15T13:07:51.325Z</published>
+    <updated>2020-09-14T09:09:33.228Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: OS-1-4 分时操作系统<br>date: 2020-09-08 22:30:52<br>tags:</p><hr><p>多道批处理系统的缺点<br>（平均周转时间长）作业处理时间长；<br>交互能力差；<br>运行过程不确定。<br>不用不一定是空闲的，<br>共享，用忙，同时等cpu的进程可能有很多，<br>宏观上并行，</p><ul><li>事务性任务的涌现<ul><li>交互度高</li><li>相应快速</li></ul></li><li>要求支持多任务/多用户</li><li>多终端计算机<ul><li>高性能主机+多个终端<ul><li>主机：运算，cpu + 内存</li><li>终端：输入和显示</li></ul></li><li>主机采用分时技术轮流为每个终端服务，每个终端都感觉到</li></ul></li><li>分时技术<ul><li>概念<ul><li>主机以很短的时间片为单位，把cpu轮流分配给终端使用，直到全部作业被运行完</li><li>由于时间片很短，在终端数量不多的情况下，每个终端都能很快重新获得cpu，使得每个终端都能得到及时响应<ul><li>等待周期 = 时间片 * 终端数量</li></ul></li></ul></li><li>特点<ul><li>多路调制性<ul><li>多用户联机使用同一台计算机</li></ul></li><li>独占性<ul><li>用户感觉独占计算机</li></ul></li><li>交互性<ul><li>及时响应用户的请求</li></ul></li></ul></li></ul></li><li>大型分时系统的实践：multics项目<ul><li>  1962年由apra支持，有mit、bell和G.E参与</li><li>开发一种“公用计算服务系统”</li><li>multiplexed information and computing service</li><li>同时支持波士顿地区的用户</li></ul></li><li>unix<ul><li>第一个实用化的分时操作系统<ul><li>第一个真正体现操作系统领域各种先进概念和技术的操作系统</li></ul></li><li>革新和创造<ul><li>实现操作系统的可移植性</li><li>实现了硬件无关性</li><li>引进了“特殊文件”（special file）的概念<ul><li>把外设看作文件，实现对外设统一管理</li></ul></li></ul></li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;title: OS-1-4 分时操作系统&lt;br&gt;date: 2020-09-08 22:30:52&lt;br&gt;tags:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;多道批处理系统的缺点&lt;br&gt;（平均周转时间长）作业处理时间长；&lt;br&gt;交互能力差；&lt;br&gt;运行过程不确定。&lt;br&gt;不用不一</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>泡影</title>
+    <link href="https://theme-next.js.org/mist/%E6%B3%A1%E5%BD%B1/"/>
+    <id>https://theme-next.js.org/mist/%E6%B3%A1%E5%BD%B1/</id>
+    <published>2021-03-22T12:57:09.000Z</published>
+    <updated>2021-03-22T05:34:51.949Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="色散"><a href="#色散" class="headerlink" title="色散"></a>色散</h1><h2 id="献给喜欢过却没有去追的女同学"><a href="#献给喜欢过却没有去追的女同学" class="headerlink" title="献给喜欢过却没有去追的女同学"></a>献给喜欢过却没有去追的女同学</h2><ul><li>光</li><li>散成那彩虹</li><li>天空高悬</li><li>望这那粼粼水波</li><li>我对此物的思念</li><li>绵延至今</li><li></li><li>浮沉于水中</li><li>好像丢失了什么</li><li>我强做镇定</li><li>内心满是创痕</li><li></li><li>过去的梦</li><li>已然消散</li><li>一颗新的梦种已然种下</li><li></li><li>不敢全然去追</li><li>我还是过于审慎</li><li></li><li>浮现了</li><li>那朦胧的美好</li><li>又消失在无尽深处</li><li></li><li>沉沦于湖底</li><li>好像精神之光</li><li>已经熄灭</li><li></li><li>湛蓝色的晴空</li><li>望不到边</li><li>我无尽的遐想</li><li>不会熄灭</li><li>有渴望之物也不会去追</li><li>害怕破碎</li><li></li><li>五彩斑斓的幻想</li><li>是否能与现实妥协</li><li>交融成我能接受的形态</li><li></li><li>不愿</li><li>我的光芒</li><li>不愿你散开啊</li><li>白虹贯日</li><li>也不怨你</li><li></li><li>我午夜的无病呻吟</li><li>如魔掌贯穿心脏</li><li>那倒影</li><li>那光的色散</li><li>我的幻梦</li><li>尚存心间</li><li></li><li>那光芒将要散去</li><li>我的步伐难追</li><li>我将乘好自己的路</li><li>世间亦有其他的光芒</li><li>等待我去追</li><li>感谢你对我的刺激</li><li>我会加油的</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;色散&quot;&gt;&lt;a href=&quot;#色散&quot; class=&quot;headerlink&quot; title=&quot;色散&quot;&gt;&lt;/a&gt;色散&lt;/h1&gt;&lt;h2 id=&quot;献给喜欢过却没有去追的女同学&quot;&gt;&lt;a href=&quot;#献给喜欢过却没有去追的女同学&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>byylswpu1</title>
+    <link href="https://theme-next.js.org/mist/byylswpu1/"/>
+    <id>https://theme-next.js.org/mist/byylswpu1/</id>
+    <published>2021-01-02T21:45:24.000Z</published>
+    <updated>2021-01-02T14:40:01.613Z</updated>
+    
+    <content type="html"><![CDATA[<p>二、实验内容<br>1、词法分析器设计<br>（1）单词的数据结构；<br>（2）记号类别编码；<br>（3）词法正规式；<br>（4）识别单词的状态转换图。<br>2、词法分析器实现<br>（1）实现辅助例程；<br>（2）实现独立的记号获取函数GetToken；<br>（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.IO;</span><br><span class="line"></span><br><span class="line">namespace scanner</span><br><span class="line">&#123;</span><br><span class="line">    //记号类别号</span><br><span class="line">    enum Token_Type</span><br><span class="line">    &#123;</span><br><span class="line">        ORIGIN, SCALE, ROT, IS, TO, //语言保留字(一字一类别)</span><br><span class="line">        STEP, DRAW, FOR, FROM,      //语言保留字</span><br><span class="line">        T,                          //语言中唯一的变量</span><br><span class="line">        ID,                         //标识符(若把关键字、变量都看成一种单词，可以使用本类别)</span><br><span class="line"></span><br><span class="line">        SEMICO, L_BRACKET, R_BRACKET, COMMA, //分隔符(分号、左括号、右括号、逗号)</span><br><span class="line">        PLUS, MINUS, MUL, DIV, POWER,        //运算符(加、减、乘、除、乘方)</span><br><span class="line"></span><br><span class="line">        FUNC,                                //(语言提供的标准数学)函数</span><br><span class="line"></span><br><span class="line">        CONST_ID,                           //数值常量</span><br><span class="line">        ERRTOKEN,                           //错误单词</span><br><span class="line">        NONTOKEN//专用记号(单词序列结束)</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //记号数据类型</span><br><span class="line">    delegate double MathFunc(double d);//单参数的函数委托类型 delegate：代表</span><br><span class="line">    struct Token</span><br><span class="line">    &#123;</span><br><span class="line">        public Token_Type type; //类别号</span><br><span class="line">        public string lexeme;//标识符的字符串</span><br><span class="line">        public double value;//数值常数的值</span><br><span class="line">        public MathFunc func;             //函数委托</span><br><span class="line"></span><br><span class="line">        public Token(Token_Type type = Token_Type.NONTOKEN, string lexeme = &quot;&quot;, double value = 0, MathFunc func = null)</span><br><span class="line">        &#123;</span><br><span class="line">            this.type = type;</span><br><span class="line">            this.lexeme = lexeme;</span><br><span class="line">            this.value = value;</span><br><span class="line">            this.func = func;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class Program</span><br><span class="line">    &#123;</span><br><span class="line">        // 预定义单词表</span><br><span class="line">        static Token[] TokenTab = &#123;</span><br><span class="line">            //符号常数</span><br><span class="line">            new Token(Token_Type.CONST_ID,  &quot;PI&quot;,       3.1415926,  null),</span><br><span class="line">            new Token(Token_Type.CONST_ID,  &quot;E&quot;,        2.71828,    null),</span><br><span class="line">            //变量(惟一的)</span><br><span class="line">            new Token(Token_Type.T,         &quot;T&quot;,        0.0,        null),</span><br><span class="line">            //数学函数</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;SIN&quot;,      0.0,        Math.Sin),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;COS&quot;,      0.0,        Math.Cos),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;TAN&quot;,      0.0,        Math.Tan),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;LN&quot;,       0.0,        Math.Log),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;EXP&quot;,      0.0,        Math.Exp),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;SQRT&quot;,     0.0,        Math.Sqrt),</span><br><span class="line">            //语句关键字</span><br><span class="line">            new Token(Token_Type.ORIGIN,    &quot;ORIGIN&quot;,   0.0,        null),</span><br><span class="line">            new Token(Token_Type.SCALE,     &quot;SCALE&quot;,    0.0,        null),</span><br><span class="line">            new Token(Token_Type.ROT,       &quot;ROT&quot;,      0.0,        null),</span><br><span class="line">            new Token(Token_Type.IS,        &quot;IS&quot;,       0.0,        null),</span><br><span class="line">            new Token(Token_Type.FOR,       &quot;FOR&quot;,      0.0,        null),</span><br><span class="line">            new Token(Token_Type.FROM,      &quot;FROM&quot;,     0.0,        null),</span><br><span class="line">            new Token(Token_Type.TO,        &quot;TO&quot;,       0.0,        null),</span><br><span class="line">            new Token(Token_Type.STEP,      &quot;STEP&quot;,     0.0,        null),</span><br><span class="line">            new Token(Token_Type.DRAW,      &quot;DRAW&quot;,     0.0,        null)</span><br><span class="line">        &#125;;</span><br><span class="line">        static Token ErrorToken = new Token(Token_Type.ERRTOKEN, &quot;error token&quot;, -1, null);</span><br><span class="line"></span><br><span class="line">        //c# 无 ungetc 函数（将一个字符退回输入流），所以用如下代码模拟</span><br><span class="line">        static char lastCh;</span><br><span class="line">        static bool ungetFlag = false;</span><br><span class="line">        //读取一个字符</span><br><span class="line">        static char getChar(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            if (!ungetFlag)</span><br><span class="line">            &#123;</span><br><span class="line">                lastCh = (char)sr.Read();</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                ungetFlag = false;</span><br><span class="line"></span><br><span class="line">            return lastCh;</span><br><span class="line">        &#125;</span><br><span class="line">        //退回一个字符</span><br><span class="line">        static void ungetChar(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            ungetFlag = true;</span><br><span class="line">        &#125;</span><br><span class="line">        //c 语言的 ungetc 函数，在 c# 中的模拟</span><br><span class="line"></span><br><span class="line">        //判断标识符是否语言的预定义单词</span><br><span class="line">        static Token IsKeyWords(string id)</span><br><span class="line">        &#123;</span><br><span class="line">            int i;</span><br><span class="line">            Token token = new Token();</span><br><span class="line"></span><br><span class="line">            for (i = 0; i &lt; TokenTab.Length; i++) if (string.Equals(TokenTab[i].lexeme, id)) break;</span><br><span class="line"></span><br><span class="line">            if (i &lt; TokenTab.Length)</span><br><span class="line">                token = TokenTab[i];</span><br><span class="line">            else</span><br><span class="line">                token = ErrorToken;</span><br><span class="line"></span><br><span class="line">            return token;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //显示单词</span><br><span class="line">        static void writeToken(Token token)</span><br><span class="line">        &#123;</span><br><span class="line">            if (token.type == Token_Type.FUNC)</span><br><span class="line">                Console.WriteLine(&quot;&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;&quot;, (int)token.type, token.lexeme, token.value, (string)token.func.Method.Name);</span><br><span class="line">            else</span><br><span class="line">                Console.WriteLine(&quot;&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;&quot;, (int)token.type, token.lexeme, token.value, &quot;&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        static void getToken(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            //从源代码逐个读取字符</span><br><span class="line">            Token token;</span><br><span class="line">            char c, preCh;</span><br><span class="line">            while (true)</span><br><span class="line">            &#123;</span><br><span class="line">                c = getChar(sr);</span><br><span class="line"></span><br><span class="line">                if (c == &#x27;-&#x27; || c == &#x27;/&#x27;)</span><br><span class="line">                &#123;//如果是注释</span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);//读取新字符</span><br><span class="line">                    if (c == preCh)</span><br><span class="line">                    &#123; //判断注释符引导字符</span><br><span class="line">                        //去掉注释符引导字符</span><br><span class="line">                        while (c != &#x27;\n&#x27; &amp;&amp; !sr.EndOfStream)</span><br><span class="line">                        &#123;</span><br><span class="line">                            c = getChar(sr);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        c = preCh;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (c == &#x27;\t&#x27; || c == &#x27;\n&#x27; || c == &#x27;\r&#x27; || c == &#x27; &#x27;)</span><br><span class="line">                &#123;//过滤空白</span><br><span class="line">                    continue;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (char.IsLetter(c))</span><br><span class="line">                &#123; //读到的是字母</span><br><span class="line">                    string buf = &quot;&quot;;//临时缓冲buf</span><br><span class="line">                    buf += char.ToUpper(c);</span><br><span class="line">                    //遍历后续字符</span><br><span class="line">                    for (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        if (char.IsLetterOrDigit(c))</span><br><span class="line">                        &#123; //如果仍是字母/数字</span><br><span class="line">                            buf += char.ToUpper(c);</span><br><span class="line">                        &#125;</span><br><span class="line">                        else &#123; break; &#125;//读完</span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = IsKeyWords(buf);</span><br><span class="line">                &#125;</span><br><span class="line">               else if (c == &#x27;(&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.L_BRACKET, &quot;(&quot;);</span><br><span class="line">                else if (c == &#x27;)&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.R_BRACKET, &quot;)&quot;);</span><br><span class="line">                else if (c == &#x27;-&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.MINUS, &quot;-&quot;);</span><br><span class="line">                else if (c == &#x27;;&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.SEMICO, &quot;;&quot;);</span><br><span class="line">                else if (c == &#x27;,&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.COMMA, &quot;,&quot;);</span><br><span class="line">                else if (c == &#x27;+&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.PLUS, &quot;+&quot;);</span><br><span class="line">                else if (c == &#x27;/&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.DIV, &quot;/&quot;);</span><br><span class="line">                else if (c == &#x27;*&#x27;)</span><br><span class="line">                &#123;//乘号会有*和乘方**</span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);//读取新字符</span><br><span class="line">                    if (c == preCh)</span><br><span class="line">                    &#123;</span><br><span class="line">                        token = new Token(Token_Type.POWER, &quot;**&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;//否则退回一个字符</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        token = new Token(Token_Type.MUL, &quot;*&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (char.IsDigit(c))</span><br><span class="line">                &#123;</span><br><span class="line">                    string buf = &quot;&quot;;</span><br><span class="line">                    buf += c;</span><br><span class="line"></span><br><span class="line">                    for (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        if (char.IsDigit(c) || c == &#x27;.&#x27;)</span><br><span class="line">                        &#123; //如果仍是数字或小数点</span><br><span class="line">                            buf += c;</span><br><span class="line">                        &#125;</span><br><span class="line">                        else &#123; break; &#125;//读完</span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = new Token(Token_Type.CONST_ID, &quot;&quot;, Convert.ToDouble(buf));</span><br><span class="line">                &#125;</span><br><span class="line">                else</span><br><span class="line">                &#123;</span><br><span class="line">                    token = ErrorToken;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (sr.EndOfStream)</span><br><span class="line">                &#123; //判断文件读取结束</span><br><span class="line">                    token = new Token(Token_Type.NONTOKEN);</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                writeToken(token);//输出单词</span><br><span class="line">            &#125;</span><br><span class="line">            writeToken(token);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(&quot;&#123;0,-11&#125;&#123;1, -12&#125;&#123;2, -12&#125;&#123;3, -20&#125;&quot;, &quot;记号类别&quot;, &quot;字符串&quot;, &quot;常数值&quot;, &quot;函数指针&quot;);</span><br><span class="line">            Console.WriteLine(&quot;-------------------------------------------------------&quot;);</span><br><span class="line"></span><br><span class="line">            //打开源代码文件</span><br><span class="line">            StreamReader sr;</span><br><span class="line">            if (args.Length == 0)</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(&quot;p89-8-10.draw&quot;);//文件在项目的子目录 bin\debug 下</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(args[0].ToString());//允许通过命令行参数，给出源代码文件名</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            getToken(sr);</span><br><span class="line">            sr.Close();</span><br><span class="line">            Console.ReadLine();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;二、实验内容&lt;br&gt;1、词法分析器设计&lt;br&gt;（1）单词的数据结构；&lt;br&gt;（2）记号类别编码；&lt;br&gt;（3）词法正规式；&lt;br&gt;（4）识别单词的状态转换图。&lt;br&gt;2、词法分析器实现&lt;br&gt;（1）实现辅助例程；&lt;br&gt;（2）实现独立的记号获取函数GetToken；&lt;br&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>eoj3021</title>
+    <link href="https://theme-next.js.org/mist/eoj3021/"/>
+    <id>https://theme-next.js.org/mist/eoj3021/</id>
+    <published>2020-12-31T20:53:22.000Z</published>
+    <updated>2020-12-31T12:57:24.722Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="3021-字符排序"><a href="#3021-字符排序" class="headerlink" title="3021. 字符排序"></a>3021. 字符排序</h1><ul><li>单点时限: 2.0 sec</li><li>内存限制: 256 MB<br>  给定一个句子，要求将其字符重新排序输出，其中的英文字母按照字母表顺序输出，其他字符的顺序和位置不变，输出后的单词长度与原句子相同。<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2>第 1 行：一个整数<br>t(1&lt;=t&gt;=10)为问题数<br>为问题数。<br>第2t+1行，每组测试数据一行，包括一个字符串（长度最大为200 ），由英文字母（均为大写字母）及其他字符组成，由空格分开的连续字符串视作一个单词。<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2>对于每个问题，输出一行问题的编号（0 开始编号，格式：case #0: 等），然后在一行中输出重新排序后的字符串。<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3>3<br>THE BREAD IS SOLD AT $10 PER POUND<br>500 DONGCHUAN ROAD EAST CHINA NORMAL UNIVERSITY SHANGHAI CHINA 200241<br>#9724 $500 1234<h3 id="output"><a href="#output" class="headerlink" title="output"></a>output</h3>case #0:<br>AAB DDDEE EH ILNO OP $10 PRR SSTTU<br>case #1:<br>500 AAAAAAAAC CCDD EEGG HHHHH IIIIIL MNNNNNNNOO ORRRSSST TUUVY 200241<br>case #2:<br>#9724 $500 1234</li></ul><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">int</span> []a=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        Scanner scanner=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String str;</span><br><span class="line">        <span class="keyword">char</span> ctemp;</span><br><span class="line">        <span class="keyword">int</span> n,u,j,temp;</span><br><span class="line">        n = Integer.parseInt(scanner.nextLine());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n ;i++ )&#123;</span><br><span class="line">            str=scanner.nextLine();</span><br><span class="line">            <span class="keyword">char</span> [] arr= str.toCharArray();</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;str.length();j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(Character.isLetter(arr[j]))</span><br><span class="line">                    a[(arr[j])-<span class="string">&#x27;A&#x27;</span>]++;<span class="comment">//储存每个字母的数量</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            temp=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; str.length(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (Character.isLetter(arr[j])) &#123;</span><br><span class="line">                    <span class="keyword">while</span> (a[temp] == <span class="number">0</span>) temp++;</span><br><span class="line">                    ctemp=<span class="string">&#x27;A&#x27;</span>;</span><br><span class="line"></span><br><span class="line">                    arr[j] = (<span class="keyword">char</span>)(ctemp+temp) ;</span><br><span class="line">                    a[temp]--;<span class="comment">//每分配到arr中一个减少一个a中数量</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;case #&quot;</span>+i+<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            System.out.println(arr);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;3021-字符排序&quot;&gt;&lt;a href=&quot;#3021-字符排序&quot; class=&quot;headerlink&quot; title=&quot;3021. 字符排序&quot;&gt;&lt;/a&gt;3021. 字符排序&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;单点时限: 2.0 sec&lt;/li&gt;
+&lt;li&gt;内存限制: 256 M</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>paixu</title>
+    <link href="https://theme-next.js.org/mist/paixu/"/>
+    <id>https://theme-next.js.org/mist/paixu/</id>
+    <published>2020-12-31T20:53:02.000Z</published>
+    <updated>2020-12-31T12:53:02.667Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>os2019a</title>
+    <link href="https://theme-next.js.org/mist/os2019a/"/>
+    <id>https://theme-next.js.org/mist/os2019a/</id>
+    <published>2020-12-19T18:10:40.000Z</published>
+    <updated>2020-12-19T10:10:40.904Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>essay02</title>
+    <link href="https://theme-next.js.org/mist/essay02/"/>
+    <id>https://theme-next.js.org/mist/essay02/</id>
+    <published>2020-12-19T16:40:49.000Z</published>
+    <updated>2020-12-19T08:40:49.461Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>essay00</title>
+    <link href="https://theme-next.js.org/mist/essay00/"/>
+    <id>https://theme-next.js.org/mist/essay00/</id>
+    <published>2020-12-14T12:53:47.000Z</published>
+    <updated>2020-12-14T05:06:09.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>生命，固然短暂的，就像清晨的露珠，还未见艳阳亟待挥发。<br>真友，固然稀缺的，人群繁盛，可惜不宜寄情与人，无论寄情于人，于物，难免到最后不感到背叛，也许如单相思一般，不如投资于自己，父母亦有其私心，人不免的，难有人能理解一另一个人人的难过处。<br>喧喧闹闹，炮竹声响，喜庆的气氛中有藏着多少的虚伪。<br>我不是职业演员，可我却带着一张张面具，我很累，很困，很疲惫，<br>不如就此睡去？<br>不能的罢，<br>离去了此世你连发声的机会都不再拥有。<br>邻里，保持你的“secret”，<br>故乡，我不曾拥有，仿佛无家可归的孤儿，四海漂泊，颠沛流离。<br>学不懂多少东洋文字？还是压根就没想使劲？</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;生命，固然短暂的，就像清晨的露珠，还未见艳阳亟待挥发。&lt;br&gt;真友，固然稀缺的，人群繁盛，可惜不宜寄情与人，无论寄情于人，于物，难免到最后不感到背叛，也许如单相思一般，不如投资于自己，父母亦有其私心，人不免的，难有人能理解一另一个人人的难过处。&lt;br&gt;喧喧闹闹，炮竹声响，喜</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>words2</title>
+    <link href="https://theme-next.js.org/mist/words2/"/>
+    <id>https://theme-next.js.org/mist/words2/</id>
+    <published>2020-12-10T20:17:31.000Z</published>
+    <updated>2020-12-10T13:39:18.395Z</updated>
+    
+    <content type="html"><![CDATA[<p>gloomier gloomy黑暗的阴暗的<br>mismanagement 收敛，汇聚，<br>coincide with 与...一致<br>shift n.&amp;v.转移；改变<br>tremor n.战栗，轻微地震<br>ore n.矿<br>outflow n.外流；流出量<br>recession n.经济衰退<br>emerging a.刚出现的,新兴的<br>decelerating a.减速制动<br>contraction n.收缩<br>corruption n.腐败; 贪污; 贿赂; 受贿<br>constraint 约束,限制,限定，严管<br>interpret 解释，口译，说明<br>conversely 相反地<br>horizontal 水平的/同一阶层的<br>confirming 证实<br>marginal 边缘的<br>eurozone 欧元区<br>federal reserve 美联储<br>bond——buying 债券购买<br>shifting 转移；转变；变化；移位<br>adj.变动的；移动的；想尽办法的<br>collapse v.崩溃；折叠；坍塌；暴跌<br>absurd 荒谬的可笑的<br>abuse vt.滥用；虐待<br>abusive a.辱骂的》滥用的》虐待的<br>affix vt.署名；贴上；n.词缀<br>affluent a.丰富的；富裕的；支流<br>afloat a.在海上的<br>averger n.复仇者<br>assassin n.刺客<br>berserker n.狂战士<br>scandal n.丑闻丑行<br>emerging market 新兴市场<br>sniffle n.抽鼻子（声)<br>estimate v.信任<br>prominent adj.重要的；著名的；杰出的；显眼的<br>emerge v 浮现显现；暴露；露出真相<br>estimate n.&amp;v.估计估价<br>hardy a.坚强的；勇敢的<br>grin n.&amp;vi&amp;vt. 露齿笑<br>groove n.凹槽<br>        vi.形成沟槽<br>gut n.勇气；内脏<br>harmony n.调和，协调，和谐<br>hawk n.鹰<br>hook n.钩；挂钩 vt.钩住<br>hop n.蹦跳<br>hospitable a.热情友好的<br>howl n.嗥叫；怒号<br>    vt.&amp;vi 咆哮；n.怒吼<br>humid a.潮湿的；湿润的<br>iceberg 冰山<br>idiot 傻瓜笨蛋<br>ignorant 不知道的，无知的<br>illusion 幻觉<br>immense 巨大的极好的<br>immigrant n.移民的，移民<br>grid n.网格，格子<br>grin vt.vi.露齿笑<br>grind vt.磨碎,磨快<br>grip vt.握紧,抓牢,紧握<br>harness vt. 治理，马具<br>harsh 严厉的，刺耳的<br>hasten vt.催促， vi.赶紧<br>hasty a.急速的，急促的<br>hawk vt.兜售眼界叫卖<br>hedge 篱笆，障碍物<br>hectic 兴奋的 狂热的<br>heroin n.海洛因，咖啡<br>hesitate vi.犹豫，踌躇，含糊<br>hierarchy n.层级,等级制度<br>highlight vt.突出 n.精彩的部分;加亮区<br>hike vt.&amp;n. 远足;徒步旅行<br>hive n.蜂房;热闹的场所<br>hockey n.曲棍球，<br>hollow a。空的，空洞的<br>imply vt。暗示 意指<br>impact 给予特定品质<br>keen 热心的<br>jury n.陪审团，评奖团<br>kidney 肾<br>lad 少年<br>landmark 陆标，地标<br>landscape n.风景，地形<br>layman 外行，门外汉，俗人<br>layoff 临时解雇<br>layout 布局安排设计<br>leak vi.漏，泄露，漏洞<br>lease 出租<br>legacy 遗产<br>legitimate 合法的<br>lenient 宽大的仁慈的<br>lever 杠杆<br>levy 征兵<br>liable 易于...的；可能的<br>license n.许可;执照vt.。.<br>ctrl+.中英文标点切换<br>loyalty n.忠诚,忠心<br>loot 战利品<br>loop 环<br>loom 织布机<br>    在织布机上织<br>    loophole 漏洞枪眼<br>    lotion 洗液,洗涤剂<br>    lottery 彩票,碰运气的事<br>    luxury 奢侈<br>    lyric 抒情诗,歌词<br>    magnificent a.壮丽的 华丽的<br>    lash vt.&amp;vi. 鞭打,冲击,摆动 n.鞭打辫子<br>    layman n.外行;门外汉;俗人<br>    lawsuit n.诉讼,诉讼案件<br>    lash vt 鞭打冲击摆动 n.鞭打鞭子<br>    loyal a.忠诚的,忠心的<br>    lotion n.洗液,洗涤剂<br>    lottery n.彩票,碰运气的事,抽奖<br>    lounge n.休息室,躺椅vi 闲逛<br>    lure 诱惑,诱饵,<br>    magnificent a.壮丽的华丽的<br>    magnify vt.放大夸大赞美<br>lash 鞭打<br>malice n.恶意,怨恨<br>maintain 维持,赡养,维修<br>manipulate  vt.操纵,操作<br>luminous a.发光的;明亮的;清楚的<br>loot 战利品<br>medieval 中世纪的;中古的<br>mentor n.指导者,良师益友</p><p>malice n.恶意,怨恨,预谋<br>malignant a.恶性的,有害的,恶意的<br>mandate  vt.授权,托管 n.授权,命令<br>manifest vt.证明,表明,显示, vi.显示出现<br>manipulate vt.操纵,操作<br>mansion 大厦<br>mar 损毁,毁伤<br>marble 大理石,大理石制品<br>plug n.塞子,插头</p><p>vt.塞<br>plumber 水管工<br>poke vt 戳刺<br>porch n.门廊<br>portable 轻便的手提的<br>potent a.有效的,强有力的<br>plea n.恳求,辩护,vt.为...辩护<br>plead vi 恳求,辩护 vt.为...辩护<br>pledge<br>polytechnic 理工科学校, a.各种工艺的,综合技术的<br>peddle 叫卖,兜售<br>peel 剥落<br>peg 钉,桩,借口,限制<br>scenario n.方案,情节,剧本<br>scorn 轻蔑,嘲笑</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;gloomier gloomy黑暗的阴暗的&lt;br&gt;mismanagement 收敛，汇聚，&lt;br&gt;coincide with 与...一致&lt;br&gt;shift n.&amp;amp;v.转移；改变&lt;br&gt;tremor n.战栗，轻微地震&lt;br&gt;ore n.矿&lt;br&gt;outflow n</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>net00</title>
+    <link href="https://theme-next.js.org/mist/net00/"/>
+    <id>https://theme-next.js.org/mist/net00/</id>
+    <published>2020-12-07T17:07:29.000Z</published>
+    <updated>2020-12-07T09:07:29.723Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>cet6_words_00</title>
+    <link href="https://theme-next.js.org/mist/cet6-words-00/"/>
+    <id>https://theme-next.js.org/mist/cet6-words-00/</id>
+    <published>2020-12-07T13:23:57.000Z</published>
+    <updated>2020-12-07T05:48:14.963Z</updated>
+    
+    <content type="html"><![CDATA[<p>day2&amp;&amp;day3<br>eradicate vt.连根拔除<br>undo vt.解开；取消<br>erase vt.擦掉<br>removal n.除去;移动<br>crackdown n.严厉打击<br>suppress vt.压制;查禁;组织...的生长（或发展)<br>oppress vt.压迫；使（心情等）沉重<br>repression n.镇压<br>repressive a.压制的;残酷的<br>tolerant a.宽容的；耐...的<br>withstand n.抵抗<br>resist v.抵抗；抵制<br>resistant a.抵抗的<br>boycott 抵制<br>protest v.坚决主张 n.抗议<br>rebel v.反叛 n.反叛分子<br>revolt n./vi。反叛，反抗，使生反感<br>riot vi.聚众闹事 n.暴乱；极度丰富<br>insurgent n.起义者 a.叛乱的<br>deport vt.把...驱逐出境<br>eject vt.喷射；驱逐 v.弹出<br>expel vt.驱逐；排出；把。。。开除<br>exile n.流放; 流亡; 放逐；流放外国者；被流放者&amp;&amp;v.<br>clasp n.扣环；紧握 vt.扣紧；握紧<br>hinge n.铰链<br>hook n.钩 vt.钩住<br>enlightened vt.启发<br>conduct v.<br>tutorial 导师的家庭教育的<br>mislead vt.<br>mission<br>calling<br>vocational<br>clamp<br>carve vt.雕刻，切<br>soak<br>absorb v。吸收<br>digestive a.助消化的<br>sip n.小口喝<br>lick vt<br>aid n.辅助物<br>conflict<br>contradict反驳相矛盾<br>mastermind 策划<br>graphic 图标的生动的<br>hamper 妨碍大篮子<br>inhibit</p><p>interfere 干涉<br>intervene 干涉干扰<br>precisous<br>junk废旧物品<br>peg小钉<br>stack柱<br>wedge<br>accumulate 积累 数量增加<br>assemble 人 集合 物 装配<br>converge 会和<br>rally 集合回复健康<br>disperse 分散使分散<br>centralization<br>monoploy<br>contact 与取得联系<br>link v.连接环节<br>isolate vt.使隔离<br>insulate 使隔离；使绝缘<br>segregate 使隔离<br>partition 分割物，分割，分开<br>disense 节省没有也行<br>allotment 分配分配物<br>reject 拒绝退回<br>plus 多加加号优势<br>deduct 扣除<br>substract<br>multiply 乘<br>division n。分开分配分歧部门<br>decrease 减少<br>diminish 减少降低<br>surge 激增<br>edit 编辑，剪辑主编<br>amend v 修改<br>modify 修改修饰<br>revise 复习修订<br>judge 法官<br>referee  裁判仲裁者<br>adjust vt 。适应调整<br>affection 喜爱<br>beloved 心爱的 心爱的人<br>disgust 使厌恶<br>resent 怨恨<br>exterior 外部的<br>external 外部的<br>internal 内部的国内的内心的<br>interior 内部的内地<br>alternative 可供选择的<br>option选择权<br>optional<br>candidate 候选人考生<br>density 密集密度<br>susceptible<br>narrative 叙述的<br>foil 挫败<br>nil 无 无价值的东西<br>desperate 绝望的</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;day2&amp;amp;&amp;amp;day3&lt;br&gt;eradicate vt.连根拔除&lt;br&gt;undo vt.解开；取消&lt;br&gt;erase vt.擦掉&lt;br&gt;removal n.除去;移动&lt;br&gt;crackdown n.严厉打击&lt;br&gt;suppress vt.压制;查禁;组织...</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ppm_reader_csharp</title>
+    <link href="https://theme-next.js.org/mist/ppm-reader-csharp/"/>
+    <id>https://theme-next.js.org/mist/ppm-reader-csharp/</id>
+    <published>2020-11-18T21:49:22.000Z</published>
+    <updated>2020-11-18T13:52:39.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>公司需要为客户开发一款用于查看PPM图像文件的软件。软件部经理决定将该项工作交付由你完成。请通过下述PPM图像文件的相关背景资料，客户粗略的软件需求说明及概要编码提示，结合桌面应用程序开发所学知识，顺利完成上述软件的开发工作。</p><ol><li>   PPM文件介绍：PPM文件是一种非常简约的图像文件，有其自己的文件格式，PPM文件主要由文件头以及文件体两大部分组成。文件头部分确定了该PPM图像文件的格式，大小， 颜色等基本信息； 文件体部分具体存储该PPM图像文件中每个像素点的具体颜色数据。下面我们以素材文件夹中的test1.ppm文件为例。<br>文件头部分由三行构成：<br>第一行是魔数P3，表示该文件是一个像素图文本文件。（像素图说明每个像素点由RGB三个颜色分量表示，每个分量一个字节。由于是文本文件，你可以用记事本等打开浏览该文件内容。）<br>第二行是该图像的大小，先是列像素数，后是行像素数，中间用一个空格隔开。（表明该图像的分辨率为400*300）<br>第三行表示每个颜色分量的最大取值。（数值255表明每个RGB分量取值范围为0~255）</li></ol><p>从第四行开始到文件结尾的数据，都是该图像每个像素点的具体RGB颜色信息。数据值之间由空格隔开。例如：本实例图像的第一个像素点RGB颜色为（69，55，62）， 第二个像素点的RGB颜色为（55，55，55）。<br>2.    软件需求及编码提示：</p><ul><li>   该软件只需要一个窗体，该窗体名称为FrmPPMViewer， 该窗体标题为“PPM 文件查看器”， 窗体大小为400*340。</li><li>   该窗体包含一个MenuStrip菜单栏控件，菜单栏包含一级主菜单“文件”，一级主菜单“文件”菜单栏下包含“打开”，以及“退出”两个二级菜单。</li><li>   当用户点击“打开”菜单后，通过OpenFileDialog对象，载入某个PPM文件。通过OpenFileDialog对象的ShowDialog（）方法显示文件打开对话框，通过OpenFileDialog对象的FileName属性可以获得用户希望载入的PPM文件名。</li><li> 获得了PPM文件名称后，即可通过StreamReader对象进行文件的解析操作。String对象的Split( )方法，对于像素点颜色数值的分割将会大有帮助， 该方法以某个指定的分隔符（本例就是以空格为分隔符），将String对象分割成若干个小的子字符串，并返回，返回数据类型为string[]。</li><li>   通过解析出来得到的PPM图像大小，新建一个大小相同的Bitmap对象。</li><li>   由于所有像素点数值信息存储在string[]数组中，需要利用int.Parse(string s)方法，实现string到int数据之间的转换。利用Bitmap对象的SetPixel( )方法写入。通过for循环，写入所有像素点颜色信息后，即可得到一个可完整显示的图像。</li><li>   写入完毕后，将该Bitmap对象，设置为FrmPPMViewer的BackgroundImage属性，即可在该窗体中显示最终图像。</li><li>   当用户点击菜单栏的“退出”菜单后，关闭窗体，结束程序。<br>PPM的文件格式<br>第一行说明是什么格式<br>第二行宽高<br>第三行最大的r or p or g的值<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.ComponentModel;</span><br><span class="line">using System.Data;</span><br><span class="line">using System.Drawing;</span><br><span class="line">using System.IO;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows.Forms;</span><br><span class="line"></span><br><span class="line">namespace FrmPPMViewer</span><br><span class="line">&#123;</span><br><span class="line">    public partial class Form1 : Form</span><br><span class="line">    &#123;</span><br><span class="line">        public Form1()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_Load(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            OpenFileDialog openFileDialog = new OpenFileDialog();</span><br><span class="line">            try</span><br><span class="line">            &#123;</span><br><span class="line">                openFileDialog.InitialDirectory = @&quot;D:\&quot;;</span><br><span class="line">                openFileDialog.Filter = &quot;(ppm文件)*.ppm|*.ppm&quot;;</span><br><span class="line">                openFileDialog.ShowDialog();</span><br><span class="line"></span><br><span class="line">                StreamReader sr = new StreamReader(openFileDialog.FileName);</span><br><span class="line">                sr.ReadLine();</span><br><span class="line">                String x = sr.ReadLine();</span><br><span class="line">                String[] g = x.Split(&#x27; &#x27;);</span><br><span class="line">                sr.ReadLine();</span><br><span class="line">                int[] intArray = new int[2];</span><br><span class="line">                for (int i = 0; i &lt; intArray.Length; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    intArray[i] = int.Parse(g[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                string strTotal = sr.ReadToEnd();</span><br><span class="line">                string[] pixels = strTotal.Split(&#x27; &#x27;);//以空格为分割点的意思</span><br><span class="line">                int v = 0;</span><br><span class="line">                </span><br><span class="line"></span><br><span class="line">                </span><br><span class="line">                Bitmap bitmap = new Bitmap(intArray[0], intArray[1]);//创建ppm相对应大小得bitmao</span><br><span class="line">                for (int i = 0; i &lt; intArray[1]; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    for (int j = 0; j &lt; intArray[0]; j++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        bitmap.SetPixel(j, i, Color.FromArgb(int.Parse(pixels[v]), int.Parse(pixels[v + 1]), int.Parse(pixels[v + 2])));</span><br><span class="line">                        //将RGB赋给bitmap（j，i）；</span><br><span class="line">                        v += 3;//因为相邻得三个分别为RG得值</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                this.BackgroundImage = bitmap;//设置本窗体的背景图片为所取得bitmap</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            catch &#123; &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Application.Exit();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;公司需要为客户开发一款用于查看PPM图像文件的软件。软件部经理决定将该项工作交付由你完成。请通过下述PPM图像文件的相关背景资料，客户粗略的软件需求说明及概要编码提示，结合桌面应用程序开发所学知识，顺利完成上述软件的开发工作。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;   PPM文件介绍</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

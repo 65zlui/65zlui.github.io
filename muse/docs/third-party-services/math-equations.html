@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/muse/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/muse/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/muse/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/muse/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5AUIVYTbHIAuz-eQtxSfZbWW5eg9_EVZMSQycIuXrG0">
+
+<link rel="stylesheet" href="/muse/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"theme-next.js.org","root":"/muse/","images":"/muse/images","scheme":"Muse","version":"8.6.1","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/muse/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
+<meta name="description" content="NexT User Docs – Third-party Service Integration – Math Equations">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Math Equations">
+<meta property="og:url" content="https://theme-next.js.org/muse/docs/third-party-services/math-equations.html">
+<meta property="og:site_name" content="NexT">
+<meta property="og:description" content="NexT User Docs – Third-party Service Integration – Math Equations">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-15T13:02:41.218Z">
+<meta property="article:modified_time" content="2021-07-15T13:02:41.218Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Hexo, NexT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://theme-next.js.org/muse/docs/third-party-services/math-equations">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":true,"permalink":"https://theme-next.js.org/muse/docs/third-party-services/math-equations.html","path":"docs/third-party-services/math-equations.html","title":"Math Equations"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Math Equations | NexT
+</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108155018-3"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-108155018-3","only_pageview":false}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/muse/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/muse/atom.xml" title="NexT" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/muse/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">NexT</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Theme for Hexo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/muse/" rel="section"><i class="fa fa-bell fa-fw"></i>Home</a></li>
+        
+            
+  <li class="menu-item menu-item-docs"><a href="/muse/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
+
+
+      
+        <li class="menu-item menu-item-plugins"><a href="/muse/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
+        <li class="menu-item menu-item-archives"><a href="/muse/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">44</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Settings"><span class="nav-number">1.</span> <span class="nav-text">Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Render-Engines"><span class="nav-number">2.</span> <span class="nav-text">Render Engines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">3.</span> <span class="nav-text">Examples</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Numbering-and-Referring-Equations-in-MathJax"><span class="nav-number">3.1.</span> <span class="nav-text">Numbering and Referring Equations in MathJax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Simple-Equations"><span class="nav-number">3.2.</span> <span class="nav-text">Simple Equations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multi-line-Equations"><span class="nav-number">3.3.</span> <span class="nav-text">Multi-line Equations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Multiple-Aligned-Equations"><span class="nav-number">3.4.</span> <span class="nav-text">Multiple Aligned Equations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Exclude-Equations-from-Numbering"><span class="nav-number">3.5.</span> <span class="nav-text">Exclude Equations from Numbering</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Use-tag-to-Tag-Equations"><span class="nav-number">3.6.</span> <span class="nav-text">Use \tag to Tag Equations</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Theme NexT"
+      src="/muse/images/logo.svg">
+  <p class="site-author-name" itemprop="name">Theme NexT</p>
+  <div class="site-description" itemprop="description">Stay Simple. Stay NexT.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/muse/archives/">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;next-theme"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/muse/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+<div class="cc-license animated" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0" title="Fork NexT on GitHub" aria-label="Fork NexT on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+  
+
+      
+
+        
+        <ul class="sub-menu menu">
+          
+            
+          
+          
+            
+                
+  <li class="menu-item menu-item-getting-started"><a href="/muse/docs/getting-started/" rel="section"><i class="fa fa-flag fa-fw"></i>Getting Started</a></li>
+
+
+          
+            
+                
+  <li class="menu-item menu-item-theme-settings"><a href="/muse/docs/theme-settings/" rel="section"><i class="fa fa-star fa-fw"></i>Theme Settings</a></li>
+
+
+          
+            
+                
+  <li class="menu-item menu-item-third-party-services"><a href="/muse/docs/third-party-services/" rel="section"><i class="fa fa-puzzle-piece fa-fw"></i>Third Party Services</a></li>
+
+
+          
+            
+                
+  <li class="menu-item menu-item-tag-plugins"><a href="/muse/docs/tag-plugins/" rel="section"><i class="fa fa-rocket fa-fw"></i>Tag Plugins</a></li>
+
+
+          
+            
+                
+  <li class="menu-item menu-item-advanced-settings"><a href="/muse/docs/advanced-settings/" rel="section"><i class="fa fa-cog fa-fw"></i>Advanced Settings</a></li>
+
+
+          
+              
+  <li class="menu-item menu-item-troubleshooting"><a href="/muse/docs/troubleshooting.html" rel="section"><i class="fa fa-life-ring fa-fw"></i>Troubleshooting</a></li>
+
+
+          
+        </ul>
+        
+
+        
+
+                
+                
+
+                
+                
+
+                
+
+                    
+                    <ul class="sub-menu menu">
+                      
+                        
+  <li class="menu-item menu-item-math-equations"><a href="/muse/docs/third-party-services/math-equations.html" rel="section"><i class="fa fa-square-root-alt fa-fw"></i>Math Equations</a></li>
+
+
+                        
+  <li class="menu-item menu-item-comment-systems"><a href="/muse/docs/third-party-services/comments.html" rel="section"><i class="fa fa-comment-alt fa-fw"></i>Comment Systems</a></li>
+
+
+                        
+  <li class="menu-item menu-item-post-widgets"><a href="/muse/docs/third-party-services/post-widgets.html" rel="section"><i class="fa fa-gift fa-fw"></i>Post Widgets</a></li>
+
+
+                        
+  <li class="menu-item menu-item-statistics-and-analytics"><a href="/muse/docs/third-party-services/statistics-and-analytics.html" rel="section"><i class="fa fa-chart-pie fa-fw"></i>Statistics and Analytics</a></li>
+
+
+                        
+  <li class="menu-item menu-item-search-services"><a href="/muse/docs/third-party-services/search-services.html" rel="section"><i class="fab fa-algolia fa-fw"></i>Search Services</a></li>
+
+
+                        
+  <li class="menu-item menu-item-chat-services"><a href="/muse/docs/third-party-services/chat-services.html" rel="section"><i class="fa fa-comments fa-fw"></i>Chat Services</a></li>
+
+
+                        
+  <li class="menu-item menu-item-external-libraries"><a href="/muse/docs/third-party-services/external-libraries.html" rel="section"><i class="fa fa-lightbulb fa-fw"></i>External Libraries</a></li>
+
+
+                    </ul>
+                    
+                
+
+                
+                
+
+                
+                
+        
+      
+  
+
+
+    
+    
+    
+    <div class="post-block" lang="en"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Math Equations<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvdGhlbWUtbmV4dC1kb2NzL2VkaXQvbWFzdGVyL3NvdXJjZS9kb2NzL3RoaXJkLXBhcnR5LXNlcnZpY2VzL21hdGgtZXF1YXRpb25zLm1k" title="Edit this post"><i class="fa fa-pen-nib"></i></span>
+</h1>
+
+<div class="post-meta-container">
+    <div class="post-description">NexT User Docs – Third-party Service Integration – Math Equations</div>
+  <ul class="breadcrumb">
+            <li><a href="/muse/docs/">DOCS</a></li>
+            <li><a href="/muse/docs/third-party-services/">THIRD-PARTY-SERVICES</a></li>
+            <li>MATH-EQUATIONS</li>
+          
+  </ul>
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h3 id="Settings"><a href="#Settings" class="headerlink" title="Settings"></a>Settings</h3><figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="comment"># Default (false) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to true, it will load mathjax / katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: none | ams | all</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">none</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>The <code>every_page</code> option controls whether to render Math Equations every page.</p>
+<ul>
+<li><strong><code>false</code></strong> → Equations will be processed on demand. It will only render those posts which have <code>mathjax: true</code> in their front-matter.</li>
+<li><code>true</code> → Equations will be processed on every page. Even if they not exists on one or another page.</li>
+</ul>
+<details class="note default"><summary><p><strong>Examples with <code>every_page: false</code> option</strong></p>
+</summary>
+<ul>
+<li><p>This post will render the Math Equations</p>
+  <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Will Render Math</span><br><span class="line"><span class="section">mathjax: true</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></li>
+<li><p>This post will NOT render the Math Equations</p>
+  <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Not Render Math</span><br><span class="line"><span class="section">mathjax: false</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></li>
+<li><p>This post will NOT render the Math Equations either</p>
+  <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="section">title: Not Render Math Either</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+</details>
+
+<p>The <code>mathjax</code> and <code>katex</code> options are used to set the rendering engine. Please read the detailed document below.</p>
+<h3 id="Render-Engines"><a href="#Render-Engines" class="headerlink" title="Render Engines"></a>Render Engines</h3><p>For now, NexT provides two rendering engines for displaying Math Equations: <span class="exturl" data-url="aHR0cHM6Ly93d3cubWF0aGpheC5vcmcv">MathJax<i class="fa fa-external-link-alt"></i></span> and <span class="exturl" data-url="aHR0cHM6Ly9rYXRleC5vcmcv">KaTeX<i class="fa fa-external-link-alt"></i></span>.</p>
+<ul>
+<li>MathJax is a JavaScript display engine for mathematics that works in all browsers. It is highly modular on input and output. Use MathML, TeX, and ASCIImath as input and produce HTML+CSS, SVG, or MathML as output.</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuaW50bWF0aC5jb20vY2c1L2thdGV4LW1hdGhqYXgtY29tcGFyaXNvbi5waHA=">KaTeX is a faster<i class="fa fa-external-link-alt"></i></span> math rendering engine compared to MathJax 3. And it could survive without JavaScript. But, for now <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0thVGVYL0thVGVYL3dpa2kvVGhpbmdzLXRoYXQtS2FUZVgtZG9lcy1ub3QtKHlldCktc3VwcG9ydA==">KaTeX supports less features<i class="fa fa-external-link-alt"></i></span> than MathJax. Here is a list of <span class="exturl" data-url="aHR0cHM6Ly9rYXRleC5vcmcvZG9jcy9zdXBwb3J0ZWQuaHRtbA==">TeX functions supported by KaTeX<i class="fa fa-external-link-alt"></i></span>.</li>
+</ul>
+<p>Firstly, you need to choose a rendering engine and turn on <code>enable</code> for it in <mark class="label primary">theme config file</mark>. Then you need to install the <strong>corresponding Hexo Renderer</strong> to fully support the display of Math Equations - Only turn on <code>enable</code> <strong>may not let you see the displayed equations correctly</strong>.</p>
+<div class="tabs" id="render-engines"><ul class="nav-tabs"><li class="tab active"><a href="#render-engines-1">MathJax</a></li><li class="tab"><a href="#render-engines-2">KaTeX</a></li></ul><div class="tab-content"><div class="tab-pane active" id="render-engines-1"><p><strong>Renderer Choosing</strong></p>
+<p>If you use MathJax to render Math Equations, you can choose one of the Markdown renderers below:</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3d6cGFuL2hleG8tcmVuZGVyZXItcGFuZG9j">hexo-renderer-pandoc<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p>hexo-renderer-pandoc is recommended because it can handle mathematical formulas in markdown documents perfectly.</p>
+<div class="note warning"><p>If you are using other renderers, such as <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXJlbmRlcmVyLW1hcmtlZA==">hexo-renderer-marked<i class="fa fa-external-link-alt"></i></span>, you need to be aware of the conflict between LaTeX and Markdown syntax. For example, an underscore (<code>_</code>) may be interpreted as the start of italic text in Markdown, or subscripted mark in TeX. To avoid syntax errors, please use escape characters (<code>\_</code>) instead:</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-$\epsilon_0$</span></span><br><span class="line"><span class="addition">+$\epsilon\_0$</span></span><br><span class="line"><span class="deletion">-\begin&#123;eqnarray*&#125;</span></span><br><span class="line"><span class="addition">+\begin&#123;eqnarray\*&#125;</span></span><br><span class="line"><span class="deletion">-\\</span></span><br><span class="line"><span class="addition">+\\\\</span></span><br></pre></td></tr></table></figure>
+</div>
+
+<p><strong>Installation</strong></p>
+<ol>
+<li><p>Firstly, set <code>mathjax</code> as rendering engine in <mark class="label primary">theme config file</mark>.</p>
+ <figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Then you need to uninstall the original renderer <code>hexo-renderer-marked</code>, and install <code>hexo-renderer-pandoc</code>:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm un hexo-renderer-marked</span><br><span class="line">$ npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure></li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2pnbS9wYW5kb2M=">pandoc<i class="fa fa-external-link-alt"></i></span> is required for hexo-renderer-pandoc, here&#39;s <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2pnbS9wYW5kb2MvYmxvYi9tYXN0ZXIvSU5TVEFMTC5tZA==">how to install pandoc<i class="fa fa-external-link-alt"></i></span>.</p>
+</li>
+</ol>
+<p><strong>Plugins</strong></p>
+<p>All extensions of MathJax are loaded automatically. For example, <code>mhchem</code> is a tool for writing beautiful chemical equations easily. It implements the <code>\ce</code> and <code>\pu</code> chemical equation macros of the LaTeX mhchem package. More information: <span class="exturl" data-url="aHR0cHM6Ly9taGNoZW0uZ2l0aHViLmlvL01hdGhKYXgtbWhjaGVtLw==">MathJax/mhchem Manual<i class="fa fa-external-link-alt"></i></span>.</p></div><div class="tab-pane" id="render-engines-2"><p><strong>Renderer Choosing</strong></p>
+<p>If you use KaTeX to render Math Equations, you can choose one of the Markdown renderers below:</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NIRU5YQ0hFTi9oZXhvLXJlbmRlcmVyLW1hcmtkb3duLWl0LXBsdXM=">hexo-renderer-markdown-it-plus<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXJlbmRlcmVyLW1hcmtkb3duLWl0">hexo-renderer-markdown-it<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p><strong>Installation</strong></p>
+<ol>
+<li><p>Firstly, set <code>katex</code> as rendering engine in <mark class="label primary">theme config file</mark>.</p>
+ <figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<li><p>Then you need to uninstall the original renderer <code>hexo-renderer-marked</code> and install one of the renderer plugins:</p>
+</li>
+</ol>
+<div class="tabs" id="katex-renderer"><ul class="nav-tabs"><li class="tab active"><a href="#katex-renderer-1">hexo-renderer-markdown-it-plus</a></li><li class="tab"><a href="#katex-renderer-2">hexo-renderer-markdown-it</a></li></ul><div class="tab-content"><div class="tab-pane active" id="katex-renderer-1"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm un hexo-renderer-marked</span><br><span class="line">$ npm i hexo-renderer-markdown-it-plus</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="katex-renderer-2"><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm un hexo-renderer-marked</span><br><span class="line">$ npm i hexo-renderer-markdown-it</span><br></pre></td></tr></table></figure>
+
+<p>If you use <code>hexo-renderer-markdown-it</code>, you also need to install <code>markdown-it-katex</code>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm i markdown-it-katex</span><br></pre></td></tr></table></figure>
+
+<p>And then in <mark class="label info">site config file</mark> you need to add <code>markdown-it-katex</code> as a plugin for <code>hexo-renderer-markdown-it</code>:</p>
+<figure class="highlight yml"><figcaption><span>hexo/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># config of hexo-renderer-markdown-it</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-katex</span></span><br></pre></td></tr></table></figure></div></div></div>
+
+<p><strong>Plugins</strong></p>
+<p>Copy-tex extension for KaTeX modifes the copy/paste behavior in any browser supporting the Clipboard API so that, when selecting and copying whole KaTeX-rendered elements, the text content of the resulting clipboard renders KaTeX elements as their LaTeX source surrounded by specified delimiters. More information: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0thVGVYL0thVGVYL3RyZWUvbWFzdGVyL2NvbnRyaWIvY29weS10ZXg=">Copy-tex extension<i class="fa fa-external-link-alt"></i></span>.</p>
+<figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<div class="note danger"><p><strong>Known Issues</strong></p>
+<ol>
+<li>Firstly, please check <span class="exturl" data-url="aHR0cHM6Ly9rYXRleC5vcmcvZG9jcy9pc3N1ZXMuaHRtbA==">Common Issues<i class="fa fa-external-link-alt"></i></span> of KaTeX.</li>
+<li>Displayed Math (i.e. <code>$$...$$</code>) needs to started with new clear line.<br> In other words: you must not have any characters (except of whitespaces) <strong>before the opening <code>$$</code> and after the ending <code>$$</code></strong> (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvMzIjaXNzdWVjb21tZW50LTM1NzQ4OTUwOQ==">comment #32<i class="fa fa-external-link-alt"></i></span>).</li>
+<li>Don&#39;t support Unicode (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvMzIjaXNzdWVjb21tZW50LTM1NzQ4OTUwOQ==">comment #32<i class="fa fa-external-link-alt"></i></span>).</li>
+<li>Inline Math (..<code>$...$</code>) must not have white spaces <strong>after the opening <code>$</code> and before the ending <code>$</code></strong> (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvMzIjaXNzdWVjb21tZW50LTM1NzQ4OTUwOQ==">comment #32<i class="fa fa-external-link-alt"></i></span>).</li>
+<li>If you use math in Heading (i.e. <code>## Heading</code>).<br> Then in corresponding TOC item it will show the related LaTeX code 3 times (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvMzIjaXNzdWVjb21tZW50LTM1OTAxODY5NA==">comment #32<i class="fa fa-external-link-alt"></i></span>).</li>
+<li>If you use math in your post&#39;s title, it will not be rendered (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvMzIjaXNzdWVjb21tZW50LTM1OTE0Mjg3OQ==">comment #32<i class="fa fa-external-link-alt"></i></span>).</li>
+</ol>
+</div></div></div></div>
+
+<div class="note warning"><p>After setting up the math rendering engine or installing / uninstalling the Markdown renderer, please execute <code>hexo clean</code>. Run standard Hexo generate, deploy process or start the server to test whether the plugin is working properly:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g -d</span><br><span class="line"><span class="comment"># or hexo clean &amp;&amp; hexo s</span></span><br></pre></td></tr></table></figure>
+</div>
+
+<div class="note warning"><p>Except for the required renderer, any other Hexo math plugins are unnecessary and there is no need to manually import any JS or CSS files. If you have installed plugins such as <code>hexo-math</code> or <code>hexo-katex</code>, they may conflict with the built-in rendering engine of NexT.</p>
+</div>
+
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><div class="note info"><p>The following examples are rendered by <code>mathjax</code> engine.</p>
+</div>
+
+<h4 id="Numbering-and-Referring-Equations-in-MathJax"><a href="#Numbering-and-Referring-Equations-in-MathJax" class="headerlink" title="Numbering and Referring Equations in MathJax"></a>Numbering and Referring Equations in MathJax</h4><p>In NexT v6.3.0, we have added feature to <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm1hdGhqYXgub3JnL2VuL2xhdGVzdC9pbnB1dC90ZXgvZXFudW1iZXJzLmh0bWw=">automatic equation numbering<i class="fa fa-external-link-alt"></i></span> with opportunity to make reference to that equations.</p>
+<p>To enable this feature, you need to set <code>mathjax.tags</code> to <code>ams</code> in <mark class="label primary">theme config file</mark>.</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: none | ams | all</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">ams</span></span><br></pre></td></tr></table></figure>
+
+<p>And to make the automatic equation numbering work, you have to wrap your LaTeX equations in <code>equation</code> environment. Using the plain old style (i.e., wrap an equation with two dollar signs in each side) will not work. How to refer to an equation? Just give a <code>\label&#123;&#125;</code> tag and then in your later text, use <code>\ref&#123;&#125;</code> or <code>\eqref&#123;&#125;</code> to refer it. Using <code>\eqref&#123;&#125;</code> is preferred since if you use <code>\ref&#123;&#125;</code>, there are no parentheses around the equation number. Below are some of the common scenarios for equation numbering.</p>
+<h4 id="Simple-Equations"><a href="#Simple-Equations" class="headerlink" title="Simple Equations"></a>Simple Equations</h4><p>For simple equations, use the following form to give a tag,</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;equation&#125; \label&#123;eq1&#125;</span><br><span class="line">e=mc^2</span><br><span class="line">\end&#123;equation&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$\begin{equation} \label{eq1}<br>e=mc^2<br>\end{equation}$$</p>
+<p>Then, you can refer to this equation in your text easily by using something like:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">The famous matter-energy equation $\eqref&#123;eq1&#125;$ proposed by Einstein...</span><br></pre></td></tr></table></figure>
+
+<p>The famous matter-energy equation $\eqref{eq1}$ proposed by Einstein...</p>
+<h4 id="Multi-line-Equations"><a href="#Multi-line-Equations" class="headerlink" title="Multi-line Equations"></a>Multi-line Equations</h4><p>For multi-line equations, inside the <code>equation</code> environment, you can use the <code>aligned</code> environment to split it into multiple lines:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;equation&#125; \label&#123;eq2&#125;</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">a &amp;= b + c \\</span><br><span class="line">  &amp;= d + e + f + g \\</span><br><span class="line">  &amp;= h + i</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">\end&#123;equation&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$\begin{equation} \label{eq2}<br>\begin{aligned}<br>a &amp;= b + c \\<br>  &amp;= d + e + f + g \\<br>  &amp;= h + i<br>\end{aligned}<br>\end{equation}$$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Equation $\eqref&#123;eq2&#125;$ is a multi-line equation.</span><br></pre></td></tr></table></figure>
+
+<p>Equation $\eqref{eq2}$ is a multi-line equation.</p>
+<h4 id="Multiple-Aligned-Equations"><a href="#Multiple-Aligned-Equations" class="headerlink" title="Multiple Aligned Equations"></a>Multiple Aligned Equations</h4><p>We can use <code>align</code> environment to align multiple equations. Each of these equations will get its own numbers.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;align&#125;</span><br><span class="line">a &amp;= b + c \label&#123;eq3&#125; \\</span><br><span class="line">x &amp;= yz \label&#123;eq4&#125; \\</span><br><span class="line">l &amp;= m - n \label&#123;eq5&#125;</span><br><span class="line">\end&#123;align&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$\begin{align}<br>a &amp;= b + c \label{eq3} \\<br>x &amp;= yz \label{eq4} \\<br>l &amp;= m - n \label{eq5}<br>\end{align}$$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">There are three aligned equations: equation $\eqref&#123;eq3&#125;$, equation $\eqref&#123;eq4&#125;$ and equation $\eqref&#123;eq5&#125;$.</span><br></pre></td></tr></table></figure>
+
+<p>There are three aligned equations: equation $\eqref{eq3}$, equation $\eqref{eq4}$ and equation $\eqref{eq5}$.</p>
+<p>Since <code>align</code> in and of itself is a complete equation environment (read <span class="exturl" data-url="aHR0cHM6Ly90ZXguc3RhY2tleGNoYW5nZS5jb20vcXVlc3Rpb25zLzk1NDAyL3doYXQtaXMtdGhlLWRpZmZlcmVuY2UtYmV0d2Vlbi1hbGlnbmVkLWluLWRpc3BsYXllZC1tb2RlLWFuZC1zdGFycmVkLWFsaWdu">here<i class="fa fa-external-link-alt"></i></span> about the difference between <code>aligned</code> and <code>align</code> in LaTeX). You do not need to wrap it with <code>equation</code> environment.</p>
+<h4 id="Exclude-Equations-from-Numbering"><a href="#Exclude-Equations-from-Numbering" class="headerlink" title="Exclude Equations from Numbering"></a>Exclude Equations from Numbering</h4><p>In the <code>align</code> environment, if you do not want to number one or some equations, just use <code>\nonumber</code> right behind these equations. Like the following:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;align&#125;</span><br><span class="line">-4 + 5x &amp;= 2 + y \nonumber \\</span><br><span class="line">w + 2 &amp;= -1 + w \\</span><br><span class="line">ab &amp;= cb</span><br><span class="line">\end&#123;align&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$\begin{align}<br>-4 + 5x &amp;= 2 + y \nonumber \\<br>w + 2 &amp;= -1 + w \\<br>ab &amp;= cb<br>\end{align}$$</p>
+<h4 id="Use-tag-to-Tag-Equations"><a href="#Use-tag-to-Tag-Equations" class="headerlink" title="Use \tag to Tag Equations"></a>Use <code>\tag</code> to Tag Equations</h4><p>Sometimes, you want to use more «exotic» style to refer your equation. You can use <code>\tag&#123;&#125;</code> to achieve this. For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$x+1\over\sqrt&#123;1-x^2&#125; \tag&#123;i&#125;\label&#123;eq_tag&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$x+1\over\sqrt{1-x^2} \tag{i}\label{eq_tag}$$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Equation $\eqref&#123;eq_tag&#125;$ use `\tag&#123;&#125;` instead of automatic numbering.</span><br></pre></td></tr></table></figure>
+
+<p>Equation $\eqref{eq_tag}$ use <code>\tag&#123;&#125;</code> instead of automatic numbering.</p>
+
+      </div>
+      
+      
+      
+    </div>
+  <ul class="breadcrumb">
+            <li><a href="/muse/docs/">DOCS</a></li>
+            <li><a href="/muse/docs/third-party-services/">THIRD-PARTY-SERVICES</a></li>
+            <li>MATH-EQUATIONS</li>
+          
+  </ul>
+
+    
+    
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2014 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NexT</span>
+</div>
+  <div class="powered-by">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <a href="https://theme-next.js.org/muse/">NexT.Muse</a>
+  </div><div class="footer-custom">
+Website source code <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG8tbmV4dC9oZXhvLW5leHQuZ2l0aHViLmlv">here</span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/schemes/muse.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/pjax.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"hexo-next/community"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/chat/gitter.min.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.0/dist/mermaid.min.js","integrity":"sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/tags/mermaid.min.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/math/mathjax.min.js"></script>
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"next-theme","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/disqus.min.js"></script>
+
+</body>
+</html>

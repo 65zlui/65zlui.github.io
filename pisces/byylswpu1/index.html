@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/pisces/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/pisces/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/pisces/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/pisces/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="5AUIVYTbHIAuz-eQtxSfZbWW5eg9_EVZMSQycIuXrG0">
+
+<link rel="stylesheet" href="/pisces/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"theme-next.js.org","root":"/pisces/","images":"/pisces/images","scheme":"Pisces","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/pisces/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
+<meta name="description" content="二、实验内容1、词法分析器设计（1）单词的数据结构；（2）记号类别编码；（3）词法正规式；（4）识别单词的状态转换图。2、词法分析器实现（1）实现辅助例程；（2）实现独立的记号获取函数GetToken；（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。 using System;using System.IO;namespace scanner&amp;#123;    &#x2F;&#x2F;记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="byylswpu1">
+<meta property="og:url" content="https://theme-next.js.org/pisces/byylswpu1/index.html">
+<meta property="og:site_name" content="NexT">
+<meta property="og:description" content="二、实验内容1、词法分析器设计（1）单词的数据结构；（2）记号类别编码；（3）词法正规式；（4）识别单词的状态转换图。2、词法分析器实现（1）实现辅助例程；（2）实现独立的记号获取函数GetToken；（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。 using System;using System.IO;namespace scanner&amp;#123;    &#x2F;&#x2F;记">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-02T21:45:24.000Z">
+<meta property="article:modified_time" content="2021-01-02T14:40:01.613Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Hexo, NexT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://theme-next.js.org/pisces/byylswpu1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://theme-next.js.org/pisces/byylswpu1/","path":"byylswpu1/","title":"byylswpu1"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>byylswpu1 | NexT</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108155018-3"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-108155018-3","only_pageview":false}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/analytics/google-analytics.min.js"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/pisces/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/pisces/atom.xml" title="NexT" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/pisces/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">NexT</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Theme for Hexo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/pisces/" rel="section"><i class="fa fa-bell fa-fw"></i>Home</a></li>
+        
+            
+  <li class="menu-item menu-item-docs"><a href="/pisces/docs/" rel="section"><i class="fa fa-book fa-fw"></i>Docs</a></li>
+
+
+      
+        <li class="menu-item menu-item-plugins"><a href="/pisces/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
+        <li class="menu-item menu-item-archives"><a href="/pisces/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">44</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Theme NexT"
+      src="/pisces/images/logo.svg">
+  <p class="site-author-name" itemprop="name">Theme NexT</p>
+  <div class="site-description" itemprop="description">Stay Simple. Stay NexT.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/pisces/archives/">
+        
+          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWU=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;next-theme"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/pisces/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+<div class="cc-license animated" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by10aGVtZS1uZXh0" title="Fork NexT on GitHub" aria-label="Fork NexT on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/pisces/byylswpu1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/pisces/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          byylswpu1<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvdGhlbWUtbmV4dC1kb2NzL2VkaXQvbWFzdGVyL3NvdXJjZS9fcG9zdHMvYnl5bHN3cHUxLm1k" title="Edit this post"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-02 21:45:24" itemprop="dateCreated datePublished" datetime="2021-01-02T21:45:24Z">2021-01-02</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/pisces/byylswpu1/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="byylswpu1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>二、实验内容<br>1、词法分析器设计<br>（1）单词的数据结构；<br>（2）记号类别编码；<br>（3）词法正规式；<br>（4）识别单词的状态转换图。<br>2、词法分析器实现<br>（1）实现辅助例程；<br>（2）实现独立的记号获取函数GetToken；<br>（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.IO;</span><br><span class="line"></span><br><span class="line">namespace scanner</span><br><span class="line">&#123;</span><br><span class="line">    //记号类别号</span><br><span class="line">    enum Token_Type</span><br><span class="line">    &#123;</span><br><span class="line">        ORIGIN, SCALE, ROT, IS, TO, //语言保留字(一字一类别)</span><br><span class="line">        STEP, DRAW, FOR, FROM,      //语言保留字</span><br><span class="line">        T,                          //语言中唯一的变量</span><br><span class="line">        ID,                         //标识符(若把关键字、变量都看成一种单词，可以使用本类别)</span><br><span class="line"></span><br><span class="line">        SEMICO, L_BRACKET, R_BRACKET, COMMA, //分隔符(分号、左括号、右括号、逗号)</span><br><span class="line">        PLUS, MINUS, MUL, DIV, POWER,        //运算符(加、减、乘、除、乘方)</span><br><span class="line"></span><br><span class="line">        FUNC,                                //(语言提供的标准数学)函数</span><br><span class="line"></span><br><span class="line">        CONST_ID,                           //数值常量</span><br><span class="line">        ERRTOKEN,                           //错误单词</span><br><span class="line">        NONTOKEN							//专用记号(单词序列结束)</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //记号数据类型</span><br><span class="line">    delegate double MathFunc(double d);//单参数的函数委托类型 delegate：代表</span><br><span class="line">    struct Token</span><br><span class="line">    &#123;</span><br><span class="line">        public Token_Type type; 			//类别号</span><br><span class="line">        public string lexeme;				//标识符的字符串</span><br><span class="line">        public double value;				//数值常数的值</span><br><span class="line">        public MathFunc func; 	            //函数委托</span><br><span class="line"></span><br><span class="line">        public Token(Token_Type type = Token_Type.NONTOKEN, string lexeme = &quot;&quot;, double value = 0, MathFunc func = null)</span><br><span class="line">        &#123;</span><br><span class="line">            this.type = type;</span><br><span class="line">            this.lexeme = lexeme;</span><br><span class="line">            this.value = value;</span><br><span class="line">            this.func = func;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class Program</span><br><span class="line">    &#123;</span><br><span class="line">        // 预定义单词表</span><br><span class="line">        static Token[] TokenTab = &#123;</span><br><span class="line">            //符号常数</span><br><span class="line">            new Token(Token_Type.CONST_ID,  &quot;PI&quot;,       3.1415926,  null),</span><br><span class="line">            new Token(Token_Type.CONST_ID,  &quot;E&quot;,        2.71828,    null),</span><br><span class="line">            //变量(惟一的)</span><br><span class="line">            new Token(Token_Type.T,         &quot;T&quot;,        0.0,        null),</span><br><span class="line">            //数学函数</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;SIN&quot;,      0.0,        Math.Sin),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;COS&quot;,      0.0,        Math.Cos),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;TAN&quot;,      0.0,        Math.Tan),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;LN&quot;,       0.0,        Math.Log),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;EXP&quot;,      0.0,        Math.Exp),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;SQRT&quot;,     0.0,        Math.Sqrt),</span><br><span class="line">            //语句关键字</span><br><span class="line">            new Token(Token_Type.ORIGIN,    &quot;ORIGIN&quot;,   0.0,        null),</span><br><span class="line">            new Token(Token_Type.SCALE,     &quot;SCALE&quot;,    0.0,        null),</span><br><span class="line">            new Token(Token_Type.ROT,       &quot;ROT&quot;,      0.0,        null),</span><br><span class="line">            new Token(Token_Type.IS,        &quot;IS&quot;,       0.0,        null),</span><br><span class="line">            new Token(Token_Type.FOR,       &quot;FOR&quot;,      0.0,        null),</span><br><span class="line">            new Token(Token_Type.FROM,      &quot;FROM&quot;,     0.0,        null),</span><br><span class="line">            new Token(Token_Type.TO,        &quot;TO&quot;,       0.0,        null),</span><br><span class="line">            new Token(Token_Type.STEP,      &quot;STEP&quot;,     0.0,        null),</span><br><span class="line">            new Token(Token_Type.DRAW,      &quot;DRAW&quot;,     0.0,        null)</span><br><span class="line">        &#125;;</span><br><span class="line">        static Token ErrorToken = new Token(Token_Type.ERRTOKEN, &quot;error token&quot;, -1, null);</span><br><span class="line"></span><br><span class="line">        //c# 无 ungetc 函数（将一个字符退回输入流），所以用如下代码模拟</span><br><span class="line">        static char lastCh;</span><br><span class="line">        static bool ungetFlag = false;</span><br><span class="line">        //读取一个字符</span><br><span class="line">        static char getChar(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            if (!ungetFlag)</span><br><span class="line">            &#123;</span><br><span class="line">                lastCh = (char)sr.Read();</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                ungetFlag = false;</span><br><span class="line"></span><br><span class="line">            return lastCh;</span><br><span class="line">        &#125;</span><br><span class="line">        //退回一个字符</span><br><span class="line">        static void ungetChar(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            ungetFlag = true;</span><br><span class="line">        &#125;</span><br><span class="line">        //c 语言的 ungetc 函数，在 c# 中的模拟</span><br><span class="line"></span><br><span class="line">        //判断标识符是否语言的预定义单词</span><br><span class="line">        static Token IsKeyWords(string id)</span><br><span class="line">        &#123;</span><br><span class="line">            int i;</span><br><span class="line">            Token token = new Token();</span><br><span class="line"></span><br><span class="line">            for (i = 0; i &lt; TokenTab.Length; i++) if (string.Equals(TokenTab[i].lexeme, id)) break;</span><br><span class="line"></span><br><span class="line">            if (i &lt; TokenTab.Length)</span><br><span class="line">                token = TokenTab[i];</span><br><span class="line">            else</span><br><span class="line">                token = ErrorToken;</span><br><span class="line"></span><br><span class="line">            return token;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //显示单词</span><br><span class="line">        static void writeToken(Token token)</span><br><span class="line">        &#123;</span><br><span class="line">            if (token.type == Token_Type.FUNC)</span><br><span class="line">                Console.WriteLine(&quot;&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;&quot;, (int)token.type, token.lexeme, token.value, (string)token.func.Method.Name);</span><br><span class="line">            else</span><br><span class="line">                Console.WriteLine(&quot;&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;&quot;, (int)token.type, token.lexeme, token.value, &quot;&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        static void getToken(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            //从源代码逐个读取字符</span><br><span class="line">            Token token;</span><br><span class="line">            char c, preCh;</span><br><span class="line">            while (true)</span><br><span class="line">            &#123;</span><br><span class="line">                c = getChar(sr);</span><br><span class="line"></span><br><span class="line">                if (c == &#x27;-&#x27; || c == &#x27;/&#x27;)</span><br><span class="line">                &#123;//如果是注释</span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);//读取新字符</span><br><span class="line">                    if (c == preCh)</span><br><span class="line">                    &#123; //判断注释符引导字符</span><br><span class="line">                        //去掉注释符引导字符</span><br><span class="line">                        while (c != &#x27;\n&#x27; &amp;&amp; !sr.EndOfStream)</span><br><span class="line">                        &#123;</span><br><span class="line">                            c = getChar(sr);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        c = preCh;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (c == &#x27;\t&#x27; || c == &#x27;\n&#x27; || c == &#x27;\r&#x27; || c == &#x27; &#x27;)</span><br><span class="line">                &#123;//过滤空白</span><br><span class="line">                    continue;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (char.IsLetter(c))</span><br><span class="line">                &#123; //读到的是字母</span><br><span class="line">                    string buf = &quot;&quot;;//临时缓冲buf</span><br><span class="line">                    buf += char.ToUpper(c);</span><br><span class="line">                    //遍历后续字符</span><br><span class="line">                    for (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        if (char.IsLetterOrDigit(c))</span><br><span class="line">                        &#123; //如果仍是字母/数字</span><br><span class="line">                            buf += char.ToUpper(c);</span><br><span class="line">                        &#125;</span><br><span class="line">                        else &#123; break; &#125;//读完</span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = IsKeyWords(buf);</span><br><span class="line">                &#125;</span><br><span class="line">               else if (c == &#x27;(&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.L_BRACKET, &quot;(&quot;);</span><br><span class="line">                else if (c == &#x27;)&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.R_BRACKET, &quot;)&quot;);</span><br><span class="line">                else if (c == &#x27;-&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.MINUS, &quot;-&quot;);</span><br><span class="line">                else if (c == &#x27;;&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.SEMICO, &quot;;&quot;);</span><br><span class="line">                else if (c == &#x27;,&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.COMMA, &quot;,&quot;);</span><br><span class="line">                else if (c == &#x27;+&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.PLUS, &quot;+&quot;);</span><br><span class="line">                else if (c == &#x27;/&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.DIV, &quot;/&quot;);</span><br><span class="line">                else if (c == &#x27;*&#x27;)</span><br><span class="line">                &#123;//乘号会有*和乘方**</span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);//读取新字符</span><br><span class="line">                    if (c == preCh)</span><br><span class="line">                    &#123;</span><br><span class="line">                        token = new Token(Token_Type.POWER, &quot;**&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;//否则退回一个字符</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        token = new Token(Token_Type.MUL, &quot;*&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (char.IsDigit(c))</span><br><span class="line">                &#123;</span><br><span class="line">                    string buf = &quot;&quot;;</span><br><span class="line">                    buf += c;</span><br><span class="line"></span><br><span class="line">                    for (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        if (char.IsDigit(c) || c == &#x27;.&#x27;)</span><br><span class="line">                        &#123; //如果仍是数字或小数点</span><br><span class="line">                            buf += c;</span><br><span class="line">                        &#125;</span><br><span class="line">                        else &#123; break; &#125;//读完</span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = new Token(Token_Type.CONST_ID, &quot;&quot;, Convert.ToDouble(buf));</span><br><span class="line">                &#125;</span><br><span class="line">                else</span><br><span class="line">                &#123;</span><br><span class="line">                    token = ErrorToken;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (sr.EndOfStream)</span><br><span class="line">                &#123; //判断文件读取结束</span><br><span class="line">                    token = new Token(Token_Type.NONTOKEN);</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                writeToken(token);//输出单词</span><br><span class="line">            &#125;</span><br><span class="line">            writeToken(token);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(&quot;&#123;0,-11&#125;&#123;1, -12&#125;&#123;2, -12&#125;&#123;3, -20&#125;&quot;, &quot;记号类别&quot;, &quot;字符串&quot;, &quot;常数值&quot;, &quot;函数指针&quot;);</span><br><span class="line">            Console.WriteLine(&quot;-------------------------------------------------------&quot;);</span><br><span class="line"></span><br><span class="line">            //打开源代码文件</span><br><span class="line">            StreamReader sr;</span><br><span class="line">            if (args.Length == 0)</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(&quot;p89-8-10.draw&quot;);//文件在项目的子目录 bin\debug 下</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(args[0].ToString());//允许通过命令行参数，给出源代码文件名</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            getToken(sr);</span><br><span class="line">            sr.Close();</span><br><span class="line">            Console.ReadLine();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/pisces/eoj3021/" rel="prev" title="eoj3021">
+                  <i class="fa fa-chevron-left"></i> eoj3021
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/pisces/%E6%B3%A1%E5%BD%B1/" rel="next" title="泡影">
+                  泡影 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2014 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NexT</span>
+</div>
+  <div class="powered-by">Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <a href="https://theme-next.js.org/pisces/">NexT.Pisces</a>
+  </div><div class="footer-custom">
+Website source code <span class="exturl theme-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG8tbmV4dC9oZXhvLW5leHQuZ2l0aHViLmlv">here</span>
+</div>
+
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/pjax.min.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/search/local-search.min.js"></script>
+<script class="next-config" data-name="gitter" type="application/json">{"enable":true,"room":"hexo-next/community"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/chat/gitter.min.js"></script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":"forest","js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.11.0/dist/mermaid.min.js","integrity":"sha256-sVAx+v/Q7v0Q2xm5vN7h5ccSna6gaLREhG9sF8pKT6I="}}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/tags/mermaid.min.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/math/mathjax.min.js"></script>
+
+
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"next-theme","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/third-party/comments/disqus.min.js"></script>
+
+</body>
+</html>

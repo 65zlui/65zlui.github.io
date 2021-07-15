@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /page/*/
+Disallow: /archives/*
+Disallow: /muse/*
+Disallow: /mist/*
+Disallow: /pisces/*
+Host: https://theme-next.js.org
