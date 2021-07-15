@@ -225,153 +225,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/OS-1-4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/OS-1-4/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-15 13:07:51" itemprop="dateCreated datePublished" datetime="2021-07-15T13:07:51Z">2021-07-15</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/OS-1-4/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="OS-1-4/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <hr>
-<p>title: OS-1-4 分时操作系统<br>date: 2020-09-08 22:30:52<br>tags:</p>
-<hr>
-<p>多道批处理系统的缺点<br>（平均周转时间长）作业处理时间长；<br>交互能力差；<br>运行过程不确定。<br>不用不一定是空闲的，<br>共享，用忙，同时等cpu的进程可能有很多，<br>宏观上并行，</p>
-<ul>
-<li>事务性任务的涌现<ul>
-<li>交互度高</li>
-<li>相应快速</li>
-</ul>
-</li>
-<li>要求支持多任务/多用户</li>
-<li>多终端计算机<ul>
-<li>高性能主机+多个终端<ul>
-<li>主机：运算，cpu + 内存</li>
-<li>终端：输入和显示</li>
-</ul>
-</li>
-<li>主机采用分时技术轮流为每个终端服务，每个终端都感觉到</li>
-</ul>
-</li>
-<li>分时技术<ul>
-<li>概念<ul>
-<li>主机以很短的时间片为单位，把cpu轮流分配给终端使用，直到全部作业被运行完</li>
-<li>由于时间片很短，在终端数量不多的情况下，每个终端都能很快重新获得cpu，使得每个终端都能得到及时响应<ul>
-<li>等待周期 = 时间片 * 终端数量</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>多路调制性<ul>
-<li>多用户联机使用同一台计算机</li>
-</ul>
-</li>
-<li>独占性<ul>
-<li>用户感觉独占计算机</li>
-</ul>
-</li>
-<li>交互性<ul>
-<li>及时响应用户的请求</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>大型分时系统的实践：multics项目<ul>
-<li>  1962年由apra支持，有mit、bell和G.E参与</li>
-<li>开发一种“公用计算服务系统”</li>
-<li>multiplexed information and computing service</li>
-<li>同时支持波士顿地区的用户</li>
-</ul>
-</li>
-<li>unix<ul>
-<li>第一个实用化的分时操作系统<ul>
-<li>第一个真正体现操作系统领域各种先进概念和技术的操作系统</li>
-</ul>
-</li>
-<li>革新和创造<ul>
-<li>实现操作系统的可移植性</li>
-<li>实现了硬件无关性</li>
-<li>引进了“特殊文件”（special file）的概念<ul>
-<li>把外设看作文件，实现对外设统一管理</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E7%B1%BB%E8%BD%AC%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -637,7 +490,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">java核心04-抽象类与接口</a>
+          <a href="/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">java核心03-抽象类与接口</a>
         </h2>
 
         <div class="post-meta-container">
@@ -816,6 +669,133 @@
 <td align="center"></td>
 </tr>
 </tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/" class="post-title-link" itemprop="url">java核心01-信息隐藏</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-04-22 01:45:24" itemprop="dateCreated datePublished" datetime="2021-04-22T01:45:24Z">2021-04-22</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="信息隐藏原则和this/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="信息隐藏原则和this"><a href="#信息隐藏原则和this" class="headerlink" title="信息隐藏原则和this"></a>信息隐藏原则和this</h1><h2 id="信息隐藏原则"><a href="#信息隐藏原则" class="headerlink" title="信息隐藏原则"></a>信息隐藏原则</h2><h3 id="面向对象有一个法则：信息隐藏"><a href="#面向对象有一个法则：信息隐藏" class="headerlink" title="面向对象有一个法则：信息隐藏"></a>面向对象有一个法则：信息隐藏</h3><ul>
+<li>类的成员属性，是私有的private</li>
+<li>类的方法是公有public的，通过方法修改成员属性的值</li>
+</ul>
+<p>eg. 信息隐藏：通过类的方法来间接访问类的属性，而不是直接访问类的属性</p>
+<ul>
+<li><p>类成员是私有的</p>
+</li>
+<li><p>get和set方法是公有的统称为getter setter</p>
+</li>
+<li><p>外界对类成员的操作只能通过get和set方法来操作</p>
+</li>
+</ul>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ul>
+<li>this 负责指向本类中的成员变量</li>
+<li>在构造函数里，形参的优先级更高</li>
+</ul>
+<p>~ example1:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>~ example2:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>this 负责指向本类中的成员方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.add(<span class="number">5</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//调用本类的add方法，this可以忽略</span></span><br></pre></td></tr></table></figure></li>
+<li><p>this可以代替本类的构造函数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<p>不影响歧义的情况下，this可以省略，参见example1</p>
+</li>
+</ul>
+<p>总结一下，</p>
+<ul>
+<li><p>this可以指向本类中的成员变量</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x</span><br></pre></td></tr></table></figure></li>
+<li><p>可以指向本类中的成员方法，</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x()</span><br></pre></td></tr></table></figure></li>
+<li><p>可以当作构造函数使用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(x);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Above-all"><a href="#Above-all" class="headerlink" title="Above all"></a>Above all</h2><ul>
+<li>信息隐藏原则<ul>
+<li>保护属性信息</li>
+<li>公开行为信息</li>
+</ul>
+</li>
+<li>this负责指向本类中的成员</li>
+<li>this可以代替本类中的构造函数</li>
+</ul>
 
       
     </div>

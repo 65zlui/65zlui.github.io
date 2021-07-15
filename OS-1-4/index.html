@@ -21,15 +21,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"theme-next.js.org","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
-<meta name="description" content="title: OS-1-4 分时操作系统date: 2020-09-08 22:30:52tags:  多道批处理系统的缺点（平均周转时间长）作业处理时间长；交互能力差；运行过程不确定。不用不一定是空闲的，共享，用忙，同时等cpu的进程可能有很多，宏观上并行，  事务性任务的涌现 交互度高 相应快速   要求支持多任务&#x2F;多用户 多终端计算机 高性能主机+多个终端 主机：运算，cpu + 内存 终">
+<meta name="description" content="#多道批处理系统的缺点（平均周转时间长）作业处理时间长；交互能力差；运行过程不确定。不用不一定是空闲的，共享，用忙，同时等cpu的进程可能有很多，宏观上并行，  事务性任务的涌现 交互度高 相应快速   要求支持多任务&#x2F;多用户 多终端计算机 高性能主机+多个终端 主机：运算，cpu + 内存 终端：输入和显示   主机采用分时技术轮流为每个终端服务，每个终端都感觉到   分时技术 概念 主机以很短">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NexT">
+<meta property="og:title" content="OS-1-4-1">
 <meta property="og:url" content="https://theme-next.js.org/OS-1-4/index.html">
 <meta property="og:site_name" content="NexT">
-<meta property="og:description" content="title: OS-1-4 分时操作系统date: 2020-09-08 22:30:52tags:  多道批处理系统的缺点（平均周转时间长）作业处理时间长；交互能力差；运行过程不确定。不用不一定是空闲的，共享，用忙，同时等cpu的进程可能有很多，宏观上并行，  事务性任务的涌现 交互度高 相应快速   要求支持多任务&#x2F;多用户 多终端计算机 高性能主机+多个终端 主机：运算，cpu + 内存 终">
+<meta property="og:description" content="#多道批处理系统的缺点（平均周转时间长）作业处理时间长；交互能力差；运行过程不确定。不用不一定是空闲的，共享，用忙，同时等cpu的进程可能有很多，宏观上并行，  事务性任务的涌现 交互度高 相应快速   要求支持多任务&#x2F;多用户 多终端计算机 高性能主机+多个终端 主机：运算，cpu + 内存 终端：输入和显示   主机采用分时技术轮流为每个终端服务，每个终端都感觉到   分时技术 概念 主机以很短">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-07-15T13:07:51.325Z">
-<meta property="article:modified_time" content="2020-09-14T09:09:33.228Z">
+<meta property="article:published_time" content="2020-09-09T22:30:52.000Z">
+<meta property="article:modified_time" content="2021-07-15T14:10:46.868Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Hexo, NexT">
 <meta name="twitter:card" content="summary">
@@ -39,10 +39,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://theme-next.js.org/OS-1-4/","path":"OS-1-4/","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://theme-next.js.org/OS-1-4/","path":"OS-1-4/","title":"OS-1-4-1"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title> | NexT</title>
+<title>OS-1-4-1 | NexT</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108155018-3"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-108155018-3","only_pageview":false}</script>
@@ -243,7 +243,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          <span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvdGhlbWUtbmV4dC1kb2NzL2VkaXQvbWFzdGVyL3NvdXJjZS9fcG9zdHMvT1MtMS00Lm1k" title="Edit this post"><i class="fa fa-pen-nib"></i></span>
+          OS-1-4-1<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvdGhlbWUtbmV4dC1kb2NzL2VkaXQvbWFzdGVyL3NvdXJjZS9fcG9zdHMvT1MtMS00Lm1k" title="Edit this post"><i class="fa fa-pen-nib"></i></span>
         </h1>
 
         <div class="post-meta-container">
@@ -254,7 +254,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-07-15 13:07:51" itemprop="dateCreated datePublished" datetime="2021-07-15T13:07:51Z">2021-07-15</time>
+      <time title="Created: 2020-09-09 22:30:52" itemprop="dateCreated datePublished" datetime="2020-09-09T22:30:52Z">2020-09-09</time>
     </span>
 
   
@@ -281,10 +281,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <hr>
-<p>title: OS-1-4 分时操作系统<br>date: 2020-09-08 22:30:52<br>tags:</p>
-<hr>
-<p>多道批处理系统的缺点<br>（平均周转时间长）作业处理时间长；<br>交互能力差；<br>运行过程不确定。<br>不用不一定是空闲的，<br>共享，用忙，同时等cpu的进程可能有很多，<br>宏观上并行，</p>
+        <p>#多道批处理系统的缺点<br>（平均周转时间长）作业处理时间长；<br>交互能力差；<br>运行过程不确定。<br>不用不一定是空闲的，<br>共享，用忙，同时等cpu的进程可能有很多，<br>宏观上并行，</p>
 <ul>
 <li>事务性任务的涌现<ul>
 <li>交互度高</li>
@@ -364,11 +361,14 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/%E7%B1%BB%E8%BD%AC%E5%9E%8B/" rel="prev" title="java核心04-类转型">
-                  <i class="fa fa-chevron-left"></i> java核心04-类转型
+                <a href="/os-swpu00/" rel="prev" title="os-swpu00">
+                  <i class="fa fa-chevron-left"></i> os-swpu00
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/swpu-sjk01/" rel="next" title="swpu-sjk01">
+                  swpu-sjk01 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
