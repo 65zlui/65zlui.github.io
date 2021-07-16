@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">45</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">46</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">46</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -216,6 +216,83 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/desktopdev03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/desktopdev03/" class="post-title-link" itemprop="url">c# winform label跳转网页</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-09-15 11:18:28" itemprop="dateCreated datePublished" datetime="2020-09-15T11:18:28Z">2020-09-15</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/desktopdev03/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="desktopdev03/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private void label1_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            System.Diagnostics.Process.Start(&quot;https://www.swpu.edu.cn/&quot;);</span><br><span class="line">            //1. 跳转到swpu主页</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -435,90 +512,6 @@
 <li>定义一个位置信息Point用于存储鼠标位置<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private Point mPoint;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">        /// 鼠标按下</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;</span><br><span class="line">        /// &lt;param name=&quot;e&quot;&gt;&lt;/param&gt;</span><br><span class="line">        private void panel1_MouseDown(object sender, MouseEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            mPoint = new Point(e.X, e.Y);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">        /// 鼠标移动</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;</span><br><span class="line">        /// &lt;param name=&quot;e&quot;&gt;&lt;/param&gt;</span><br><span class="line">        private void panel1_MouseMove(object sender, MouseEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            if (e.Button == MouseButtons.Left)</span><br><span class="line">            &#123;</span><br><span class="line">                this.Location = new Point(this.Location.X + e.X - mPoint.X, this.Location.Y + e.Y - mPoint.Y);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/swpu-sjk01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/swpu-sjk01/" class="post-title-link" itemprop="url">swpu-sjk01</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-09-11 13:27:27" itemprop="dateCreated datePublished" datetime="2020-09-11T13:27:27Z">2020-09-11</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/swpu-sjk01/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="swpu-sjk01/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="数据库系统概论"><a href="#数据库系统概论" class="headerlink" title="数据库系统概论"></a>数据库系统概论</h1><h2 id="数据库的定义"><a href="#数据库的定义" class="headerlink" title="数据库的定义"></a>数据库的定义</h2><h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><ul>
-<li>数据</li>
-<li>信息<br>数据是信息的载体，而信息是数据的内涵<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3>存放数据的仓库</li>
-<li>永久存储</li>
-<li>有组织</li>
-<li>可共享<h3 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h3>DBMS 是位于用户与操作系统之间的一种数据管理软件。<br>使用户能够方便地定义数据，操纵数据<h3 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h3>是指在计算机中引入数据库后的系统，通常由数据库，数据库管理系统，应用系统和数据库管理员四部分组成</li>
-</ul>
 
       
     </div>
