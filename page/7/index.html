@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">46</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">50</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">50</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -225,7 +225,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/sql00/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/ppm-reader-csharp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -238,7 +238,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/sql00/" class="post-title-link" itemprop="url">sql00</a>
+          <a href="/ppm-reader-csharp/" class="post-title-link" itemprop="url">ppm_reader_csharp</a>
         </h2>
 
         <div class="post-meta-container">
@@ -249,7 +249,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-10-19 18:27:01" itemprop="dateCreated datePublished" datetime="2020-10-19T18:27:01Z">2020-10-19</time>
+      <time title="Created: 2020-11-18 21:49:22" itemprop="dateCreated datePublished" datetime="2020-11-18T21:49:22Z">2020-11-18</time>
     </span>
 
   
@@ -261,8 +261,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/sql00/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="sql00/" itemprop="commentCount"></span>
+    <a title="disqus" href="/ppm-reader-csharp/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="ppm-reader-csharp/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,9 +276,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>实验一中遇到的问题<br>1．输入数据报错，提示索引超出了数组界限<br>解决办法：重启ssms</p>
-<p>2.输入数据，报错数据类型不匹配<br>解决办法：检查主键外键是否设置好，并重新进入，<br>如果不重新进入sqlserver，依然会报错</p>
-<p>3.遗漏复合主键<br>解决方法：ctrl加鼠标右键，再勾选主键</p>
+          <p>公司需要为客户开发一款用于查看PPM图像文件的软件。软件部经理决定将该项工作交付由你完成。请通过下述PPM图像文件的相关背景资料，客户粗略的软件需求说明及概要编码提示，结合桌面应用程序开发所学知识，顺利完成上述软件的开发工作。</p>
+<ol>
+<li>   PPM文件介绍：PPM文件是一种非常简约的图像文件，有其自己的文件格式，PPM文件主要由文件头以及文件体两大部分组成。文件头部分确定了该PPM图像文件的格式，大小， 颜色等基本信息； 文件体部分具体存储该PPM图像文件中每个像素点的具体颜色数据。下面我们以素材文件夹中的test1.ppm文件为例。<br>文件头部分由三行构成：<br>第一行是魔数P3，表示该文件是一个像素图文本文件。（像素图说明每个像素点由RGB三个颜色分量表示，每个分量一个字节。由于是文本文件，你可以用记事本等打开浏览该文件内容。）<br>第二行是该图像的大小，先是列像素数，后是行像素数，中间用一个空格隔开。（表明该图像的分辨率为400*300）<br>第三行表示每个颜色分量的最大取值。（数值255表明每个RGB分量取值范围为0~255）</li>
+</ol>
+<p>从第四行开始到文件结尾的数据，都是该图像每个像素点的具体RGB颜色信息。数据值之间由空格隔开。例如：本实例图像的第一个像素点RGB颜色为（69，55，62）， 第二个像素点的RGB颜色为（55，55，55）。<br>2.    软件需求及编码提示：</p>
+<ul>
+<li>   该软件只需要一个窗体，该窗体名称为FrmPPMViewer， 该窗体标题为“PPM 文件查看器”， 窗体大小为400*340。</li>
+<li>   该窗体包含一个MenuStrip菜单栏控件，菜单栏包含一级主菜单“文件”，一级主菜单“文件”菜单栏下包含“打开”，以及“退出”两个二级菜单。</li>
+<li>   当用户点击“打开”菜单后，通过OpenFileDialog对象，载入某个PPM文件。通过OpenFileDialog对象的ShowDialog（）方法显示文件打开对话框，通过OpenFileDialog对象的FileName属性可以获得用户希望载入的PPM文件名。</li>
+<li> 获得了PPM文件名称后，即可通过StreamReader对象进行文件的解析操作。String对象的Split( )方法，对于像素点颜色数值的分割将会大有帮助， 该方法以某个指定的分隔符（本例就是以空格为分隔符），将String对象分割成若干个小的子字符串，并返回，返回数据类型为string[]。</li>
+<li>   通过解析出来得到的PPM图像大小，新建一个大小相同的Bitmap对象。</li>
+<li>   由于所有像素点数值信息存储在string[]数组中，需要利用int.Parse(string s)方法，实现string到int数据之间的转换。利用Bitmap对象的SetPixel( )方法写入。通过for循环，写入所有像素点颜色信息后，即可得到一个可完整显示的图像。</li>
+<li>   写入完毕后，将该Bitmap对象，设置为FrmPPMViewer的BackgroundImage属性，即可在该窗体中显示最终图像。</li>
+<li>   当用户点击菜单栏的“退出”菜单后，关闭窗体，结束程序。<br>PPM的文件格式<br>第一行说明是什么格式<br>第二行宽高<br>第三行最大的r or p or g的值<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.ComponentModel;</span><br><span class="line">using System.Data;</span><br><span class="line">using System.Drawing;</span><br><span class="line">using System.IO;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows.Forms;</span><br><span class="line"></span><br><span class="line">namespace FrmPPMViewer</span><br><span class="line">&#123;</span><br><span class="line">    public partial class Form1 : Form</span><br><span class="line">    &#123;</span><br><span class="line">        public Form1()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_Load(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            OpenFileDialog openFileDialog = new OpenFileDialog();</span><br><span class="line">            try</span><br><span class="line">            &#123;</span><br><span class="line">                openFileDialog.InitialDirectory = @&quot;D:\&quot;;</span><br><span class="line">                openFileDialog.Filter = &quot;(ppm文件)*.ppm|*.ppm&quot;;</span><br><span class="line">                openFileDialog.ShowDialog();</span><br><span class="line"></span><br><span class="line">                StreamReader sr = new StreamReader(openFileDialog.FileName);</span><br><span class="line">                sr.ReadLine();</span><br><span class="line">                String x = sr.ReadLine();</span><br><span class="line">                String[] g = x.Split(&#x27; &#x27;);</span><br><span class="line">                sr.ReadLine();</span><br><span class="line">                int[] intArray = new int[2];</span><br><span class="line">                for (int i = 0; i &lt; intArray.Length; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    intArray[i] = int.Parse(g[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                string strTotal = sr.ReadToEnd();</span><br><span class="line">                string[] pixels = strTotal.Split(&#x27; &#x27;);//以空格为分割点的意思</span><br><span class="line">                int v = 0;</span><br><span class="line">                </span><br><span class="line"></span><br><span class="line">                </span><br><span class="line">                Bitmap bitmap = new Bitmap(intArray[0], intArray[1]);//创建ppm相对应大小得bitmao</span><br><span class="line">                for (int i = 0; i &lt; intArray[1]; i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    for (int j = 0; j &lt; intArray[0]; j++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        bitmap.SetPixel(j, i, Color.FromArgb(int.Parse(pixels[v]), int.Parse(pixels[v + 1]), int.Parse(pixels[v + 2])));</span><br><span class="line">                        //将RGB赋给bitmap（j，i）；</span><br><span class="line">                        v += 3;//因为相邻得三个分别为RG得值</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                this.BackgroundImage = bitmap;//设置本窗体的背景图片为所取得bitmap</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            catch &#123; &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Application.Exit();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -305,7 +317,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/ddrui-1/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/vivaldi-introduce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -318,7 +330,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/ddrui-1/" class="post-title-link" itemprop="url">你=future?,dd of 天朝</a>
+          <a href="/vivaldi-introduce/" class="post-title-link" itemprop="url">vivaldi_introduce</a>
         </h2>
 
         <div class="post-meta-container">
@@ -329,7 +341,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-10-13 23:23:48" itemprop="dateCreated datePublished" datetime="2020-10-13T23:23:48Z">2020-10-13</time>
+      <time title="Created: 2020-11-17 17:59:39" itemprop="dateCreated datePublished" datetime="2020-11-17T17:59:39Z">2020-11-17</time>
     </span>
 
   
@@ -341,8 +353,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/ddrui-1/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="ddrui-1/" itemprop="commentCount"></span>
+    <a title="disqus" href="/vivaldi-introduce/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="vivaldi-introduce/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -356,19 +368,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>（魔改曾博的你=未来，Best Boy of China）<br>致我自己：    </p>
-<p>我想简短的问问你，身体还好吗，这么长的时间，空下来的时候，都在干些什么呢，有没有去读什么书，就先不问有没有读到很有感触的书了。有没有静下心写点东西的东西，暂不要说没有想到一些提笔想写的事情？时间就是时间，不分内外，都很值钱。时间可以变现为金钱，而金钱却只能节约时间，不能变现为时间。</p>
-<p>人是心理动物，孤单和寂寞都是可以调控。要想在孤单的环境内做到不寂寞，让自己充实起来，自然会有一片自己的天地，而不是三心二意看看这个人，看看那个人，最后才发现人家的生活不适合自己，绕过许多弯路。</p>
-<p>没错的，我是个啥比，只会去勾勒理想的大饼，却不会琢磨实施的计划，一会儿看着人家做手机赚钱，yy自己能当产品经理，一会儿看着ff15的遗憾，希望自己能当游戏制作人，做出最好的jrpg，一时🧠上头以为自己能从政娶红二代中的漂亮妹妹，一会儿yy着自己能本科毕业去谷歌，却™连一个前后端框架都没摸熟，屁的算法都不会，我看还不如人家面包高中时的水平吧，dd！你就是个dd！shame on you！</p>
-<p>物质上的满足随风即逝，化为内心的创痛，内心里的坚毅牢不可摧，成为力量的泉源。我希望你能一直有个向上积极的心态，找到自己在囹圄里的意义。</p>
-<p>精神上的空虚，甚至停滞不前，对人造成的损害是巨大的。心中无源，有身为表，实为死水。我常常听说很多大人，或爱好书法，或爱好旅游，或爱好电子产品，都是有一种让人心旷神怡的精神追求。而谈到你，我则往往会说，他的爱好，“都是牌乐麻将罢”，“都是消费别人的内容吧”，“都是啪啪啪吧”。外人或许会流露出对这种生活的羡慕，我却担心其中暗藏的腐朽。这腐朽不是政治上的腐朽，是精神上的腐朽。精神上的腐朽，消磨人的意志，愚钝人的体能。人的一生，就是参悟人生本身的历程，而你们半途而废。对照年轻时的气宇轩昂，这十几年来你的内心，都让自己羞颜。</p>
-<p>这样一个打击，或者说变故，必然到来。是给你一个机会去反思，去想想生命本身，去想想自己的快乐，幸福，平静，安详，究竟来自何方。是来自权利，物质，其他人，还是自己纯净的精神。它来的不早，它来的反而迟了，就好像地震，小的地震没能释放能量，积聚多年，最后而来的就是毁灭性的大震。</p>
-<p>你吃了很多苦。我假装很心疼，但我觉得不必过于忧心。人都是适应性极强的动物，你能慢慢适应。通俗点说，潮涨潮落，风水轮流转，人生总有起伏，能适应优越，难道就不能适应艰苦？从精神的条件来说，外在的物质条件都是次要的，暂时的，从属的，你若能有一颗抵制纵欲，清新向上的精神，你就能克服所谓困难，生机不断。</p>
-<p>对于将来的安排，我也听说了。至于是悲观还是乐观，我觉得完全取决于人。多少英雄没有经历过家中的变故，多少伟大的民族没有经历过磨难？变故，磨难，失败，都是由自己的精神上的松懈引至的。你错在不能居安思危，错在放纵自己的物欲，错在自己的自负，错在不能在找到现实和理想的平衡点，错在侥幸懈怠，错在放弃了对人生孜孜不倦的追求。因此招致祸变，是生命给你的警钟，他对你提出改变的要求。</p>
-<p>人的生命有长短，生命不是靠长短来衡量，更不是靠在有限生命中的物质，而应当靠你的精神境界来衡量。追求精神，追求那些永恒的东西，比追求这些世俗，昙花一现的东西有效，划算的多。古人早就看破这一点，因此他们才有严于律己，宽于待人的谚俗，因此他们才有手留余香的想象，因此他们才有修身齐家治国平天下的理想。</p>
-<p>这种理想，我想你肯定有过。但伴随着你事业的上升，你没能坚持。你侥幸的认为生命会放过你的怠慢，但她已经用生动的一课告诉了你：这不是运气，也不是你的倒霉，每个人都一样。家家有一本难念的经，每个人的光环背后都有痛楚，而只要那些真正有精神寄托和追求的人，才能笑到最后。</p>
-<p>因此你受难的时间长短，真的不重要。何时能结束，也不重要。重要的事你有没有用这同等重要的时间，去想那些更加重要的事。我们以后还有很多时间，我也希望能收到你的回信，继续谈一些建设性的，而不是责备的话题。但我想这样的责备是必要的，是我的责任。有责改之，无则加勉。这不但是写给你的，也是写给我自己的，我们都要共同加勉。我现在的生活很好，倘若我真有此信中所写如此的觉悟，我想我也可以让你放心。</p>
-<p>另一个自我，于西石专</p>
+          <p>笔记本不插电源的时候用chrome会很费电，游戏本一个半小时左右电就差不多了<br>这时候该怎么办呢？<br>一个比较好的建议<br>使用vivaldi，基于chromium内核，但是耗电少很多，<br>实测我的游戏本用vivaldi能上4个小时网。</p>
 
       
     </div>
@@ -395,7 +395,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/gamecomment01/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%88%91%E6%98%AF%EF%BC%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -408,7 +408,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/gamecomment01/" class="post-title-link" itemprop="url">gamecomment00--游戏杂谈01</a>
+          <a href="/%E6%88%91%E6%98%AF%EF%BC%9F/" class="post-title-link" itemprop="url">我是？</a>
         </h2>
 
         <div class="post-meta-container">
@@ -419,7 +419,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-09-15 22:28:06" itemprop="dateCreated datePublished" datetime="2020-09-15T22:28:06Z">2020-09-15</time>
+      <time title="Created: 2020-11-04 12:09:18" itemprop="dateCreated datePublished" datetime="2020-11-04T12:09:18Z">2020-11-04</time>
     </span>
 
   
@@ -431,8 +431,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/gamecomment01/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="gamecomment01/" itemprop="commentCount"></span>
+    <a title="disqus" href="/%E6%88%91%E6%98%AF%EF%BC%9F/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="我是？/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -446,9 +446,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="原神-缝合怪-崩崩崩-荒野之息"><a href="#原神-缝合怪-崩崩崩-荒野之息" class="headerlink" title="原神---缝合怪 崩崩崩+荒野之息"></a>原神---缝合怪 崩崩崩+荒野之息</h1><p><img src="/img/%E5%8E%9F%E7%A5%9E00.png" loading="lazy"><br>这是一部缝合怪作品，感觉就是把荒野之息的元素和崩坏三缝合，<br>崩坏三的元素：<br>如抽卡，多个角色之间的切换，打击和技能，感觉都是崩坏三的延续，<br>荒野之息的元素<br><img src="/img/%E5%8E%9F%E7%A5%9E01.bmp" loading="lazy"><br>开放世界，野炊，收集，画风，<br><img src="/img/%E5%8E%9F%E7%A5%9E02.png" loading="lazy"><br>这是抽卡游戏，也有开放世界，有很多元素的混合，但是它们糅合后的体验并不算佳，<br>画面在手游中完全可以算一线水准，<br>如果把它当作pc网游其实也还说得过去，不过玩家间互相交互的元素稍微少了点，16级前原生只是有抽卡机制的单机。<br>游戏机制，在很多方面让你感觉米哈游是想引导你花更多的时间肝主线，<br>原神前20-30个小时的体验，其实相当不错，<br><img src="/img/%E5%8E%9F%E7%A5%9E04.png" loading="lazy"><br>到了一定等级后，升级越来越难，演变成网游常见的刷boss肝任务，开放世界就成了一个谎言，原神只是有着开放世界的皮，<br>原神之后的体验就渐渐变得无聊起来，<br>比如冒险等级机制，不让你速通主线，逼你花更多的时间让你肝在游戏里<br>剧情和巫师三那种不能比，叙事非常单薄低幼。<br>如果把原神当作一个抽卡网游，其实它是算相对优秀的作品<br>如果把它和塞尔达比较，没有太多可比性，一个内购氪金游戏和一个买断制游戏感觉比较起来没那么大可比性。<br><img src="/img/%E5%8E%9F%E7%A5%9E06.png" loading="lazy"><br>未完待续。。。</p>
-<p><img src="/img/%E5%8E%9F%E7%A5%9E05.png" loading="lazy"></p>
-
+          
       
     </div>
 
@@ -474,7 +472,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/python03/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -487,7 +485,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/python03/" class="post-title-link" itemprop="url">python中的turtle</a>
+          <a href="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F04/" class="post-title-link" itemprop="url">操作系统04</a>
         </h2>
 
         <div class="post-meta-container">
@@ -498,7 +496,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-09-15 12:49:51" itemprop="dateCreated datePublished" datetime="2020-09-15T12:49:51Z">2020-09-15</time>
+      <time title="Created: 2020-11-03 13:26:52" itemprop="dateCreated datePublished" datetime="2020-11-03T13:26:52Z">2020-11-03</time>
     </span>
 
   
@@ -510,8 +508,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/python03/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="python03/" itemprop="commentCount"></span>
+    <a title="disqus" href="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F04/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="操作系统04/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -525,15 +523,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.penup()</span><br><span class="line">turtle.pendown()</span><br></pre></td></tr></table></figure>
-<p>turtle中的画笔，可以通过一组函数来控制，penup抬起画笔，pendown落下画笔</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">turtle.penup(),turtle.pu(),turtle.up()</span><br></pre></td></tr></table></figure>
-<p>作用：抬起画笔，之后移动画笔不绘制形状。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">turtle.pendown()</span><br><span class="line">turtle.pd(),turtle.down()</span><br></pre></td></tr></table></figure>
-<p>作用：落下画笔，之后移动画笔将绘制形状。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">turtle.pensize(width)</span><br><span class="line">turtle.width()</span><br></pre></td></tr></table></figure>
-<p>作用设置画笔宽度，当无参数输入时返回当前画笔宽度。<br>参数如下：<br>width：设置画笔线条宽度，如果为none或者空，则函数返回当前画笔宽度</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">turtle.pencolor(colorstring)</span><br><span class="line">turtle.pencolor((r,g,b))</span><br></pre></td></tr></table></figure>
+          
       
     </div>
 
@@ -552,7 +542,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
