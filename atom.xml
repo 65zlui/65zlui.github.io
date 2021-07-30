@@ -6,7 +6,7 @@
   <link href="https://theme-next.js.org/atom.xml" rel="self"/>
   
   <link href="https://theme-next.js.org/"/>
-  <updated>2021-07-30T08:43:25.559Z</updated>
+  <updated>2021-07-30T09:02:00.940Z</updated>
   <id>https://theme-next.js.org/</id>
   
   <author>
@@ -21,17 +21,14 @@
     <link href="https://theme-next.js.org/Number%E5%92%8CString%E6%96%B9%E6%B3%95/"/>
     <id>https://theme-next.js.org/Number%E5%92%8CString%E6%96%B9%E6%B3%95/</id>
     <published>2021-07-30T16:31:17.000Z</published>
-    <updated>2021-07-30T08:43:25.559Z</updated>
+    <updated>2021-07-30T09:02:00.940Z</updated>
     
-    <content type="html"><![CDATA[<p>#Number和String方法--背后的转换原则</p><p>##Number方法</p><p>1.先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤</p><p>2.若valueOf方法返回对象，则改用ToString方法，若返回原始类型的值，则使用Number方法，不再进行后续步骤</p><p>3.如果toString方法返回的是对象，就报错</p><p>##String方法</p><p>1.先调用对象的toString方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p><p>2.如果toString方法返回对象，使用valueOf方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p><p>3.如果valueOf方法返回对象，则报错</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Number和String方法-背后的转换原则"><a href="#Number和String方法-背后的转换原则" class="headerlink" title="Number和String方法--背后的转换原则"></a>Number和String方法--背后的转换原则</h1><h2 id="Number方法"><a href="#Number方法" class="headerlink" title="Number方法"></a>Number方法</h2><ol><li><p>先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤</p></li><li><p>若valueOf方法返回对象，则改用ToString方法，若返回原始类型的值，则使用Number方法，不再进行后续步骤</p></li><li><p>如果toString方法返回的是对象，就报错</p></li></ol><h2 id="String方法"><a href="#String方法" class="headerlink" title="String方法"></a>String方法</h2><ol><li><p>先调用对象的toString方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p></li><li><p>如果toString方法返回对象，使用valueOf方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p></li><li><p>如果valueOf方法返回对象，则报错</p></li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;#Number和String方法--背后的转换原则&lt;/p&gt;
-&lt;p&gt;##Number方法&lt;/p&gt;
-&lt;p&gt;1.先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤&lt;/p&gt;
-&lt;p&gt;2.若valueOf方法返回对象，则改用ToString方</summary>
+    <summary type="html">&lt;h1 id=&quot;Number和String方法-背后的转换原则&quot;&gt;&lt;a href=&quot;#Number和String方法-背后的转换原则&quot; class=&quot;headerlink&quot; title=&quot;Number和String方法--背后的转换原则&quot;&gt;&lt;/a&gt;Number和String方法-</summary>
       
     
     

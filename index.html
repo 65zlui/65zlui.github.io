@@ -276,15 +276,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>#Number和String方法--背后的转换原则</p>
-<p>##Number方法</p>
-<p>1.先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤</p>
-<p>2.若valueOf方法返回对象，则改用ToString方法，若返回原始类型的值，则使用Number方法，不再进行后续步骤</p>
-<p>3.如果toString方法返回的是对象，就报错</p>
-<p>##String方法</p>
-<p>1.先调用对象的toString方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p>
-<p>2.如果toString方法返回对象，使用valueOf方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p>
-<p>3.如果valueOf方法返回对象，则报错</p>
+          <h1 id="Number和String方法-背后的转换原则"><a href="#Number和String方法-背后的转换原则" class="headerlink" title="Number和String方法--背后的转换原则"></a>Number和String方法--背后的转换原则</h1><h2 id="Number方法"><a href="#Number方法" class="headerlink" title="Number方法"></a>Number方法</h2><ol>
+<li><p>先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤</p>
+</li>
+<li><p>若valueOf方法返回对象，则改用ToString方法，若返回原始类型的值，则使用Number方法，不再进行后续步骤</p>
+</li>
+<li><p>如果toString方法返回的是对象，就报错</p>
+</li>
+</ol>
+<h2 id="String方法"><a href="#String方法" class="headerlink" title="String方法"></a>String方法</h2><ol>
+<li><p>先调用对象的toString方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p>
+</li>
+<li><p>如果toString方法返回对象，使用valueOf方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p>
+</li>
+<li><p>如果valueOf方法返回对象，则报错</p>
+</li>
+</ol>
 
       
     </div>
