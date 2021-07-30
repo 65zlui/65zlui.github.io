@@ -6,7 +6,7 @@
   <link href="https://theme-next.js.org/atom.xml" rel="self"/>
   
   <link href="https://theme-next.js.org/"/>
-  <updated>2021-07-19T05:39:08.268Z</updated>
+  <updated>2021-07-30T08:43:25.559Z</updated>
   <id>https://theme-next.js.org/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Number和String方法</title>
+    <link href="https://theme-next.js.org/Number%E5%92%8CString%E6%96%B9%E6%B3%95/"/>
+    <id>https://theme-next.js.org/Number%E5%92%8CString%E6%96%B9%E6%B3%95/</id>
+    <published>2021-07-30T16:31:17.000Z</published>
+    <updated>2021-07-30T08:43:25.559Z</updated>
+    
+    <content type="html"><![CDATA[<p>#Number和String方法--背后的转换原则</p><p>##Number方法</p><p>1.先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤</p><p>2.若valueOf方法返回对象，则改用ToString方法，若返回原始类型的值，则使用Number方法，不再进行后续步骤</p><p>3.如果toString方法返回的是对象，就报错</p><p>##String方法</p><p>1.先调用对象的toString方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p><p>2.如果toString方法返回对象，使用valueOf方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p><p>3.如果valueOf方法返回对象，则报错</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;#Number和String方法--背后的转换原则&lt;/p&gt;
+&lt;p&gt;##Number方法&lt;/p&gt;
+&lt;p&gt;1.先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤&lt;/p&gt;
+&lt;p&gt;2.若valueOf方法返回对象，则改用ToString方</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>fix</title>
+    <link href="https://theme-next.js.org/fix/"/>
+    <id>https://theme-next.js.org/fix/</id>
+    <published>2021-07-22T13:46:52.000Z</published>
+    <updated>2021-07-22T05:46:52.169Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>html00</title>
+    <link href="https://theme-next.js.org/html00/"/>
+    <id>https://theme-next.js.org/html00/</id>
+    <published>2021-07-20T12:46:07.000Z</published>
+    <updated>2021-07-20T09:43:32.481Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="屮"><a href="#屮" class="headerlink" title="屮"></a>屮</h1><p>html不管样式<br>css管样式<br>不能把视频当电视剧看多查文档<br>navigation-<nav><br>alternative-alt<br>不要一直用<div><br><span> <DIV>没有意义的标签<br>中文英文关系</p><h2 id="和区别"><a href="#和区别" class="headerlink" title="和区别"></a><button>和<input type="button">区别</h2><p>button不是一个空元素<br><input type="button">不能有自己元素 </p><p>空元素<meta> <link> <hr><br><col><colgroup></p><p>html5不推荐input写成自闭合的</p><div>就是写到<head></head>里面也会被浏览器纠错放到<body></body>里base title meta link script noscript可以出现在head元素内<p><noscript> 如果用户浏览器不支持script 则展示noscript中的内容</p><p>   iframe可以拥有一个name，a标签的target可以通过name指向这个iframe</p><p>现代前端开发中iframe很少用</p><p>iframe用于在当前页面里嵌入一个页面</p><meta charset="utf-8">* html5更新后<meta http-equip="content-type" content="text\html" charset ="utf-8"><ul><li><p>http等价物</p></li><li><p>body 默认margin:8px</p></li><li><p>span，image默认display inline</p></li><li><p>div，ul，h1默认display block </p></li></ul><p>img可替换元素=》替换为图片，宽高待图片下载后产生</p><p>img input video</p><ul><li>外观渲染独立于css</li></ul><p>css优先级比属性要高，属性不是内联样式</p><p>html全称?</p><ul><li>Hyper Text Makeup Language</li></ul><p>Who is making  the Web standards?</p><ul><li>The World Wide Web Consortium(w3c)</li></ul><p>What is the correct Html element for inserting a line break</p><br><p>html早期自带css一些属性</p><p>李爵士发明html时候没有css</p><p>bgcolor背景色</p><p>What is the correct html for adding a background color?</p><body style="background-color:yellow;"><p>Choose the correct Html element to define important text?</p><strong><p>Choose the correct html element to define emphasizzed text</p><em><p>em语气重</p><p>strong地位重</p><p>How can you open a link in anew tab/browser window ?</p><a href="url" target="_blank"><p>Which of these elements are all <table> elements?(d)</p><p>a.<thead>，<body>,<tr></p><p>b.<table>,<tr>,<tt></p><p>c.<table>,<head>,<tfoot></p><p>d.<table><tr><td></p><p>inline 内联元素<br>Inline elements are normally displayed without starting a new line</p><p>How can you make a numbered list?<br>ans:<ol></p><p>How can you make a bulleted list?</p><ul><ol><list><dl>ans:<ul>What is the correct Html for making a checkbox?(a)a.<input type="checkbox">b.<input type="check">c.<checkbox>d.<check><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210720153829499.png" alt="image-20210720153829499" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210720153856363.png" alt="image-20210720153856363" loading="lazy"></p><p>What is the correct html for making a text area?</p><textarea>What is the correct html for inserting a background image<body style ="background-image:url(background.jpg)"In html you can embed svg elements directly into an html page(true)contenteditable="true"The html global attribute "contenteditable" is used to Specify whether the content of an element should be eaditable or notIn html onblur and onfocus is 事件event attributessvg是xml格式的<canvas>元素用来draw graphicsIn html,which attribute is used to specify that an input field must be filled out?ans:requiredwhich input type defines a slider control?ans:rangewhich html element is used to display a scalar measurement within a range<meter>非·<measure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;屮&quot;&gt;&lt;a href=&quot;#屮&quot; class=&quot;headerlink&quot; title=&quot;屮&quot;&gt;&lt;/a&gt;屮&lt;/h1&gt;&lt;p&gt;html不管样式&lt;br&gt;css管样式&lt;br&gt;不能把视频当电视剧看多查文档&lt;br&gt;navigation-&lt;nav&gt;&lt;br&gt;alternative-al</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>凝死，报恩</title>
@@ -381,45 +437,6 @@
 &lt;li&gt;单点时限: 2.0 sec&lt;/li&gt;
 &lt;li&gt;内存限制: 256 M</summary>
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>paixu</title>
-    <link href="https://theme-next.js.org/paixu/"/>
-    <id>https://theme-next.js.org/paixu/</id>
-    <published>2020-12-31T20:53:02.000Z</published>
-    <updated>2020-12-31T12:53:02.667Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>os2019a</title>
-    <link href="https://theme-next.js.org/os2019a/"/>
-    <id>https://theme-next.js.org/os2019a/</id>
-    <published>2020-12-19T18:10:40.000Z</published>
-    <updated>2020-12-19T10:10:40.904Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>essay02</title>
-    <link href="https://theme-next.js.org/essay02/"/>
-    <id>https://theme-next.js.org/essay02/</id>
-    <published>2020-12-19T16:40:49.000Z</published>
-    <updated>2020-12-19T08:40:49.461Z</updated>
-    
     
     
     
