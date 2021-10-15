@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">53</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">57</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -225,7 +225,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/OS-1-4/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/desktopdev02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -238,7 +238,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/OS-1-4/" class="post-title-link" itemprop="url">OS-1-4-1</a>
+          <a href="/desktopdev02/" class="post-title-link" itemprop="url">winform c#实现鼠标移动到picturebox picturebox变色</a>
         </h2>
 
         <div class="post-meta-container">
@@ -249,7 +249,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-09-09 22:30:52" itemprop="dateCreated datePublished" datetime="2020-09-09T22:30:52Z">2020-09-09</time>
+      <time title="Created: 2020-09-14 18:40:00" itemprop="dateCreated datePublished" datetime="2020-09-14T18:40:00Z">2020-09-14</time>
     </span>
 
   
@@ -261,8 +261,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/OS-1-4/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="OS-1-4/" itemprop="commentCount"></span>
+    <a title="disqus" href="/desktopdev02/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="desktopdev02/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,74 +276,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>#多道批处理系统的缺点<br>（平均周转时间长）作业处理时间长；<br>交互能力差；<br>运行过程不确定。<br>不用不一定是空闲的，<br>共享，用忙，同时等cpu的进程可能有很多，<br>宏观上并行，</p>
-<ul>
-<li>事务性任务的涌现<ul>
-<li>交互度高</li>
-<li>相应快速</li>
-</ul>
-</li>
-<li>要求支持多任务/多用户</li>
-<li>多终端计算机<ul>
-<li>高性能主机+多个终端<ul>
-<li>主机：运算，cpu + 内存</li>
-<li>终端：输入和显示</li>
-</ul>
-</li>
-<li>主机采用分时技术轮流为每个终端服务，每个终端都感觉到</li>
-</ul>
-</li>
-<li>分时技术<ul>
-<li>概念<ul>
-<li>主机以很短的时间片为单位，把cpu轮流分配给终端使用，直到全部作业被运行完</li>
-<li>由于时间片很短，在终端数量不多的情况下，每个终端都能很快重新获得cpu，使得每个终端都能得到及时响应<ul>
-<li>等待周期 = 时间片 * 终端数量</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>多路调制性<ul>
-<li>多用户联机使用同一台计算机</li>
-</ul>
-</li>
-<li>独占性<ul>
-<li>用户感觉独占计算机</li>
-</ul>
-</li>
-<li>交互性<ul>
-<li>及时响应用户的请求</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>大型分时系统的实践：multics项目<ul>
-<li>  1962年由apra支持，有mit、bell和G.E参与</li>
-<li>开发一种“公用计算服务系统”</li>
-<li>multiplexed information and computing service</li>
-<li>同时支持波士顿地区的用户</li>
-</ul>
-</li>
-<li>unix<ul>
-<li>第一个实用化的分时操作系统<ul>
-<li>第一个真正体现操作系统领域各种先进概念和技术的操作系统</li>
-</ul>
-</li>
-<li>革新和创造<ul>
-<li>实现操作系统的可移植性</li>
-<li>实现了硬件无关性</li>
-<li>引进了“特殊文件”（special file）的概念<ul>
-<li>把外设看作文件，实现对外设统一管理</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+          <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//</span><br><span class="line">private void label1_MouseEnter(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    label1.ForeColor = Color.Black;</span><br><span class="line">&#125;</span><br><span class="line">private void label1_MouseLeave(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    label1.ForeColor = Color.Gray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -369,7 +302,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/os-swpu00/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/desktopdev01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -382,7 +315,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/os-swpu00/" class="post-title-link" itemprop="url">os-swpu00</a>
+          <a href="/desktopdev01/" class="post-title-link" itemprop="url">c# winform在无边框窗口实现退出按钮</a>
         </h2>
 
         <div class="post-meta-container">
@@ -393,7 +326,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-09-08 14:50:15" itemprop="dateCreated datePublished" datetime="2020-09-08T14:50:15Z">2020-09-08</time>
+      <time title="Created: 2020-09-14 18:34:10" itemprop="dateCreated datePublished" datetime="2020-09-14T18:34:10Z">2020-09-14</time>
     </span>
 
   
@@ -405,8 +338,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/os-swpu00/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="os-swpu00/" itemprop="commentCount"></span>
+    <a title="disqus" href="/desktopdev01/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="desktopdev01/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -420,18 +353,88 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>操作系统最终通过接口为用户提供服务<br>api 应用程序编程接口<br>cui 命令行用户交互<br>gui 图形用户界面<br>终端用户：纯粹的使用者，使用cui gui<br>程序员用户：使用api编程<br>linux windows下拷贝文件功能不一样的</p>
+          <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//在方法中添加</span><br><span class="line">Application.Exit();</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/desktopdev00/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/desktopdev00/" class="post-title-link" itemprop="url">C#WinForm无边框窗体移动方法、模仿鼠标单击标题栏移动窗体位置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-09-14 10:51:44" itemprop="dateCreated datePublished" datetime="2020-09-14T10:51:44Z">2020-09-14</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/desktopdev00/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="desktopdev00/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>直接通过修改窗体位置从而达到移动窗体的效果<br>方法一</p>
 <ol>
-<li><ol start="2">
-<li>1<br>操作系统的目标：<br>方便性:配置os后计算机系统更容易使用<br>有效性：改善资源利用率 提高系统的吞吐量<br>可扩充性：os的结构：层次化结构<br>开放性：os应遵循世界标准规范</li>
+<li>定义一个位置信息Point用于存储鼠标位置<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">private Point mPoint;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/// &lt;summary&gt;</span><br><span class="line">        /// 鼠标按下</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;</span><br><span class="line">        /// &lt;param name=&quot;e&quot;&gt;&lt;/param&gt;</span><br><span class="line">        private void panel1_MouseDown(object sender, MouseEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            mPoint = new Point(e.X, e.Y);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        /// &lt;summary&gt;</span><br><span class="line">        /// 鼠标移动</span><br><span class="line">        /// &lt;/summary&gt;</span><br><span class="line">        /// &lt;param name=&quot;sender&quot;&gt;&lt;/param&gt;</span><br><span class="line">        /// &lt;param name=&quot;e&quot;&gt;&lt;/param&gt;</span><br><span class="line">        private void panel1_MouseMove(object sender, MouseEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            if (e.Button == MouseButtons.Left)</span><br><span class="line">            &#123;</span><br><span class="line">                this.Location = new Point(this.Location.X + e.X - mPoint.X, this.Location.Y + e.Y - mPoint.Y);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-</li>
-<li><ol start="2">
-<li>2<br>os作为用户与计算机系统之间的接口<br>操作系统是计算机系统资源的管理者<br>os实现了对计算机系统资源的抽象<br>eniac 电子 数字 积分 计算机<br>Electronic Numerical Integrator And Computer</li>
-</ol>
-</li>
-</ol>
-<p>integrator 积分器<br>不断提高计算机资源利用率</p>
 
       
     </div>
@@ -458,7 +461,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/gamecomment00/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/swpu-sjk01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -471,7 +474,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/gamecomment00/" class="post-title-link" itemprop="url">gamecomment00--游戏短评00</a>
+          <a href="/swpu-sjk01/" class="post-title-link" itemprop="url">swpu-sjk01</a>
         </h2>
 
         <div class="post-meta-container">
@@ -482,7 +485,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-09-06 14:19:23" itemprop="dateCreated datePublished" datetime="2020-09-06T14:19:23Z">2020-09-06</time>
+      <time title="Created: 2020-09-11 13:27:27" itemprop="dateCreated datePublished" datetime="2020-09-11T13:27:27Z">2020-09-11</time>
     </span>
 
   
@@ -494,8 +497,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/gamecomment00/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="gamecomment00/" itemprop="commentCount"></span>
+    <a title="disqus" href="/swpu-sjk01/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="swpu-sjk01/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -509,90 +512,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Mad-Game-Tycoon-疯狂游戏大亨"><a href="#Mad-Game-Tycoon-疯狂游戏大亨" class="headerlink" title="Mad Game Tycoon ------疯狂游戏大亨"></a>Mad Game Tycoon ------疯狂游戏大亨</h1><p><img src="/img/gamex00.jpg" loading="lazy"><br>以前一直想在电脑上游玩类似游戏发展国的游戏，开罗确实做过一个pc的游戏发展国，不过画面太过差了。<br>之后在逼乎上看到有人推荐mad game tycoon，我决定一试，耐玩性确实要比游戏发展国好些，员工的数量只要你想要，就可以拥有一个几百人的员工队伍，这更接近于现实中一个游戏公司的情况。<br>但是没有创业公司startup company这部游戏中的经理系统，当公司规模大起来后，去管理到一个员工个人是很麻烦的事情，如果能交由手下的经理管理就好多了。<br>画面确实不是很好，但总比开罗的pc版本游戏发展国要好太多了</p>
-<ol>
-<li>优点：内容丰富，单论此游戏中可以建立的部门就有：客服中心，硬件开发部，技术研究部，营销中心，总办公室，员工培训室，生产车间，存储室，图像处理部，录音室，质量监控室。</li>
-<li>缺点：薄弱的画面和音乐</li>
-</ol>
-<p>整体评分 B+ 值得一玩<br>游戏性 A+<br>画面 C<br>音乐 C<br>剧情 无/non</p>
+          <h1 id="数据库系统概论"><a href="#数据库系统概论" class="headerlink" title="数据库系统概论"></a>数据库系统概论</h1><h2 id="数据库的定义"><a href="#数据库的定义" class="headerlink" title="数据库的定义"></a>数据库的定义</h2><h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><ul>
+<li>数据</li>
+<li>信息<br>数据是信息的载体，而信息是数据的内涵<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3>存放数据的仓库</li>
+<li>永久存储</li>
+<li>有组织</li>
+<li>可共享<h3 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h3>DBMS 是位于用户与操作系统之间的一种数据管理软件。<br>使用户能够方便地定义数据，操纵数据<h3 id="数据库系统"><a href="#数据库系统" class="headerlink" title="数据库系统"></a>数据库系统</h3>是指在计算机中引入数据库后的系统，通常由数据库，数据库管理系统，应用系统和数据库管理员四部分组成</li>
+</ul>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/python00-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/python00-01/" class="post-title-link" itemprop="url">python语言程序设计基础-高等教育出版社01</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-08-17 19:08:32" itemprop="dateCreated datePublished" datetime="2020-08-17T19:08:32Z">2020-08-17</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/python00-01/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="python00-01/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#1.1圆面积的计算</span></span><br><span class="line">rad=<span class="number">25</span></span><br><span class="line">area=<span class="number">3.1415</span>*rad*rad</span><br><span class="line"><span class="built_in">print</span>(area)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&#123;:.2f&#125;&quot;</span>.<span class="built_in">format</span>(area))<span class="comment">#只输入两位小数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#1.2简单的人名对话</span></span><br><span class="line">x=<span class="built_in">input</span>(<span class="string">&quot;选择是否为复性，1为单姓，2为复姓:&quot;</span>)</span><br><span class="line">x=<span class="built_in">int</span>(x)</span><br><span class="line">name=<span class="built_in">input</span>(<span class="string">&quot;输入姓名：&quot;</span>)</span><br><span class="line"><span class="keyword">if</span>(x==<span class="number">1</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;同学，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;哥，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name[<span class="number">0</span>]))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;妹妹，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name[<span class="number">1</span>:]))</span><br><span class="line"><span class="keyword">elif</span>(x==<span class="number">2</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;同学，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;哥，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name[<span class="number">0</span>]))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;妹妹，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name[<span class="number">2</span>:]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.3斐波那契数列</span></span><br><span class="line">a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> a &lt; <span class="number">1000</span>:</span><br><span class="line">    <span class="built_in">print</span>(a,end=<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">    a, b = b, a+b</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.4画圆</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.pensize(<span class="number">2</span>)</span><br><span class="line">turtle.circle(<span class="number">10</span>)</span><br><span class="line">turtle.circle(<span class="number">30</span>)</span><br><span class="line">turtle.circle(<span class="number">90</span>)</span><br><span class="line">turtle.circle(<span class="number">180</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.5日期和时间输出</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">now=datetime.now()</span><br><span class="line"><span class="built_in">print</span>(now)</span><br><span class="line">now.strftime(<span class="string">&quot;%x&quot;</span>)</span><br><span class="line">now.strftime(<span class="string">&quot;%X&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.6 smalltest range()</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.1字符串拼接</span></span><br><span class="line">str1=<span class="built_in">input</span>(<span class="string">&quot;请输入一个人的名字：&quot;</span>)</span><br><span class="line">str2=<span class="built_in">input</span>(<span class="string">&quot;请输入一个国家的名字：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;世界这么大，&#123;&#125;想去&#123;&#125;看看了啊。&quot;</span>.<span class="built_in">format</span>(str1,str2))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.2整数序列求和</span></span><br><span class="line">n=<span class="built_in">input</span>(<span class="string">&quot;请输入整数n:&quot;</span>)</span><br><span class="line"><span class="built_in">sum</span>=<span class="number">0</span></span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(n)):</span><br><span class="line">    <span class="built_in">sum</span> += i+<span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;1到N求和结果：&quot;</span>,<span class="built_in">sum</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.3 九九乘法表</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;*&#123;&#125;=&#123;:2&#125;&quot;</span>.<span class="built_in">format</span>(i,j,i*j),end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.4 计算1到10的阶乘之和</span></span><br><span class="line">sumx, tmp = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">    tmp *= i</span><br><span class="line">    sumx += tmp</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;运算结果是：&#123;&#125;&quot;</span>.<span class="built_in">format</span>(sumx))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.5 猴子吃桃</span></span><br><span class="line">n = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">0</span>,-<span class="number">1</span>):</span><br><span class="line">    n=(n+<span class="number">1</span>)*<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(n)</span><br><span class="line"></span><br><span class="line">n = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">0</span>,-<span class="number">1</span>):</span><br><span class="line">    n=(n+<span class="number">1</span>)&lt;&lt;<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(n)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.6 健康食谱输出</span></span><br><span class="line">diet=[<span class="string">&#x27;西红柿&#x27;</span>,<span class="string">&#x27;花椰菜&#x27;</span>,<span class="string">&#x27;黄瓜&#x27;</span>,<span class="string">&#x27;牛排&#x27;</span>,<span class="string">&#x27;虾仁&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">5</span>):</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,x+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span>(x==y):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(diet[x],diet[y]))</span><br><span class="line"></span><br><span class="line">diet=[<span class="string">&#x27;西红柿&#x27;</span>,<span class="string">&#x27;花椰菜&#x27;</span>,<span class="string">&#x27;黄瓜&#x27;</span>,<span class="string">&#x27;牛排&#x27;</span>,<span class="string">&#x27;虾仁&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">5</span>):</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,x+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> (x!=y):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(diet[x],diet[y]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.7五角星的绘制</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line">turtle.fillcolor(<span class="string">&quot;#3dd&quot;</span>)</span><br><span class="line">turtle.begin_fill()</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    turtle.forward(<span class="number">200</span>)</span><br><span class="line">    turtle.right(<span class="number">144</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">abs</span>(turtle.pos()) &lt; <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">turtle.end_fill()</span><br><span class="line">turtle.done()</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.8太阳花的绘制</span></span><br><span class="line"><span class="keyword">import</span>  turtle</span><br><span class="line">turtle.color(<span class="string">&#x27;red&#x27;</span>,<span class="string">&#x27;yellow&#x27;</span>)</span><br><span class="line">turtle.begin_fill()</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    turtle.forward(<span class="number">200</span>)</span><br><span class="line">    turtle.left(<span class="number">170</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">abs</span>(turtle.pos()) &lt; <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">turtle.end_fill()</span><br><span class="line">turtle.done()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -611,7 +538,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

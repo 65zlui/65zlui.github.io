@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">53</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">57</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -225,7 +225,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%83%85%E8%AF%970/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -238,7 +238,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%83%85%E8%AF%970/" class="post-title-link" itemprop="url">深夜情诗2</a>
+          <a href="/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/" class="post-title-link" itemprop="url">java核心01-信息隐藏</a>
         </h2>
 
         <div class="post-meta-container">
@@ -249,7 +249,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-03-20 21:45:24" itemprop="dateCreated datePublished" datetime="2021-03-20T21:45:24Z">2021-03-20</time>
+      <time title="Created: 2021-04-22 01:45:24" itemprop="dateCreated datePublished" datetime="2021-04-22T01:45:24Z">2021-04-22</time>
     </span>
 
   
@@ -261,8 +261,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/%E6%83%85%E8%AF%970/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="情诗0/" itemprop="commentCount"></span>
+    <a title="disqus" href="/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="信息隐藏原则和this/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,27 +276,55 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><ul>
-<li>见到你仿佛见到花</li>
-<li>我心中泛起阵阵红晕</li>
-<li>我强做镇定</li>
-<li>仿佛一本正经的亚子</li>
-<li>倘若事隔流年</li>
-<li>感情必将慢慢变淡</li>
-<li>我如何继续选择沉默</li>
-<li>因他人评头论足而放弃生活</li>
-<li>是以前的我之软弱无能</li>
-<li>忍耐是一种懦弱</li>
-<li>我该如何选择坚强</li>
-<li>我要选择坚强</li>
-<li>我心之所爱</li>
-<li>必不为他人所辱没</li>
-<li>我心之所求</li>
-<li>必不为他人所践踏</li>
-<li>背后的言语</li>
-<li>随便怎样了</li>
-<li>如果我以后欺骗了你</li>
-<li>你也可以将我抛弃</li>
+          <h1 id="信息隐藏原则和this"><a href="#信息隐藏原则和this" class="headerlink" title="信息隐藏原则和this"></a>信息隐藏原则和this</h1><h2 id="信息隐藏原则"><a href="#信息隐藏原则" class="headerlink" title="信息隐藏原则"></a>信息隐藏原则</h2><h3 id="面向对象有一个法则：信息隐藏"><a href="#面向对象有一个法则：信息隐藏" class="headerlink" title="面向对象有一个法则：信息隐藏"></a>面向对象有一个法则：信息隐藏</h3><ul>
+<li>类的成员属性，是私有的private</li>
+<li>类的方法是公有public的，通过方法修改成员属性的值</li>
+</ul>
+<p>eg. 信息隐藏：通过类的方法来间接访问类的属性，而不是直接访问类的属性</p>
+<ul>
+<li><p>类成员是私有的</p>
+</li>
+<li><p>get和set方法是公有的统称为getter setter</p>
+</li>
+<li><p>外界对类成员的操作只能通过get和set方法来操作</p>
+</li>
+</ul>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ul>
+<li>this 负责指向本类中的成员变量</li>
+<li>在构造函数里，形参的优先级更高</li>
+</ul>
+<p>~ example1:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>~ example2:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>this 负责指向本类中的成员方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.add(<span class="number">5</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//调用本类的add方法，this可以忽略</span></span><br></pre></td></tr></table></figure></li>
+<li><p>this可以代替本类的构造函数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+
+<p>不影响歧义的情况下，this可以省略，参见example1</p>
+</li>
+</ul>
+<p>总结一下，</p>
+<ul>
+<li><p>this可以指向本类中的成员变量</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x</span><br></pre></td></tr></table></figure></li>
+<li><p>可以指向本类中的成员方法，</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x()</span><br></pre></td></tr></table></figure></li>
+<li><p>可以当作构造函数使用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(x);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Above-all"><a href="#Above-all" class="headerlink" title="Above all"></a>Above all</h2><ul>
+<li>信息隐藏原则<ul>
+<li>保护属性信息</li>
+<li>公开行为信息</li>
+</ul>
+</li>
+<li>this负责指向本类中的成员</li>
+<li>this可以代替本类中的构造函数</li>
 </ul>
 
       
@@ -324,7 +352,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%83%B3%E7%88%B1%E4%BD%A0%E4%BD%86%E6%97%A0%E8%83%BD%E4%B8%BA%E5%8A%9B/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%B1%82%E8%81%8C%E8%AF%97%EF%BC%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -337,7 +365,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%83%B3%E7%88%B1%E4%BD%A0%E4%BD%86%E6%97%A0%E8%83%BD%E4%B8%BA%E5%8A%9B/" class="post-title-link" itemprop="url">深夜情诗</a>
+          <a href="/%E6%B1%82%E8%81%8C%E8%AF%97%EF%BC%9F/" class="post-title-link" itemprop="url">求职？</a>
         </h2>
 
         <div class="post-meta-container">
@@ -348,7 +376,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-03-14 21:45:24" itemprop="dateCreated datePublished" datetime="2021-03-14T21:45:24Z">2021-03-14</time>
+      <time title="Created: 2021-04-12 21:45:24" itemprop="dateCreated datePublished" datetime="2021-04-12T21:45:24Z">2021-04-12</time>
     </span>
 
   
@@ -360,8 +388,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/%E6%83%B3%E7%88%B1%E4%BD%A0%E4%BD%86%E6%97%A0%E8%83%BD%E4%B8%BA%E5%8A%9B/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="想爱你但无能为力/" itemprop="commentCount"></span>
+    <a title="disqus" href="/%E6%B1%82%E8%81%8C%E8%AF%97%EF%BC%9F/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="求职诗？/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -375,255 +403,365 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="待定"><a href="#待定" class="headerlink" title="待定"></a>待定</h1><p>在我很小的时候，最不解的事情之一，便是名人论证，为什么名人口中放屁一样的观点，一样很多人恭维。</p>
-<h2 id="想爱你但无能为力"><a href="#想爱你但无能为力" class="headerlink" title="想爱你但无能为力"></a>想爱你但无能为力</h2><ol>
-<li><p>我在生活中挣扎</p>
+          <h1 id="求职诗？"><a href="#求职诗？" class="headerlink" title="求职诗？"></a>求职诗？</h1><ul>
+<li>鸣笛声伴随两道光芒</li>
+<li>新的一天又将开始</li>
+<li>又是掉下一撮头发</li>
+<li>发际线又是后移</li>
+<li>网络的新鲜感终将殆尽</li>
+<li>又是刷手机到凌晨</li>
+<li>可leetcode题刷了多少呢</li>
+<li>还不是个菜鸡</li>
+<li>梦，镜花水月一般；</li>
+<li>若，浮光掠影之间</li>
+<li>好像初出于人世间似的，</li>
+<li>对一切的好奇</li>
+<li>也许付出惨痛教训</li>
+<li>对他人不切实际的期望</li>
+<li>终将换来失望</li>
+<li>我将为我的无知懵懂付出代价</li>
+<li>有天之骄子吗</li>
+<li>有失败人士吗</li>
+<li>莫不是来自于无尽的比较嫉妒之螺旋</li>
+<li>剑，那锋芒</li>
+<li>断然不可为血肉消磨</li>
+<li>不顾一切向前冲去</li>
+<li>厮杀与广阔的战场，</li>
+<li>即使战死</li>
+<li>亦是神馈赠的命运，</li>
+<li>我将欣然接受</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%C2%B7%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%C2%B7%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">机器学习入门？</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-04-02 22:42:24" itemprop="dateCreated datePublished" datetime="2021-04-02T22:42:24Z">2021-04-02</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%C2%B7%E7%AE%97%E6%B3%95/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="机器学习·算法/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="机器学习·算法"><a href="#机器学习·算法" class="headerlink" title="机器学习·算法"></a>机器学习·算法</h1><ul>
+<li>参数不一样也是不同的模型</li>
+</ul>
+<ol>
+<li><p>确定模型，设计模型：选定问题适合xx 模型 （model 如决策树，）</p>
 </li>
-<li><p>我被社会的压力胁迫</p>
+<li><p>好坏标准（损失函数，loss function 学习就是学参数）</p>
 </li>
-<li><p>被他人的眼光左右</p>
+<li><p>优化方法（预测能不能考上研，用已经考过研的同学的数据来训练，输入：？，输出（考上，不能考上））</p>
+<ul>
+<li><p>测试样本</p>
 </li>
-<li><p>奔向成功还是失败</p>
+<li><p>历史数据，训练样本</p>
 </li>
-<li><p>就算走向死亡</p>
+<li><p>训练的时候，二分类问题（神经网络,在训练网络上的好坏)</p>
 </li>
-<li><p>也比随意得活着好</p>
+<li><p>一万个同学的结果label</p>
 </li>
-<li><p>我渴望成功</p>
+<li><p>模型的label和真实label越接近越好</p>
 </li>
-<li><p>我渴望他人的认可</p>
+<li><p>预测类别 准确率</p>
 </li>
-<li><p>在社会性焦虑的传染下</p>
+<li><p>误差</p>
 </li>
-<li><p>我多么想恋爱</p>
+<li><p>梯度下降</p>
 </li>
-<li><p>宝贝啊</p>
+<li><p>导数</p>
 </li>
-<li><p>我想搂着你腰肢</p>
+<li><p>函数极值点</p>
 </li>
-<li><p>想抚摸你那水嫩的脸庞</p>
+<li><p>优化方法</p>
 </li>
-<li><p>想爱你</p>
+<li><p>确定模型参数很多种选法</p>
 </li>
-<li><p>无比甜蜜的你</p>
+<li><p>不可能把所有参数选一</p>
 </li>
-<li><p>在我心房中占据一席之地</p>
-</li>
-<li><p>亲爱的</p>
-</li>
-<li><p>请不要哭泣</p>
-</li>
-<li><p>你都忘了你有多可爱</p>
-</li>
-<li><p>亲爱的</p>
-</li>
-<li><p>请不要伤心</p>
-</li>
-<li><p>让我拂去你的泪水</p>
-</li>
-<li><p>我不是poser</p>
-</li>
-<li><p>我只是对一切爱的太深切</p>
-</li>
-<li><p>可惜我生命中有更重要的东西</p>
-</li>
-<li><p>想爱你</p>
-</li>
-<li><p>那么天真的你</p>
-</li>
-<li><p>我不忍得爱过了你又</p>
-</li>
-<li><p>去残忍抛弃</p>
-</li>
-<li><p>所以将爱藏在心底</p>
-</li>
-<li><p>将爱埋藏心底</p>
-</li>
-<li><p>总有一天我会成功</p>
-</li>
-<li><p>人活为一口气</p>
-</li>
-<li><p>我是多么多么想爱你，</p>
-</li>
-<li><p>可我却无能为力</p>
-</li>
-<li><p>我的爱太过有限</p>
-</li>
-<li><p>我不想滥用我的爱</p>
-</li>
-<li><p>趁着夜色的深沉</p>
-</li>
-<li><p>你我都将睡去</p>
-</li>
-<li><p>也许明天我将忘记你</p>
-</li>
-<li><p>希望你能找个好人</p>
-</li>
-<li><p>想爱你</p>
-</li>
-<li><p>但我无能为力</p>
+</ul>
 </li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/byylswpu1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/byylswpu1/" class="post-title-link" itemprop="url">byylswpu1</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-02 21:45:24" itemprop="dateCreated datePublished" datetime="2021-01-02T21:45:24Z">2021-01-02</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/byylswpu1/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="byylswpu1/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>二、实验内容<br>1、词法分析器设计<br>（1）单词的数据结构；<br>（2）记号类别编码；<br>（3）词法正规式；<br>（4）识别单词的状态转换图。<br>2、词法分析器实现<br>（1）实现辅助例程；<br>（2）实现独立的记号获取函数GetToken；<br>（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.IO;</span><br><span class="line"></span><br><span class="line">namespace scanner</span><br><span class="line">&#123;</span><br><span class="line">    //记号类别号</span><br><span class="line">    enum Token_Type</span><br><span class="line">    &#123;</span><br><span class="line">        ORIGIN, SCALE, ROT, IS, TO, //语言保留字(一字一类别)</span><br><span class="line">        STEP, DRAW, FOR, FROM,      //语言保留字</span><br><span class="line">        T,                          //语言中唯一的变量</span><br><span class="line">        ID,                         //标识符(若把关键字、变量都看成一种单词，可以使用本类别)</span><br><span class="line"></span><br><span class="line">        SEMICO, L_BRACKET, R_BRACKET, COMMA, //分隔符(分号、左括号、右括号、逗号)</span><br><span class="line">        PLUS, MINUS, MUL, DIV, POWER,        //运算符(加、减、乘、除、乘方)</span><br><span class="line"></span><br><span class="line">        FUNC,                                //(语言提供的标准数学)函数</span><br><span class="line"></span><br><span class="line">        CONST_ID,                           //数值常量</span><br><span class="line">        ERRTOKEN,                           //错误单词</span><br><span class="line">        NONTOKEN							//专用记号(单词序列结束)</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //记号数据类型</span><br><span class="line">    delegate double MathFunc(double d);//单参数的函数委托类型 delegate：代表</span><br><span class="line">    struct Token</span><br><span class="line">    &#123;</span><br><span class="line">        public Token_Type type; 			//类别号</span><br><span class="line">        public string lexeme;				//标识符的字符串</span><br><span class="line">        public double value;				//数值常数的值</span><br><span class="line">        public MathFunc func; 	            //函数委托</span><br><span class="line"></span><br><span class="line">        public Token(Token_Type type = Token_Type.NONTOKEN, string lexeme = &quot;&quot;, double value = 0, MathFunc func = null)</span><br><span class="line">        &#123;</span><br><span class="line">            this.type = type;</span><br><span class="line">            this.lexeme = lexeme;</span><br><span class="line">            this.value = value;</span><br><span class="line">            this.func = func;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class Program</span><br><span class="line">    &#123;</span><br><span class="line">        // 预定义单词表</span><br><span class="line">        static Token[] TokenTab = &#123;</span><br><span class="line">            //符号常数</span><br><span class="line">            new Token(Token_Type.CONST_ID,  &quot;PI&quot;,       3.1415926,  null),</span><br><span class="line">            new Token(Token_Type.CONST_ID,  &quot;E&quot;,        2.71828,    null),</span><br><span class="line">            //变量(惟一的)</span><br><span class="line">            new Token(Token_Type.T,         &quot;T&quot;,        0.0,        null),</span><br><span class="line">            //数学函数</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;SIN&quot;,      0.0,        Math.Sin),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;COS&quot;,      0.0,        Math.Cos),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;TAN&quot;,      0.0,        Math.Tan),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;LN&quot;,       0.0,        Math.Log),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;EXP&quot;,      0.0,        Math.Exp),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;SQRT&quot;,     0.0,        Math.Sqrt),</span><br><span class="line">            //语句关键字</span><br><span class="line">            new Token(Token_Type.ORIGIN,    &quot;ORIGIN&quot;,   0.0,        null),</span><br><span class="line">            new Token(Token_Type.SCALE,     &quot;SCALE&quot;,    0.0,        null),</span><br><span class="line">            new Token(Token_Type.ROT,       &quot;ROT&quot;,      0.0,        null),</span><br><span class="line">            new Token(Token_Type.IS,        &quot;IS&quot;,       0.0,        null),</span><br><span class="line">            new Token(Token_Type.FOR,       &quot;FOR&quot;,      0.0,        null),</span><br><span class="line">            new Token(Token_Type.FROM,      &quot;FROM&quot;,     0.0,        null),</span><br><span class="line">            new Token(Token_Type.TO,        &quot;TO&quot;,       0.0,        null),</span><br><span class="line">            new Token(Token_Type.STEP,      &quot;STEP&quot;,     0.0,        null),</span><br><span class="line">            new Token(Token_Type.DRAW,      &quot;DRAW&quot;,     0.0,        null)</span><br><span class="line">        &#125;;</span><br><span class="line">        static Token ErrorToken = new Token(Token_Type.ERRTOKEN, &quot;error token&quot;, -1, null);</span><br><span class="line"></span><br><span class="line">        //c# 无 ungetc 函数（将一个字符退回输入流），所以用如下代码模拟</span><br><span class="line">        static char lastCh;</span><br><span class="line">        static bool ungetFlag = false;</span><br><span class="line">        //读取一个字符</span><br><span class="line">        static char getChar(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            if (!ungetFlag)</span><br><span class="line">            &#123;</span><br><span class="line">                lastCh = (char)sr.Read();</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                ungetFlag = false;</span><br><span class="line"></span><br><span class="line">            return lastCh;</span><br><span class="line">        &#125;</span><br><span class="line">        //退回一个字符</span><br><span class="line">        static void ungetChar(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            ungetFlag = true;</span><br><span class="line">        &#125;</span><br><span class="line">        //c 语言的 ungetc 函数，在 c# 中的模拟</span><br><span class="line"></span><br><span class="line">        //判断标识符是否语言的预定义单词</span><br><span class="line">        static Token IsKeyWords(string id)</span><br><span class="line">        &#123;</span><br><span class="line">            int i;</span><br><span class="line">            Token token = new Token();</span><br><span class="line"></span><br><span class="line">            for (i = 0; i &lt; TokenTab.Length; i++) if (string.Equals(TokenTab[i].lexeme, id)) break;</span><br><span class="line"></span><br><span class="line">            if (i &lt; TokenTab.Length)</span><br><span class="line">                token = TokenTab[i];</span><br><span class="line">            else</span><br><span class="line">                token = ErrorToken;</span><br><span class="line"></span><br><span class="line">            return token;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //显示单词</span><br><span class="line">        static void writeToken(Token token)</span><br><span class="line">        &#123;</span><br><span class="line">            if (token.type == Token_Type.FUNC)</span><br><span class="line">                Console.WriteLine(&quot;&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;&quot;, (int)token.type, token.lexeme, token.value, (string)token.func.Method.Name);</span><br><span class="line">            else</span><br><span class="line">                Console.WriteLine(&quot;&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;&quot;, (int)token.type, token.lexeme, token.value, &quot;&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        static void getToken(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            //从源代码逐个读取字符</span><br><span class="line">            Token token;</span><br><span class="line">            char c, preCh;</span><br><span class="line">            while (true)</span><br><span class="line">            &#123;</span><br><span class="line">                c = getChar(sr);</span><br><span class="line"></span><br><span class="line">                if (c == &#x27;-&#x27; || c == &#x27;/&#x27;)</span><br><span class="line">                &#123;//如果是注释</span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);//读取新字符</span><br><span class="line">                    if (c == preCh)</span><br><span class="line">                    &#123; //判断注释符引导字符</span><br><span class="line">                        //去掉注释符引导字符</span><br><span class="line">                        while (c != &#x27;\n&#x27; &amp;&amp; !sr.EndOfStream)</span><br><span class="line">                        &#123;</span><br><span class="line">                            c = getChar(sr);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        c = preCh;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (c == &#x27;\t&#x27; || c == &#x27;\n&#x27; || c == &#x27;\r&#x27; || c == &#x27; &#x27;)</span><br><span class="line">                &#123;//过滤空白</span><br><span class="line">                    continue;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (char.IsLetter(c))</span><br><span class="line">                &#123; //读到的是字母</span><br><span class="line">                    string buf = &quot;&quot;;//临时缓冲buf</span><br><span class="line">                    buf += char.ToUpper(c);</span><br><span class="line">                    //遍历后续字符</span><br><span class="line">                    for (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        if (char.IsLetterOrDigit(c))</span><br><span class="line">                        &#123; //如果仍是字母/数字</span><br><span class="line">                            buf += char.ToUpper(c);</span><br><span class="line">                        &#125;</span><br><span class="line">                        else &#123; break; &#125;//读完</span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = IsKeyWords(buf);</span><br><span class="line">                &#125;</span><br><span class="line">               else if (c == &#x27;(&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.L_BRACKET, &quot;(&quot;);</span><br><span class="line">                else if (c == &#x27;)&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.R_BRACKET, &quot;)&quot;);</span><br><span class="line">                else if (c == &#x27;-&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.MINUS, &quot;-&quot;);</span><br><span class="line">                else if (c == &#x27;;&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.SEMICO, &quot;;&quot;);</span><br><span class="line">                else if (c == &#x27;,&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.COMMA, &quot;,&quot;);</span><br><span class="line">                else if (c == &#x27;+&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.PLUS, &quot;+&quot;);</span><br><span class="line">                else if (c == &#x27;/&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.DIV, &quot;/&quot;);</span><br><span class="line">                else if (c == &#x27;*&#x27;)</span><br><span class="line">                &#123;//乘号会有*和乘方**</span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);//读取新字符</span><br><span class="line">                    if (c == preCh)</span><br><span class="line">                    &#123;</span><br><span class="line">                        token = new Token(Token_Type.POWER, &quot;**&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;//否则退回一个字符</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        token = new Token(Token_Type.MUL, &quot;*&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (char.IsDigit(c))</span><br><span class="line">                &#123;</span><br><span class="line">                    string buf = &quot;&quot;;</span><br><span class="line">                    buf += c;</span><br><span class="line"></span><br><span class="line">                    for (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        if (char.IsDigit(c) || c == &#x27;.&#x27;)</span><br><span class="line">                        &#123; //如果仍是数字或小数点</span><br><span class="line">                            buf += c;</span><br><span class="line">                        &#125;</span><br><span class="line">                        else &#123; break; &#125;//读完</span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = new Token(Token_Type.CONST_ID, &quot;&quot;, Convert.ToDouble(buf));</span><br><span class="line">                &#125;</span><br><span class="line">                else</span><br><span class="line">                &#123;</span><br><span class="line">                    token = ErrorToken;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (sr.EndOfStream)</span><br><span class="line">                &#123; //判断文件读取结束</span><br><span class="line">                    token = new Token(Token_Type.NONTOKEN);</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                writeToken(token);//输出单词</span><br><span class="line">            &#125;</span><br><span class="line">            writeToken(token);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(&quot;&#123;0,-11&#125;&#123;1, -12&#125;&#123;2, -12&#125;&#123;3, -20&#125;&quot;, &quot;记号类别&quot;, &quot;字符串&quot;, &quot;常数值&quot;, &quot;函数指针&quot;);</span><br><span class="line">            Console.WriteLine(&quot;-------------------------------------------------------&quot;);</span><br><span class="line"></span><br><span class="line">            //打开源代码文件</span><br><span class="line">            StreamReader sr;</span><br><span class="line">            if (args.Length == 0)</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(&quot;p89-8-10.draw&quot;);//文件在项目的子目录 bin\debug 下</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(args[0].ToString());//允许通过命令行参数，给出源代码文件名</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            getToken(sr);</span><br><span class="line">            sr.Close();</span><br><span class="line">            Console.ReadLine();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/eoj3021/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/eoj3021/" class="post-title-link" itemprop="url">eoj3021</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-12-31 20:53:22" itemprop="dateCreated datePublished" datetime="2020-12-31T20:53:22Z">2020-12-31</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/eoj3021/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="eoj3021/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="3021-字符排序"><a href="#3021-字符排序" class="headerlink" title="3021. 字符排序"></a>3021. 字符排序</h1><ul>
-<li>单点时限: 2.0 sec</li>
-<li>内存限制: 256 MB<br>  给定一个句子，要求将其字符重新排序输出，其中的英文字母按照字母表顺序输出，其他字符的顺序和位置不变，输出后的单词长度与原句子相同。<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2>第 1 行：一个整数<br>t(1&lt;=t&gt;=10)为问题数<br>为问题数。<br>第2t+1行，每组测试数据一行，包括一个字符串（长度最大为200 ），由英文字母（均为大写字母）及其他字符组成，由空格分开的连续字符串视作一个单词。<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2>对于每个问题，输出一行问题的编号（0 开始编号，格式：case #0: 等），然后在一行中输出重新排序后的字符串。<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3>3<br>THE BREAD IS SOLD AT $10 PER POUND<br>500 DONGCHUAN ROAD EAST CHINA NORMAL UNIVERSITY SHANGHAI CHINA 200241<br>#9724 $500 1234<h3 id="output"><a href="#output" class="headerlink" title="output"></a>output</h3>case #0:<br>AAB DDDEE EH ILNO OP $10 PRR SSTTU<br>case #1:<br>500 AAAAAAAAC CCDD EEGG HHHHH IIIIIL MNNNNNNNOO ORRRSSST TUUVY 200241<br>case #2:<br>#9724 $500 1234</li>
+<ul>
+<li><p>回归问题  目标函数输出是数值，（预测明天pm2.5的值）</p>
+</li>
+<li><p>分类问题 (预测明天pm2.5达不达标)</p>
+</li>
+<li><p>时间序列问题：在一个序列上解决的</p>
+</li>
+<li><p>怎么确定训练数据</p>
+<ul>
+<li><p>拿到去年一年的数据</p>
+</li>
+<li><p>三天一组</p>
+</li>
+<li><p>构造训练数据</p>
+</li>
+<li><p>一个月的pm2.5值</p>
+</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">int</span> []a=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        Scanner scanner=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String str;</span><br><span class="line">        <span class="keyword">char</span> ctemp;</span><br><span class="line">        <span class="keyword">int</span> n,u,j,temp;</span><br><span class="line">        n = Integer.parseInt(scanner.nextLine());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n ;i++ )&#123;</span><br><span class="line">            str=scanner.nextLine();</span><br><span class="line">            <span class="keyword">char</span> [] arr= str.toCharArray();</span><br><span class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;str.length();j++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span>(Character.isLetter(arr[j]))</span><br><span class="line">                    a[(arr[j])-<span class="string">&#x27;A&#x27;</span>]++;<span class="comment">//储存每个字母的数量</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            temp=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; str.length(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (Character.isLetter(arr[j])) &#123;</span><br><span class="line">                    <span class="keyword">while</span> (a[temp] == <span class="number">0</span>) temp++;</span><br><span class="line">                    ctemp=<span class="string">&#x27;A&#x27;</span>;</span><br><span class="line"></span><br><span class="line">                    arr[j] = (<span class="keyword">char</span>)(ctemp+temp) ;</span><br><span class="line">                    a[temp]--;<span class="comment">//每分配到arr中一个减少一个a中数量</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;case #&quot;</span>+i+<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            System.out.println(arr);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>slide-window 滑动窗口法</p>
+<ul>
+<li>2号三号一个 四号一个</li>
+</ul>
+</li>
+<li><p>二分类==》多分类</p>
+</li>
+<li><p>大于2就叫多分类</p>
+</li>
+<li><p>实验 二分类</p>
+</li>
+<li><p>垃圾邮件过滤</p>
+<ul>
+<li><p>正样本和负样本的数量是差别很大的</p>
+</li>
+<li><p>非均衡样本使得你模型的效果不太好</p>
+<p>垃圾邮件过滤</p>
+<p>写规则</p>
+<p>赌博，黄色</p>
+<p>一堆专利</p>
+<p>不写规则，让程序理解语义</p>
+</li>
+</ul>
+</li>
+<li><p> 输出的</p>
+</li>
+</ul>
+<ul>
+<li>alphago 分类问题</li>
+<li>alphago确定棋子下到棋盘的几个位置</li>
+<li>最基本的是学习能力</li>
+<li>强化学习，自己和自己下</li>
+</ul>
+<ul>
+<li><p>无监督：学习 如考试题没给答案</p>
+</li>
+<li></li>
+<li><p>有监督：有标签的，有训练样本</p>
+</li>
+<li><p>半监督：样本有一部分有标签，有一部分没有标签</p>
+</li>
+<li><p>for example recognizing cats and dogs</p>
+</li>
+<li><p>迁移学习 </p>
+</li>
+<li><p>完全</p>
+</li>
+<li><p>没有训练样本，无监督学习</p>
+</li>
+</ul>
+<p>强化学习</p>
+<ul>
+<li>当话务员，不知道该说什么，客户说一个问题你回答，客户再说一个问题你还回答，知道这个是不对的，非常差的反馈知道自己是错的</li>
+<li>客户反馈不行知道错的，客户反馈可以知道还行</li>
+</ul>
+<p>Alphago </p>
+<p>监督学习 ：棋谱 样本</p>
+<p>强化学习： 自己和自己下棋</p>
+<p>AlphaZero</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%B3%A1%E5%BD%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/%E6%B3%A1%E5%BD%B1/" class="post-title-link" itemprop="url">泡影</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-03-22 12:57:09" itemprop="dateCreated datePublished" datetime="2021-03-22T12:57:09Z">2021-03-22</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/%E6%B3%A1%E5%BD%B1/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="泡影/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="色散"><a href="#色散" class="headerlink" title="色散"></a>色散</h1><h2 id="献给喜欢过却没有去追的女同学"><a href="#献给喜欢过却没有去追的女同学" class="headerlink" title="献给喜欢过却没有去追的女同学"></a>献给喜欢过却没有去追的女同学</h2><ul>
+<li>光</li>
+<li>散成那彩虹</li>
+<li>天空高悬</li>
+<li>望这那粼粼水波</li>
+<li>我对此物的思念</li>
+<li>绵延至今</li>
+<li></li>
+<li>浮沉于水中</li>
+<li>好像丢失了什么</li>
+<li>我强做镇定</li>
+<li>内心满是创痕</li>
+<li></li>
+<li>过去的梦</li>
+<li>已然消散</li>
+<li>一颗新的梦种已然种下</li>
+<li></li>
+<li>不敢全然去追</li>
+<li>我还是过于审慎</li>
+<li></li>
+<li>浮现了</li>
+<li>那朦胧的美好</li>
+<li>又消失在无尽深处</li>
+<li></li>
+<li>沉沦于湖底</li>
+<li>好像精神之光</li>
+<li>已经熄灭</li>
+<li></li>
+<li>湛蓝色的晴空</li>
+<li>望不到边</li>
+<li>我无尽的遐想</li>
+<li>不会熄灭</li>
+<li>有渴望之物也不会去追</li>
+<li>害怕破碎</li>
+<li></li>
+<li>五彩斑斓的幻想</li>
+<li>是否能与现实妥协</li>
+<li>交融成我能接受的形态</li>
+<li></li>
+<li>不愿</li>
+<li>我的光芒</li>
+<li>不愿你散开啊</li>
+<li>白虹贯日</li>
+<li>也不怨你</li>
+<li></li>
+<li>我午夜的无病呻吟</li>
+<li>如魔掌贯穿心脏</li>
+<li>那倒影</li>
+<li>那光的色散</li>
+<li>我的幻梦</li>
+<li>尚存心间</li>
+<li></li>
+<li>那光芒将要散去</li>
+<li>我的步伐难追</li>
+<li>我将乘好自己的路</li>
+<li>世间亦有其他的光芒</li>
+<li>等待我去追</li>
+<li>感谢你对我的刺激</li>
+<li>我会加油的</li>
+</ul>
 
       
     </div>
@@ -643,7 +781,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
