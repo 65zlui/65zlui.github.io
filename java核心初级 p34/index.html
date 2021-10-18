@@ -21,24 +21,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"theme-next.js.org","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.6.1/source/js/config.min.js"></script>
-<meta property="og:type" content="website">
+<meta name="description" content="java核心初级 p34try、catch、finally用法总结: 　　1、不管有没有异常，finally中的代码都会执行 　　2、当try、catch中有return时，finally中的代码依然会继续执行 　　3、finally是在return后面的表达式运算之后执行的，此时并没有返回运算之后的值，而是把值保存起来，不管finally对该值做任何的改变，返回的值都不会改变，依然返回保存起来的">
+<meta property="og:type" content="article">
 <meta property="og:title" content="NexT">
-<meta property="og:url" content="https://theme-next.js.org/archives/2021/page/3/index.html">
+<meta property="og:url" content="https://theme-next.js.org/java%E6%A0%B8%E5%BF%83%E5%88%9D%E7%BA%A7%20p34/index.html">
 <meta property="og:site_name" content="NexT">
+<meta property="og:description" content="java核心初级 p34try、catch、finally用法总结: 　　1、不管有没有异常，finally中的代码都会执行 　　2、当try、catch中有return时，finally中的代码依然会继续执行 　　3、finally是在return后面的表达式运算之后执行的，此时并没有返回运算之后的值，而是把值保存起来，不管finally对该值做任何的改变，返回的值都不会改变，依然返回保存起来的">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-18T09:44:51.197Z">
+<meta property="article:modified_time" content="2021-10-09T08:11:01.256Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Hexo, NexT">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://theme-next.js.org/archives/2021/page/3/">
+<link rel="canonical" href="https://theme-next.js.org/java%E6%A0%B8%E5%BF%83%E5%88%9D%E7%BA%A7%20p34/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"en","comments":"","permalink":"","path":"archives/2021/page/3/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://theme-next.js.org/java%E6%A0%B8%E5%BF%83%E5%88%9D%E7%BA%A7%20p34/","path":"java核心初级 p34/","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Archive | NexT</title>
+<title> | NexT</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108155018-3"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"UA-108155018-3","only_pageview":false}</script>
@@ -96,7 +100,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">57</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">53</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -140,7 +144,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -153,6 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java%E6%A0%B8%E5%BF%83%E5%88%9D%E7%BA%A7-p34"><span class="nav-number">1.</span> <span class="nav-text">java核心初级 p34</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -169,7 +174,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">57</span>
+          <span class="site-state-item-count">53</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -215,54 +220,111 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/java%E6%A0%B8%E5%BF%83%E5%88%9D%E7%BA%A7%20p34/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          <span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvdGhlbWUtbmV4dC1kb2NzL2VkaXQvbWFzdGVyL3NvdXJjZS9fcG9zdHMvamF2YeaguOW/g+WInee6pyBwMzQubWQ=" title="Edit this post"><i class="fa fa-pen-nib"></i></span>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-10-18 09:44:51" itemprop="dateCreated datePublished" datetime="2021-10-18T09:44:51Z">2021-10-18</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/java%E6%A0%B8%E5%BF%83%E5%88%9D%E7%BA%A7%20p34/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="java核心初级 p34/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="java核心初级-p34"><a href="#java核心初级-p34" class="headerlink" title="java核心初级 p34"></a>java核心初级 p34</h1><p><strong>try、catch、finally用法总结:</strong></p>
+<p>　　1、不管有没有异常，finally中的代码都会执行</p>
+<p>　　2、当try、catch中有return时，finally中的代码依然会继续执行</p>
+<p>　　3、finally是在return后面的表达式运算之后执行的，此时并没有返回运算之后的值，而是把值保存起来，不管finally对该值做任何的改变，返回的值都不会改变，依然返回保存起来的值。也就是说方法的返回值是在finally运算之前就确定了的。</p>
+<p>　　4、finally代码中最好不要包含return，程序会提前退出，也就是说返回的值不是try或catch中的值</p>
+<p>重写方法时，子类方法所抛出的异常不能超过父类方法的异常范围</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
         
-        <span class="collection-header">Nice! 57 posts in total. Keep on posting.</span>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-12-31T20:53:02Z"
-              content="2020-12-31">
-          12-31
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/paixu/" itemprop="url">
-            <span itemprop="name">paixu</span>
-          </a>
-      </div>
-
-      
-    </header>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/1.%E6%88%91%E7%8E%B0%E5%9C%A8%E6%B3%A8%E9%87%8D%E5%AE%8F%E8%A7%82%E5%8D%B4%E4%B8%8D%E6%B3%A8%E9%87%8D%E5%BE%AE%E8%A7%82%EF%BC%8C%E5%85%B6%E5%AE%9E%E6%98%AF%E5%BE%88%E9%94%99%E8%AF%AF%E7%9A%84%E3%80%82/" rel="prev" title="">
+                  <i class="fa fa-chevron-left"></i> 
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B/" rel="next" title="">
+                   <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
 
-    </div>
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
   </div>
   
-  
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2021/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/archives/2021/">1</a><a class="page-number" href="/archives/2021/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
 </div>
   </main>
 
