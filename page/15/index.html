@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">59</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">59</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -216,6 +216,105 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/b-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/b-md/" class="post-title-link" itemprop="url">leetcode题目-面试题 08.06. 汉诺塔问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-08-06 02:17:45" itemprop="dateCreated datePublished" datetime="2020-08-06T02:17:45Z">2020-08-06</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/b-md/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="b-md/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在经典汉诺塔问题中，有 3 根柱子及 N 个不同大小的穿孔圆盘，盘子可以滑入任意一根柱子。一开始，所有盘子自上而下按升序依次套在第一根柱子上(即每一个盘子只能放在更大的盘子上面)。移动圆盘时受到以下限制:</p>
+<ol>
+<li>每次只能移动一个盘子;</li>
+<li>盘子只能从柱子顶端滑出移到下一根柱子;</li>
+<li>盘子只能叠在比它大的盘子上。</li>
+</ol>
+<p>请编写程序，用栈将所有盘子从第一根柱子移到最后一根柱子。</p>
+<p>你需要原地修改栈。</p>
+<p>示例1:</p>
+<p> 输入：A = [2, 1, 0], B = [], C = []<br> 输出：C = [2, 1, 0]<br>示例2:</p>
+<p> 输入：A = [1, 0], B = [], C = []<br> 输出：C = [1, 0]<br>提示:</p>
+<ul>
+<li>A中盘子的数目不大于14个。 </li>
+</ul>
+<ol>
+<li>c++解法</li>
+</ol>
+<ul>
+<li>参考：<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvaGFub3RhLWxjY2kvc29sdXRpb24vdHUtamllLXlpLW51by10YS1kZS1ndS1zaGktanUtc2h1by1kYW5nLTY0Z2UtcGFuLXov">https://leetcode-cn.com/problems/hanota-lcci/solution/tu-jie-yi-nuo-ta-de-gu-shi-ju-shuo-dang-64ge-pan-z/<i class="fa fa-external-link-alt"></i></span></li>
+<li>这个图解也很好：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vZG1lZ28vcC81OTY1ODM1Lmh0bWw=">https://www.cnblogs.com/dmego/p/5965835.html<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">hanota</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; A, vector&lt;<span class="keyword">int</span>&gt;&amp; B, vector&lt;<span class="keyword">int</span>&gt;&amp; C)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n=A.<span class="built_in">size</span>();</span><br><span class="line">        <span class="built_in">move</span>(n,A,B,C);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> n,vector &lt;<span class="keyword">int</span>&gt;&amp; A,vector &lt;<span class="keyword">int</span>&gt;&amp;B,vector &lt;<span class="keyword">int</span>&gt;&amp; C)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n&lt;<span class="number">2</span>)&#123;</span><br><span class="line">            C.<span class="built_in">push_back</span>(A.<span class="built_in">back</span>());</span><br><span class="line">            A.<span class="built_in">pop_back</span>();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">move</span>(n<span class="number">-1</span>,A,C,B);</span><br><span class="line">    C.<span class="built_in">push_back</span>(A.<span class="built_in">back</span>());</span><br><span class="line">    A.<span class="built_in">pop_back</span>();</span><br><span class="line">    <span class="built_in">move</span>(n<span class="number">-1</span>,B,A,C);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 

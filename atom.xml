@@ -6,7 +6,7 @@
   <link href="https://theme-next.js.org/atom.xml" rel="self"/>
   
   <link href="https://theme-next.js.org/"/>
-  <updated>2021-11-13T17:56:19.931Z</updated>
+  <updated>2021-11-13T18:10:03.423Z</updated>
   <id>https://theme-next.js.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cs与bs架构</title>
+    <link href="https://theme-next.js.org/cs%E4%B8%8Ebs%E6%9E%B6%E6%9E%84/"/>
+    <id>https://theme-next.js.org/cs%E4%B8%8Ebs%E6%9E%B6%E6%9E%84/</id>
+    <published>2021-11-14T02:03:50.000Z</published>
+    <updated>2021-11-13T18:10:03.423Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CS与BS架构"><a href="#CS与BS架构" class="headerlink" title="CS与BS架构"></a>CS与BS架构</h1><h2 id="1-C-S架构"><a href="#1-C-S架构" class="headerlink" title="1.C/S架构"></a>1.C/S架构</h2><p>C/S架构是一种比较早的软件架构，分为客户机和服务器两层。</p><p>微信淘宝从后台获取数据后在app中生成页面并显示的叫做CS架构。</p><h2 id="2-B-S架构"><a href="#2-B-S架构" class="headerlink" title="2.B/S架构"></a>2.B/S架构</h2><p>B/S架构指的是浏览器-服务器模式，他是cs架构的改进</p><p>也可以说是三层的cs架构</p><p>b站网页版这种从后台获取html页面是B/S架构了。</p><p>抛去webapp、小程序等原生和H5混合开发的app</p><p>可以宽泛认为</p><p>手机和电脑应用都是cs架构</p><p>浏览器网站都是bs架构</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;CS与BS架构&quot;&gt;&lt;a href=&quot;#CS与BS架构&quot; class=&quot;headerlink&quot; title=&quot;CS与BS架构&quot;&gt;&lt;/a&gt;CS与BS架构&lt;/h1&gt;&lt;h2 id=&quot;1-C-S架构&quot;&gt;&lt;a href=&quot;#1-C-S架构&quot; class=&quot;headerlink</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>map</title>
@@ -427,26 +447,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;经常有人说，学一行爱一行，要找到心之所爱&quot;&gt;&lt;a href=&quot;#经常有人说，学一行爱一行，要找到心之所爱&quot; class=&quot;headerlink&quot; title=&quot;经常有人说，学一行爱一行，要找到心之所爱&quot;&gt;&lt;/a&gt;经常有人说，学一行爱一行，要找到心之所爱&lt;/h2&gt;&lt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>java核心04-类转型</title>
-    <link href="https://theme-next.js.org/%E7%B1%BB%E8%BD%AC%E5%9E%8B/"/>
-    <id>https://theme-next.js.org/%E7%B1%BB%E8%BD%AC%E5%9E%8B/</id>
-    <published>2021-06-01T09:45:34.000Z</published>
-    <updated>2021-07-15T13:40:23.014Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="类转型"><a href="#类转型" class="headerlink" title="类转型"></a>类转型</h1><h2 id="类转型1"><a href="#类转型1" class="headerlink" title="类转型1"></a>类转型1</h2><ul><li><p>变量支持相互转化，比如int a=(int)3.5;</p></li><li><p>变量可以相互转型，但是只限制于有继承关系的类。</p><ul><li>子类可以转换为父类，而父类不可以转换为子类</li><li>子类可以继承父类所有的财产，子类可以变成父类，从大变小，即向上转型</li><li>而父类直接变成子类（从小变大，即向下转型）则不允许</li></ul></li><li><p>父类转为子类有一种情况例外</p><pre><code>* 就是这个父类本身就是从子类转化的</code></pre></li></ul><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Man</span> <span class="keyword">extends</span> <span class="title">Human</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;I can eat more&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ploygh</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span>&#123;</span><br><span class="line">Man obj1=<span class="keyword">new</span> Man();</span><br><span class="line">        obj1.eat();</span><br><span class="line">        Human obj2=(Human) obj2;</span><br><span class="line">        obj2.eat();</span><br><span class="line">        Man obj3=(Man) obj2;</span><br><span class="line">        obj3.eat();</span><br><span class="line">        <span class="comment">//obj1==obj2;//true</span></span><br><span class="line">        <span class="comment">//obj2==obj3;//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>多态的作用</p><ul><li>以统一的接口来操纵某一类中不同的对象的动态行为</li><li>对象之间的解耦</li></ul><h2 id="契约设计"><a href="#契约设计" class="headerlink" title="契约设计"></a>契约设计</h2><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210501231741365.png" alt="image-20210501231741365" loading="lazy"></p><p>契约：规定规范了对象应该包含的行为方法</p><p>接口定义了方法的名称参数和返回值</p><p>基于接口，利用转型和多态，不影响真正方法的调用，成功地将调用类和被调用类解耦</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210501230936328.png" alt="image-20210501230936328" loading="lazy"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>java支持子类转父类，但不支持父类转子类，除非父类对象最早就是子类转型父类而来</p><p>多态：子类转型为父类后，调用普通方法，依旧是子类本身的方法</p><p>契约设计：类不会直接调用另外一个类，而是采用接口形式，外部可以空投这个接口下的任意子类对象</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;类转型&quot;&gt;&lt;a href=&quot;#类转型&quot; class=&quot;headerlink&quot; title=&quot;类转型&quot;&gt;&lt;/a&gt;类转型&lt;/h1&gt;&lt;h2 id=&quot;类转型1&quot;&gt;&lt;a href=&quot;#类转型1&quot; class=&quot;headerlink&quot; title=&quot;类转型1&quot;&gt;&lt;/a&gt;类转型</summary>
       
     
     

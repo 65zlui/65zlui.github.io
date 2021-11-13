@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">59</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">59</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -216,6 +216,98 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/jsexample/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/jsexample/" class="post-title-link" itemprop="url">jsexample00-date</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-07-16 15:44:05" itemprop="dateCreated datePublished" datetime="2021-07-16T15:44:05Z">2021-07-16</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/jsexample/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="jsexample/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>// GMT 时间 2000 年 1 月 1 日午夜零时</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2000</span>, <span class="number">0</span>));</span><br></pre></td></tr></table></figure>
+
+
+<p>// GMT 时间 2005 年 5 月 5 日下午 5:55:55</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>));</span><br></pre></td></tr></table></figure>
+
+<p>​                                                                                                        <code>DateTypeUTCExample01.htm</code><br>这个例子创建了两个日期对象。第一个对象表示 GMT 时间 2000 年 1 月 1 日午夜零时，传入的值一<br>个是表示年份的 2000，一个是表示月份的 0（即一月份）。因为其他参数是自动填充的（即月中的天数为 1，其他所有参数均为 0），所以结果就是该月第一天的午夜零时。第二个对象表示 GMT 时间 2005年 5 月 5 日下午 5:55:55，即使日期和时间中只包含 5，也需要传入不一样的参数：月份必须是 4（因为月份是基于 0 的）、小时必须设置为 17（因为小时以 0 到 23 表示），剩下的参数就很直观了。</p>
+<p>因此，如果第一个参数是数值， Date 构造函数就会假设该值是日期中的年份，而第二个参数是月份，<br>以此类推。据此，可以将前面的例子重写如下。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 本地时间 2000 年 1 月 1 日午夜零时</span></span><br><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2000</span>, <span class="number">0</span>);</span><br><span class="line"><span class="comment">// 本地时间 2005 年 5 月 5 日下午 5:55:55</span></span><br><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>);</span><br><span class="line"><span class="comment">// DateTypeConstructorExample01.htm</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>以上代码创建了与前面例子中相同的两个日期对象，只不过这次的日期都是基于系统设置的本地时<br>区创建的</p>
+<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155703497.png" alt="image-20210716155703497" loading="lazy"></p>
+<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155745891.png" alt="image-20210716155745891" loading="lazy"></p>
+<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155757315.png" alt="image-20210716155757315" loading="lazy"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -444,113 +536,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="经常有人说，学一行爱一行，要找到心之所爱"><a href="#经常有人说，学一行爱一行，要找到心之所爱" class="headerlink" title="经常有人说，学一行爱一行，要找到心之所爱"></a>经常有人说，学一行爱一行，要找到心之所爱</h2><p>可我却要质疑，如果非要等到你对某样事物有兴趣了才去做，会不会晚了些呢，社会竞争激烈，会不会在犹豫间，就失去了机会呢。人生，怎么会是仅仅去喜欢就够了的呢，就像你爱一个女孩死心踏地去追，还会不会落一场空呢；如果佛系一些，女孩又会白白送来吗；建议你还是先花费些精力去做吧，就像我的某朋友，撒大网才能钓大鱼，韭菜不要有过多的感受，现在开始结网，以后说不定收获累累呢。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E7%B1%BB%E8%BD%AC%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E7%B1%BB%E8%BD%AC%E5%9E%8B/" class="post-title-link" itemprop="url">java核心04-类转型</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-06-01 09:45:34" itemprop="dateCreated datePublished" datetime="2021-06-01T09:45:34Z">2021-06-01</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/%E7%B1%BB%E8%BD%AC%E5%9E%8B/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="类转型/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="类转型"><a href="#类转型" class="headerlink" title="类转型"></a>类转型</h1><h2 id="类转型1"><a href="#类转型1" class="headerlink" title="类转型1"></a>类转型1</h2><ul>
-<li><p>变量支持相互转化，比如int a=(int)3.5;</p>
-</li>
-<li><p>变量可以相互转型，但是只限制于有继承关系的类。</p>
-<ul>
-<li>子类可以转换为父类，而父类不可以转换为子类</li>
-<li>子类可以继承父类所有的财产，子类可以变成父类，从大变小，即向上转型</li>
-<li>而父类直接变成子类（从小变大，即向下转型）则不允许</li>
-</ul>
-</li>
-<li><p>父类转为子类有一种情况例外</p>
-<pre><code>* 就是这个父类本身就是从子类转化的
-</code></pre>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Man</span> <span class="keyword">extends</span> <span class="title">Human</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;I can eat more&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ploygh</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span>&#123;</span><br><span class="line">		Man obj1=<span class="keyword">new</span> Man();</span><br><span class="line">        obj1.eat();</span><br><span class="line">        Human obj2=(Human) obj2;</span><br><span class="line">        obj2.eat();</span><br><span class="line">        Man obj3=(Man) obj2;</span><br><span class="line">        obj3.eat();</span><br><span class="line">        <span class="comment">//obj1==obj2;//true</span></span><br><span class="line">        <span class="comment">//obj2==obj3;//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>多态的作用</p>
-<ul>
-<li>以统一的接口来操纵某一类中不同的对象的动态行为</li>
-<li>对象之间的解耦</li>
-</ul>
-<h2 id="契约设计"><a href="#契约设计" class="headerlink" title="契约设计"></a>契约设计</h2><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210501231741365.png" alt="image-20210501231741365" loading="lazy"></p>
-<p>契约：规定规范了对象应该包含的行为方法</p>
-<p>接口定义了方法的名称参数和返回值</p>
-<p>基于接口，利用转型和多态，不影响真正方法的调用，成功地将调用类和被调用类解耦</p>
-<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210501230936328.png" alt="image-20210501230936328" loading="lazy"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>java支持子类转父类，但不支持父类转子类，除非父类对象最早就是子类转型父类而来</p>
-<p>多态：子类转型为父类后，调用普通方法，依旧是子类本身的方法</p>
-<p>契约设计：类不会直接调用另外一个类，而是采用接口形式，外部可以空投这个接口下的任意子类对象</p>
 
       
     </div>
