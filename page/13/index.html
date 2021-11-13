@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">56</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">57</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -216,6 +216,83 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/python00-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/python00-01/" class="post-title-link" itemprop="url">python语言程序设计基础-高等教育出版社01</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-08-17 19:08:32" itemprop="dateCreated datePublished" datetime="2020-08-17T19:08:32Z">2020-08-17</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/python00-01/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="python00-01/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#1.1圆面积的计算</span></span><br><span class="line">rad=<span class="number">25</span></span><br><span class="line">area=<span class="number">3.1415</span>*rad*rad</span><br><span class="line"><span class="built_in">print</span>(area)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;&#123;:.2f&#125;&quot;</span>.<span class="built_in">format</span>(area))<span class="comment">#只输入两位小数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#1.2简单的人名对话</span></span><br><span class="line">x=<span class="built_in">input</span>(<span class="string">&quot;选择是否为复性，1为单姓，2为复姓:&quot;</span>)</span><br><span class="line">x=<span class="built_in">int</span>(x)</span><br><span class="line">name=<span class="built_in">input</span>(<span class="string">&quot;输入姓名：&quot;</span>)</span><br><span class="line"><span class="keyword">if</span>(x==<span class="number">1</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;同学，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;哥，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name[<span class="number">0</span>]))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;妹妹，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name[<span class="number">1</span>:]))</span><br><span class="line"><span class="keyword">elif</span>(x==<span class="number">2</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;同学，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;哥，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name[<span class="number">0</span>]))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;妹妹，学好python，继续内卷！&quot;</span>.<span class="built_in">format</span>(name[<span class="number">2</span>:]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.3斐波那契数列</span></span><br><span class="line">a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> a &lt; <span class="number">1000</span>:</span><br><span class="line">    <span class="built_in">print</span>(a,end=<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">    a, b = b, a+b</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.4画圆</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.pensize(<span class="number">2</span>)</span><br><span class="line">turtle.circle(<span class="number">10</span>)</span><br><span class="line">turtle.circle(<span class="number">30</span>)</span><br><span class="line">turtle.circle(<span class="number">90</span>)</span><br><span class="line">turtle.circle(<span class="number">180</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.5日期和时间输出</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">now=datetime.now()</span><br><span class="line"><span class="built_in">print</span>(now)</span><br><span class="line">now.strftime(<span class="string">&quot;%x&quot;</span>)</span><br><span class="line">now.strftime(<span class="string">&quot;%X&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.6 smalltest range()</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">10</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.1字符串拼接</span></span><br><span class="line">str1=<span class="built_in">input</span>(<span class="string">&quot;请输入一个人的名字：&quot;</span>)</span><br><span class="line">str2=<span class="built_in">input</span>(<span class="string">&quot;请输入一个国家的名字：&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;世界这么大，&#123;&#125;想去&#123;&#125;看看了啊。&quot;</span>.<span class="built_in">format</span>(str1,str2))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.2整数序列求和</span></span><br><span class="line">n=<span class="built_in">input</span>(<span class="string">&quot;请输入整数n:&quot;</span>)</span><br><span class="line"><span class="built_in">sum</span>=<span class="number">0</span></span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(n)):</span><br><span class="line">    <span class="built_in">sum</span> += i+<span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;1到N求和结果：&quot;</span>,<span class="built_in">sum</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.3 九九乘法表</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;*&#123;&#125;=&#123;:2&#125;&quot;</span>.<span class="built_in">format</span>(i,j,i*j),end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.4 计算1到10的阶乘之和</span></span><br><span class="line">sumx, tmp = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):</span><br><span class="line">    tmp *= i</span><br><span class="line">    sumx += tmp</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;运算结果是：&#123;&#125;&quot;</span>.<span class="built_in">format</span>(sumx))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.5 猴子吃桃</span></span><br><span class="line">n = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">0</span>,-<span class="number">1</span>):</span><br><span class="line">    n=(n+<span class="number">1</span>)*<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(n)</span><br><span class="line"></span><br><span class="line">n = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>,<span class="number">0</span>,-<span class="number">1</span>):</span><br><span class="line">    n=(n+<span class="number">1</span>)&lt;&lt;<span class="number">2</span></span><br><span class="line"><span class="built_in">print</span>(n)</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.6 健康食谱输出</span></span><br><span class="line">diet=[<span class="string">&#x27;西红柿&#x27;</span>,<span class="string">&#x27;花椰菜&#x27;</span>,<span class="string">&#x27;黄瓜&#x27;</span>,<span class="string">&#x27;牛排&#x27;</span>,<span class="string">&#x27;虾仁&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">5</span>):</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,x+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span>(x==y):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(diet[x],diet[y]))</span><br><span class="line"></span><br><span class="line">diet=[<span class="string">&#x27;西红柿&#x27;</span>,<span class="string">&#x27;花椰菜&#x27;</span>,<span class="string">&#x27;黄瓜&#x27;</span>,<span class="string">&#x27;牛排&#x27;</span>,<span class="string">&#x27;虾仁&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">5</span>):</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,x+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> (x!=y):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(diet[x],diet[y]))</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.7五角星的绘制</span></span><br><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line">turtle.fillcolor(<span class="string">&quot;#3dd&quot;</span>)</span><br><span class="line">turtle.begin_fill()</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    turtle.forward(<span class="number">200</span>)</span><br><span class="line">    turtle.right(<span class="number">144</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">abs</span>(turtle.pos()) &lt; <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">turtle.end_fill()</span><br><span class="line">turtle.done()</span><br><span class="line"></span><br><span class="line"><span class="comment">#1.x.8太阳花的绘制</span></span><br><span class="line"><span class="keyword">import</span>  turtle</span><br><span class="line">turtle.color(<span class="string">&#x27;red&#x27;</span>,<span class="string">&#x27;yellow&#x27;</span>)</span><br><span class="line">turtle.begin_fill()</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    turtle.forward(<span class="number">200</span>)</span><br><span class="line">    turtle.left(<span class="number">170</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">abs</span>(turtle.pos()) &lt; <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">turtle.end_fill()</span><br><span class="line">turtle.done()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -570,93 +647,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/d-md/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/d-md/" class="post-title-link" itemprop="url">hexo-theme-icarus-imaegoo3使用中遇到的坑</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-08-08 13:26:14" itemprop="dateCreated datePublished" datetime="2020-08-08T13:26:14Z">2020-08-08</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/d-md/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="d-md/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><p>主题地址，<br><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2ltYWVnb28vaGV4by10aGVtZS1pY2FydXM=">https://github.com/imaegoo/hexo-theme-icarus<i class="fa fa-external-link-alt"></i></span></p>
-</li>
-<li><p>删除豫ICP备18017229号<br>在themes/icarus/layout/common/footer.jsx<br>删除</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;showVisitorCounter ? <span class="xml"><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span> : <span class="literal">null</span>&#125;</span><br><span class="line">&lt;a href=<span class="string">&quot;http://www.miitbeian.gov.cn&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;豫ICP备<span class="number">18017229</span>号&lt;/a&gt;&amp;nbsp;-&amp;nbsp;</span><br></pre></td></tr></table></figure></li>
-<li><p>因为新增了夜间模式，所以需要设置两个</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">logo:</span></span><br><span class="line">    <span class="attr">light:</span> <span class="string">/img/logo.svg</span></span><br><span class="line">    <span class="attr">dark:</span> <span class="string">/img/logo.svg</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
