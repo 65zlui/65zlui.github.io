@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">57</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">57</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -216,6 +216,84 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/byylswpu1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/byylswpu1/" class="post-title-link" itemprop="url">byylswpu1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-02 21:45:24" itemprop="dateCreated datePublished" datetime="2021-01-02T21:45:24Z">2021-01-02</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/byylswpu1/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="byylswpu1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>二、实验内容<br>1、词法分析器设计<br>（1）单词的数据结构；<br>（2）记号类别编码；<br>（3）词法正规式；<br>（4）识别单词的状态转换图。<br>2、词法分析器实现<br>（1）实现辅助例程；<br>（2）实现独立的记号获取函数GetToken；<br>（3）构造测试文件，调试词法分析器（基本要求：能通过命令行界面输出分析结果）。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.IO;</span><br><span class="line"></span><br><span class="line">namespace scanner</span><br><span class="line">&#123;</span><br><span class="line">    //记号类别号</span><br><span class="line">    enum Token_Type</span><br><span class="line">    &#123;</span><br><span class="line">        ORIGIN, SCALE, ROT, IS, TO, //语言保留字(一字一类别)</span><br><span class="line">        STEP, DRAW, FOR, FROM,      //语言保留字</span><br><span class="line">        T,                          //语言中唯一的变量</span><br><span class="line">        ID,                         //标识符(若把关键字、变量都看成一种单词，可以使用本类别)</span><br><span class="line"></span><br><span class="line">        SEMICO, L_BRACKET, R_BRACKET, COMMA, //分隔符(分号、左括号、右括号、逗号)</span><br><span class="line">        PLUS, MINUS, MUL, DIV, POWER,        //运算符(加、减、乘、除、乘方)</span><br><span class="line"></span><br><span class="line">        FUNC,                                //(语言提供的标准数学)函数</span><br><span class="line"></span><br><span class="line">        CONST_ID,                           //数值常量</span><br><span class="line">        ERRTOKEN,                           //错误单词</span><br><span class="line">        NONTOKEN							//专用记号(单词序列结束)</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    //记号数据类型</span><br><span class="line">    delegate double MathFunc(double d);//单参数的函数委托类型 delegate：代表</span><br><span class="line">    struct Token</span><br><span class="line">    &#123;</span><br><span class="line">        public Token_Type type; 			//类别号</span><br><span class="line">        public string lexeme;				//标识符的字符串</span><br><span class="line">        public double value;				//数值常数的值</span><br><span class="line">        public MathFunc func; 	            //函数委托</span><br><span class="line"></span><br><span class="line">        public Token(Token_Type type = Token_Type.NONTOKEN, string lexeme = &quot;&quot;, double value = 0, MathFunc func = null)</span><br><span class="line">        &#123;</span><br><span class="line">            this.type = type;</span><br><span class="line">            this.lexeme = lexeme;</span><br><span class="line">            this.value = value;</span><br><span class="line">            this.func = func;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class Program</span><br><span class="line">    &#123;</span><br><span class="line">        // 预定义单词表</span><br><span class="line">        static Token[] TokenTab = &#123;</span><br><span class="line">            //符号常数</span><br><span class="line">            new Token(Token_Type.CONST_ID,  &quot;PI&quot;,       3.1415926,  null),</span><br><span class="line">            new Token(Token_Type.CONST_ID,  &quot;E&quot;,        2.71828,    null),</span><br><span class="line">            //变量(惟一的)</span><br><span class="line">            new Token(Token_Type.T,         &quot;T&quot;,        0.0,        null),</span><br><span class="line">            //数学函数</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;SIN&quot;,      0.0,        Math.Sin),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;COS&quot;,      0.0,        Math.Cos),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;TAN&quot;,      0.0,        Math.Tan),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;LN&quot;,       0.0,        Math.Log),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;EXP&quot;,      0.0,        Math.Exp),</span><br><span class="line">            new Token(Token_Type.FUNC,      &quot;SQRT&quot;,     0.0,        Math.Sqrt),</span><br><span class="line">            //语句关键字</span><br><span class="line">            new Token(Token_Type.ORIGIN,    &quot;ORIGIN&quot;,   0.0,        null),</span><br><span class="line">            new Token(Token_Type.SCALE,     &quot;SCALE&quot;,    0.0,        null),</span><br><span class="line">            new Token(Token_Type.ROT,       &quot;ROT&quot;,      0.0,        null),</span><br><span class="line">            new Token(Token_Type.IS,        &quot;IS&quot;,       0.0,        null),</span><br><span class="line">            new Token(Token_Type.FOR,       &quot;FOR&quot;,      0.0,        null),</span><br><span class="line">            new Token(Token_Type.FROM,      &quot;FROM&quot;,     0.0,        null),</span><br><span class="line">            new Token(Token_Type.TO,        &quot;TO&quot;,       0.0,        null),</span><br><span class="line">            new Token(Token_Type.STEP,      &quot;STEP&quot;,     0.0,        null),</span><br><span class="line">            new Token(Token_Type.DRAW,      &quot;DRAW&quot;,     0.0,        null)</span><br><span class="line">        &#125;;</span><br><span class="line">        static Token ErrorToken = new Token(Token_Type.ERRTOKEN, &quot;error token&quot;, -1, null);</span><br><span class="line"></span><br><span class="line">        //c# 无 ungetc 函数（将一个字符退回输入流），所以用如下代码模拟</span><br><span class="line">        static char lastCh;</span><br><span class="line">        static bool ungetFlag = false;</span><br><span class="line">        //读取一个字符</span><br><span class="line">        static char getChar(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            if (!ungetFlag)</span><br><span class="line">            &#123;</span><br><span class="line">                lastCh = (char)sr.Read();</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">                ungetFlag = false;</span><br><span class="line"></span><br><span class="line">            return lastCh;</span><br><span class="line">        &#125;</span><br><span class="line">        //退回一个字符</span><br><span class="line">        static void ungetChar(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            ungetFlag = true;</span><br><span class="line">        &#125;</span><br><span class="line">        //c 语言的 ungetc 函数，在 c# 中的模拟</span><br><span class="line"></span><br><span class="line">        //判断标识符是否语言的预定义单词</span><br><span class="line">        static Token IsKeyWords(string id)</span><br><span class="line">        &#123;</span><br><span class="line">            int i;</span><br><span class="line">            Token token = new Token();</span><br><span class="line"></span><br><span class="line">            for (i = 0; i &lt; TokenTab.Length; i++) if (string.Equals(TokenTab[i].lexeme, id)) break;</span><br><span class="line"></span><br><span class="line">            if (i &lt; TokenTab.Length)</span><br><span class="line">                token = TokenTab[i];</span><br><span class="line">            else</span><br><span class="line">                token = ErrorToken;</span><br><span class="line"></span><br><span class="line">            return token;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //显示单词</span><br><span class="line">        static void writeToken(Token token)</span><br><span class="line">        &#123;</span><br><span class="line">            if (token.type == Token_Type.FUNC)</span><br><span class="line">                Console.WriteLine(&quot;&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;&quot;, (int)token.type, token.lexeme, token.value, (string)token.func.Method.Name);</span><br><span class="line">            else</span><br><span class="line">                Console.WriteLine(&quot;&#123;0,-15&#125;&#123;1, -15&#125;&#123;2, -15&#125;&#123;3, -20&#125;&quot;, (int)token.type, token.lexeme, token.value, &quot;&quot;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        static void getToken(StreamReader sr)</span><br><span class="line">        &#123;</span><br><span class="line">            //从源代码逐个读取字符</span><br><span class="line">            Token token;</span><br><span class="line">            char c, preCh;</span><br><span class="line">            while (true)</span><br><span class="line">            &#123;</span><br><span class="line">                c = getChar(sr);</span><br><span class="line"></span><br><span class="line">                if (c == &#x27;-&#x27; || c == &#x27;/&#x27;)</span><br><span class="line">                &#123;//如果是注释</span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);//读取新字符</span><br><span class="line">                    if (c == preCh)</span><br><span class="line">                    &#123; //判断注释符引导字符</span><br><span class="line">                        //去掉注释符引导字符</span><br><span class="line">                        while (c != &#x27;\n&#x27; &amp;&amp; !sr.EndOfStream)</span><br><span class="line">                        &#123;</span><br><span class="line">                            c = getChar(sr);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        c = preCh;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (c == &#x27;\t&#x27; || c == &#x27;\n&#x27; || c == &#x27;\r&#x27; || c == &#x27; &#x27;)</span><br><span class="line">                &#123;//过滤空白</span><br><span class="line">                    continue;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (char.IsLetter(c))</span><br><span class="line">                &#123; //读到的是字母</span><br><span class="line">                    string buf = &quot;&quot;;//临时缓冲buf</span><br><span class="line">                    buf += char.ToUpper(c);</span><br><span class="line">                    //遍历后续字符</span><br><span class="line">                    for (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        if (char.IsLetterOrDigit(c))</span><br><span class="line">                        &#123; //如果仍是字母/数字</span><br><span class="line">                            buf += char.ToUpper(c);</span><br><span class="line">                        &#125;</span><br><span class="line">                        else &#123; break; &#125;//读完</span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = IsKeyWords(buf);</span><br><span class="line">                &#125;</span><br><span class="line">               else if (c == &#x27;(&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.L_BRACKET, &quot;(&quot;);</span><br><span class="line">                else if (c == &#x27;)&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.R_BRACKET, &quot;)&quot;);</span><br><span class="line">                else if (c == &#x27;-&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.MINUS, &quot;-&quot;);</span><br><span class="line">                else if (c == &#x27;;&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.SEMICO, &quot;;&quot;);</span><br><span class="line">                else if (c == &#x27;,&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.COMMA, &quot;,&quot;);</span><br><span class="line">                else if (c == &#x27;+&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.PLUS, &quot;+&quot;);</span><br><span class="line">                else if (c == &#x27;/&#x27;)</span><br><span class="line">                    token = new Token(Token_Type.DIV, &quot;/&quot;);</span><br><span class="line">                else if (c == &#x27;*&#x27;)</span><br><span class="line">                &#123;//乘号会有*和乘方**</span><br><span class="line">                    preCh = c;</span><br><span class="line">                    c = getChar(sr);//读取新字符</span><br><span class="line">                    if (c == preCh)</span><br><span class="line">                    &#123;</span><br><span class="line">                        token = new Token(Token_Type.POWER, &quot;**&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                    else</span><br><span class="line">                    &#123;//否则退回一个字符</span><br><span class="line">                        ungetChar(sr);</span><br><span class="line">                        token = new Token(Token_Type.MUL, &quot;*&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                else if (char.IsDigit(c))</span><br><span class="line">                &#123;</span><br><span class="line">                    string buf = &quot;&quot;;</span><br><span class="line">                    buf += c;</span><br><span class="line"></span><br><span class="line">                    for (; ; )</span><br><span class="line">                    &#123;</span><br><span class="line">                        c = getChar(sr);</span><br><span class="line">                        if (char.IsDigit(c) || c == &#x27;.&#x27;)</span><br><span class="line">                        &#123; //如果仍是数字或小数点</span><br><span class="line">                            buf += c;</span><br><span class="line">                        &#125;</span><br><span class="line">                        else &#123; break; &#125;//读完</span><br><span class="line">                    &#125;</span><br><span class="line">                    ungetChar(sr);</span><br><span class="line"></span><br><span class="line">                    token = new Token(Token_Type.CONST_ID, &quot;&quot;, Convert.ToDouble(buf));</span><br><span class="line">                &#125;</span><br><span class="line">                else</span><br><span class="line">                &#123;</span><br><span class="line">                    token = ErrorToken;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                if (sr.EndOfStream)</span><br><span class="line">                &#123; //判断文件读取结束</span><br><span class="line">                    token = new Token(Token_Type.NONTOKEN);</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                writeToken(token);//输出单词</span><br><span class="line">            &#125;</span><br><span class="line">            writeToken(token);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(&quot;&#123;0,-11&#125;&#123;1, -12&#125;&#123;2, -12&#125;&#123;3, -20&#125;&quot;, &quot;记号类别&quot;, &quot;字符串&quot;, &quot;常数值&quot;, &quot;函数指针&quot;);</span><br><span class="line">            Console.WriteLine(&quot;-------------------------------------------------------&quot;);</span><br><span class="line"></span><br><span class="line">            //打开源代码文件</span><br><span class="line">            StreamReader sr;</span><br><span class="line">            if (args.Length == 0)</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(&quot;p89-8-10.draw&quot;);//文件在项目的子目录 bin\debug 下</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                sr = File.OpenText(args[0].ToString());//允许通过命令行参数，给出源代码文件名</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            getToken(sr);</span><br><span class="line">            sr.Close();</span><br><span class="line">            Console.ReadLine();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -422,83 +500,6 @@
     
     <a title="disqus" href="/os2019a/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="os2019a/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/essay02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/essay02/" class="post-title-link" itemprop="url">essay02</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-12-19 16:40:49" itemprop="dateCreated datePublished" datetime="2020-12-19T16:40:49Z">2020-12-19</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/essay02/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="essay02/" itemprop="commentCount"></span>
     </a>
   </span>
   

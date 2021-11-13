@@ -6,7 +6,7 @@
   <link href="https://theme-next.js.org/atom.xml" rel="self"/>
   
   <link href="https://theme-next.js.org/"/>
-  <updated>2021-11-13T16:40:02.953Z</updated>
+  <updated>2021-11-13T17:56:19.931Z</updated>
   <id>https://theme-next.js.org/</id>
   
   <author>
@@ -17,20 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>XML可拓展标记语言</title>
-    <link href="https://theme-next.js.org/%EF%BC%B8%EF%BC%AD%EF%BC%AC%E5%8F%AF%E6%8B%93%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
-    <id>https://theme-next.js.org/%EF%BC%B8%EF%BC%AD%EF%BC%AC%E5%8F%AF%E6%8B%93%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/</id>
-    <published>2021-11-14T11:17:31.000Z</published>
-    <updated>2021-11-13T16:40:02.953Z</updated>
+    <title>map</title>
+    <link href="https://theme-next.js.org/map/"/>
+    <id>https://theme-next.js.org/map/</id>
+    <published>2021-11-14T01:56:04.000Z</published>
+    <updated>2021-11-13T17:56:19.931Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="XML可拓展标记语言"><a href="#XML可拓展标记语言" class="headerlink" title="ＸＭＬ可拓展标记语言"></a>ＸＭＬ可拓展标记语言</h2><p>意义+数据</p><p>标签可自行定义</p><p>纯文本表示，跨系统，平台,语言·</p><p>包括两个元素，</p><p>Children 属性，</p><p>数据+含义，适用于传输数据，而不是显示数据（HTML）</p><p>XML</p><p>任何起始标签都必须有一个结束标签。</p><p>简化写法，例如<name></name>可以写为<name/></p><p>大小写敏感</p><p>每个文件都要由根元素</p><p>DTD(Document Type Definition)</p><p>定义XML文档的结构，</p><p>使用一系列合法的元素来定义文档结构，</p><p>可嵌套在xml文档中，或者在xml中引用</p><p>XML Schema（XSD，XML Schema Definition）</p><ul><li>定义XML文档的结构，DTD的继任者。</li><li>支持数据类型，可扩展，功能更完善，强大。</li><li>采用xml编写</li><li>DTD语法</li><li>XSD 本身就是一种xml</li><li>元素顺序类型</li><li>xsl</li></ul><p>正则表达式，其他字符串操作</p><p>输一个邮箱地址，怎么判断是对的。</p><p>add符号，</p><p>问题，如何认定一个字符串满足一定的规律</p><p>正则表达式独立于特定的编程语言（Java，Perl，Python，PHP）</p><p>正则表达式</p><ul><li>界定符</li><li>原子</li></ul><p>java的正则表达式</p><p>java.util.regex包</p><p>Pattern类编译正则表达式</p><p>Matcher</p><p>一个Pattern代表一个正则表达式</p>]]></content>
+    <content type="html"><![CDATA[<p>map</p><p>映射</p><p>自变量的定义域对应变量的值域</p><p>{key，value}</p><p>K-V对</p><p>java里面</p><p>实现存储栈</p><p>存储很多很多的kv对</p><p>hashtable和properties</p><p>hashtable（同步，慢，数据量小）</p><p>HashMap（不支持同步，快，数据量大）</p><p>Properties (同步，文件形式，数据量小)</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;XML可拓展标记语言&quot;&gt;&lt;a href=&quot;#XML可拓展标记语言&quot; class=&quot;headerlink&quot; title=&quot;ＸＭＬ可拓展标记语言&quot;&gt;&lt;/a&gt;ＸＭＬ可拓展标记语言&lt;/h2&gt;&lt;p&gt;意义+数据&lt;/p&gt;
-&lt;p&gt;标签可自行定义&lt;/p&gt;
-&lt;p&gt;纯文本表示，跨系统，</summary>
+    <summary type="html">&lt;p&gt;map&lt;/p&gt;
+&lt;p&gt;映射&lt;/p&gt;
+&lt;p&gt;自变量的定义域对应变量的值域&lt;/p&gt;
+&lt;p&gt;{key，value}&lt;/p&gt;
+&lt;p&gt;K-V对&lt;/p&gt;
+&lt;p&gt;java里面&lt;/p&gt;
+&lt;p&gt;实现存储栈&lt;/p&gt;
+&lt;p&gt;存储很多很多的kv对&lt;/p&gt;
+&lt;p&gt;hashtable和properti</summary>
       
     
     
@@ -75,6 +81,28 @@
 &lt;p&gt;onDraw 进行绘制&lt;/p&gt;
 &lt;p&gt;如果在onDraw过程中频繁的new对象销毁对象，会导致内存抖动。&lt;/p&gt;
 </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>XML可拓展标记语言</title>
+    <link href="https://theme-next.js.org/%EF%BC%B8%EF%BC%AD%EF%BC%AC%E5%8F%AF%E6%8B%93%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
+    <id>https://theme-next.js.org/%EF%BC%B8%EF%BC%AD%EF%BC%AC%E5%8F%AF%E6%8B%93%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/</id>
+    <published>2021-11-14T00:41:31.000Z</published>
+    <updated>2021-11-13T17:56:41.734Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="XML可拓展标记语言"><a href="#XML可拓展标记语言" class="headerlink" title="ＸＭＬ可拓展标记语言"></a>ＸＭＬ可拓展标记语言</h2><p>意义+数据</p><p>标签可自行定义</p><p>纯文本表示，跨系统，平台,语言·</p><p>包括两个元素，</p><p>Children 属性，</p><p>数据+含义，适用于传输数据，而不是显示数据（HTML）</p><p>XML</p><p>任何起始标签都必须有一个结束标签。</p><p>简化写法，例如<name></name>可以写为<name/></p><p>大小写敏感</p><p>每个文件都要由根元素</p><p>DTD(Document Type Definition)</p><p>定义XML文档的结构，</p><p>使用一系列合法的元素来定义文档结构，</p><p>可嵌套在xml文档中，或者在xml中引用</p><p>XML Schema（XSD，XML Schema Definition）</p><ul><li>定义XML文档的结构，DTD的继任者。</li><li>支持数据类型，可扩展，功能更完善，强大。</li><li>采用xml编写</li><li>DTD语法</li><li>XSD 本身就是一种xml</li><li>元素顺序类型</li><li>xsl</li></ul><p>正则表达式，其他字符串操作</p><p>输一个邮箱地址，怎么判断是对的。</p><p>add符号，</p><p>问题，如何认定一个字符串满足一定的规律</p><p>正则表达式独立于特定的编程语言（Java，Perl，Python，PHP）</p><p>正则表达式</p><ul><li>界定符</li><li>原子</li></ul><p>java的正则表达式</p><p>java.util.regex包</p><p>Pattern类编译正则表达式</p><p>Matcher</p><p>一个Pattern代表一个正则表达式</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;XML可拓展标记语言&quot;&gt;&lt;a href=&quot;#XML可拓展标记语言&quot; class=&quot;headerlink&quot; title=&quot;ＸＭＬ可拓展标记语言&quot;&gt;&lt;/a&gt;ＸＭＬ可拓展标记语言&lt;/h2&gt;&lt;p&gt;意义+数据&lt;/p&gt;
+&lt;p&gt;标签可自行定义&lt;/p&gt;
+&lt;p&gt;纯文本表示，跨系统，</summary>
       
     
     
@@ -419,27 +447,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;类转型&quot;&gt;&lt;a href=&quot;#类转型&quot; class=&quot;headerlink&quot; title=&quot;类转型&quot;&gt;&lt;/a&gt;类转型&lt;/h1&gt;&lt;h2 id=&quot;类转型1&quot;&gt;&lt;a href=&quot;#类转型1&quot; class=&quot;headerlink&quot; title=&quot;类转型1&quot;&gt;&lt;/a&gt;类转型</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>java核心02-继承</title>
-    <link href="https://theme-next.js.org/%E7%BB%A7%E6%89%BF/"/>
-    <id>https://theme-next.js.org/%E7%BB%A7%E6%89%BF/</id>
-    <published>2021-05-08T15:12:26.000Z</published>
-    <updated>2021-07-15T13:42:06.416Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="6-1-1继承"><a href="#6-1-1继承" class="headerlink" title="6.1.1继承"></a>6.1.1继承</h1><p>先看一个例子</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">father</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f1</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;hi&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Father</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] a)</span></span>&#123;</span><br><span class="line">        Son s=<span class="keyword">new</span> Son();</span><br><span class="line">        S.f1();</span><br><span class="line">        <span class="comment">//Son中没有f1方法的定义，根据父类继承的</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><p>面向过程编程语言没有继承，导致出现很多类型重复定义</p></li><li><p>物以类聚，世间万物皆对象，对象也可以划分为若干类别</p></li><li><p>类别内的对象属性和方法都有一定的共同点</p></li><li><p>将共同点提取出来，形成父类（或者叫基类，超类）</p><p>Parent class/Base class/Super class</p></li><li><p>而其他类则自动为子类派生类</p><p>Child class/Derived class</p></li></ul><p>从很多个对象中提取出共性，形成父类，其他类继承父类成为子类，也具有这些共性</p><ul><li><p>Man extends human 表示Man继承于humna</p></li><li><p>Human是父类，Man是子类</p></li><li><p>子类继承父类中所有的属性和方法（但不能直接访问private成员</p></li><li><p>根据信息隐藏原则：子类会继承父类中所有的方法。可以直接使用。</p></li><li><p>子类也会继承父类的父类的所有属性和方法（但不嫩更直接访问private成员)</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="comment">//private int num=20;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Derived foo =<span class="keyword">new</span> Derived();</span><br><span class="line">        System.out.println(foo.getNUm());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><p>​    输出结果为</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure><p>//子类可以通过调用父类的方法来访问父类的私有的成员属性</p><h2 id="方法优先级"><a href="#方法优先级" class="headerlink" title="方法优先级"></a>方法优先级</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">20</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Derived foo =<span class="keyword">new</span> Derived();</span><br><span class="line">        System.out.println(foo.getNUm());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>结果为</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">20</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>这说明了在同样方法名和参数情况下，本类的方法优先级会比父类的方法高</p><h2 id="继承（6）"><a href="#继承（6）" class="headerlink" title="继承（6）"></a>继承（6）</h2><ul><li>单类继承原则：每个类都只能继承一个类</li><li>如果不写extends，java类默认继承java.lang.Object类</li><li>class Human extends java.lang.Object</li><li>java所有类从java.lang.Object开始，构建出一个类型继承树</li><li>Object类里面默认有clone，equals，finalize，getClass，hashCode，toString等方法</li><li>若一个方法在当前类中没有定义，那这个方法就来自它的父类</li></ul><h2 id="继承和构造函数"><a href="#继承和构造函数" class="headerlink" title="继承和构造函数"></a>继承和构造函数</h2><ul><li><p>每个java类都必须有构造函数</p></li><li><p>如果没有显式定义构造函数，java编译器自动产生一个空的无形参构造函数</p></li><li><p>每个子类的构造函数的第一句话，都默认调用父类的无参数构造函数super（）,除非子类的构造函数第一句话是super，而且super语句必须放在第一条，不会出现连续两条super语句</p></li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li><p>子类继承父类所有的东西（但不能直接访问private成员）</p><ul><li><p>java所有类都继承自java.lang.Object类</p></li><li><p>java所有的类都是单根继承的</p></li><li><p>子类构造函数默认第一句话都会区调用父类的构造函数</p></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;6-1-1继承&quot;&gt;&lt;a href=&quot;#6-1-1继承&quot; class=&quot;headerlink&quot; title=&quot;6.1.1继承&quot;&gt;&lt;/a&gt;6.1.1继承&lt;/h1&gt;&lt;p&gt;先看一个例子&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;</summary>
       
     
     
