@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">55</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">56</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-count">56</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -216,6 +216,100 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/jsexample01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/jsexample01/" class="post-title-link" itemprop="url">jsexample01</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-07-16 16:02:55" itemprop="dateCreated datePublished" datetime="2021-07-16T16:02:55Z">2021-07-16</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/jsexample01/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="jsexample01/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol>
+<li>函数名仅仅是指向函数的指针，因此函数名与包含对象指针的其他变量没有什么不同。换句话<br>说，一个函数可能会有多个名字，如下面的例子所示。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br><span class="line"><span class="keyword">var</span> anotherSum = sum;</span><br><span class="line">alert(anotherSum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br><span class="line">sum = <span class="literal">null</span>;</span><br><span class="line">alert(anotherSum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>以上代码首先定义了一个名为 sum() 的函数，用于求两个值的和。然后，又声明了变量 anotherSum ，<br>并将其设置为与 sum 相等（将 sum 的值赋给 anotherSum ）。注意，使用不带圆括号的函数名是访问函数指针，而非调用函数。此时， anotherSum 和 sum 就都指向了同一个函数，因此 anotherSum() 也<br>可以被调用并返回结果。即使将 sum 设置为 null ，让它与函数“断绝关系”，但仍然可以正常调用<br>anotherSum() </p>
+<ol start="2">
+<li>解析器在向执行环境中加载数据时，对函数声明和函数表达式并非一视同仁。解析器会率先读取函数声明，并使其在执行任何代码之前可用（可以访问）；至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被解释执行。请看下面的例子。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>));</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//FunctionDeclarationExample01.htm</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>以上代码完全可以正常运行。因为在代码开始执行之前，解析器就已经通过一个名为函数声明提升<br>（function declaration hoisting）的过程，读取并将函数声明添加到执行环境中。对代码求值时，JavaScript引擎在第一遍会声明函数并将它们放到源代码树的顶部。所以，即使声明函数的代码在调用它的代码后面，JavaScript 引擎也能把函数声明提升到顶部。如果像下面例子所示的，把上面的函数声明改为等价的函数表达式，就会在执行期间导致错误</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>));</span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>以上代码之所以会在运行期间产生错误，原因在于函数位于一个初始化语句中，而不是一个函数声<br>明。换句话说，在执行到函数所在的语句之前，变量 sum 中不会保存有对函数的引用；而且，由于第一<br>行代码就会导致“unexpected identifier”（意外标识符）错误，实际上也不会执行到下一行。<br>除了什么时候可以通过变量访问函数这一点区别之外，函数声明与函数表达式的语法其实是等价的。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -458,84 +552,6 @@
 <li><p>使用 async 属性可以表示当前脚本不必等待其他脚本，也不必阻塞文档呈现。不能保证异步脚<br>本按照它们在页面中出现的顺序执行。</p>
 </li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E5%AD%A6%E4%B8%80%E8%A1%8C%E7%88%B1%E4%B8%80%E8%A1%8C%C2%B7%E6%88%91%E7%9C%8B%E5%A4%A7%E5%8F%AF%E4%B8%8D%E5%BF%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E5%AD%A6%E4%B8%80%E8%A1%8C%E7%88%B1%E4%B8%80%E8%A1%8C%C2%B7%E6%88%91%E7%9C%8B%E5%A4%A7%E5%8F%AF%E4%B8%8D%E5%BF%85/" class="post-title-link" itemprop="url">学一行爱一行·我看大可不必</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-16 14:38:42" itemprop="dateCreated datePublished" datetime="2021-07-16T14:38:42Z">2021-07-16</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/%E5%AD%A6%E4%B8%80%E8%A1%8C%E7%88%B1%E4%B8%80%E8%A1%8C%C2%B7%E6%88%91%E7%9C%8B%E5%A4%A7%E5%8F%AF%E4%B8%8D%E5%BF%85/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="学一行爱一行·我看大可不必/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="经常有人说，学一行爱一行，要找到心之所爱"><a href="#经常有人说，学一行爱一行，要找到心之所爱" class="headerlink" title="经常有人说，学一行爱一行，要找到心之所爱"></a>经常有人说，学一行爱一行，要找到心之所爱</h2><p>可我却要质疑，如果非要等到你对某样事物有兴趣了才去做，会不会晚了些呢，社会竞争激烈，会不会在犹豫间，就失去了机会呢。人生，怎么会是仅仅去喜欢就够了的呢，就像你爱一个女孩死心踏地去追，还会不会落一场空呢；如果佛系一些，女孩又会白白送来吗；建议你还是先花费些精力去做吧，就像我的某朋友，撒大网才能钓大鱼，韭菜不要有过多的感受，现在开始结网，以后说不定收获累累呢。</p>
 
       
     </div>

@@ -39,6 +39,30 @@
   </entry>
   
   <entry>
+    <title>自定义view简要流程</title>
+    <link href="https://theme-next.js.org/%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%AE%80%E8%A6%81%E6%B5%81%E7%A8%8B/"/>
+    <id>https://theme-next.js.org/%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%AE%80%E8%A6%81%E6%B5%81%E7%A8%8B/</id>
+    <published>2021-11-14T01:42:20.000Z</published>
+    <updated>2021-11-13T17:45:14.058Z</updated>
+    
+    <content type="html"><![CDATA[<p>onMeasure 测量控件大小</p><p>onLayout 确定控件在布局中的位置</p><p>onDraw 进行绘制</p><p>如果在onDraw过程中频繁的new对象销毁对象，会导致内存抖动。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;onMeasure 测量控件大小&lt;/p&gt;
+&lt;p&gt;onLayout 确定控件在布局中的位置&lt;/p&gt;
+&lt;p&gt;onDraw 进行绘制&lt;/p&gt;
+&lt;p&gt;如果在onDraw过程中频繁的new对象销毁对象，会导致内存抖动。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Android00_View</title>
     <link href="https://theme-next.js.org/Android00-View/"/>
     <id>https://theme-next.js.org/Android00-View/</id>
@@ -416,26 +440,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;抽象类和接口&quot;&gt;&lt;a href=&quot;#抽象类和接口&quot; class=&quot;headerlink&quot; title=&quot;抽象类和接口&quot;&gt;&lt;/a&gt;抽象类和接口&lt;/h1&gt;&lt;h2 id=&quot;抽象类&quot;&gt;&lt;a href=&quot;#抽象类&quot; class=&quot;headerlink&quot; title=&quot;抽象类</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>java核心01-信息隐藏</title>
-    <link href="https://theme-next.js.org/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/"/>
-    <id>https://theme-next.js.org/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/</id>
-    <published>2021-04-22T01:45:24.000Z</published>
-    <updated>2021-07-15T13:41:28.465Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="信息隐藏原则和this"><a href="#信息隐藏原则和this" class="headerlink" title="信息隐藏原则和this"></a>信息隐藏原则和this</h1><h2 id="信息隐藏原则"><a href="#信息隐藏原则" class="headerlink" title="信息隐藏原则"></a>信息隐藏原则</h2><h3 id="面向对象有一个法则：信息隐藏"><a href="#面向对象有一个法则：信息隐藏" class="headerlink" title="面向对象有一个法则：信息隐藏"></a>面向对象有一个法则：信息隐藏</h3><ul><li>类的成员属性，是私有的private</li><li>类的方法是公有public的，通过方法修改成员属性的值</li></ul><p>eg. 信息隐藏：通过类的方法来间接访问类的属性，而不是直接访问类的属性</p><ul><li><p>类成员是私有的</p></li><li><p>get和set方法是公有的统称为getter setter</p></li><li><p>外界对类成员的操作只能通过get和set方法来操作</p></li></ul><h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ul><li>this 负责指向本类中的成员变量</li><li>在构造函数里，形参的优先级更高</li></ul><p>~ example1:</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>~ example2:</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><p>this 负责指向本类中的成员方法</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.add(<span class="number">5</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//调用本类的add方法，this可以忽略</span></span><br></pre></td></tr></table></figure></li><li><p>this可以代替本类的构造函数</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(<span class="number">5</span>);</span><br></pre></td></tr></table></figure><p>不影响歧义的情况下，this可以省略，参见example1</p></li></ul><p>总结一下，</p><ul><li><p>this可以指向本类中的成员变量</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x</span><br></pre></td></tr></table></figure></li><li><p>可以指向本类中的成员方法，</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x()</span><br></pre></td></tr></table></figure></li><li><p>可以当作构造函数使用</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(x);</span><br></pre></td></tr></table></figure></li></ul><h2 id="Above-all"><a href="#Above-all" class="headerlink" title="Above all"></a>Above all</h2><ul><li>信息隐藏原则<ul><li>保护属性信息</li><li>公开行为信息</li></ul></li><li>this负责指向本类中的成员</li><li>this可以代替本类中的构造函数</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;信息隐藏原则和this&quot;&gt;&lt;a href=&quot;#信息隐藏原则和this&quot; class=&quot;headerlink&quot; title=&quot;信息隐藏原则和this&quot;&gt;&lt;/a&gt;信息隐藏原则和this&lt;/h1&gt;&lt;h2 id=&quot;信息隐藏原则&quot;&gt;&lt;a href=&quot;#信息隐藏原则&quot; cla</summary>
       
     
     
