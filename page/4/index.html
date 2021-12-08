@@ -225,6 +225,143 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/Hashmapx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Hashmapx/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-11-17 11:20:04" itemprop="dateCreated datePublished" datetime="2021-11-17T11:20:04Z">2021-11-17</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/Hashmapx/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Hashmapx/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Hashmap"><a href="#Hashmap" class="headerlink" title="Hashmap"></a>Hashmap</h1><p>Hashmap底层原理实现</p>
+<p>hashmap底层实现了哈希表，这是一种非常重要的数据结构，</p>
+<p>对于我们以后理解很多技术很有帮助</p>
+<p>hashmap采用哈希表来实现</p>
+<p>redis数据库和hashmap一样</p>
+<ol>
+<li>数组：占用空间连续。寻址容易，查询速度快。但是，增加和删除效率低。</li>
+<li>链表：占用空间不连续，寻址难，查询速度慢，但，增加和删除效率高</li>
+</ol>
+<p>结合数组和链表的优点，即查询快，增删效率也高。</p>
+<p>使用哈希表。哈希表的本质是数组加链表。</p>
+<p>一个Entry对象存储了</p>
+<p>key:键对象，value:值对象</p>
+<p>next：下一个节点。</p>
+<p>hash：键对象的hash值</p>
+<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20211116164717155.png" alt="image-20211116164717155" loading="lazy"></p>
+<p>键值对存到一个一个对象里，entry对象。</p>
+<p>Hashmap的结构</p>
+<p>本质数组</p>
+<p>放的entry类型</p>
+<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20211116164808601.png" alt="image-20211116164808601" loading="lazy"></p>
+<p>0-15长度为16的数组</p>
+<p>只要存键值对时往数组放就可以了</p>
+<p>map</p>
+<p>17-18个</p>
+<p>可能会冲突</p>
+<p>Entry[] table</p>
+<p>hash冲突</p>
+<p>hash扩容</p>
+<p>链表</p>
+<p>一个键值对怎么往里放。</p>
+<p>去存储一个键值对</p>
+<p>会计算键对象，hashcode方法。</p>
+<p>object类里一个方法，返回一个整数，比较大，有大有小，有正有负，初始长度16个 0-15个</p>
+<p>通过一种算法，知道了存键值对的时候一个entry对象</p>
+<p>hash</p>
+<p>key对象</p>
+<p>value对象</p>
+<p>next null</p>
+<p>刚刚存的entry对象放到数组</p>
+<p>直接写</p>
+<p>15</p>
+<p>entry对象</p>
+<p>还是15</p>
+<p>next指向</p>
+<p>有内容</p>
+<p>找next，再放再指向</p>
+<p>找到以后想一个一个去遍历，</p>
+<p>链表</p>
+<p>没有发挥数组的优势</p>
+<p>退化成链表</p>
+<p>0-15间的范围</p>
+<p>16-》15</p>
+<p>对长度取余数最简单的算法</p>
+<p>可以通过位运算提高效率</p>
+<p>整个的存储过程</p>
+<p>代码实现怎么往里存，再实现怎么取</p>
+<p>单击Interface</p>
+<p>Mymap</p>
+<p>自定义结构</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82%E5%92%8C%E9%9D%A2%E8%AF%95%E7%9A%84%E5%87%86%E5%A4%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -450,87 +587,6 @@
 <p>ReentrantLock：可重入锁。</p>
 <p>面向对象三大特征，</p>
 <p>封装，继承，多态</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E5%89%8D%E9%9D%A2%E6%98%AF%E6%89%BE%E4%BA%86%E4%B8%AA%E4%BA%BA%E6%A8%A1%E6%8B%9F%E8%A7%84%E5%88%92%E8%B7%AF%E7%BA%BF%EF%BC%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E5%89%8D%E9%9D%A2%E6%98%AF%E6%89%BE%E4%BA%86%E4%B8%AA%E4%BA%BA%E6%A8%A1%E6%8B%9F%E8%A7%84%E5%88%92%E8%B7%AF%E7%BA%BF%EF%BC%8C/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-11-17 11:19:31" itemprop="dateCreated datePublished" datetime="2021-11-17T11:19:31Z">2021-11-17</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/%E5%89%8D%E9%9D%A2%E6%98%AF%E6%89%BE%E4%BA%86%E4%B8%AA%E4%BA%BA%E6%A8%A1%E6%8B%9F%E8%A7%84%E5%88%92%E8%B7%AF%E7%BA%BF%EF%BC%8C/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="前面是找了个人模拟规划路线，/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>前面是找了个人模拟规划路线，</p>
-<p>他带我过了下java和jvm android基础的四大组件 recycleview什么的</p>
-<p>现在嘛，是那四周完了，那个人改完简历后，发个设计图，说带我做个项目，但周六开始也不回复了。。。</p>
-<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20211114135441312.png" alt="image-20211114135441312" loading="lazy"></p>
 
       
     </div>

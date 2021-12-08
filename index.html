@@ -225,6 +225,84 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/ConsoleApp%EF%BC%9A%E7%AE%97%E4%B8%80%E4%B8%8B%E4%BD%A0%E5%8D%81%E5%B9%B4%E5%90%8E%E8%83%BD%E6%94%92%E5%A4%9A%E5%B0%91%E9%92%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/ConsoleApp%EF%BC%9A%E7%AE%97%E4%B8%80%E4%B8%8B%E4%BD%A0%E5%8D%81%E5%B9%B4%E5%90%8E%E8%83%BD%E6%94%92%E5%A4%9A%E5%B0%91%E9%92%B1/" class="post-title-link" itemprop="url">算一下十年之后能赚多少钱</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-12-08 23:23:48" itemprop="dateCreated datePublished" datetime="2021-12-08T23:23:48Z">2021-12-08</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/ConsoleApp%EF%BC%9A%E7%AE%97%E4%B8%80%E4%B8%8B%E4%BD%A0%E5%8D%81%E5%B9%B4%E5%90%8E%E8%83%BD%E6%94%92%E5%A4%9A%E5%B0%91%E9%92%B1/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="ConsoleApp：算一下你十年后能攒多少钱/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="ConsoleApp：算一下你十年后能攒多少钱"><a href="#ConsoleApp：算一下你十年后能攒多少钱" class="headerlink" title="ConsoleApp：算一下你十年后能攒多少钱"></a>ConsoleApp：算一下你十年后能攒多少钱</h1><p>看到同学算工作几年能买房，我也写个简单的递归做个预测吧，好鞭策自己了。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Money</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        nasdaq();</span><br><span class="line">        saveBank();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">nasdaq</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//RMB计价</span></span><br><span class="line">        <span class="keyword">int</span> resPetro1=pessmisticPredict_1(<span class="number">50000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">int</span> resPetro2=positivePredict_1(<span class="number">50000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//假设国内三线企业</span></span><br><span class="line">        <span class="keyword">int</span> res1=pessmisticPredict_1(<span class="number">100000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">int</span> res2=positivePredict_1(<span class="number">100000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//假设国内二线企业</span></span><br><span class="line">        <span class="keyword">int</span> resPRC1=pessmisticPredict_1(<span class="number">150000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">int</span> resPRC2=positivePredict_1(<span class="number">150000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//假设shopee</span></span><br><span class="line">        <span class="keyword">int</span> resShopee1=pessmisticPredict_1(<span class="number">300000</span>,<span class="number">5000</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">int</span> resShopee2=positivePredict_1(<span class="number">300000</span>,<span class="number">5000</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//假设润到meta那种企业。</span></span><br><span class="line">        <span class="keyword">int</span> resCrazy1=pessmisticPredict_1(<span class="number">1000000</span>,pessmisticPredict_1(<span class="number">300000</span>,<span class="number">5000</span>,<span class="number">3</span>),<span class="number">7</span>);</span><br><span class="line">        <span class="keyword">int</span> resCrazy2=positivePredict_1(<span class="number">1500000</span>,positivePredict_1(<span class="number">300000</span>,<span class="number">5000</span>,<span class="number">3</span>),<span class="number">7</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;在合理投资下十年后你能攒多少钱(删去通货膨胀&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Petroleum:悲观预计：&quot;</span>+resPetro1+<span class="string">&quot;;乐观预计&quot;</span>+resPetro2);</span><br><span class="line">        System.out.println(<span class="string">&quot;国内三线厂:悲观预计：&quot;</span>+res1+<span class="string">&quot;;乐观预计&quot;</span>+res2);</span><br><span class="line">        System.out.println(<span class="string">&quot;国内二线厂:悲观预计：&quot;</span>+resPRC1+<span class="string">&quot;;乐观预计&quot;</span>+resPRC2);</span><br><span class="line">        System.out.println(<span class="string">&quot;Shopee:悲观预计:&quot;</span>+resShopee1+<span class="string">&quot;;乐观预计:&quot;</span>+resShopee2);</span><br><span class="line">        System.out.println(<span class="string">&quot;干三年跳maga:悲观估计&quot;</span>+resCrazy1+<span class="string">&quot;;乐观预计&quot;</span>+resCrazy2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">saveBank</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//RMB计价</span></span><br><span class="line">        <span class="keyword">int</span> resPetro1=pessmisticPredict_0(<span class="number">50000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">int</span> resPetro2=positivePredict_0(<span class="number">50000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//假设国内三线企业</span></span><br><span class="line">        <span class="keyword">int</span> res1=pessmisticPredict_0(<span class="number">100000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">int</span> res2=positivePredict_0(<span class="number">100000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//假设国内二线企业</span></span><br><span class="line">        <span class="keyword">int</span> resPRC1=pessmisticPredict_0(<span class="number">150000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">int</span> resPRC2=positivePredict_0(<span class="number">150000</span>,<span class="number">0</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//假设shopee</span></span><br><span class="line">        <span class="keyword">int</span> resShopee1=pessmisticPredict_0(<span class="number">300000</span>,<span class="number">5000</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">int</span> resShopee2=positivePredict_0(<span class="number">300000</span>,<span class="number">5000</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//假设润到meta那种企业。</span></span><br><span class="line">        <span class="keyword">int</span> resCrazy1=pessmisticPredict_0(<span class="number">1000000</span>,pessmisticPredict_0(<span class="number">300000</span>,<span class="number">5000</span>,<span class="number">3</span>),<span class="number">7</span>);</span><br><span class="line">        <span class="keyword">int</span> resCrazy2=positivePredict_0(<span class="number">1500000</span>,positivePredict_0(<span class="number">300000</span>,<span class="number">5000</span>,<span class="number">3</span>),<span class="number">7</span>);</span><br><span class="line">        <span class="comment">//假设去银行干若干年。</span></span><br><span class="line">        System.out.println(<span class="string">&quot;在存银行钱十年后你能攒多少钱(删去通货膨胀&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;Petrolenum:悲观估计:&quot;</span>+resPetro1+<span class="string">&quot;;乐观估计&quot;</span>+resPetro2);</span><br><span class="line">        System.out.println(<span class="string">&quot;国内三线厂:悲观预计：&quot;</span>+res1+<span class="string">&quot;;乐观预计&quot;</span>+res2);</span><br><span class="line">        System.out.println(<span class="string">&quot;国内二线厂:悲观预计：&quot;</span>+resPRC1+<span class="string">&quot;;乐观预计&quot;</span>+resPRC2);</span><br><span class="line">        System.out.println(<span class="string">&quot;Shopee:悲观预计:&quot;</span>+resShopee1+<span class="string">&quot;;乐观预计:&quot;</span>+resShopee2);</span><br><span class="line">        System.out.println(<span class="string">&quot;干三年跳maga:悲观估计&quot;</span>+resCrazy1+<span class="string">&quot;;乐观预计&quot;</span>+resCrazy2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">pessmisticPredict_0</span><span class="params">(<span class="keyword">int</span> mPackage,<span class="keyword">int</span> allMoney, <span class="keyword">int</span> year)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(year==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> allMoney;</span><br><span class="line">        &#125;</span><br><span class="line">        mPackage*=<span class="number">1.05</span>;</span><br><span class="line">        allMoney+=mPackage;</span><br><span class="line">        allMoney*=(<span class="number">1.02</span>/<span class="number">1.07</span>);</span><br><span class="line">        year--;</span><br><span class="line">        <span class="keyword">return</span> pessmisticPredict_0(mPackage,allMoney,year);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">positivePredict_0</span><span class="params">(<span class="keyword">int</span> mPackage,<span class="keyword">int</span> allMoney, <span class="keyword">int</span> year)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(year==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> allMoney;</span><br><span class="line">        &#125;</span><br><span class="line">        mPackage*=<span class="number">1.1</span>;</span><br><span class="line">        allMoney+=mPackage;</span><br><span class="line">        allMoney*=(<span class="number">1.02</span>/<span class="number">1.05</span>);</span><br><span class="line">        year--;</span><br><span class="line">        <span class="keyword">return</span> positivePredict_0(mPackage,allMoney,year);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">pessmisticPredict_1</span><span class="params">(<span class="keyword">int</span> mPackage,<span class="keyword">int</span> allMoney, <span class="keyword">int</span> year)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(year==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> allMoney;</span><br><span class="line">        &#125;</span><br><span class="line">        mPackage*=<span class="number">1.05</span>;</span><br><span class="line">        allMoney+=mPackage;</span><br><span class="line">        allMoney*=(<span class="number">1.15</span>/<span class="number">1.07</span>);</span><br><span class="line">        year--;</span><br><span class="line">        <span class="keyword">return</span> pessmisticPredict_1(mPackage,allMoney,year);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">positivePredict_1</span><span class="params">(<span class="keyword">int</span> mPackage,<span class="keyword">int</span> allMoney, <span class="keyword">int</span> year)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(year==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> allMoney;</span><br><span class="line">        &#125;</span><br><span class="line">        mPackage*=<span class="number">1.1</span>;</span><br><span class="line">        allMoney+=mPackage;</span><br><span class="line">        allMoney*=(<span class="number">1.25</span>/<span class="number">1.07</span>);</span><br><span class="line">        year--;</span><br><span class="line">        <span class="keyword">return</span> positivePredict_1(mPackage,allMoney,year);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/32%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%92%8C64%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8C%BA%E5%88%AB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -450,84 +528,6 @@
 <h2 id="运行时多态"><a href="#运行时多态" class="headerlink" title="运行时多态"></a>运行时多态</h2><p>程序运行时多态决定调用哪个方法。</p>
 <p>运行时多态</p>
 <p>chen</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E8%87%AA%E5%A6%82%E7%AC%94%E8%AF%95%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%8C%82%EF%BC%8C%E6%9C%89mysql%E8%BF%98%E6%9C%89%E8%87%AA%E6%97%8B%E9%94%81%E7%9A%84%E9%A2%98%EF%BC%8Cmx%E9%82%A3%E4%B8%AA%E6%9C%89%E4%BA%9B%E9%80%89%E6%8B%A9%E9%A2%98%E4%B8%8D%E7%A1%AE%E5%AE%9A%EF%BC%8C%E4%BD%86%E5%A4%A7%E9%A2%98%E9%83%BD%E8%BF%87%E4%BA%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/%E8%87%AA%E5%A6%82%E7%AC%94%E8%AF%95%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%8C%82%EF%BC%8C%E6%9C%89mysql%E8%BF%98%E6%9C%89%E8%87%AA%E6%97%8B%E9%94%81%E7%9A%84%E9%A2%98%EF%BC%8Cmx%E9%82%A3%E4%B8%AA%E6%9C%89%E4%BA%9B%E9%80%89%E6%8B%A9%E9%A2%98%E4%B8%8D%E7%A1%AE%E5%AE%9A%EF%BC%8C%E4%BD%86%E5%A4%A7%E9%A2%98%E9%83%BD%E8%BF%87%E4%BA%86/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-11-17 11:21:07" itemprop="dateCreated datePublished" datetime="2021-11-17T11:21:07Z">2021-11-17</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/%E8%87%AA%E5%A6%82%E7%AC%94%E8%AF%95%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%8C%82%EF%BC%8C%E6%9C%89mysql%E8%BF%98%E6%9C%89%E8%87%AA%E6%97%8B%E9%94%81%E7%9A%84%E9%A2%98%EF%BC%8Cmx%E9%82%A3%E4%B8%AA%E6%9C%89%E4%BA%9B%E9%80%89%E6%8B%A9%E9%A2%98%E4%B8%8D%E7%A1%AE%E5%AE%9A%EF%BC%8C%E4%BD%86%E5%A4%A7%E9%A2%98%E9%83%BD%E8%BF%87%E4%BA%86/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="自如笔试可能会挂，有mysql还有自旋锁的题，mx那个有些选择题不确定，但大题都过了/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>自如笔试可能会挂，有mysql还有自旋锁的题，mx那个有些选择题不确定，但大题都过了</p>
 
       
     </div>

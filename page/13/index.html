@@ -225,6 +225,99 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/Number%E5%92%8CString%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.svg">
+      <meta itemprop="name" content="Theme NexT">
+      <meta itemprop="description" content="Stay Simple. Stay NexT.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NexT">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Number%E5%92%8CString%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Number和String方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-07-30 16:31:17" itemprop="dateCreated datePublished" datetime="2021-07-30T16:31:17Z">2021-07-30</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/Number%E5%92%8CString%E6%96%B9%E6%B3%95/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Number和String方法/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Number和String方法-背后的转换原则"><a href="#Number和String方法-背后的转换原则" class="headerlink" title="Number和String方法--背后的转换原则"></a>Number和String方法--背后的转换原则</h1><h2 id="Number方法"><a href="#Number方法" class="headerlink" title="Number方法"></a>Number方法</h2><ol>
+<li><p>先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤</p>
+</li>
+<li><p>若valueOf方法返回对象，则改用ToString方法，若返回原始类型的值，则使用Number方法，不再进行后续步骤</p>
+</li>
+<li><p>如果toString方法返回的是对象，就报错</p>
+</li>
+</ol>
+<h2 id="String方法"><a href="#String方法" class="headerlink" title="String方法"></a>String方法</h2><ol>
+<li><p>先调用对象的toString方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p>
+</li>
+<li><p>如果toString方法返回对象，使用valueOf方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p>
+</li>
+<li><p>如果valueOf方法返回对象，则报错</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/fix/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -577,100 +670,6 @@ which html element is used to display a scalar measurement within a range
 <p>以后呢，也许是父亲凝视我的死亡呢，也许是我凝视父亲的死亡呢，变数太多，不好说清。</p>
 <p>我当初是希望他们白发人快点送我黑发人走，可现在感觉对生有了一点迷恋，毕竟我还希望能留给后人一些东西，无论是代码还是文章，或是社会事务的贡献，虽然自己的心灵受了痛苦，但我好像对人类弥留了些爱恋，肯定是要报恩的。</p>
 <p>写于2021.7.18</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/jsexample01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.svg">
-      <meta itemprop="name" content="Theme NexT">
-      <meta itemprop="description" content="Stay Simple. Stay NexT.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NexT">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/jsexample01/" class="post-title-link" itemprop="url">jsexample01</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-07-16 16:02:55" itemprop="dateCreated datePublished" datetime="2021-07-16T16:02:55Z">2021-07-16</time>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/jsexample01/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="jsexample01/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li>函数名仅仅是指向函数的指针，因此函数名与包含对象指针的其他变量没有什么不同。换句话<br>说，一个函数可能会有多个名字，如下面的例子所示。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br><span class="line"><span class="keyword">var</span> anotherSum = sum;</span><br><span class="line">alert(anotherSum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br><span class="line">sum = <span class="literal">null</span>;</span><br><span class="line">alert(anotherSum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>以上代码首先定义了一个名为 sum() 的函数，用于求两个值的和。然后，又声明了变量 anotherSum ，<br>并将其设置为与 sum 相等（将 sum 的值赋给 anotherSum ）。注意，使用不带圆括号的函数名是访问函数指针，而非调用函数。此时， anotherSum 和 sum 就都指向了同一个函数，因此 anotherSum() 也<br>可以被调用并返回结果。即使将 sum 设置为 null ，让它与函数“断绝关系”，但仍然可以正常调用<br>anotherSum() </p>
-<ol start="2">
-<li>解析器在向执行环境中加载数据时，对函数声明和函数表达式并非一视同仁。解析器会率先读取函数声明，并使其在执行任何代码之前可用（可以访问）；至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被解释执行。请看下面的例子。</li>
-</ol>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>));</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//FunctionDeclarationExample01.htm</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>以上代码完全可以正常运行。因为在代码开始执行之前，解析器就已经通过一个名为函数声明提升<br>（function declaration hoisting）的过程，读取并将函数声明添加到执行环境中。对代码求值时，JavaScript引擎在第一遍会声明函数并将它们放到源代码树的顶部。所以，即使声明函数的代码在调用它的代码后面，JavaScript 引擎也能把函数声明提升到顶部。如果像下面例子所示的，把上面的函数声明改为等价的函数表达式，就会在执行期间导致错误</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>));</span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>以上代码之所以会在运行期间产生错误，原因在于函数位于一个初始化语句中，而不是一个函数声<br>明。换句话说，在执行到函数所在的语句之前，变量 sum 中不会保存有对函数的引用；而且，由于第一<br>行代码就会导致“unexpected identifier”（意外标识符）错误，实际上也不会执行到下一行。<br>除了什么时候可以通过变量访问函数这一点区别之外，函数声明与函数表达式的语法其实是等价的。</p>
 
       
     </div>
