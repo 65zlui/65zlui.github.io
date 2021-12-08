@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">59</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">96</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-count">96</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -225,7 +225,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/jsexample/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%AD%BB%E9%94%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -238,7 +238,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/jsexample/" class="post-title-link" itemprop="url">jsexample00-date</a>
+          <a href="/%E6%AD%BB%E9%94%81/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -249,7 +249,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-07-16 15:44:05" itemprop="dateCreated datePublished" datetime="2021-07-16T15:44:05Z">2021-07-16</time>
+      <time title="Created: 2021-11-15 21:13:53" itemprop="dateCreated datePublished" datetime="2021-11-15T21:13:53Z">2021-11-15</time>
     </span>
 
   
@@ -261,8 +261,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/jsexample/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="jsexample/" itemprop="commentCount"></span>
+    <a title="disqus" href="/%E6%AD%BB%E9%94%81/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="死锁/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,21 +276,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>// GMT 时间 2000 年 1 月 1 日午夜零时</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2000</span>, <span class="number">0</span>));</span><br></pre></td></tr></table></figure>
-
-
-<p>// GMT 时间 2005 年 5 月 5 日下午 5:55:55</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>));</span><br></pre></td></tr></table></figure>
-
-<p>​                                                                                                        <code>DateTypeUTCExample01.htm</code><br>这个例子创建了两个日期对象。第一个对象表示 GMT 时间 2000 年 1 月 1 日午夜零时，传入的值一<br>个是表示年份的 2000，一个是表示月份的 0（即一月份）。因为其他参数是自动填充的（即月中的天数为 1，其他所有参数均为 0），所以结果就是该月第一天的午夜零时。第二个对象表示 GMT 时间 2005年 5 月 5 日下午 5:55:55，即使日期和时间中只包含 5，也需要传入不一样的参数：月份必须是 4（因为月份是基于 0 的）、小时必须设置为 17（因为小时以 0 到 23 表示），剩下的参数就很直观了。</p>
-<p>因此，如果第一个参数是数值， Date 构造函数就会假设该值是日期中的年份，而第二个参数是月份，<br>以此类推。据此，可以将前面的例子重写如下。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 本地时间 2000 年 1 月 1 日午夜零时</span></span><br><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2000</span>, <span class="number">0</span>);</span><br><span class="line"><span class="comment">// 本地时间 2005 年 5 月 5 日下午 5:55:55</span></span><br><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>);</span><br><span class="line"><span class="comment">// DateTypeConstructorExample01.htm</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>以上代码创建了与前面例子中相同的两个日期对象，只不过这次的日期都是基于系统设置的本地时<br>区创建的</p>
-<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155703497.png" alt="image-20210716155703497" loading="lazy"></p>
-<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155745891.png" alt="image-20210716155745891" loading="lazy"></p>
-<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155757315.png" alt="image-20210716155757315" loading="lazy"></p>
+          <ol>
+<li><p>死锁</p>
+</li>
+<li><p>synchronized和lock的区别 </p>
+</li>
+<li><p>深挖hashmap</p>
+</li>
+<li><p>tcp和udp区别</p>
+<p>Tcp:</p>
+</li>
+<li></li>
+<li></li>
+</ol>
+<p>收到了极米的一面，面试官主要也是从简历上写的来提问</p>
+<p><img src="https://img-blog.csdn.net/20180904143958577?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hlZmVuZ2xpYW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img" loading="lazy"></p>
 
       
     </div>
@@ -317,7 +317,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/js00/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E5%A4%8D%E7%9B%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -330,7 +330,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/js00/" class="post-title-link" itemprop="url">js00</a>
+          <a href="/%E5%A4%8D%E7%9B%98/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -341,7 +341,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-07-16 15:04:30" itemprop="dateCreated datePublished" datetime="2021-07-16T15:04:30Z">2021-07-16</time>
+      <time title="Created: 2021-11-15 21:13:21" itemprop="dateCreated datePublished" datetime="2021-11-15T21:13:21Z">2021-11-15</time>
     </span>
 
   
@@ -353,8 +353,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/js00/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="js00/" itemprop="commentCount"></span>
+    <a title="disqus" href="/%E5%A4%8D%E7%9B%98/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="复盘/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -368,13 +368,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>ECMAScript 有5 种简单数据类型（也称为基本数据类型）：</p>
-<ul>
-<li><p>5 种简单数据类型：Null 、Boolean 、 Number、String、Undefined  。</p>
+          <p>复盘</p>
+<ol>
+<li><p>项目介绍。</p>
 </li>
-<li><p>还有1种复杂数据类型—— Object。</p>
+<li><p>try---catch---finally异常体系。</p>
 </li>
-</ul>
+<li><p>try 和finally return哪个在前。</p>
+</li>
+<li></li>
+</ol>
 
       
     </div>
@@ -401,7 +404,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/defer-async/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/JVM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -414,7 +417,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/defer-async/" class="post-title-link" itemprop="url">js要点-defer_async</a>
+          <a href="/JVM/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -425,7 +428,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-07-16 14:54:22" itemprop="dateCreated datePublished" datetime="2021-07-16T14:54:22Z">2021-07-16</time>
+      <time title="Created: 2021-11-15 21:13:11" itemprop="dateCreated datePublished" datetime="2021-11-15T21:13:11Z">2021-11-15</time>
     </span>
 
   
@@ -437,8 +440,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/defer-async/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="defer-async/" itemprop="commentCount"></span>
+    <a title="disqus" href="/JVM/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="JVM/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -452,12 +455,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><p>使用 defer 属性可以让脚本在文档完全呈现之后再执行。延迟脚本总是按照指定它们的顺序执行。</p>
-</li>
-<li><p>使用 async 属性可以表示当前脚本不必等待其他脚本，也不必阻塞文档呈现。不能保证异步脚<br>本按照它们在页面中出现的顺序执行。</p>
-</li>
-</ul>
+          <p>JVM</p>
+<p>jvm概述</p>
 
       
     </div>
@@ -484,7 +483,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E5%AD%A6%E4%B8%80%E8%A1%8C%E7%88%B1%E4%B8%80%E8%A1%8C%C2%B7%E6%88%91%E7%9C%8B%E5%A4%A7%E5%8F%AF%E4%B8%8D%E5%BF%85/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/okhttp%E7%9A%84%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -497,7 +496,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/%E5%AD%A6%E4%B8%80%E8%A1%8C%E7%88%B1%E4%B8%80%E8%A1%8C%C2%B7%E6%88%91%E7%9C%8B%E5%A4%A7%E5%8F%AF%E4%B8%8D%E5%BF%85/" class="post-title-link" itemprop="url">学一行爱一行·我看大可不必</a>
+          <a href="/okhttp%E7%9A%84%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -508,7 +507,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-07-16 14:38:42" itemprop="dateCreated datePublished" datetime="2021-07-16T14:38:42Z">2021-07-16</time>
+      <time title="Created: 2021-11-15 21:12:51" itemprop="dateCreated datePublished" datetime="2021-11-15T21:12:51Z">2021-11-15</time>
     </span>
 
   
@@ -520,8 +519,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/%E5%AD%A6%E4%B8%80%E8%A1%8C%E7%88%B1%E4%B8%80%E8%A1%8C%C2%B7%E6%88%91%E7%9C%8B%E5%A4%A7%E5%8F%AF%E4%B8%8D%E5%BF%85/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="学一行爱一行·我看大可不必/" itemprop="commentCount"></span>
+    <a title="disqus" href="/okhttp%E7%9A%84%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="okhttp的同步和异步/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -535,7 +534,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="经常有人说，学一行爱一行，要找到心之所爱"><a href="#经常有人说，学一行爱一行，要找到心之所爱" class="headerlink" title="经常有人说，学一行爱一行，要找到心之所爱"></a>经常有人说，学一行爱一行，要找到心之所爱</h2><p>可我却要质疑，如果非要等到你对某样事物有兴趣了才去做，会不会晚了些呢，社会竞争激烈，会不会在犹豫间，就失去了机会呢。人生，怎么会是仅仅去喜欢就够了的呢，就像你爱一个女孩死心踏地去追，还会不会落一场空呢；如果佛系一些，女孩又会白白送来吗；建议你还是先花费些精力去做吧，就像我的某朋友，撒大网才能钓大鱼，韭菜不要有过多的感受，现在开始结网，以后说不定收获累累呢。</p>
+          <p>okhttp的同步和异步</p>
 
       
     </div>
@@ -555,7 +554,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

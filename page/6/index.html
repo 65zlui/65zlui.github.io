@@ -96,7 +96,7 @@
 
       
         <li class="menu-item menu-item-plugins"><a href="/plugins/" rel="section"><i class="fa fa-flask fa-fw"></i>Plugins</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">59</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">96</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -169,7 +169,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-count">96</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -225,7 +225,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E7%B1%BB%E8%BD%AC%E5%9E%8B/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/kotlin%E7%89%B9%E6%80%A7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -238,7 +238,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/%E7%B1%BB%E8%BD%AC%E5%9E%8B/" class="post-title-link" itemprop="url">java核心04-类转型</a>
+          <a href="/kotlin%E7%89%B9%E6%80%A7/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -249,7 +249,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-06-01 09:45:34" itemprop="dateCreated datePublished" datetime="2021-06-01T09:45:34Z">2021-06-01</time>
+      <time title="Created: 2021-11-15 21:12:15" itemprop="dateCreated datePublished" datetime="2021-11-15T21:12:15Z">2021-11-15</time>
     </span>
 
   
@@ -261,8 +261,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/%E7%B1%BB%E8%BD%AC%E5%9E%8B/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="类转型/" itemprop="commentCount"></span>
+    <a title="disqus" href="/kotlin%E7%89%B9%E6%80%A7/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="kotlin特性/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -276,36 +276,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="类转型"><a href="#类转型" class="headerlink" title="类转型"></a>类转型</h1><h2 id="类转型1"><a href="#类转型1" class="headerlink" title="类转型1"></a>类转型1</h2><ul>
-<li><p>变量支持相互转化，比如int a=(int)3.5;</p>
-</li>
-<li><p>变量可以相互转型，但是只限制于有继承关系的类。</p>
-<ul>
-<li>子类可以转换为父类，而父类不可以转换为子类</li>
-<li>子类可以继承父类所有的财产，子类可以变成父类，从大变小，即向上转型</li>
-<li>而父类直接变成子类（从小变大，即向下转型）则不允许</li>
-</ul>
-</li>
-<li><p>父类转为子类有一种情况例外</p>
-<pre><code>* 就是这个父类本身就是从子类转化的
-</code></pre>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Man</span> <span class="keyword">extends</span> <span class="title">Human</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;I can eat more&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ploygh</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span></span>&#123;</span><br><span class="line">		Man obj1=<span class="keyword">new</span> Man();</span><br><span class="line">        obj1.eat();</span><br><span class="line">        Human obj2=(Human) obj2;</span><br><span class="line">        obj2.eat();</span><br><span class="line">        Man obj3=(Man) obj2;</span><br><span class="line">        obj3.eat();</span><br><span class="line">        <span class="comment">//obj1==obj2;//true</span></span><br><span class="line">        <span class="comment">//obj2==obj3;//true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>多态的作用</p>
-<ul>
-<li>以统一的接口来操纵某一类中不同的对象的动态行为</li>
-<li>对象之间的解耦</li>
-</ul>
-<h2 id="契约设计"><a href="#契约设计" class="headerlink" title="契约设计"></a>契约设计</h2><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210501231741365.png" alt="image-20210501231741365" loading="lazy"></p>
-<p>契约：规定规范了对象应该包含的行为方法</p>
-<p>接口定义了方法的名称参数和返回值</p>
-<p>基于接口，利用转型和多态，不影响真正方法的调用，成功地将调用类和被调用类解耦</p>
-<p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210501230936328.png" alt="image-20210501230936328" loading="lazy"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>java支持子类转父类，但不支持父类转子类，除非父类对象最早就是子类转型父类而来</p>
-<p>多态：子类转型为父类后，调用普通方法，依旧是子类本身的方法</p>
-<p>契约设计：类不会直接调用另外一个类，而是采用接口形式，外部可以空投这个接口下的任意子类对象</p>
+          <h2 id="kotlin特性"><a href="#kotlin特性" class="headerlink" title="kotlin特性"></a>kotlin特性</h2><p>第一个是可空类型，kotlin提出了可空类型，避免了Java的空指针异常<br>第二个是自带协程</p>
 
       
     </div>
@@ -332,7 +303,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E7%BB%A7%E6%89%BF/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -345,7 +316,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/%E7%BB%A7%E6%89%BF/" class="post-title-link" itemprop="url">java核心02-继承</a>
+          <a href="/%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -356,7 +327,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-05-08 15:12:26" itemprop="dateCreated datePublished" datetime="2021-05-08T15:12:26Z">2021-05-08</time>
+      <time title="Created: 2021-11-15 21:11:57" itemprop="dateCreated datePublished" datetime="2021-11-15T21:11:57Z">2021-11-15</time>
     </span>
 
   
@@ -368,8 +339,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/%E7%BB%A7%E6%89%BF/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="继承/" itemprop="commentCount"></span>
+    <a title="disqus" href="/%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="事件分发机制/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -383,74 +354,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="6-1-1继承"><a href="#6-1-1继承" class="headerlink" title="6.1.1继承"></a>6.1.1继承</h1><p>先看一个例子</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">father</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f1</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;hi&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Son</span> <span class="keyword">extends</span> <span class="title">Father</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] a)</span></span>&#123;</span><br><span class="line">        Son s=<span class="keyword">new</span> Son();</span><br><span class="line">        S.f1();</span><br><span class="line">        <span class="comment">//Son中没有f1方法的定义，根据父类继承的</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>面向过程编程语言没有继承，导致出现很多类型重复定义</p>
-</li>
-<li><p>物以类聚，世间万物皆对象，对象也可以划分为若干类别</p>
-</li>
-<li><p>类别内的对象属性和方法都有一定的共同点</p>
-</li>
-<li><p>将共同点提取出来，形成父类（或者叫基类，超类）</p>
-<p>Parent class/Base class/Super class</p>
-</li>
-<li><p>而其他类则自动为子类派生类</p>
-<p>Child class/Derived class</p>
-</li>
-</ul>
-<p>从很多个对象中提取出共性，形成父类，其他类继承父类成为子类，也具有这些共性</p>
-<ul>
-<li><p>Man extends human 表示Man继承于humna</p>
-</li>
-<li><p>Human是父类，Man是子类</p>
-</li>
-<li><p>子类继承父类中所有的属性和方法（但不能直接访问private成员</p>
-</li>
-<li><p>根据信息隐藏原则：子类会继承父类中所有的方法。可以直接使用。</p>
-</li>
-<li><p>子类也会继承父类的父类的所有属性和方法（但不嫩更直接访问private成员)</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="comment">//private int num=20;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Derived foo =<span class="keyword">new</span> Derived();</span><br><span class="line">        System.out.println(foo.getNUm());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>​    输出结果为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
-
-<p>//子类可以通过调用父类的方法来访问父类的私有的成员属性</p>
-<h2 id="方法优先级"><a href="#方法优先级" class="headerlink" title="方法优先级"></a>方法优先级</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">20</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Derived foo =<span class="keyword">new</span> Derived();</span><br><span class="line">        System.out.println(foo.getNUm());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Base</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num=<span class="number">10</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>结果为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">20</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这说明了在同样方法名和参数情况下，本类的方法优先级会比父类的方法高</p>
-<h2 id="继承（6）"><a href="#继承（6）" class="headerlink" title="继承（6）"></a>继承（6）</h2><ul>
-<li>单类继承原则：每个类都只能继承一个类</li>
-<li>如果不写extends，java类默认继承java.lang.Object类</li>
-<li>class Human extends java.lang.Object</li>
-<li>java所有类从java.lang.Object开始，构建出一个类型继承树</li>
-<li>Object类里面默认有clone，equals，finalize，getClass，hashCode，toString等方法</li>
-<li>若一个方法在当前类中没有定义，那这个方法就来自它的父类</li>
-</ul>
-<h2 id="继承和构造函数"><a href="#继承和构造函数" class="headerlink" title="继承和构造函数"></a>继承和构造函数</h2><ul>
-<li><p>每个java类都必须有构造函数</p>
-</li>
-<li><p>如果没有显式定义构造函数，java编译器自动产生一个空的无形参构造函数</p>
-</li>
-<li><p>每个子类的构造函数的第一句话，都默认调用父类的无参数构造函数super（）,除非子类的构造函数第一句话是super，而且super语句必须放在第一条，不会出现连续两条super语句</p>
-</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li><p>子类继承父类所有的东西（但不能直接访问private成员）</p>
-<ul>
-<li><p>java所有类都继承自java.lang.Object类</p>
-</li>
-<li><p>java所有的类都是单根继承的</p>
-</li>
-<li><p>子类构造函数默认第一句话都会区调用父类的构造函数</p>
-</li>
-</ul>
-</li>
-</ul>
+          <p>事件分发机制</p>
+<p>hashmap-红黑树</p>
 
       
     </div>
@@ -477,7 +382,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/Hashmap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -490,7 +395,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">java核心03-抽象类与接口</a>
+          <a href="/Hashmap/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -501,7 +406,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-05-02 23:13:24" itemprop="dateCreated datePublished" datetime="2021-05-02T23:13:24Z">2021-05-02</time>
+      <time title="Created: 2021-11-15 21:11:15" itemprop="dateCreated datePublished" datetime="2021-11-15T21:11:15Z">2021-11-15</time>
     </span>
 
   
@@ -513,8 +418,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="抽象类和接口/" itemprop="commentCount"></span>
+    <a title="disqus" href="/Hashmap/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Hashmap/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -528,148 +433,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h1><h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>类:</p>
-<ul>
-<li><p>一个完整健康的类:所有的方法都有实现（方法体）</p>
-</li>
-<li><p>类可以没有方法，但有方法就得实现，这才是一个完整的类</p>
-</li>
-<li><p>如果一个类暂时有方法未实现，需要被定义为抽象类</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> area;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">calArea</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>抽象类关键字abstract声明<ul>
-<li>抽象类的组成，成员变量个数不限</li>
-<li>具体方法，方法有实现，个数不限</li>
-<li>抽象方法，加abstract关键字，个数不限</li>
-</ul>
-</li>
-</ul>
-<p>当图形未知时，无法给出calArea的具体实现，因此此方法定义为abstract</p>
-<h2 id="抽象类2"><a href="#抽象类2" class="headerlink" title="抽象类2"></a>抽象类2</h2><ul>
-<li><p>抽象类也是类，一个类继承于抽象类，就不能继承于其他的抽象类</p>
-</li>
-<li><p>子类可以继承于抽象类，但是一定要实现父类们所有abstract的方法。</p>
-</li>
-<li><p>如果不能完全实现，那么子类也必须被定义为抽象类</p>
-</li>
-<li><p>只有实现父类的所有抽象方法，才变成完整类，否则会报错</p>
-</li>
-</ul>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ul>
-<li><p>如果类的所有方法都没有实现，那么这个类就算是接口</p>
-</li>
-<li><p>类可以实现多个接口，</p>
-<p>例子：类c继承于类a，同时也实现接口b，c中的f1方法只会在a或c中实现</p>
-</li>
-<li><p>接口是特殊的类</p>
-</li>
-</ul>
-<h2 id="接口2"><a href="#接口2" class="headerlink" title="接口2"></a>接口2</h2><ul>
-<li><p>接口可以继承多个接口，没有实现的方法将会叠加</p>
-</li>
-<li><p>类实现接口，就必须实现所有未实现的方法。如果没有全部实现，那么只能成为一个抽象类（见ex4）</p>
-<p>.ex1</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">implements</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Cat:I can eat&quot;</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Cat:I can move&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>Animal接口中含有eat和move两个方法</p>
-<p>.ex2</p>
- <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>定义接口爬树</p>
-<p>.ex3</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ClimbTree</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">climb</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>陆地动物</p>
-<p>.ex4</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">LandAnimal</span> <span class="keyword">implements</span> <span class="title">Animal</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> abstact <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;I can walk bt feet&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>extends 必须写在implements前面</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Rabbit</span> <span class="keyword">extends</span> <span class="title">LandAnimal</span> <span class="keyword">implements</span> <span class="title">ClimbTree</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">climb</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Rabbit:I can climb&quot;</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.our.println(<span class="string">&quot;Rabbit:I can eat&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>一个类可以继承一个抽象类，同时实现一个接口</p>
-<p>而一个接口可以继承多个接口</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CatFamily</span> <span class="keyword">extends</span> <span class="title">Animal</span>,<span class="title">ClimbTree</span></span>&#123;</span><br><span class="line">    <span class="comment">//eat()</span></span><br><span class="line">    <span class="comment">//move()</span></span><br><span class="line">    <span class="comment">//climb()</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tiger</span> <span class="keyword">implements</span> <span class="title">CatFamily</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Tiger:I can eat&quot;</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">move</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Tiger:I can move&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">climb</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Tiger:I can climb&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="抽象类和接口-1"><a href="#抽象类和接口-1" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h3><h4 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h4><p>两者都不能被实例化，不嫩new操作</p>
-<h4 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h4><p>抽象类abstract 接口interface</p>
-<p>抽象类可以有部分方法实现，接口所有方法不能有实现，</p>
-<p>一个类只能继承一个抽象类，实现多个接口</p>
-<p>接口可以继承多个接口</p>
-<p>抽象类有构造函数，接口没有构造函数</p>
-<p>抽象类可以有main，也能运行，接口没有main函数</p>
-<p>抽象类方法可以有private/protected，接口方法都是public</p>
-<table>
-<thead>
-<tr>
-<th align="center">特点\类型</th>
-<th align="center">类</th>
-<th align="center">抽象类</th>
-<th align="center">接口</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">构造函数</td>
-<td align="center">有</td>
-<td align="center">无</td>
-<td align="center">有</td>
-</tr>
-<tr>
-<td align="center">加入main方法并运行</td>
-<td align="center">可行</td>
-<td align="center">可</td>
-<td align="center">不能</td>
-</tr>
-<tr>
-<td align="center">可以有private/protected</td>
-<td align="center">是</td>
-<td align="center">是</td>
-<td align="center">不</td>
-</tr>
-<tr>
-<td align="center">继承</td>
-<td align="center">可以继承一个类</td>
-<td align="center">可以继承一个类，只要不是密封类</td>
-<td align="center">可以继承接口</td>
-</tr>
-<tr>
-<td align="center">实现接口</td>
-<td align="center">可以实现多个接口</td>
-<td align="center">可以实现多个接口</td>
-<td align="center">不能</td>
-</tr>
-<tr>
-<td align="center">实现方法</td>
-<td align="center">必须实现所有的方法</td>
-<td align="center">可以有部分方法实现</td>
-<td align="center">所有方法不能有实现</td>
-</tr>
-<tr>
-<td align="center">实例化</td>
-<td align="center">可以</td>
-<td align="center">不可以</td>
-<td align="center">不可以</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-
+          <h1 id="Hashmap"><a href="#Hashmap" class="headerlink" title="Hashmap"></a>Hashmap</h1>
       
     </div>
 
@@ -695,7 +459,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/">
+    <link itemprop="mainEntityOfPage" href="https://theme-next.js.org/Canvas%E5%A6%82%E4%BD%95%E6%98%BE%E7%A4%BA%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%EF%BC%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/logo.svg">
@@ -708,7 +472,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/" class="post-title-link" itemprop="url">java核心01-信息隐藏</a>
+          <a href="/Canvas%E5%A6%82%E4%BD%95%E6%98%BE%E7%A4%BA%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%EF%BC%8C/" class="post-title-link" itemprop="url">Untitled</a>
         </h2>
 
         <div class="post-meta-container">
@@ -719,7 +483,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-04-22 01:45:24" itemprop="dateCreated datePublished" datetime="2021-04-22T01:45:24Z">2021-04-22</time>
+      <time title="Created: 2021-11-15 21:11:05" itemprop="dateCreated datePublished" datetime="2021-11-15T21:11:05Z">2021-11-15</time>
     </span>
 
   
@@ -731,8 +495,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/%E4%BF%A1%E6%81%AF%E9%9A%90%E8%97%8F%E5%8E%9F%E5%88%99%E5%92%8Cthis/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="信息隐藏原则和this/" itemprop="commentCount"></span>
+    <a title="disqus" href="/Canvas%E5%A6%82%E4%BD%95%E6%98%BE%E7%A4%BA%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%EF%BC%8C/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Canvas如何显示一张图片，/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -746,56 +510,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="信息隐藏原则和this"><a href="#信息隐藏原则和this" class="headerlink" title="信息隐藏原则和this"></a>信息隐藏原则和this</h1><h2 id="信息隐藏原则"><a href="#信息隐藏原则" class="headerlink" title="信息隐藏原则"></a>信息隐藏原则</h2><h3 id="面向对象有一个法则：信息隐藏"><a href="#面向对象有一个法则：信息隐藏" class="headerlink" title="面向对象有一个法则：信息隐藏"></a>面向对象有一个法则：信息隐藏</h3><ul>
-<li>类的成员属性，是私有的private</li>
-<li>类的方法是公有public的，通过方法修改成员属性的值</li>
-</ul>
-<p>eg. 信息隐藏：通过类的方法来间接访问类的属性，而不是直接访问类的属性</p>
-<ul>
-<li><p>类成员是私有的</p>
-</li>
-<li><p>get和set方法是公有的统称为getter setter</p>
-</li>
-<li><p>外界对类成员的操作只能通过get和set方法来操作</p>
-</li>
-</ul>
-<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ul>
-<li>this 负责指向本类中的成员变量</li>
-<li>在构造函数里，形参的优先级更高</li>
-</ul>
-<p>~ example1:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>~ example2:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">InfoHiding</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">InfoHiding</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id=id2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>this 负责指向本类中的成员方法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.add(<span class="number">5</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//调用本类的add方法，this可以忽略</span></span><br></pre></td></tr></table></figure></li>
-<li><p>this可以代替本类的构造函数</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
-
-<p>不影响歧义的情况下，this可以省略，参见example1</p>
-</li>
-</ul>
-<p>总结一下，</p>
-<ul>
-<li><p>this可以指向本类中的成员变量</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x</span><br></pre></td></tr></table></figure></li>
-<li><p>可以指向本类中的成员方法，</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>.x()</span><br></pre></td></tr></table></figure></li>
-<li><p>可以当作构造函数使用</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">this</span>(x);</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="Above-all"><a href="#Above-all" class="headerlink" title="Above all"></a>Above all</h2><ul>
-<li>信息隐藏原则<ul>
-<li>保护属性信息</li>
-<li>公开行为信息</li>
-</ul>
-</li>
-<li>this负责指向本类中的成员</li>
-<li>this可以代替本类中的构造函数</li>
-</ul>
+          <p>Canvas如何显示一张图片，</p>
 
       
     </div>
@@ -815,7 +530,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>

@@ -6,7 +6,7 @@
   <link href="https://theme-next.js.org/atom.xml" rel="self"/>
   
   <link href="https://theme-next.js.org/"/>
-  <updated>2021-11-13T18:10:03.423Z</updated>
+  <updated>2021-11-17T18:18:30.642Z</updated>
   <id>https://theme-next.js.org/</id>
   
   <author>
@@ -17,132 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>cs与bs架构</title>
-    <link href="https://theme-next.js.org/cs%E4%B8%8Ebs%E6%9E%B6%E6%9E%84/"/>
-    <id>https://theme-next.js.org/cs%E4%B8%8Ebs%E6%9E%B6%E6%9E%84/</id>
-    <published>2021-11-14T02:03:50.000Z</published>
-    <updated>2021-11-13T18:10:03.423Z</updated>
+    <title></title>
+    <link href="https://theme-next.js.org/32%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%92%8C64%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://theme-next.js.org/32%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%92%8C64%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2021-11-17T18:18:30.330Z</published>
+    <updated>2021-11-17T18:18:30.642Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="CS与BS架构"><a href="#CS与BS架构" class="headerlink" title="CS与BS架构"></a>CS与BS架构</h1><h2 id="1-C-S架构"><a href="#1-C-S架构" class="headerlink" title="1.C/S架构"></a>1.C/S架构</h2><p>C/S架构是一种比较早的软件架构，分为客户机和服务器两层。</p><p>微信淘宝从后台获取数据后在app中生成页面并显示的叫做CS架构。</p><h2 id="2-B-S架构"><a href="#2-B-S架构" class="headerlink" title="2.B/S架构"></a>2.B/S架构</h2><p>B/S架构指的是浏览器-服务器模式，他是cs架构的改进</p><p>也可以说是三层的cs架构</p><p>b站网页版这种从后台获取html页面是B/S架构了。</p><p>抛去webapp、小程序等原生和H5混合开发的app</p><p>可以宽泛认为</p><p>手机和电脑应用都是cs架构</p><p>浏览器网站都是bs架构</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;CS与BS架构&quot;&gt;&lt;a href=&quot;#CS与BS架构&quot; class=&quot;headerlink&quot; title=&quot;CS与BS架构&quot;&gt;&lt;/a&gt;CS与BS架构&lt;/h1&gt;&lt;h2 id=&quot;1-C-S架构&quot;&gt;&lt;a href=&quot;#1-C-S架构&quot; class=&quot;headerlink</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>map</title>
-    <link href="https://theme-next.js.org/map/"/>
-    <id>https://theme-next.js.org/map/</id>
-    <published>2021-11-14T01:56:04.000Z</published>
-    <updated>2021-11-13T17:56:19.931Z</updated>
-    
-    <content type="html"><![CDATA[<p>map</p><p>映射</p><p>自变量的定义域对应变量的值域</p><p>{key，value}</p><p>K-V对</p><p>java里面</p><p>实现存储栈</p><p>存储很多很多的kv对</p><p>hashtable和properties</p><p>hashtable（同步，慢，数据量小）</p><p>HashMap（不支持同步，快，数据量大）</p><p>Properties (同步，文件形式，数据量小)</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="32位操作系统和64位操作系统的区别"><a href="#32位操作系统和64位操作系统的区别" class="headerlink" title="32位操作系统和64位操作系统的区别"></a>32位操作系统和64位操作系统的区别</h2><p>运算速度不同：64位CPU GPRs(General-PurPose Registers)的数据宽度为64位，64位指令集可以运行64位数据指令，也就是说处理器一次可提取64位数据（只要两个指令，一次提取8个字节的数据，比32位提高一倍，理论性能会相应提升一倍）</p><p>寻址能力不同。64位处理器的优势还体现在系统对内存的控制上。由于地址使用特殊的整数，因此一个ALU（算数逻辑运算器）和寄存器可以处理更大的整数，比如 vista支持多达128GB的内存和多达16TB的虚拟内存，而32位CPU和操作系统最大可支持4G内存。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;map&lt;/p&gt;
-&lt;p&gt;映射&lt;/p&gt;
-&lt;p&gt;自变量的定义域对应变量的值域&lt;/p&gt;
-&lt;p&gt;{key，value}&lt;/p&gt;
-&lt;p&gt;K-V对&lt;/p&gt;
-&lt;p&gt;java里面&lt;/p&gt;
-&lt;p&gt;实现存储栈&lt;/p&gt;
-&lt;p&gt;存储很多很多的kv对&lt;/p&gt;
-&lt;p&gt;hashtable和properti</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>多态</title>
-    <link href="https://theme-next.js.org/%E5%A4%9A%E6%80%81/"/>
-    <id>https://theme-next.js.org/%E5%A4%9A%E6%80%81/</id>
-    <published>2021-11-14T01:47:43.000Z</published>
-    <updated>2021-11-13T17:49:11.892Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><p>所谓多态就是指程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定。即一个引用变量到底会指向哪个类的实例对象，必须由程序运行期间才能决定。</p><p>不修改程序代码就可以改变程序运行时绑定的具体代码，让程序可以选择多个运行状态，就是多态性。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;多态&quot;&gt;&lt;a href=&quot;#多态&quot; class=&quot;headerlink&quot; title=&quot;多态&quot;&gt;&lt;/a&gt;多态&lt;/h1&gt;&lt;p&gt;所谓多态就是指程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定。即一个引用变量到</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>自定义view简要流程</title>
-    <link href="https://theme-next.js.org/%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%AE%80%E8%A6%81%E6%B5%81%E7%A8%8B/"/>
-    <id>https://theme-next.js.org/%E8%87%AA%E5%AE%9A%E4%B9%89view%E7%AE%80%E8%A6%81%E6%B5%81%E7%A8%8B/</id>
-    <published>2021-11-14T01:42:20.000Z</published>
-    <updated>2021-11-13T17:45:14.058Z</updated>
-    
-    <content type="html"><![CDATA[<p>onMeasure 测量控件大小</p><p>onLayout 确定控件在布局中的位置</p><p>onDraw 进行绘制</p><p>如果在onDraw过程中频繁的new对象销毁对象，会导致内存抖动。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;onMeasure 测量控件大小&lt;/p&gt;
-&lt;p&gt;onLayout 确定控件在布局中的位置&lt;/p&gt;
-&lt;p&gt;onDraw 进行绘制&lt;/p&gt;
-&lt;p&gt;如果在onDraw过程中频繁的new对象销毁对象，会导致内存抖动。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>XML可拓展标记语言</title>
-    <link href="https://theme-next.js.org/%EF%BC%B8%EF%BC%AD%EF%BC%AC%E5%8F%AF%E6%8B%93%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
-    <id>https://theme-next.js.org/%EF%BC%B8%EF%BC%AD%EF%BC%AC%E5%8F%AF%E6%8B%93%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/</id>
-    <published>2021-11-14T00:41:31.000Z</published>
-    <updated>2021-11-13T17:56:41.734Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="XML可拓展标记语言"><a href="#XML可拓展标记语言" class="headerlink" title="ＸＭＬ可拓展标记语言"></a>ＸＭＬ可拓展标记语言</h2><p>意义+数据</p><p>标签可自行定义</p><p>纯文本表示，跨系统，平台,语言·</p><p>包括两个元素，</p><p>Children 属性，</p><p>数据+含义，适用于传输数据，而不是显示数据（HTML）</p><p>XML</p><p>任何起始标签都必须有一个结束标签。</p><p>简化写法，例如<name></name>可以写为<name/></p><p>大小写敏感</p><p>每个文件都要由根元素</p><p>DTD(Document Type Definition)</p><p>定义XML文档的结构，</p><p>使用一系列合法的元素来定义文档结构，</p><p>可嵌套在xml文档中，或者在xml中引用</p><p>XML Schema（XSD，XML Schema Definition）</p><ul><li>定义XML文档的结构，DTD的继任者。</li><li>支持数据类型，可扩展，功能更完善，强大。</li><li>采用xml编写</li><li>DTD语法</li><li>XSD 本身就是一种xml</li><li>元素顺序类型</li><li>xsl</li></ul><p>正则表达式，其他字符串操作</p><p>输一个邮箱地址，怎么判断是对的。</p><p>add符号，</p><p>问题，如何认定一个字符串满足一定的规律</p><p>正则表达式独立于特定的编程语言（Java，Perl，Python，PHP）</p><p>正则表达式</p><ul><li>界定符</li><li>原子</li></ul><p>java的正则表达式</p><p>java.util.regex包</p><p>Pattern类编译正则表达式</p><p>Matcher</p><p>一个Pattern代表一个正则表达式</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;XML可拓展标记语言&quot;&gt;&lt;a href=&quot;#XML可拓展标记语言&quot; class=&quot;headerlink&quot; title=&quot;ＸＭＬ可拓展标记语言&quot;&gt;&lt;/a&gt;ＸＭＬ可拓展标记语言&lt;/h2&gt;&lt;p&gt;意义+数据&lt;/p&gt;
-&lt;p&gt;标签可自行定义&lt;/p&gt;
-&lt;p&gt;纯文本表示，跨系统，</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Android00_View</title>
-    <link href="https://theme-next.js.org/Android00-View/"/>
-    <id>https://theme-next.js.org/Android00-View/</id>
-    <published>2021-11-13T02:19:14.000Z</published>
-    <updated>2021-11-12T18:41:35.858Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Android-view"><a href="#Android-view" class="headerlink" title="Android view"></a>Android view</h1><h2 id="1-基本View"><a href="#1-基本View" class="headerlink" title="1.基本View"></a>1.基本View</h2><h3 id="1-1-TextView"><a href="#1-1-TextView" class="headerlink" title="1.1 TextView"></a>1.1 TextView</h3><p>最基本的一个控件了，</p><h6 id="TextView和其子类图-参考：-93条消息-Android-TextView及其子类（TextView、EditText、Button）-Duan的博客-CSDN博客-textview是edittext的父类"><a href="#TextView和其子类图-参考：-93条消息-Android-TextView及其子类（TextView、EditText、Button）-Duan的博客-CSDN博客-textview是edittext的父类" class="headerlink" title="TextView和其子类图-参考：(93条消息) Android-TextView及其子类（TextView、EditText、Button）_Duan的博客-CSDN博客_textview是edittext的父类"></a>TextView和其子类图-参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpbWVpbWVpVFMvYXJ0aWNsZS9kZXRhaWxzLzYyMDg4Njcy">(93条消息) Android-TextView及其子类（TextView、EditText、Button）_Duan的博客-CSDN博客_textview是edittext的父类<i class="fa fa-external-link-alt"></i></span></h6><p>TextView直接继承自View，是EditText和Button的父类，所以，TextView的属性同样适用于EditText和Button。TextView的作用就是在界面上显示文本。</p><h3 id="1-2Button"><a href="#1-2Button" class="headerlink" title="1.2Button"></a>1.2Button</h3><p>继承结构</p><p>Object</p><p>​          --- View</p><p>​            --- TextView</p><p>​              --- Button</p><h3 id="1-3-EditText"><a href="#1-3-EditText" class="headerlink" title="1.3 EditText"></a>1.3 EditText</h3><p>Object</p><p>​          --- View</p><p>​            --- TextView</p><p>​              ---  EditView</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Android-view&quot;&gt;&lt;a href=&quot;#Android-view&quot; class=&quot;headerlink&quot; title=&quot;Android view&quot;&gt;&lt;/a&gt;Android view&lt;/h1&gt;&lt;h2 id=&quot;1-基本View&quot;&gt;&lt;a href=&quot;#1-基本V</summary>
+    <summary type="html">&lt;h2 id=&quot;32位操作系统和64位操作系统的区别&quot;&gt;&lt;a href=&quot;#32位操作系统和64位操作系统的区别&quot; class=&quot;headerlink&quot; title=&quot;32位操作系统和64位操作系统的区别&quot;&gt;&lt;/a&gt;32位操作系统和64位操作系统的区别&lt;/h2&gt;&lt;p&gt;运算速度不同</summary>
       
     
     
@@ -152,213 +38,28 @@
   
   <entry>
     <title></title>
-    <link href="https://theme-next.js.org/%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B/"/>
-    <id>https://theme-next.js.org/%E5%89%91%E8%B5%B0%E5%81%8F%E9%94%8B/</id>
-    <published>2021-10-18T09:44:51.286Z</published>
-    <updated>2021-10-10T09:27:59.990Z</updated>
+    <link href="https://theme-next.js.org/%E9%94%81%EF%BC%9A%E5%BC%82%E5%B8%B8%E5%A4%8D%E4%B9%A0java%E5%9F%BA%E7%A1%80topcoder%E5%88%B730%E9%81%93/"/>
+    <id>https://theme-next.js.org/%E9%94%81%EF%BC%9A%E5%BC%82%E5%B8%B8%E5%A4%8D%E4%B9%A0java%E5%9F%BA%E7%A1%80topcoder%E5%88%B730%E9%81%93/</id>
+    <published>2021-11-17T11:21:16.756Z</published>
+    <updated>2021-11-17T11:21:16.961Z</updated>
     
-    <content type="html"><![CDATA[<p>剑走偏锋</p><p>王道操作系统+背面试题</p><p>java+剑指offer题目</p><p>前端学到react,跨过vue,</p><p>客户端尝试下</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;剑走偏锋&lt;/p&gt;
-&lt;p&gt;王道操作系统+背面试题&lt;/p&gt;
-&lt;p&gt;java+剑指offer题目&lt;/p&gt;
-&lt;p&gt;前端学到react,跨过vue,&lt;/p&gt;
-&lt;p&gt;客户端尝试下&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://theme-next.js.org/java%E6%A0%B8%E5%BF%83%E5%88%9D%E7%BA%A7%20p34/"/>
-    <id>https://theme-next.js.org/java%E6%A0%B8%E5%BF%83%E5%88%9D%E7%BA%A7%20p34/</id>
-    <published>2021-10-18T09:44:51.197Z</published>
-    <updated>2021-10-09T08:11:01.256Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="java核心初级-p34"><a href="#java核心初级-p34" class="headerlink" title="java核心初级 p34"></a>java核心初级 p34</h1><p><strong>try、catch、finally用法总结:</strong></p><p>　　1、不管有没有异常，finally中的代码都会执行</p><p>　　2、当try、catch中有return时，finally中的代码依然会继续执行</p><p>　　3、finally是在return后面的表达式运算之后执行的，此时并没有返回运算之后的值，而是把值保存起来，不管finally对该值做任何的改变，返回的值都不会改变，依然返回保存起来的值。也就是说方法的返回值是在finally运算之前就确定了的。</p><p>　　4、finally代码中最好不要包含return，程序会提前退出，也就是说返回的值不是try或catch中的值</p><p>重写方法时，子类方法所抛出的异常不能超过父类方法的异常范围</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;java核心初级-p34&quot;&gt;&lt;a href=&quot;#java核心初级-p34&quot; class=&quot;headerlink&quot; title=&quot;java核心初级 p34&quot;&gt;&lt;/a&gt;java核心初级 p34&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;try、catch、finally用法总结:</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://theme-next.js.org/1.%E6%88%91%E7%8E%B0%E5%9C%A8%E6%B3%A8%E9%87%8D%E5%AE%8F%E8%A7%82%E5%8D%B4%E4%B8%8D%E6%B3%A8%E9%87%8D%E5%BE%AE%E8%A7%82%EF%BC%8C%E5%85%B6%E5%AE%9E%E6%98%AF%E5%BE%88%E9%94%99%E8%AF%AF%E7%9A%84%E3%80%82/"/>
-    <id>https://theme-next.js.org/1.%E6%88%91%E7%8E%B0%E5%9C%A8%E6%B3%A8%E9%87%8D%E5%AE%8F%E8%A7%82%E5%8D%B4%E4%B8%8D%E6%B3%A8%E9%87%8D%E5%BE%AE%E8%A7%82%EF%BC%8C%E5%85%B6%E5%AE%9E%E6%98%AF%E5%BE%88%E9%94%99%E8%AF%AF%E7%9A%84%E3%80%82/</id>
-    <published>2021-09-25T03:25:00.995Z</published>
-    <updated>2021-09-25T03:25:01.177Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.我现在注重宏观却不注重微观，其实是很错误的。</p><p>2.如果只有经历才能成长，那人生也太累了呢，为什么要背负无数的风尘？所以说有些事情没有必要经历，看着别人踩坑就好，但要对踩坑者的勇气报以钦佩。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;1.我现在注重宏观却不注重微观，其实是很错误的。&lt;/p&gt;
-&lt;p&gt;2.如果只有经历才能成长，那人生也太累了呢，为什么要背负无数的风尘？所以说有些事情没有必要经历，看着别人踩坑就好，但要对踩坑者的勇气报以钦佩。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://theme-next.js.org/1.%E4%B8%8D%E6%98%AF%E8%92%99%E5%8F%A4%E5%85%A5%E4%BE%B5%EF%BC%8C%E8%A5%BF%E6%96%B9%E6%9C%AA%E5%BF%85%E4%BC%9A%E5%8F%91%E5%B1%95%E5%87%BA%E7%A7%91%E5%AD%A6%EF%BC%8C%E5%8F%8D%E8%80%8C%E5%8F%AF%E8%83%BD%E6%98%AF%E9%98%BF%E6%8B%89%E4%BC%AF%E4%B8%96%E7%95%8C%E5%85%88%E5%87%BA/"/>
-    <id>https://theme-next.js.org/1.%E4%B8%8D%E6%98%AF%E8%92%99%E5%8F%A4%E5%85%A5%E4%BE%B5%EF%BC%8C%E8%A5%BF%E6%96%B9%E6%9C%AA%E5%BF%85%E4%BC%9A%E5%8F%91%E5%B1%95%E5%87%BA%E7%A7%91%E5%AD%A6%EF%BC%8C%E5%8F%8D%E8%80%8C%E5%8F%AF%E8%83%BD%E6%98%AF%E9%98%BF%E6%8B%89%E4%BC%AF%E4%B8%96%E7%95%8C%E5%85%88%E5%87%BA/</id>
-    <published>2021-08-24T12:43:09.417Z</published>
-    <updated>2021-08-24T12:44:21.325Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.不是蒙古入侵，西方未必会发展出科学，反而可能是阿拉伯世界先出</p><p>2.日本17世纪开始逐渐社会发展程度超过中国，和算中有些关于微积分的成果</p><p>同时期中国并没有发展出类似的成果</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;1.不是蒙古入侵，西方未必会发展出科学，反而可能是阿拉伯世界先出&lt;/p&gt;
-&lt;p&gt;2.日本17世纪开始逐渐社会发展程度超过中国，和算中有些关于微积分的成果&lt;/p&gt;
-&lt;p&gt;同时期中国并没有发展出类似的成果&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://theme-next.js.org/1.%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81key/"/>
-    <id>https://theme-next.js.org/1.%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81key/</id>
-    <published>2021-08-03T08:41:33.536Z</published>
-    <updated>2021-08-04T01:19:51.354Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.为什么需要key</p><p>增加渲染效率</p><p>没key<li>的添加导致</p><p>提高渲染效率</p><p>React的key不要用index</p><p>不推荐用index</p><p>index对应数据重排会导致重新渲染</p><p>正常的列表数据index做key影响不大</p><p>index会导致重新渲染</p><p>用的多了会导致变慢</p><p>为什么setState是一个异步过程</p><p>内部一致性</p><p>state同步 props异步会导致很多问题</p><p>性能优化</p><p>批量处理的过程，</p><p>不断改方案</p><p>改成d方案</p><p>什么是Hooks？</p><p>functional conponent 没有state 没有生命周期</p><p>有了Hooks</p><p>functional component+hooks =class component</p><p>useState()</p><p>useReducer()</p><p>useEffect()</p><p>useContext()</p><p>代码质量-可复用性</p><p>mixin-&gt;Hoc-&gt;Render Props-&gt;Hooks</p><p>mixin方案出现源自一种oop直觉</p><p>Mixin的缺陷</p><p>隐式依赖</p><p>可能产生冲突</p><p>倾向于增加更多状态</p><p>计时器</p><p>细粒度代码复用不应该和组件复用捆绑</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803161349337.png" alt="image-20210803161349337" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803161408482.png" alt="image-20210803161408482" loading="lazy"><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803161550370.png" alt="image-20210803161550370" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803161644695.png" alt="image-20210803161644695" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803163256637.png" alt="image-20210803163256637" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803163351175.png" alt="image-20210803163351175" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803163523773.png" alt="image-20210803163523773" loading="lazy"></p><p>问个code答不上来，面试官会觉得水</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803163720413.png" alt="image-20210803163720413" loading="lazy"></p><p>建立可复用的tcp连接</p><p>，这个主要为了兼容老版本的tc<img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803163924624.png" alt="image-20210803163924624" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803164443837.png" alt="image-20210803164443837" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803164122390.png" alt="image-20210803164122390" loading="lazy"></p><p>Get和Post的区别</p><p>Option put</p><p>通常一起比较</p><p>get去拿</p><p>一般服务器获取资源数据</p><p>post一般向服务器提交资源</p><p>get请求能做的事情post也能做</p><p>get方法安全且幂等的</p><p>post新增</p><p>提交多次有多个资源不是幂等的</p><p>get一些查询条件</p><p>服务器不规范也是能处理</p><p>get可以被cache的</p><p>post很难被缓存</p><p>HTTp1.1优缺点</p><ol><li><p>简单灵活 </p></li><li><p>跨平台 </p></li><li><p>无状态</p></li></ol><p>服务器不需要额外资源记录状态信息</p><p>其实坏处是没有记忆能力，关联性的操作很麻烦</p><p>cookie保证不用每一步验证</p><p>明文传输</p><ul><li>可以方便的阅读</li><li>信息裸奔</li><li>可能被篡改</li></ul><p>安全性</p><p>https多了一层</p><p>tls层secure层</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210803214233343.png" alt="image-20210803214233343" loading="lazy"></p><p>冒充风险</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;1.为什么需要key&lt;/p&gt;
-&lt;p&gt;增加渲染效率&lt;/p&gt;
-&lt;p&gt;没key&lt;li&gt;的添加导致&lt;/p&gt;
-&lt;p&gt;提高渲染效率&lt;/p&gt;
-&lt;p&gt;React的key不要用index&lt;/p&gt;
-&lt;p&gt;不推荐用index&lt;/p&gt;
-&lt;p&gt;index对应数据重排会导致重新渲染&lt;/p&gt;
-&lt;p&gt;正常</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Number和String方法</title>
-    <link href="https://theme-next.js.org/Number%E5%92%8CString%E6%96%B9%E6%B3%95/"/>
-    <id>https://theme-next.js.org/Number%E5%92%8CString%E6%96%B9%E6%B3%95/</id>
-    <published>2021-07-30T16:31:17.000Z</published>
-    <updated>2021-07-30T09:02:00.940Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Number和String方法-背后的转换原则"><a href="#Number和String方法-背后的转换原则" class="headerlink" title="Number和String方法--背后的转换原则"></a>Number和String方法--背后的转换原则</h1><h2 id="Number方法"><a href="#Number方法" class="headerlink" title="Number方法"></a>Number方法</h2><ol><li><p>先调用对象自身的valueOf方法，若返回原始类型的值，则使用Number方法，放弃后续的步骤</p></li><li><p>若valueOf方法返回对象，则改用ToString方法，若返回原始类型的值，则使用Number方法，不再进行后续步骤</p></li><li><p>如果toString方法返回的是对象，就报错</p></li></ol><h2 id="String方法"><a href="#String方法" class="headerlink" title="String方法"></a>String方法</h2><ol><li><p>先调用对象的toString方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p></li><li><p>如果toString方法返回对象，使用valueOf方法，若返回原始类型的值，则使用String方法，不再进行后续步骤</p></li><li><p>如果valueOf方法返回对象，则报错</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Number和String方法-背后的转换原则&quot;&gt;&lt;a href=&quot;#Number和String方法-背后的转换原则&quot; class=&quot;headerlink&quot; title=&quot;Number和String方法--背后的转换原则&quot;&gt;&lt;/a&gt;Number和String方法-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>fix</title>
-    <link href="https://theme-next.js.org/fix/"/>
-    <id>https://theme-next.js.org/fix/</id>
-    <published>2021-07-22T13:46:52.000Z</published>
-    <updated>2021-07-22T05:46:52.169Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>html00</title>
-    <link href="https://theme-next.js.org/html00/"/>
-    <id>https://theme-next.js.org/html00/</id>
-    <published>2021-07-20T12:46:07.000Z</published>
-    <updated>2021-07-20T09:43:32.481Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="屮"><a href="#屮" class="headerlink" title="屮"></a>屮</h1><p>html不管样式<br>css管样式<br>不能把视频当电视剧看多查文档<br>navigation-<nav><br>alternative-alt<br>不要一直用<div><br><span> <DIV>没有意义的标签<br>中文英文关系</p><h2 id="和区别"><a href="#和区别" class="headerlink" title="和区别"></a><button>和<input type="button">区别</h2><p>button不是一个空元素<br><input type="button">不能有自己元素 </p><p>空元素<meta> <link> <hr><br><col><colgroup></p><p>html5不推荐input写成自闭合的</p><div>就是写到<head></head>里面也会被浏览器纠错放到<body></body>里base title meta link script noscript可以出现在head元素内<p><noscript> 如果用户浏览器不支持script 则展示noscript中的内容</p><p>   iframe可以拥有一个name，a标签的target可以通过name指向这个iframe</p><p>现代前端开发中iframe很少用</p><p>iframe用于在当前页面里嵌入一个页面</p><meta charset="utf-8">* html5更新后<meta http-equip="content-type" content="text\html" charset ="utf-8"><ul><li><p>http等价物</p></li><li><p>body 默认margin:8px</p></li><li><p>span，image默认display inline</p></li><li><p>div，ul，h1默认display block </p></li></ul><p>img可替换元素=》替换为图片，宽高待图片下载后产生</p><p>img input video</p><ul><li>外观渲染独立于css</li></ul><p>css优先级比属性要高，属性不是内联样式</p><p>html全称?</p><ul><li>Hyper Text Makeup Language</li></ul><p>Who is making  the Web standards?</p><ul><li>The World Wide Web Consortium(w3c)</li></ul><p>What is the correct Html element for inserting a line break</p><br><p>html早期自带css一些属性</p><p>李爵士发明html时候没有css</p><p>bgcolor背景色</p><p>What is the correct html for adding a background color?</p><body style="background-color:yellow;"><p>Choose the correct Html element to define important text?</p><strong><p>Choose the correct html element to define emphasizzed text</p><em><p>em语气重</p><p>strong地位重</p><p>How can you open a link in anew tab/browser window ?</p><a href="url" target="_blank"><p>Which of these elements are all <table> elements?(d)</p><p>a.<thead>，<body>,<tr></p><p>b.<table>,<tr>,<tt></p><p>c.<table>,<head>,<tfoot></p><p>d.<table><tr><td></p><p>inline 内联元素<br>Inline elements are normally displayed without starting a new line</p><p>How can you make a numbered list?<br>ans:<ol></p><p>How can you make a bulleted list?</p><ul><ol><list><dl>ans:<ul>What is the correct Html for making a checkbox?(a)a.<input type="checkbox">b.<input type="check">c.<checkbox>d.<check><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210720153829499.png" alt="image-20210720153829499" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210720153856363.png" alt="image-20210720153856363" loading="lazy"></p><p>What is the correct html for making a text area?</p><textarea>What is the correct html for inserting a background image<body style ="background-image:url(background.jpg)"In html you can embed svg elements directly into an html page(true)contenteditable="true"The html global attribute "contenteditable" is used to Specify whether the content of an element should be eaditable or notIn html onblur and onfocus is 事件event attributessvg是xml格式的<canvas>元素用来draw graphicsIn html,which attribute is used to specify that an input field must be filled out?ans:requiredwhich input type defines a slider control?ans:rangewhich html element is used to display a scalar measurement within a range<meter>非·<measure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;屮&quot;&gt;&lt;a href=&quot;#屮&quot; class=&quot;headerlink&quot; title=&quot;屮&quot;&gt;&lt;/a&gt;屮&lt;/h1&gt;&lt;p&gt;html不管样式&lt;br&gt;css管样式&lt;br&gt;不能把视频当电视剧看多查文档&lt;br&gt;navigation-&lt;nav&gt;&lt;br&gt;alternative-al</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>凝死，报恩</title>
-    <link href="https://theme-next.js.org/%E5%87%9D%E6%AD%BB%EF%BC%8C%E6%8A%A5%E6%81%A9/"/>
-    <id>https://theme-next.js.org/%E5%87%9D%E6%AD%BB%EF%BC%8C%E6%8A%A5%E6%81%A9/</id>
-    <published>2021-07-19T13:37:38.000Z</published>
-    <updated>2021-07-19T05:39:08.268Z</updated>
-    
-    <content type="html"><![CDATA[<p>望着祖母离去的眼，凝视祖母的死亡，我竟不带一丝一毫的同情。</p><p>也许是出于对她行为的嫉妒，祖母并不心疼我，虽然我是正孙可她却最喜欢外孙，我甚至觉得，她生出我的父亲，是一个错误。</p><p>说到我的高中时期。</p><p>父亲一直认定我是追女生j开始不好好学习的，对我的态度也日趋恶劣。</p><p>其实大概是我被人孤立排挤了。</p><p>父亲是极矛盾的人，本身自己就是极平凡的人，我中学时却要我去学习乔布斯呢，我当时没什么社会经验，学乔布斯问女生是不是处，学乔布斯骂人无视讨厌的人，骂了我讨厌的但喜欢我的姑娘，将她的事迹给别人讲，然后那人竟传的整个班上我是屌丝意淫。全班同学以我为逗乐，拍屌拔裤子什么的就不说了，被全班所孤立，极为痛苦，我当时的精神都不愿意再拿来说了。</p><p>父亲说：”谁欺负你了给我说啊。“可当我被全班孤立之时，他只会说我不会打架，不会相处等等。并不愿意听我细细去讲，一度还以为我怀了春”</p><p>从那时起，我对父亲变得愤懑起来，他渐渐对我的不满也与日俱增。</p><p>听到了沉重的步伐声，我急忙藏起我的语录本。父亲要是看到了我写的那些“神神叨叨”的话，定会撕了我的小本，扇我巴掌，吼叫到：“你他妈的有没有出息，人家xx家的孩子都能学到两三点，你为什么没能学到那么晚？写的是些什么垃圾玩意儿？”</p><p>可是掏出练习册，册子是空的。</p><p>’麻烦大了。。。‘</p><p>父亲翻了下我的练习册，立马删了我一巴掌。</p><p>我又气又愤：“还让不让人过了？”</p><p>“你自己不锻炼，没有体力，我听你们班主任说人家xx的孩子为了高考都拼了，一天睡四个小时。我是为了你好，现在不努力，以后你哭去吧？”父亲丝毫对我没有同情，只是把心中的不满引爆到我的身上。</p><p>那会儿确实是困了，想睡觉。可父亲揪起我的头发，把我往墙边撞去。我无力反抗，像个被警察殴打的犯人一样狼狈，好像是犯下了什么罪行，接受着“正义”的拷打。</p><p>到省城上学，是我的希望，但是父亲不让我一人去，“不放心你！”，原话是说得好听，托关系到了省城，他找的人因为站错队丢了职务，他自然没有被安排职位，心情不好，没有人去开涮，原来这个垃圾桶是我妈妈，现在呢我就成了他的垃圾桶，他的发泄口。</p><p>“哎。。。”我真是倒霉，白白受到这种对待，还不能反抗。</p><p> “你看看人家怎么学习的，你不学习到凌晨怎么能行？高中拼一拼就为了你的将来，现在不拼更待何时？”这种话从家里到学校，一直在提，一直在说，教员和家长的话里，好像谁睡得少就是一种荣耀似的，人不睡觉怎么得行？</p><p>   但是，我，毕竟太过懦弱，总要在人前装出一种和善的样子，只能在背后哀叹自己的无能，慢慢让自己也接受了这种成功学似的话术。因为这种生活方式太过疲惫，时不时一个人自己与自己相慰籍，莫名的泪从眼中流出，经过脸颊流下，但又不好意思让人知道我的软弱。</p><p>   成功人士可能真睡四个小时吗？</p><p>   就算有，也是极为偶然有一天睡得少些吧。</p><p>   在“暴君”的荒谬统治下，长达数月四五小时的睡眠让我的体型不在均匀，有点弯腰驼背的样子，眼前是重重的眼袋。。。皮肤也不在光鲜，人也越来越毛躁，越来越听不进去课了，家里晚上不让我睡，我就白天在课堂睡。老师要就我起来，我就站着睡，没有睡眠的我像一具活尸，记忆力不断的衰退。班主任和家长天天喂我成功学鸡汤。</p><p>父亲只会说，是你不够努力。</p><p>老师也是这么说。</p><p>我不但憎恶起了父亲，也同样憎恶起了老师，渐渐的与他们对抗。</p><p>”鳅老师指着我眼睛，说我如果是他的孩子要狠狠扇我。“这是我对年级主任说的话，作为对她的恩情的奉还。</p><p>年纪主任将她批评了一番，鳅老师之后看我双眼带着憎恶，没错，这就是当时的我想要的，我并不想让别人喜欢我，只想自绝于社会，也许有人看来我是惯坏的怪胎，可我的伤痛他们想必也没有耐心倾听。</p><p>想必有一天，当我的父亲离世之日，我也许会装出哭腔，但内心毫无怜悯吧，毕竟我的领主的领主不是我的领主，我的家长的家长不是我的家长。</p><p>我仍旧要在家长的面前装弱，好像自己是个什么都不懂的人，待他的支配罢，</p><p>日夜的折磨下，我有那么一两刻想过自绝于人世，或是将父亲这只肥猪用剪刀捅向心窝。矛盾激化至此，也是难收回了呢。</p><p>我觉得还是要积聚力量吧，毕竟15-16岁的孩子和正当壮年的人打架还是要吃亏的吧。</p><p>所幸没有做出那样的决定吧，这是我对死亡的凝视。</p><p>我本来是想和父亲断绝关系的，可是呢，疫情在家的日子里却又和他们走得更近了，我的心也是软呢，虽然他喝酒后暴躁，虽然他希望去控制我，但我也有好处-可以利用他的控制欲帮我做一些事情：“比如让他掏钱。寄生于人虽然没有任何地位，但是总好过饿死，也许我本不想出生，可为何他们生了我呢。</p><p>毕竟啊这些中老年男性，就是待死之人，而我父亲这种呢，外面混的不顺心时，特别强调自己在家中的权威性，因为养老要靠子女吧，所以要建立权威性和让孩子感恩。</p><p>我的内心只有感恩，这感恩呢，是五味杂陈的感恩。</p><p>以后呢，也许是父亲凝视我的死亡呢，也许是我凝视父亲的死亡呢，变数太多，不好说清。</p><p>我当初是希望他们白发人快点送我黑发人走，可现在感觉对生有了一点迷恋，毕竟我还希望能留给后人一些东西，无论是代码还是文章，或是社会事务的贡献，虽然自己的心灵受了痛苦，但我好像对人类弥留了些爱恋，肯定是要报恩的。</p><p>写于2021.7.18</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;望着祖母离去的眼，凝视祖母的死亡，我竟不带一丝一毫的同情。&lt;/p&gt;
-&lt;p&gt;也许是出于对她行为的嫉妒，祖母并不心疼我，虽然我是正孙可她却最喜欢外孙，我甚至觉得，她生出我的父亲，是一个错误。&lt;/p&gt;
-&lt;p&gt;说到我的高中时期。&lt;/p&gt;
-&lt;p&gt;父亲一直认定我是追女生j开始不好好学习</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>jsexample01</title>
-    <link href="https://theme-next.js.org/jsexample01/"/>
-    <id>https://theme-next.js.org/jsexample01/</id>
-    <published>2021-07-16T16:02:55.000Z</published>
-    <updated>2021-07-16T08:24:54.647Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>函数名仅仅是指向函数的指针，因此函数名与包含对象指针的其他变量没有什么不同。换句话<br>说，一个函数可能会有多个名字，如下面的例子所示。</li></ol><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br><span class="line"><span class="keyword">var</span> anotherSum = sum;</span><br><span class="line">alert(anotherSum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br><span class="line">sum = <span class="literal">null</span>;</span><br><span class="line">alert(anotherSum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></span><br></pre></td></tr></table></figure><p>以上代码首先定义了一个名为 sum() 的函数，用于求两个值的和。然后，又声明了变量 anotherSum ，<br>并将其设置为与 sum 相等（将 sum 的值赋给 anotherSum ）。注意，使用不带圆括号的函数名是访问函数指针，而非调用函数。此时， anotherSum 和 sum 就都指向了同一个函数，因此 anotherSum() 也<br>可以被调用并返回结果。即使将 sum 设置为 null ，让它与函数“断绝关系”，但仍然可以正常调用<br>anotherSum() </p><ol start="2"><li>解析器在向执行环境中加载数据时，对函数声明和函数表达式并非一视同仁。解析器会率先读取函数声明，并使其在执行任何代码之前可用（可以访问）；至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被解释执行。请看下面的例子。</li></ol><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>));</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//FunctionDeclarationExample01.htm</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>以上代码完全可以正常运行。因为在代码开始执行之前，解析器就已经通过一个名为函数声明提升<br>（function declaration hoisting）的过程，读取并将函数声明添加到执行环境中。对代码求值时，JavaScript引擎在第一遍会声明函数并将它们放到源代码树的顶部。所以，即使声明函数的代码在调用它的代码后面，JavaScript 引擎也能把函数声明提升到顶部。如果像下面例子所示的，把上面的函数声明改为等价的函数表达式，就会在执行期间导致错误</p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(sum(<span class="number">10</span>,<span class="number">10</span>));</span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line"><span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>以上代码之所以会在运行期间产生错误，原因在于函数位于一个初始化语句中，而不是一个函数声<br>明。换句话说，在执行到函数所在的语句之前，变量 sum 中不会保存有对函数的引用；而且，由于第一<br>行代码就会导致“unexpected identifier”（意外标识符）错误，实际上也不会执行到下一行。<br>除了什么时候可以通过变量访问函数这一点区别之外，函数声明与函数表达式的语法其实是等价的。</p>]]></content>
+    <content type="html"><![CDATA[<ol><li><p>锁：</p></li><li><p>异常复习</p></li><li><p>java基础</p></li><li><p>topcoder刷30道</p></li><li></li></ol>]]></content>
     
     
       
       
     <summary type="html">&lt;ol&gt;
-&lt;li&gt;函数名仅仅是指向函数的指针，因此函数名与包含对象指针的其他变量没有什么不同。换句话&lt;br&gt;说，一个函数可能会有多个名字，如下面的例子所示。&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;锁：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;异常复习&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;java基础&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;topcoder刷30道&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t</summary>
+</summary>
       
     
     
@@ -367,19 +68,18 @@
   </entry>
   
   <entry>
-    <title>jsexample00-date</title>
-    <link href="https://theme-next.js.org/jsexample/"/>
-    <id>https://theme-next.js.org/jsexample/</id>
-    <published>2021-07-16T15:44:05.000Z</published>
-    <updated>2021-07-16T08:02:26.208Z</updated>
+    <title></title>
+    <link href="https://theme-next.js.org/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/"/>
+    <id>https://theme-next.js.org/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/</id>
+    <published>2021-11-17T11:21:12.292Z</published>
+    <updated>2021-11-17T11:21:12.499Z</updated>
     
-    <content type="html"><![CDATA[<p>// GMT 时间 2000 年 1 月 1 日午夜零时</p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2000</span>, <span class="number">0</span>));</span><br></pre></td></tr></table></figure><p>// GMT 时间 2005 年 5 月 5 日下午 5:55:55</p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>));</span><br></pre></td></tr></table></figure><p>​                                                                                                        <code>DateTypeUTCExample01.htm</code><br>这个例子创建了两个日期对象。第一个对象表示 GMT 时间 2000 年 1 月 1 日午夜零时，传入的值一<br>个是表示年份的 2000，一个是表示月份的 0（即一月份）。因为其他参数是自动填充的（即月中的天数为 1，其他所有参数均为 0），所以结果就是该月第一天的午夜零时。第二个对象表示 GMT 时间 2005年 5 月 5 日下午 5:55:55，即使日期和时间中只包含 5，也需要传入不一样的参数：月份必须是 4（因为月份是基于 0 的）、小时必须设置为 17（因为小时以 0 到 23 表示），剩下的参数就很直观了。</p><p>因此，如果第一个参数是数值， Date 构造函数就会假设该值是日期中的年份，而第二个参数是月份，<br>以此类推。据此，可以将前面的例子重写如下。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 本地时间 2000 年 1 月 1 日午夜零时</span></span><br><span class="line"><span class="keyword">var</span> y2k = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2000</span>, <span class="number">0</span>);</span><br><span class="line"><span class="comment">// 本地时间 2005 年 5 月 5 日下午 5:55:55</span></span><br><span class="line"><span class="keyword">var</span> allFives = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2005</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">17</span>, <span class="number">55</span>, <span class="number">55</span>);</span><br><span class="line"><span class="comment">// DateTypeConstructorExample01.htm</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>以上代码创建了与前面例子中相同的两个日期对象，只不过这次的日期都是基于系统设置的本地时<br>区创建的</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155703497.png" alt="image-20210716155703497" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155745891.png" alt="image-20210716155745891" loading="lazy"></p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20210716155757315.png" alt="image-20210716155757315" loading="lazy"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h1><h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>意味着允许不同类的对象对同一消息做出不同的响应。</p><h2 id="编译时多态"><a href="#编译时多态" class="headerlink" title="编译时多态"></a>编译时多态</h2><p>设计时多态</p><p>编译器在编译状态就进行不同状态的区分。</p><p>方法重载</p><h2 id="运行时多态"><a href="#运行时多态" class="headerlink" title="运行时多态"></a>运行时多态</h2><p>程序运行时多态决定调用哪个方法。</p><p>运行时多态</p><p>chen</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;// GMT 时间 2000 年 1 月 1 日午夜零时&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;ke</summary>
+    <summary type="html">&lt;h1 id=&quot;面向对象思想&quot;&gt;&lt;a href=&quot;#面向对象思想&quot; class=&quot;headerlink&quot; title=&quot;面向对象思想&quot;&gt;&lt;/a&gt;面向对象思想&lt;/h1&gt;&lt;h2 id=&quot;多态&quot;&gt;&lt;a href=&quot;#多态&quot; class=&quot;headerlink&quot; title=&quot;多态&quot;&gt;&lt;</summary>
       
     
     
@@ -388,22 +88,244 @@
   </entry>
   
   <entry>
-    <title>js00</title>
-    <link href="https://theme-next.js.org/js00/"/>
-    <id>https://theme-next.js.org/js00/</id>
-    <published>2021-07-16T15:04:30.000Z</published>
-    <updated>2021-07-16T07:06:16.032Z</updated>
+    <title></title>
+    <link href="https://theme-next.js.org/%E8%87%AA%E5%A6%82%E7%AC%94%E8%AF%95%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%8C%82%EF%BC%8C%E6%9C%89mysql%E8%BF%98%E6%9C%89%E8%87%AA%E6%97%8B%E9%94%81%E7%9A%84%E9%A2%98%EF%BC%8Cmx%E9%82%A3%E4%B8%AA%E6%9C%89%E4%BA%9B%E9%80%89%E6%8B%A9%E9%A2%98%E4%B8%8D%E7%A1%AE%E5%AE%9A%EF%BC%8C%E4%BD%86%E5%A4%A7%E9%A2%98%E9%83%BD%E8%BF%87%E4%BA%86/"/>
+    <id>https://theme-next.js.org/%E8%87%AA%E5%A6%82%E7%AC%94%E8%AF%95%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%8C%82%EF%BC%8C%E6%9C%89mysql%E8%BF%98%E6%9C%89%E8%87%AA%E6%97%8B%E9%94%81%E7%9A%84%E9%A2%98%EF%BC%8Cmx%E9%82%A3%E4%B8%AA%E6%9C%89%E4%BA%9B%E9%80%89%E6%8B%A9%E9%A2%98%E4%B8%8D%E7%A1%AE%E5%AE%9A%EF%BC%8C%E4%BD%86%E5%A4%A7%E9%A2%98%E9%83%BD%E8%BF%87%E4%BA%86/</id>
+    <published>2021-11-17T11:21:07.564Z</published>
+    <updated>2021-11-17T11:21:07.785Z</updated>
     
-    <content type="html"><![CDATA[<p>ECMAScript 有5 种简单数据类型（也称为基本数据类型）：</p><ul><li><p>5 种简单数据类型：Null 、Boolean 、 Number、String、Undefined  。</p></li><li><p>还有1种复杂数据类型—— Object。</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>自如笔试可能会挂，有mysql还有自旋锁的题，mx那个有些选择题不确定，但大题都过了</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;ECMAScript 有5 种简单数据类型（也称为基本数据类型）：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;5 种简单数据类型：Null 、Boolean 、 Number、String、Undefined  。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;自如笔试可能会挂，有mysql还有自旋锁的题，mx那个有些选择题不确定，但大题都过了&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/public%20class%20AnimalTest%7B%20%20%20%20public%20static%20Scanner%20sc=new%20Scanner(System/"/>
+    <id>https://theme-next.js.org/public%20class%20AnimalTest%7B%20%20%20%20public%20static%20Scanner%20sc=new%20Scanner(System/</id>
+    <published>2021-11-17T11:21:00.637Z</published>
+    <updated>2021-11-17T11:21:00.879Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class AnimalTest&#123;</span><br><span class="line">public static Scanner sc=new Scanner(System.in);</span><br><span class="line">public static void main(String[] args)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>谷歌</p><ul><li><p>android 开发者指南</p></li><li><p>看下</p></li><li><p>9-5：30</p></li><li><p>三个</p></li><li><p>51job</p></li><li><p>应届生</p></li><li><p>网采</p></li><li><p>拉勾</p></li><li><p>直播</p><p>recruit？</p></li><li><p>上海</p></li><li><p>5-6月毕业。</p><p>有考虑实习。</p><p>答辩。</p><p>毕业。</p><p>稍等，</p><p>后续通知</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;public class AnimalTest&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/%E9%9C%80%E8%A6%81%E5%8E%BB%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://theme-next.js.org/%E9%9C%80%E8%A6%81%E5%8E%BB%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/</id>
+    <published>2021-11-17T11:20:56.892Z</published>
+    <updated>2021-11-17T11:20:57.111Z</updated>
+    
+    <content type="html"><![CDATA[<p>需要去创建对象</p><p>类和对象的关系</p><p>类可以看作一个模板</p><p>可以根据图纸造出很多个汽车</p><p>类的单词class</p><p>对象object</p><p>instance（实例）</p><p>含义是一样的</p><p>类和对象的关系</p><p>创建相关的对象</p><p>Student stu01通过new的关键字来创建</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;需要去创建对象&lt;/p&gt;
+&lt;p&gt;类和对象的关系&lt;/p&gt;
+&lt;p&gt;类可以看作一个模板&lt;/p&gt;
+&lt;p&gt;可以根据图纸造出很多个汽车&lt;/p&gt;
+&lt;p&gt;类的单词class&lt;/p&gt;
+&lt;p&gt;对象object&lt;/p&gt;
+&lt;p&gt;instance（实例）&lt;/p&gt;
+&lt;p&gt;含义是一样的&lt;/p&gt;
+&lt;p&gt;类和</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/class%20CQueue%20%7B/"/>
+    <id>https://theme-next.js.org/class%20CQueue%20%7B/</id>
+    <published>2021-11-17T11:20:52.027Z</published>
+    <updated>2021-11-17T11:20:52.261Z</updated>
+    
+    <content type="html"><![CDATA[<p>class CQueue {<br>    private Stack<Integer> stack1;<br>    private Stack<Integer> stack2;<br>    public CQueue() {<br>        this.stack1 = new Stack&lt;&gt;();<br>        this.stack2 = new Stack&lt;&gt;();<br>    }</p><pre><code>public void appendTail(int value) &#123;    stack1.push(value);&#125;public int deleteHead() &#123;    if (stack2.isEmpty()) &#123;        while (!stack1.isEmpty()) &#123;            stack2.push(stack1.pop());        &#125;    &#125;    if (stack2.isEmpty()) &#123;        return -1;    &#125; else &#123;        return stack2.pop();    &#125;&#125;</code></pre><p>}</p><p>作者：tangweiqun<br>链接：<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvaW1wbGVtZW50LXF1ZXVlLXVzaW5nLXN0YWNrcy9zb2x1dGlvbi93ZW4temktc2hpLXBpbi1kZS1mYW5nLXNoaS14aWFuZy14aS1qaWFuZy1qaWUtbGktMi8=">https://leetcode-cn.com/problems/implement-queue-using-stacks/solution/wen-zi-shi-pin-de-fang-shi-xiang-xi-jiang-jie-li-2/<i class="fa fa-external-link-alt"></i></span><br>来源：力扣（LeetCode）<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;class CQueue {&lt;br&gt;    private Stack&lt;Integer&gt; stack1;&lt;br&gt;    private Stack&lt;Integer&gt; stack2;&lt;br&gt;    public CQueue() {&lt;br&gt;        this.stack</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/layout/"/>
+    <id>https://theme-next.js.org/layout/</id>
+    <published>2021-11-17T11:20:46.740Z</published>
+    <updated>2021-11-17T11:20:46.971Z</updated>
+    
+    <content type="html"><![CDATA[<p>layout_width:组件的宽</p><p>layout_height:组件的高</p><p>id:为TextView设置一个组件id。</p><p>text:设置显示的文本内容</p><p>textColor:设置字体颜色</p><p>textStyle:设置字体风格，三个可选值，normal，bold，italic</p><p>textSize:设置字体大小，一般用sp</p><p>background：控件的背景颜色,可以理解为填充整个控件的颜色，可以是图片。</p><p>gravity：设置控件中内容的对齐方向，TextView中是文字，ImageView中是图片等。</p><p>shadowColor：设置阴影颜色，需要与shadowRadius一起使用。</p><p>shadowRadius：设置阴影的模糊程度，设为0.1就变成字体颜色了，建议使用3.0。</p><p>shadowDx：阴影在竖直方向上的偏移。就是水平方向上阴影开始的横坐标位置。</p><p>shadowDy:设置阴影在竖直方向上的偏移，就是竖直方向阴影开始的纵坐标位置。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;layout_width:组件的宽&lt;/p&gt;
+&lt;p&gt;layout_height:组件的高&lt;/p&gt;
+&lt;p&gt;id:为TextView设置一个组件id。&lt;/p&gt;
+&lt;p&gt;text:设置显示的文本内容&lt;/p&gt;
+&lt;p&gt;textColor:设置字体颜色&lt;/p&gt;
+&lt;p&gt;textStyle:设</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6%E6%88%91/"/>
+    <id>https://theme-next.js.org/%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6%E6%88%91/</id>
+    <published>2021-11-17T11:20:40.628Z</published>
+    <updated>2021-11-17T11:20:40.889Z</updated>
+    
+    <content type="html"><![CDATA[<p>事件分发机制</p><p>按时休息</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;事件分发机制&lt;/p&gt;
+&lt;p&gt;按时休息&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/Object%E5%92%8Cinstance%E4%B8%80%E6%A0%B7%E7%9A%84%E5%86%85%E5%AE%B9/"/>
+    <id>https://theme-next.js.org/Object%E5%92%8Cinstance%E4%B8%80%E6%A0%B7%E7%9A%84%E5%86%85%E5%AE%B9/</id>
+    <published>2021-11-17T11:20:29.235Z</published>
+    <updated>2021-11-17T11:20:29.458Z</updated>
+    
+    <content type="html"><![CDATA[<p>Object和instance一样的内容</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Object和instance一样的内容&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/Fragment%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>https://theme-next.js.org/Fragment%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</id>
+    <published>2021-11-17T11:20:09.634Z</published>
+    <updated>2021-11-17T11:20:09.871Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Fragment生命周期"><a href="#Fragment生命周期" class="headerlink" title="Fragment生命周期"></a>Fragment生命周期</h1><ol><li><p>打开界面</p><p>onCreate-&gt;onCreateView-&gt;onActivityCreated-&gt;onStart-&gt;onResume</p></li><li><p>按下主屏键</p><p>onPause-&gt;onStop</p></li><li><p>重新打开页面</p><p>onStart-&gt;onResume</p></li><li><p>按后退键</p><p>onPause-&gt;onStop-&gt;onDestroyView-&gt;onDestroy-&gt;onDetach</p></li></ol><p>一周最多面十五场</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Fragment生命周期&quot;&gt;&lt;a href=&quot;#Fragment生命周期&quot; class=&quot;headerlink&quot; title=&quot;Fragment生命周期&quot;&gt;&lt;/a&gt;Fragment生命周期&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;打开界面&lt;/p&gt;
+&lt;p&gt;onCreate-</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/Hashmapx/"/>
+    <id>https://theme-next.js.org/Hashmapx/</id>
+    <published>2021-11-17T11:20:04.515Z</published>
+    <updated>2021-11-17T11:20:04.753Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hashmap"><a href="#Hashmap" class="headerlink" title="Hashmap"></a>Hashmap</h1><p>Hashmap底层原理实现</p><p>hashmap底层实现了哈希表，这是一种非常重要的数据结构，</p><p>对于我们以后理解很多技术很有帮助</p><p>hashmap采用哈希表来实现</p><p>redis数据库和hashmap一样</p><ol><li>数组：占用空间连续。寻址容易，查询速度快。但是，增加和删除效率低。</li><li>链表：占用空间不连续，寻址难，查询速度慢，但，增加和删除效率高</li></ol><p>结合数组和链表的优点，即查询快，增删效率也高。</p><p>使用哈希表。哈希表的本质是数组加链表。</p><p>一个Entry对象存储了</p><p>key:键对象，value:值对象</p><p>next：下一个节点。</p><p>hash：键对象的hash值</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20211116164717155.png" alt="image-20211116164717155" loading="lazy"></p><p>键值对存到一个一个对象里，entry对象。</p><p>Hashmap的结构</p><p>本质数组</p><p>放的entry类型</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20211116164808601.png" alt="image-20211116164808601" loading="lazy"></p><p>0-15长度为16的数组</p><p>只要存键值对时往数组放就可以了</p><p>map</p><p>17-18个</p><p>可能会冲突</p><p>Entry[] table</p><p>hash冲突</p><p>hash扩容</p><p>链表</p><p>一个键值对怎么往里放。</p><p>去存储一个键值对</p><p>会计算键对象，hashcode方法。</p><p>object类里一个方法，返回一个整数，比较大，有大有小，有正有负，初始长度16个 0-15个</p><p>通过一种算法，知道了存键值对的时候一个entry对象</p><p>hash</p><p>key对象</p><p>value对象</p><p>next null</p><p>刚刚存的entry对象放到数组</p><p>直接写</p><p>15</p><p>entry对象</p><p>还是15</p><p>next指向</p><p>有内容</p><p>找next，再放再指向</p><p>找到以后想一个一个去遍历，</p><p>链表</p><p>没有发挥数组的优势</p><p>退化成链表</p><p>0-15间的范围</p><p>16-》15</p><p>对长度取余数最简单的算法</p><p>可以通过位运算提高效率</p><p>整个的存储过程</p><p>代码实现怎么往里存，再实现怎么取</p><p>单击Interface</p><p>Mymap</p><p>自定义结构</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hashmap&quot;&gt;&lt;a href=&quot;#Hashmap&quot; class=&quot;headerlink&quot; title=&quot;Hashmap&quot;&gt;&lt;/a&gt;Hashmap&lt;/h1&gt;&lt;p&gt;Hashmap底层原理实现&lt;/p&gt;
+&lt;p&gt;hashmap底层实现了哈希表，这是一种非常重要的数据结构</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82%E5%92%8C%E9%9D%A2%E8%AF%95%E7%9A%84%E5%87%86%E5%A4%87/"/>
+    <id>https://theme-next.js.org/%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82%E5%92%8C%E9%9D%A2%E8%AF%95%E7%9A%84%E5%87%86%E5%A4%87/</id>
+    <published>2021-11-17T11:19:52.313Z</published>
+    <updated>2021-11-17T11:19:52.556Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="技术要求和面试的准备"><a href="#技术要求和面试的准备" class="headerlink" title="技术要求和面试的准备"></a>技术要求和面试的准备</h1><h2 id="1-良好的开发习惯，"><a href="#1-良好的开发习惯，" class="headerlink" title="1. 良好的开发习惯，"></a>1. 良好的开发习惯，</h2><p>注释，代码规范</p><h2 id="2-独立思考的能力，"><a href="#2-独立思考的能力，" class="headerlink" title="2. 独立思考的能力，"></a>2. 独立思考的能力，</h2><p>非常根本</p><h2 id="3-主动并善于沟通（非常非常重要）"><a href="#3-主动并善于沟通（非常非常重要）" class="headerlink" title="3. 主动并善于沟通（非常非常重要）"></a>3. 主动并善于沟通（非常非常重要）</h2><p>80%的时间沟通，和产品，和qa沟通，不会沟通的程序员发展受限。</p><h2 id="招聘要求"><a href="#招聘要求" class="headerlink" title="招聘要求"></a>招聘要求</h2><ol><li>熟悉常用的设计模式、数据结构。</li><li>有Android软件开发经验，熟悉Android移动终端开发技术</li><li>有扎实的Java语言基础，熟练掌握Android各种UI布局和组件，能够熟练自定义ui控件。</li><li>熟练掌握HTTP和Socket编程；对Android程序性能优化，内存优化有一定经验。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;技术要求和面试的准备&quot;&gt;&lt;a href=&quot;#技术要求和面试的准备&quot; class=&quot;headerlink&quot; title=&quot;技术要求和面试的准备&quot;&gt;&lt;/a&gt;技术要求和面试的准备&lt;/h1&gt;&lt;h2 id=&quot;1-良好的开发习惯，&quot;&gt;&lt;a href=&quot;#1-良好的开发习惯，&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/%E9%94%81synchronizedLock%E9%94%81/"/>
+    <id>https://theme-next.js.org/%E9%94%81synchronizedLock%E9%94%81/</id>
+    <published>2021-11-17T11:19:48.343Z</published>
+    <updated>2021-11-17T11:19:48.572Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>锁synchronized</p><p>Lock锁</p></li><li></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;锁synchronized&lt;/p&gt;
+&lt;p&gt;Lock锁&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;还有1种复杂数据类型—— Obje</summary>
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</summary>
       
     
     
@@ -412,21 +334,76 @@
   </entry>
   
   <entry>
-    <title>js要点-defer_async</title>
-    <link href="https://theme-next.js.org/defer-async/"/>
-    <id>https://theme-next.js.org/defer-async/</id>
-    <published>2021-07-16T14:54:22.000Z</published>
-    <updated>2021-07-16T06:56:13.962Z</updated>
+    <title></title>
+    <link href="https://theme-next.js.org/Lock%E5%92%8Csychronized%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://theme-next.js.org/Lock%E5%92%8Csychronized%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2021-11-17T11:19:43.864Z</published>
+    <updated>2021-11-17T11:19:44.122Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><p>使用 defer 属性可以让脚本在文档完全呈现之后再执行。延迟脚本总是按照指定它们的顺序执行。</p></li><li><p>使用 async 属性可以表示当前脚本不必等待其他脚本，也不必阻塞文档呈现。不能保证异步脚<br>本按照它们在页面中出现的顺序执行。</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>Lock和sychronized的区别</p><p>sychroniezd是java中的一个关键字，也就是说是java语言内置的特性。那么为什么会出现Lock呢？</p><p>ReentrantLock：可重入锁。</p><p>面向对象三大特征，</p><p>封装，继承，多态</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;使用 defer 属性可以让脚本在文档完全呈现之后再执行。延迟脚本总是按照指定它们的顺序执行。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Lock和sychronized的区别&lt;/p&gt;
+&lt;p&gt;sychroniezd是java中的一个关键字，也就是说是java语言内置的特性。那么为什么会出现Lock呢？&lt;/p&gt;
+&lt;p&gt;ReentrantLock：可重入锁。&lt;/p&gt;
+&lt;p&gt;面向对象三大特征，&lt;/p&gt;
+&lt;p&gt;封装，</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/%E5%89%8D%E9%9D%A2%E6%98%AF%E6%89%BE%E4%BA%86%E4%B8%AA%E4%BA%BA%E6%A8%A1%E6%8B%9F%E8%A7%84%E5%88%92%E8%B7%AF%E7%BA%BF%EF%BC%8C/"/>
+    <id>https://theme-next.js.org/%E5%89%8D%E9%9D%A2%E6%98%AF%E6%89%BE%E4%BA%86%E4%B8%AA%E4%BA%BA%E6%A8%A1%E6%8B%9F%E8%A7%84%E5%88%92%E8%B7%AF%E7%BA%BF%EF%BC%8C/</id>
+    <published>2021-11-17T11:19:31.351Z</published>
+    <updated>2021-11-17T11:19:31.635Z</updated>
+    
+    <content type="html"><![CDATA[<p>前面是找了个人模拟规划路线，</p><p>他带我过了下java和jvm android基础的四大组件 recycleview什么的</p><p>现在嘛，是那四周完了，那个人改完简历后，发个设计图，说带我做个项目，但周六开始也不回复了。。。</p><p><img src="C:\Users\zr199\AppData\Roaming\Typora\typora-user-images\image-20211114135441312.png" alt="image-20211114135441312" loading="lazy"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;前面是找了个人模拟规划路线，&lt;/p&gt;
+&lt;p&gt;他带我过了下java和jvm android基础的四大组件 recycleview什么的&lt;/p&gt;
+&lt;p&gt;现在嘛，是那四周完了，那个人改完简历后，发个设计图，说带我做个项目，但周六开始也不回复了。。。&lt;/p&gt;
+&lt;p&gt;&lt;img src</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/%E6%AD%BB%E9%94%81/"/>
+    <id>https://theme-next.js.org/%E6%AD%BB%E9%94%81/</id>
+    <published>2021-11-15T21:13:53.178Z</published>
+    <updated>2021-11-15T21:13:53.470Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>死锁</p></li><li><p>synchronized和lock的区别 </p></li><li><p>深挖hashmap</p></li><li><p>tcp和udp区别</p><p>Tcp:</p></li><li></li><li></li></ol><p>收到了极米的一面，面试官主要也是从简历上写的来提问</p><p><img src="https://img-blog.csdn.net/20180904143958577?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hlZmVuZ2xpYW4=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img" loading="lazy"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;死锁&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;使用 async 属性可以表示当前脚本不必等待其他脚本，也不必阻塞文档呈现。不能保证异步脚&lt;br&gt;本按照它们在页面中出现的顺序</summary>
+&lt;li&gt;&lt;p&gt;synchronized和lock的区别 &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;深挖hashmap&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;tcp和udp区别&lt;/p&gt;
+&lt;p&gt;Tcp:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+</summary>
       
     
     
@@ -435,18 +412,71 @@
   </entry>
   
   <entry>
-    <title>学一行爱一行·我看大可不必</title>
-    <link href="https://theme-next.js.org/%E5%AD%A6%E4%B8%80%E8%A1%8C%E7%88%B1%E4%B8%80%E8%A1%8C%C2%B7%E6%88%91%E7%9C%8B%E5%A4%A7%E5%8F%AF%E4%B8%8D%E5%BF%85/"/>
-    <id>https://theme-next.js.org/%E5%AD%A6%E4%B8%80%E8%A1%8C%E7%88%B1%E4%B8%80%E8%A1%8C%C2%B7%E6%88%91%E7%9C%8B%E5%A4%A7%E5%8F%AF%E4%B8%8D%E5%BF%85/</id>
-    <published>2021-07-16T14:38:42.000Z</published>
-    <updated>2021-07-16T06:47:55.751Z</updated>
+    <title></title>
+    <link href="https://theme-next.js.org/%E5%A4%8D%E7%9B%98/"/>
+    <id>https://theme-next.js.org/%E5%A4%8D%E7%9B%98/</id>
+    <published>2021-11-15T21:13:21.321Z</published>
+    <updated>2021-11-15T21:13:21.541Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="经常有人说，学一行爱一行，要找到心之所爱"><a href="#经常有人说，学一行爱一行，要找到心之所爱" class="headerlink" title="经常有人说，学一行爱一行，要找到心之所爱"></a>经常有人说，学一行爱一行，要找到心之所爱</h2><p>可我却要质疑，如果非要等到你对某样事物有兴趣了才去做，会不会晚了些呢，社会竞争激烈，会不会在犹豫间，就失去了机会呢。人生，怎么会是仅仅去喜欢就够了的呢，就像你爱一个女孩死心踏地去追，还会不会落一场空呢；如果佛系一些，女孩又会白白送来吗；建议你还是先花费些精力去做吧，就像我的某朋友，撒大网才能钓大鱼，韭菜不要有过多的感受，现在开始结网，以后说不定收获累累呢。</p>]]></content>
+    <content type="html"><![CDATA[<p>复盘</p><ol><li><p>项目介绍。</p></li><li><p>try---catch---finally异常体系。</p></li><li><p>try 和finally return哪个在前。</p></li><li></li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;经常有人说，学一行爱一行，要找到心之所爱&quot;&gt;&lt;a href=&quot;#经常有人说，学一行爱一行，要找到心之所爱&quot; class=&quot;headerlink&quot; title=&quot;经常有人说，学一行爱一行，要找到心之所爱&quot;&gt;&lt;/a&gt;经常有人说，学一行爱一行，要找到心之所爱&lt;/h2&gt;&lt;</summary>
+    <summary type="html">&lt;p&gt;复盘&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;项目介绍。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;try---catch---finally异常体系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;try 和finally return哪个在前。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/JVM/"/>
+    <id>https://theme-next.js.org/JVM/</id>
+    <published>2021-11-15T21:13:11.346Z</published>
+    <updated>2021-11-15T21:13:11.576Z</updated>
+    
+    <content type="html"><![CDATA[<p>JVM</p><p>jvm概述</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;JVM&lt;/p&gt;
+&lt;p&gt;jvm概述&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://theme-next.js.org/okhttp%E7%9A%84%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5/"/>
+    <id>https://theme-next.js.org/okhttp%E7%9A%84%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5/</id>
+    <published>2021-11-15T21:12:51.200Z</published>
+    <updated>2021-11-15T21:12:51.457Z</updated>
+    
+    <content type="html"><![CDATA[<p>okhttp的同步和异步</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;okhttp的同步和异步&lt;/p&gt;
+</summary>
       
     
     
